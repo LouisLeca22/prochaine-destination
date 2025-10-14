@@ -46,7 +46,7 @@ function Sidebar() {
         }
     }
     return (
-        <motion.div animate={open ? "open" : "closed"} className="flex flex-col items-center justify-center bg-cyan-700 text-white dark:bg-white dark:text-cyan-700">
+        <motion.div initial={false} animate={open ? "open" : "closed"} className="flex flex-col items-center justify-center bg-cyan-700 text-white dark:bg-white dark:text-cyan-700">
             <motion.div variants={variants} className="fixed top-0 left-0 bottom-0 w-[400px] bg-amber-300">
                 <NavLinks />
             </motion.div>
