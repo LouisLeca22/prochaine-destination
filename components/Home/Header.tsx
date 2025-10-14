@@ -2,16 +2,19 @@
 
 import SplitText from "@/components/ui/SplitText";
 
+import Image from 'next/image'
+
 function Header() {
     return (
         <header className="z-10 relative w-full h-[90vh]">
-            <video
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                src="/videos/header.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
+            <Image
+                src="/images/header.jpg"
+                alt="Bannière du site"
+                fill
+                priority
+                quality={90}
+                sizes="100vw"
+                className="object-cover object-center"
             />
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
                 <div className="absolute top-100 px-20 flex w-full gap-2 flex-col align-middle">
