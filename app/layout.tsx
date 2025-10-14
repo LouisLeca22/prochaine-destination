@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Josefin_Sans, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
+import Navigation from "@/components/Navigation/Navigation";
 
 import "./globals.css";
+
 
 const josefin_sans = Josefin_Sans({
   variable: "--font-josefin-sans",
@@ -29,11 +31,9 @@ export default function RootLayout({
       <body
         className={`${josefin_sans.variable} ${inter.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+
+          <Navigation />
           {children}
         </ThemeProvider>
       </body>
