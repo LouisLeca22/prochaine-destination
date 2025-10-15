@@ -1,26 +1,63 @@
 "use client"
 
 import SplitText from "@/components/ui/SplitText";
-
+import { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
 import Image from 'next/image'
 
 function Header() {
+
+    const images = [
+        "/images/header1.jpg",
+        "/images/header2.jpg",
+        "/images/header3.jpg",
+        "/images/header4.jpg",
+        "/images/header5.jpg",
+        "/images/header6.jpg",
+        "/images/header7.jpg",
+    ];
     return (
-        <header className="z-10 relative w-full h-[90vh]">
-            <Image
-                src="/images/header.jpg"
-                alt="Bannière du site"
-                fill
-                priority
-                quality={90}
-                sizes="100vw"
-                className="object-cover object-center"
-            />
+        <header className="relative w-full h-[90vh] overflow-hidden">
+            <div className="absolute inset-0 z-0">
+
+                <Swiper
+                    modules={[Autoplay, EffectFade]}
+                    effect="fade"
+                    speed={1500}
+                    autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    className="w-full h-full"
+                >
+                    {images.map((src, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="relative w-full h-full">
+                                <Image
+                                    src={src}
+                                    alt={`Bannière ${index + 1}`}
+                                    fill
+                                    priority={index === 0}
+                                    quality={90}
+                                    sizes="100vw"
+                                    className="object-cover object-center"
+                                />
+
+                                <div className="absolute inset-0 bg-black/40" />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
-                <div className="absolute top-100 px-20 flex w-full gap-2 flex-col align-middle">
+                <div className="absolute top-100 px-10 md:px-20 flex w-full gap-2 flex-col align-middle">
                     <SplitText
                         text="PROCHAINE"
-                        className="text-6xl font-extrabold text-shadow-lg font-inter"
+                        className="text-3xl md:text-6xl text-white font-extrabold text-shadow-lg font-inter"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
@@ -34,7 +71,7 @@ function Header() {
 
                     <SplitText
                         text="DESTINATION"
-                        className="text-6xl text-shadow-lg font-josefin-sans"
+                        className="text-3xl md:text-6xl text-white text-shadow-lg font-josefin-sans"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
