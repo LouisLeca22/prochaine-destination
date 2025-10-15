@@ -1,7 +1,6 @@
 "use client"
 
 import SplitText from "@/components/ui/SplitText";
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -22,7 +21,6 @@ function Header() {
     return (
         <header className="relative w-full h-[90vh] overflow-hidden">
             <div className="absolute inset-0 z-0">
-
                 <Swiper
                     modules={[Autoplay, EffectFade]}
                     effect="fade"
@@ -47,17 +45,17 @@ function Header() {
                                     className="object-cover object-center"
                                 />
 
-                                <div className="absolute inset-0 bg-black/40" />
+                                {/* <div className="absolute inset-0 bg-black/40" /> */}
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
-                <div className="absolute top-100 px-10 md:px-20 flex w-full gap-2 flex-col align-middle">
+                <div className="absolute bottom-20 px-10 md:px-20 flex w-full gap-2 flex-col align-middle">
                     <SplitText
                         text="PROCHAINE"
-                        className="text-3xl md:text-6xl text-white font-extrabold text-shadow-lg font-inter"
+                        className="text-4xl md:text-6xl text-white font-extrabold text-shadow-lg font-inter"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
@@ -71,7 +69,7 @@ function Header() {
 
                     <SplitText
                         text="DESTINATION"
-                        className="text-3xl md:text-6xl text-white text-shadow-lg font-josefin-sans"
+                        className="text-4xl md:text-6xl text-white text-shadow-lg font-josefin-sans"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
