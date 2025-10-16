@@ -59,7 +59,6 @@ function ToggleButton() {
 }
 
 function NavLinks() {
-
     const containerVariants = {
         open: {
             transition: {
@@ -79,12 +78,22 @@ function NavLinks() {
         closed: { opacity: 0, y: 20 },
         open: { opacity: 1, y: 0 },
     };
+
     return (
-        <motion.div variants={containerVariants} className="w-full h-full flex flex-col items-center justify-center gap-10 font-bold uppercase">
+        <motion.div
+            variants={containerVariants}
+            className="w-full h-full flex flex-col items-center justify-center gap-10 font-bold uppercase"
+        >
             {["Explorer", "Séjourner", "Déguster", "Profiter"].map((text) => (
                 <motion.div key={text} variants={itemVariants}>
-                    <Link href="#" className="text-3xl">
+                    <Link
+                        href="#"
+                        className="relative text-3xl text-cyan-700 transition-all duration-300 group"
+                    >
                         {text}
+                        <span
+                            className="absolute bottom-[-1px] left-[6px] w-full h-[65%] bg-amber-400 opacity-0 translate-x-1 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 -z-10"
+                        ></span>
                     </Link>
                 </motion.div>
             ))}

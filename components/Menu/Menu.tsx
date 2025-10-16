@@ -1,9 +1,9 @@
 "use client"
 
 import ThemeToggler from "@/components/ThemeToggler"
-import Sidebar from "@/components/Navigation/Sidebar"
+import Sidebar from "@/components/Menu/Sidebar"
 
-function Navigation() {
+function Menu() {
     return (
         <div className="z-50 relative">
             <Sidebar />
@@ -12,4 +12,4 @@ function Navigation() {
         </div>
     )
 }
-export default Navigation
+export default Menu

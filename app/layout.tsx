@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Josefin_Sans, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
-import Navigation from "@/components/Navigation/Navigation";
+import Menu from "@/components/Menu/Menu";
 
 import "./globals.css";
 
@@ -32,8 +32,7 @@ export default function RootLayout({
         className={`${josefin_sans.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-
-          <Navigation />
+          <Menu />
           {children}
         </ThemeProvider>
       </body>

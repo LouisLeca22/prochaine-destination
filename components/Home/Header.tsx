@@ -6,7 +6,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import Image from 'next/image'
-
+import Separator from "@/components/ui/Separator";
 function Header() {
 
     const images = [
@@ -52,10 +52,12 @@ function Header() {
                 </Swiper>
             </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
-                <div className="absolute bottom-20 px-10 md:px-20 flex w-full gap-2 flex-col align-middle">
+                <div className="flex w-full h-full flex-col items-end justify-end p-7 md:p-14">
+                    <span className="text-2xl font-josefin-sans font-bold mb-4 uppercase">L'air du large, l'art en partage</span>
+                    <Separator width="w-92" />
                     <SplitText
                         text="PROCHAINE"
-                        className="text-4xl md:text-6xl text-white font-extrabold text-shadow-lg font-inter"
+                        className="text-4xl tracking-wide md:text-6xl text-white font-extrabold text-shadow-lg font-inter"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
@@ -69,7 +71,7 @@ function Header() {
 
                     <SplitText
                         text="DESTINATION"
-                        className="text-4xl md:text-6xl text-white text-shadow-lg font-josefin-sans"
+                        className="text-4xl tracking-wide md:text-6xl text-white font-extrabold text-shadow-lg font-inter"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
