@@ -1,2 +1,4 @@
-# hover effect on nav links
-# creating custom gradient separator
+
+# color and size mobiel
+
+# new image header

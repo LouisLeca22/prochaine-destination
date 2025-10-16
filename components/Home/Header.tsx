@@ -53,8 +53,8 @@ function Header() {
             </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
                 <div className="flex w-full h-full flex-col items-end justify-end p-7 md:p-14">
-                    <span className="text-2xl font-josefin-sans font-bold mb-4 uppercase">L'air du large, l'art en partage</span>
-                    <Separator width="w-92" />
+                    <span className="text-1xl md:text-2xl font-josefin-sans text-white font-bold mb-4 uppercase">L'air du large, l'art en partage</span>
+                    <Separator width="w-70" className="md:w-92" />
                     <SplitText
                         text="PROCHAINE"
                         className="text-4xl tracking-wide md:text-6xl text-white font-extrabold text-shadow-lg font-inter"

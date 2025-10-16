@@ -106,6 +106,7 @@ function FooterLinks() {
         open: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
         closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
     };
+
     const itemVariants = {
         closed: { opacity: 0, y: 50 },
         open: { opacity: 1, y: 0 },
@@ -118,8 +119,14 @@ function FooterLinks() {
         >
             {["Presse", "Groupe", "Pro", "Affaire"].map((text) => (
                 <motion.div key={text} variants={itemVariants}>
-                    <Link href="#" className="text-sm tracking-wide">
+                    <Link
+                        href="#"
+                        className="relative text-sm tracking-wide transition-all duration-300 group"
+                    >
                         {text}
+                        <span
+                            className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"
+                        ></span>
                     </Link>
                 </motion.div>
             ))}
