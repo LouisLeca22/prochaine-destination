@@ -19,7 +19,7 @@ export default function ThemeToggler() {
     return (
         <motion.button
             onClick={() => setTheme(isDark ? 'light' : 'dark')}
-            className="fixed top-[20px] left-[110px] p-5 rounded-full bg-amber-300 text-cyan-700 "
+            className="fixed top-[20px] left-25 cursor-pointer p-5 rounded-full bg-amber-300 text-cyan-700 "
             whileTap={{ scale: 0.9 }}
             whileHover={{ rotate: 15 }}
             transition={{ type: 'spring', stiffness: 300 }}

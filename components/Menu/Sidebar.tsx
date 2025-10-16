@@ -5,6 +5,7 @@ import { useSidebarStore } from '@/store/sidebarStore'
 
 
 import { motion, Variants } from "framer-motion"
+import { useScopedI18n } from "@/locales/client"
 
 function ToggleButton() {
     const toggle = useSidebarStore(state => state.toggle)
@@ -21,6 +22,7 @@ function ToggleButton() {
                 viewBox="0 0 23 23"
                 initial={false}
                 animate={open ? "open" : "closed"}
+                whileHover={{ rotate: 15 }}
             >
                 <motion.path
                     stroke="#0e7490"
@@ -59,6 +61,9 @@ function ToggleButton() {
 }
 
 function NavLinks() {
+
+    const t = useScopedI18n("Menu")
+
     const containerVariants = {
         open: {
             transition: {
@@ -79,18 +84,25 @@ function NavLinks() {
         open: { opacity: 1, y: 0 },
     };
 
+    const links = [
+        { key: "explore", href: "/explore" },
+        { key: "stay", href: "/stay" },
+        { key: "taste", href: "/taste" },
+        { key: "enjoy", href: "/enjoy" },
+    ] as const
+
     return (
         <motion.div
             variants={containerVariants}
             className="w-full h-full flex flex-col items-center justify-center gap-10 font-bold uppercase"
         >
-            {["Explorer", "Séjourner", "Déguster", "Profiter"].map((text) => (
-                <motion.div key={text} variants={itemVariants}>
+            {links.map((link) => (
+                <motion.div key={link.key} variants={itemVariants}>
                     <Link
-                        href="#"
+                        href={link.href}
                         className="relative text-3xl text-cyan-700 transition-all duration-300 group"
                     >
-                        {text}
+                        {t(link.key)}
                         <span
                             className="absolute bottom-[-1px] left-[6px] w-full h-[65%] bg-amber-400 opacity-0 translate-x-1 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 -z-10"
                         ></span>
@@ -102,6 +114,8 @@ function NavLinks() {
 }
 
 function FooterLinks() {
+    const t = useScopedI18n("Menu")
+
     const containerVariants = {
         open: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
         closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
@@ -112,18 +126,25 @@ function FooterLinks() {
         open: { opacity: 1, y: 0 },
     };
 
+    const links = [
+        { key: "press", href: "/press" },
+        { key: "groups", href: "/groups" },
+        { key: "partners", href: "/partners" },
+        { key: "business", href: "/business" },
+    ] as const
+
     return (
         <motion.div
             variants={containerVariants}
             className="absolute bottom-10 w-full flex justify-center gap-6 text-cyan-700 font-medium uppercase"
         >
-            {["Presse", "Groupe", "Pro", "Affaire"].map((text) => (
-                <motion.div key={text} variants={itemVariants}>
+            {links.map((link) => (
+                <motion.div key={link.key} variants={itemVariants}>
                     <Link
-                        href="#"
+                        href={link.href}
                         className="relative text-sm tracking-wide transition-all duration-300 group"
                     >
-                        {text}
+                        {t(link.key)}
                         <span
                             className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-amber-400 transition-all duration-300 group-hover:w-full"
                         ></span>
@@ -155,7 +176,7 @@ function Sidebar() {
     }
     return (
         <motion.div initial={false} animate={open ? "open" : "closed"} className="flex flex-col items-center justify-center text-cyan-700">
-            <motion.div variants={variants} className="fixed top-0 left-0 bottom-0 w-full md:w-1/4 bg-amber-300 ">
+            <motion.div variants={variants} className="fixed top-0 left-0 bottom-0 w-full md:w-1/4 bg-amber-300 " >
                 <NavLinks />
                 <FooterLinks />
             </motion.div>
