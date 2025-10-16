@@ -52,7 +52,7 @@ function Header() {
                 </Swiper>
             </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
-                <div className="flex w-full h-full flex-col items-end justify-end p-20">
+                <div className="flex w-full h-full flex-col items-end justify-end px-10 py-20">
                     <span className="text-1xl md:text-2xl font-josefin-sans text-white font-bold mb-4 uppercase">L'air du large, l'art en partage</span>
                     <Separator width="w-40" className="md:w-92" />
                     <SplitText
