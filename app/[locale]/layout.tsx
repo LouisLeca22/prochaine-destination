@@ -29,21 +29,22 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 }
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: {
-    locale: string
-  }
+  params: Promise<{ locale: string }>
 }>) {
+
+  const { locale } = await params
+
   return (
     <html lang="en">
       <body
         className={`${josefin_sans.variable} ${inter.variable} antialiased`}
       >
-        <LocaleProvider locale={params.locale}>
+        <LocaleProvider locale={locale}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Menu />
             {children}
