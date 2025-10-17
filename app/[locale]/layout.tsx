@@ -42,7 +42,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${josefin_sans.variable} ${inter.variable} antialiased`}
+        className={`${josefin_sans.variable} ${inter.variable} font-josefin-sans antialiased`}
       >
         <LocaleProvider locale={locale}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

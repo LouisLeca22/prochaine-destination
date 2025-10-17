@@ -22,7 +22,7 @@ function Header() {
         "/images/header7.jpg",
     ];
     return (
-        <header className="relative w-full h-[90vh] overflow-hidden">
+        <header className="relative snap-center w-full h-[90vh] overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <Swiper
                     modules={[Autoplay, EffectFade]}

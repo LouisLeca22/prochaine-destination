@@ -1,4 +1,5 @@
 import Header from "@/components/Home/Header";
+import Headlines from "@/components/Home/Headlines";
 
 
 
@@ -6,9 +7,8 @@ export default async function Home() {
   return (
     <main >
       <Header />
-      <section className="bg-amber-100 h-[100vh] w-full text-black flex flex-col items-center justify-center">
+      <Headlines />
 
-      </section>
 
     </main>
   );

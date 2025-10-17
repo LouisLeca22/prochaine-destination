@@ -61,6 +61,7 @@ function ToggleButton() {
 }
 
 function NavLinks() {
+    const setOpen = useSidebarStore(state => state.setOpen)
 
     const t = useScopedI18n("Menu")
 
@@ -100,6 +101,7 @@ function NavLinks() {
                 <motion.div key={link.key} variants={itemVariants}>
                     <Link
                         href={link.href}
+                        onClick={() => setOpen(false)}
                         className="relative text-3xl text-cyan-700 transition-all duration-300 group"
                     >
                         {t(link.key)}
@@ -115,6 +117,7 @@ function NavLinks() {
 
 function FooterLinks() {
     const t = useScopedI18n("Menu")
+    const setOpen = useSidebarStore(state => state.setOpen)
 
     const containerVariants = {
         open: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
@@ -142,6 +145,7 @@ function FooterLinks() {
                 <motion.div key={link.key} variants={itemVariants}>
                     <Link
                         href={link.href}
+                        onClick={() => setOpen(false)}
                         className="relative text-sm tracking-wide transition-all duration-300 group"
                     >
                         {t(link.key)}
@@ -155,7 +159,7 @@ function FooterLinks() {
     )
 }
 
-function Sidebar() {
+function Navigation() {
     const open = useSidebarStore(state => state.open)
     const variants: Variants = {
         open: {
@@ -186,4 +190,4 @@ function Sidebar() {
 }
 
 
-export default Sidebar
+export default Navigation
