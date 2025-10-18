@@ -33,7 +33,14 @@ export default {
                 citypass: "Découvrez notre destination en toute liberté : musées, visites et bons plans inclus dans un seul pass malin.",
                 sustainable: "Explorez autrement : activités durables, hébergements verts et expériences respectueuses de la nature.",
                 weekend: "Ne manquez rien ! Concerts, expos, marchés… toutes les idées sorties à ne pas rater ce week-end."
-            }
+            },
+        },
+        Favorites: {
+            Heading: "Coups de cœur",
+            coast: "Sillonner la côte ",
+            museum: "Et si on allait au musée",
+            hiking: "6 idées randos",
+            tasting: "À savourer sans moderation"
         }
     },
     404: {

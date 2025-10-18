@@ -33,7 +33,14 @@ export default {
                 citypass: "Discover our destination freely — museums, tours, and exclusive offers, all in one smart pass.",
                 sustainable: "Explore differently: sustainable activities, green stays, and experiences that respect nature.",
                 weekend: "Don’t miss a thing! Concerts, exhibitions, markets — all the best ideas for your weekend out."
-            }
+            },
+        },
+        Favorites: {
+            Heading: "Favorites",
+            coast: "Exploring the coast",
+            museum: "How about going to the museum",
+            hiking: "6 hiking ideas",
+            tasting: "To savor without moderation"
         }
     },
     404: {

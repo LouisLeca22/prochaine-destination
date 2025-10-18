@@ -5,6 +5,11 @@ import Menu from "@/components/Menu/Menu";
 import { getScopedI18n } from "@/locales/server";
 
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
 import { LocaleProvider } from "@/providers/locale-provider";
 
 

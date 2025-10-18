@@ -48,6 +48,10 @@ export default function GlobalSearch() {
                 e.preventDefault()
                 setIsOpen((prev) => !prev)
             }
+
+            if (e.key === 'Escape') {
+                setIsOpen(false)
+            }
         }
         window.addEventListener('keydown', handleKeyDown)
         return () => window.removeEventListener('keydown', handleKeyDown)

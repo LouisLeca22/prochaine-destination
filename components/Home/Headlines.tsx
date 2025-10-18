@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import AnimatedLink from "../ui/AnimatedLink";
 import { useScopedI18n } from "@/locales/client";
+import ScrollFloat from "../ui/ScrollFloat";
 
 
 type Item = {
@@ -102,10 +103,17 @@ function Headlines() {
     ]
     return (
         <div className="relative" ref={ref}>
-            <div className='sticky z-40 bg-background  pt-30 md:pt-20  top-0 left-0  pb-8 md:px-100 text-center'>
-                <h2 className="text-5xl font-inter font-bold mb-6 bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+            <div className='sticky z-40 bg-background  pt-30 md:pt-8  top-0 left-0  pb-8 md:px-100 text-center'>
+                <ScrollFloat
+                    animationDuration={1}
+                    ease='back.inOut(2)'
+                    scrollStart='center bottom+=50%'
+                    scrollEnd='bottom bottom-=40%'
+                    stagger={0.03}
+                    textClassName="text-5xl font-josefin-sans font-bold text-cyan-500"
+                >
                     {t("Heading")}
-                </h2>
+                </ScrollFloat>
                 <motion.div style={{ scaleX }} className='h-1 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full'></motion.div>
             </div>
             {items.map((item, index) => {

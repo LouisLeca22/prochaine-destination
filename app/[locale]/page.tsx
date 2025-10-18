@@ -1,3 +1,4 @@
+import Favorites from "@/components/Home/Favorites";
 import Header from "@/components/Home/Header";
 import Headlines from "@/components/Home/Headlines";
 
@@ -8,13 +9,7 @@ export default async function Home() {
     <main >
       <Header />
       <Headlines />
-      <section className="h-screen snap-center">
-
-
-
-
-      </section>
-
+      <Favorites />
 
     </main>
   );
