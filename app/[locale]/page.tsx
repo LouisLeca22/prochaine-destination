@@ -8,6 +8,12 @@ export default async function Home() {
     <main >
       <Header />
       <Headlines />
+      <section className="h-screen snap-center">
+
+
+
+
+      </section>
 
 
     </main>

@@ -13,13 +13,13 @@ function Header() {
     const t = useScopedI18n("Home.Header")
 
     const images = [
-        "/images/header1.jpg",
-        "/images/header2.jpg",
-        "/images/header3.jpg",
-        "/images/header4.jpg",
-        "/images/header5.jpg",
-        "/images/header6.jpg",
-        "/images/header7.jpg",
+        "/images/header/header1.jpg",
+        "/images/header/header2.jpg",
+        "/images/header/header3.jpg",
+        "/images/header/header4.jpg",
+        "/images/header/header5.jpg",
+        "/images/header/header6.jpg",
+        "/images/header/header7.jpg",
     ];
     return (
         <header className="relative snap-center w-full h-[90vh] overflow-hidden">
@@ -54,8 +54,8 @@ function Header() {
                 </Swiper>
             </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
-                <div className="flex w-full h-full flex-col items-end justify-end px-10 py-20">
-                    <span className="text-1xl md:text-2xl font-josefin-sans text-white font-bold mb-4 uppercase">{t("tagline")}</span>
+                <h1 className="flex w-full h-full flex-col items-end justify-end px-10 py-20">
+                    <span className="text-sm md:text-2xl font-josefin-sans text-white font-bold mb-4 uppercase">{t("tagline")}</span>
                     <Separator width="w-40" className="md:w-70" />
                     <SplitText
                         text={t("next")}
@@ -86,7 +86,7 @@ function Header() {
                     />
 
 
-                </div>
+                </h1>
 
             </div>
 

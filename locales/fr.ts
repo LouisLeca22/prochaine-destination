@@ -19,6 +19,21 @@ export default {
             next: "Prochaine",
             destination: "Destination",
             tagline: "L'air du large, l'art en partage"
+        },
+        Headlines: {
+            Heading: "À la une",
+            Titles: {
+                autumn: "L'automne en douceur",
+                citypass: "City Pass",
+                sustainable: "Voyage éco-responsable",
+                weekend: "Les bons plans du weekend"
+            },
+            Descriptions: {
+                autumn: "Entre couleurs dorées et lumières apaisantes, laissez-vous porter par la sérénité de la saison.",
+                citypass: "Découvrez notre destination en toute liberté : musées, visites et bons plans inclus dans un seul pass malin.",
+                sustainable: "Explorez autrement : activités durables, hébergements verts et expériences respectueuses de la nature.",
+                weekend: "Ne manquez rien ! Concerts, expos, marchés… toutes les idées sorties à ne pas rater ce week-end."
+            }
         }
     },
     404: {
