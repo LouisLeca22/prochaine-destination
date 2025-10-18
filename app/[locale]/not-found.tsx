@@ -17,6 +17,7 @@ export default function NotFound() {
                 <FuzzyText
                     baseIntensity={0.2}
                     enableHover={true}
+                    fontSize={120}
                     hoverIntensity={1}
                     color="#06b6d4"
                 >

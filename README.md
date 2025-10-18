@@ -10,17 +10,20 @@ Le projet reprend les fonctionnalités classiques d’un **site d’office de to
 ## 🚀 Lancer le projet en local
 
 ### 1. Cloner le repo
+
 ```bash
 git clone https://github.com/LouisLeca22/prochaine-destination.git
 cd prochaine-destination
 ```
 
 ### 2. Installer les dépendances
+
 ```bash
 npm install
 ```
 
 ### 3. Lancer le serveur de développement
+
 ```bash
 npm run dev
 ```
@@ -34,7 +37,7 @@ Le site est accessible sur :
 
 - **Next.js** → Framework React rapide et optimisé  
 - **Shadcn/UI** → Composants élégants et accessibles  
-- **React Bits** → Hooks et utilitaires réutilisables  
+- **React Bits** → Composants créatifs réutilisables  
 - **Zustand** → Gestion d’état simple et performante  
 - **Leaflet** → Cartes interactives et intuitives  
 - **Framer Motion** → Animations et transitions fluides  

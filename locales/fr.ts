@@ -38,7 +38,7 @@ export default {
         Favorites: {
             Heading: "Coups de cœur",
             coast: "Sillonner la côte ",
-            museum: "Et si on allait au musée",
+            museum: "Et si on allait au musée ?",
             hiking: "6 idées randos",
             tasting: "À savourer sans moderation"
         }

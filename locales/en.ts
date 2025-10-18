@@ -38,7 +38,7 @@ export default {
         Favorites: {
             Heading: "Favorites",
             coast: "Exploring the coast",
-            museum: "How about going to the museum",
+            museum: "How about going to the museum?",
             hiking: "6 hiking ideas",
             tasting: "To savor without moderation"
         }
