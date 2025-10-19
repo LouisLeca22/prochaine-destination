@@ -4,17 +4,18 @@ import { useScopedI18n } from "@/locales/client";
 import ScrollFloat from "../ui/ScrollFloat"
 import Separator from "../ui/Separator"
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 function Targets() {
     const t = useScopedI18n("Home.Targets");
 
     const cards = [
-        { id: 1, title: t("culture"), img: "/images/targets/culture.jpg" },
-        { id: 2, title: t("friends"), img: "/images/targets/friends.jpg" },
-        { id: 3, title: t("family"), img: "/images/targets/family.jpg" },
-        { id: 4, title: t("adventure"), img: "/images/targets/adventure.jpg" },
-        { id: 5, title: t("couple"), img: "/images/targets/couple.jpg" },
-        { id: 6, title: t("relax"), img: "/images/targets/relax.jpg" },
+        { id: 1, title: t("culture"), img: "/images/targets/culture.jpg", href: "/culture" },
+        { id: 2, title: t("friends"), img: "/images/targets/friends.jpg", href: "/friends" },
+        { id: 3, title: t("family"), img: "/images/targets/family.jpg", href: "/family" },
+        { id: 4, title: t("adventure"), img: "/images/targets/adventure.jpg", href: "/adventure" },
+        { id: 5, title: t("couple"), img: "/images/targets/couple.jpg", href: "/couple" },
+        { id: 6, title: t("relax"), img: "/images/targets/relax.jpg", href: "/relax" },
     ];
 
     const containerVariants = {
@@ -65,16 +66,18 @@ function Targets() {
                         variants={cardVariants}
                         className="relative h-64 md:h-54 rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
                     >
-                        <div
-                            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                            style={{ backgroundImage: `url(${card.img})` }}
-                        ></div>
-                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <h3 className="text-2xl text-white font-semibold font-josefin-sans tracking-wide">
-                                {card.title}
-                            </h3>
-                        </div>
+                        <Link href={card.href}>
+                            <div
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                style={{ backgroundImage: `url(${card.img})` }}
+                            ></div>
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <h3 className="text-2xl text-white font-semibold font-josefin-sans tracking-wide">
+                                    {card.title}
+                                </h3>
+                            </div>
+                        </Link>
                     </motion.div>
                 ))}
             </motion.div>
