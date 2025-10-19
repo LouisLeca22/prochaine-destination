@@ -25,7 +25,7 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
     const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
     return (
-        <section className="h-[50vh] snap-center md:mb-10 relative">
+        <section className="h-[50vh] snap-center md:m-10 pt-4 relative">
             <div
                 className={`md:max-w-[1100px] h-full m-auto flex items-center justify-center md:gap-20 
         ${reverse ? "md:flex-row-reverse" : ""}
@@ -103,7 +103,7 @@ function Headlines() {
     ]
     return (
         <div className="relative" ref={ref}>
-            <div className='sticky z-40 bg-background pt-30 md:pt-15  top-0 left-0  pb-4 md:px-100 text-center'>
+            <div className='sticky z-40 bg-background pt-30 md:pt-15 top-0 left-0  pb-4 md:px-100 text-center'>
                 <ScrollFloat
                     animationDuration={1}
                     ease='back.inOut(2)'
