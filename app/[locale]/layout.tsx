@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       siteName: 'Prochaine Destination',
       images: [
         {
-          url: 'https://prochaine-destination.vercel.app/images/preview.png',
+          url: 'https://prochaine-destination.vercel.app/images/preview.jpg',
           width: 1200,
           height: 630,
           alt: 'Aperçu de Prochaine Destination',
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: 'https://prochaine-destination.vercel.app/images/preview.png',
+      images: 'https://prochaine-destination.vercel.app/images/preview.jpg',
     },
   };
 }
