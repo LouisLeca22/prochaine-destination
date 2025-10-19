@@ -38,8 +38,8 @@ function Targets() {
     };
 
     return (
-        <section className="min-h-screen snap-center">
-            <div className="sticky z-40 overflow-hidden  top-0 left-0 bg-background pt-20 md:pt-15 pb-4 text-center flex flex-col items-center">
+        <section className="min-h-screen snap-start">
+            <div className="sticky z-40 overflow-hidden  top-0 left-0 bg-background pt-30 md:pt-15 pb-4 text-center flex flex-col items-center">
                 <ScrollFloat
                     animationDuration={1}
                     ease="back.inOut(2)"

@@ -103,7 +103,7 @@ function Headlines() {
     ]
     return (
         <div className="relative" ref={ref}>
-            <div className='sticky z-40 bg-background  pt-20 md:pt-15  top-0 left-0  pb-4 md:px-100 text-center'>
+            <div className='sticky z-40 bg-background pt-30 md:pt-15  top-0 left-0  pb-4 md:px-100 text-center'>
                 <ScrollFloat
                     animationDuration={1}
                     ease='back.inOut(2)'
