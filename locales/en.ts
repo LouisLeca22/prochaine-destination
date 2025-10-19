@@ -41,6 +41,15 @@ export default {
             museum: "How about going to the museum?",
             hiking: "6 hiking ideas",
             tasting: "To savor without moderation"
+        },
+        Targets: {
+            Heading: "What's your vibe?",
+            culture: "Culture lover",
+            friends: "Out with friends",
+            family: "Family first",
+            adventure: "Up for adventure",
+            couple: "Just the two of us",
+            relax: "Time to relax"
         }
     },
     404: {

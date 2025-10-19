@@ -41,6 +41,15 @@ export default {
             museum: "Et si on allait au musée ?",
             hiking: "6 idées randos",
             tasting: "À savourer sans moderation"
+        },
+        Targets: {
+            Heading: "Vous êtes plutôt ?",
+            culture: "En mode culture",
+            friends: "Sortie entre potes",
+            family: "La famille d'abord",
+            advenutre: "En quête d'aventure",
+            couple: "À deux c'est mieux",
+            relax: "Pause bien-être"
         }
     },
     404: {
