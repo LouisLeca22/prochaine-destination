@@ -30,6 +30,28 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: t('title'),
     description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: 'https://prochaine-destination.vercel.app',
+      siteName: 'Prochaine Destination',
+      images: [
+        {
+          url: 'https://prochaine-destination.vercel.app/preview.png',
+          width: 1200,
+          height: 630,
+          alt: 'Aperçu de Prochaine Destination',
+        },
+      ],
+      locale: 'fr_FR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: 'https://prochaine-destination.vercel.app/preview.png',
+    },
   };
 }
 
