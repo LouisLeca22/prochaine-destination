@@ -23,13 +23,14 @@ export default function Experience() {
             title: t("accomodations"),
             background: "cyan1",
             href: '/accomodations',
-            src: "/images/favorties/modern_art.jpg",
+            src: "/images/favorties/hiking.jpg",
+
         },
         {
             title: t("restaurants"),
             background: "cyan2",
             href: "/restaurants",
-            src: "/images/favorties/hiking.jpg",
+            src: "/images/favorties/modern_art.jpg",
         },
         {
             title: t("activities"),
