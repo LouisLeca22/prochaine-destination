@@ -57,6 +57,9 @@ export default {
             restaurants: "Restaurants",
             activities: "Loisirs",
         },
+        Social: {
+            Heading: "Suivez-nous sur les réseaux"
+        },
         Contact: {
             Heading: "Contactez-nous"
         }

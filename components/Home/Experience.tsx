@@ -23,20 +23,20 @@ export default function Experience() {
             title: t("accomodations"),
             background: "cyan1",
             href: '/accomodations',
-            src: "/images/favorties/hiking.jpg",
+            src: "/images/experience/accommodation.jpg",
 
         },
         {
             title: t("restaurants"),
             background: "cyan2",
             href: "/restaurants",
-            src: "/images/favorties/modern_art.jpg",
+            src: "/images/experience/restaurant.jpg",
         },
         {
             title: t("activities"),
             background: "cyan3",
             href: "/activities",
-            src: "/images/favorties/tasting.jpg",
+            src: "/images/experience/leisure.jpg",
         },
     ];
 
