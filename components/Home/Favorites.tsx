@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import Image from 'next/image';
 
 function Favorites() {
     const t = useScopedI18n("Home.Favorites");
@@ -72,9 +73,10 @@ function Favorites() {
                     >
                         <Link href={href}>
                             <div className="absolute inset-0 overflow-hidden group">
-                                <img
+                                <Image
                                     src={src}
                                     alt={title}
+                                    fill
                                     className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black/30 transition-opacity duration-500 ease-out group-hover:bg-black/40" />

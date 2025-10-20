@@ -50,6 +50,15 @@ export default {
             advenutre: "En quête d'aventure",
             couple: "À deux c'est mieux",
             relax: "Pause bien-être"
+        },
+        Experience: {
+            Heading: "Préparez votre venue",
+            accomodations: "Hébergements",
+            restaurants: "Restaurants",
+            activities: "Loisirs",
+        },
+        Contact: {
+            Heading: "Contactez-nous"
         }
     },
     404: {

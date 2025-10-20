@@ -50,6 +50,15 @@ export default {
             adventure: "Up for adventure",
             couple: "Just the two of us",
             relax: "Time to relax"
+        },
+        Experience: {
+            Heading: "Get ready for your trip",
+            accomodations: "Accommodations",
+            restaurants: "Restaurants",
+            activities: "Activities",
+        },
+        Contact: {
+            Heading: "Contact us"
         }
     },
     404: {

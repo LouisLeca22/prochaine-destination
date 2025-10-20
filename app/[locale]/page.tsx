@@ -1,3 +1,5 @@
+import Contact from "@/components/Home/Contact";
+import Experience from "@/components/Home/Experience";
 import Favorites from "@/components/Home/Favorites";
 import Header from "@/components/Home/Header";
 import Headlines from "@/components/Home/Headlines";
@@ -12,6 +14,8 @@ export default async function Home() {
       <Headlines />
       <Favorites />
       <Targets />
+      <Experience />
+      <Contact />
     </main>
   );
 }

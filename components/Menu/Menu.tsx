@@ -19,7 +19,7 @@ function Menu() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (<div
-        className={`z-50 fixed top-0 left-0 h-10 w-full transition-colors duration-500 ${scrolled ? "bg-background" : "bg-transparent"
+        className={`z-50 fixed top-0 left-0 h-20 md:h-10 w-full transition-colors duration-500 ${scrolled ? "bg-background" : "bg-transparent"
             }`}
     >
         <Navigation />
