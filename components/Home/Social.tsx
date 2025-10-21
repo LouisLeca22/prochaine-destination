@@ -47,7 +47,7 @@ function Social() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.3 }}
-                    className="md:flex-1 h-[5vh] md:h-screen flex justify-center items-center">
+                    className="md:flex-1  flex justify-center items-center">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
