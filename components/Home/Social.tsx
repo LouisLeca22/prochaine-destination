@@ -120,15 +120,12 @@ function Social() {
                 <Separator width="w-200" />
             </div>
             <div className=" flex md:w-[80vw] mx-auto flex-col md:flex-row">
-                <motion.div variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false, amount: 0.3 }}
-                    className="md:flex-1 flex justify-center items-center">
+                <div className="md:flex-1 flex justify-center items-center">
                     <motion.div
                         initial="hidden"
+                        variants={containerVariants}
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }} className="flex  gap-8"
+                        viewport={{ once: false, amount: 0.3 }} className="flex  gap-8"
                     >
                         <motion.a variants={iconVariants}
                             whileHover={{ scale: 1.1 }}
@@ -144,11 +141,9 @@ function Social() {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }} href="http://youtube.com">
                             <YoutubeIcon width={48} height={48} stroke="#06b6d4" />
-
                         </motion.a>
-
                     </motion.div>
-                </motion.div>
+                </div>
                 <div className="md:flex-2 h-[80vh]">
                     <DomeGallery images={images} grayscale={false} overlayBlurColor="transparent" />
                 </div>
