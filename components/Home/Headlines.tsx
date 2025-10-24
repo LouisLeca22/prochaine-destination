@@ -20,6 +20,7 @@ type Item = {
 
 
 const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
+    const t = useScopedI18n("Home.Headlines")
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
     const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
@@ -50,7 +51,7 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
                 >
                     <h2 className="text-2xl font-bold">{item.title}</h2>
                     <p className="text-lg">{item.desc}</p>
-                    <AnimatedLink href={item.href} text="Voir plus +" />
+                    <AnimatedLink href={item.href} text={t("more")} />
                 </motion.div>
             </div>
         </section>

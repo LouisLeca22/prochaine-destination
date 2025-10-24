@@ -34,6 +34,7 @@ export default {
                 sustainable: "Explore differently: sustainable activities, green stays, and experiences that respect nature.",
                 weekend: "Don’t miss a thing! Concerts, exhibitions, markets — all the best ideas for your weekend out."
             },
+            more: "See more+"
         },
         Favorites: {
             Heading: "Favorites",
@@ -61,7 +62,14 @@ export default {
             Heading: "Follow us on social media"
         },
         Contact: {
-            Heading: "Contact us"
+            Heading: "Contact us",
+            emailFormat: "Please enter a valid email address",
+            emailRequired: "Email is required",
+            messageMin: "Your message must be at least 10 characters long",
+            messageMax: "Your message must be less than 1000 characters",
+            emailLabel: "Email",
+            messageLabel: "Message",
+            submit: "Submit",
         }
     },
     404: {

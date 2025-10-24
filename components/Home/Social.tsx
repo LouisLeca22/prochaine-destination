@@ -144,7 +144,7 @@ function Social() {
                         </motion.a>
                     </motion.div>
                 </div>
-                <div className="md:flex-2 h-[80vh]">
+                <div className="md:flex-2 h-[75vh]">
                     <DomeGallery images={images} grayscale={false} overlayBlurColor="transparent" />
                 </div>
             </div>
