@@ -155,7 +155,7 @@ function ContactForm() {
 function Contact() {
     const t = useScopedI18n("Home.Contact")
     return (
-        <section className="h-screen snap-start ">
+        <section className="h-screen snap-center">
             <div className="sticky z-40 overflow-hidden top-0 left-0 bg-background pt-20 md:pt-15 pb-4 mb-10 text-center flex flex-col items-center">
                 <ScrollFloat
                     animationDuration={1}
