@@ -5,7 +5,7 @@ import Separator from "@/components/ui/Separator"
 import { useScopedI18n } from "@/locales/client"
 import DomeGallery from "@/components//ui/DomeGallery"
 import { motion, Variants } from "framer-motion"
-import { Instagram, Facebook, Youtube, InstagramIcon, FacebookIcon, YoutubeIcon } from "lucide-react"
+import { InstagramIcon, FacebookIcon, YoutubeIcon } from "lucide-react"
 
 const images = [
     {
@@ -106,26 +106,26 @@ function Social() {
 
     return (
         <section className="snap-start">
-            <div className="sticky z-40 overflow-hidden  top-0 left-0 bg-background pt-20 md:pt-15  mb-10 text-center flex flex-col items-center">
+            <div className="sticky z-40 overflow-hidden  top-0 left-0 bg-background pt-20 md:pt-15  mb-10 md:mb-0 text-center flex flex-col items-center">
                 <ScrollFloat
                     animationDuration={1}
                     ease="back.inOut(2)"
                     scrollStart="center bottom+=50%"
                     scrollEnd="bottom bottom-=40%"
                     stagger={0.03}
-                    textClassName="text-5xl font-josefin-sans font-bold text-cyan-500"
+                    textClassName="text-4xl font-josefin-sans font-bold text-cyan-500"
                 >
                     {t("Heading")}
                 </ScrollFloat>
                 <Separator width="w-200" />
             </div>
             <div className=" flex md:w-[80vw] mx-auto flex-col md:flex-row">
-                <div className="md:flex-1 flex justify-center items-center">
+                <div className="md:flex-1  flex justify-center items-center">
                     <motion.div
                         initial="hidden"
                         variants={containerVariants}
                         whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }} className="flex  gap-8"
+                        viewport={{ once: false, amount: 0.3 }} className="flex flex-row md:flex-col gap-8"
                     >
                         <motion.a variants={iconVariants}
                             whileHover={{ scale: 1.1 }}

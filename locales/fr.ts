@@ -71,6 +71,9 @@ export default {
             emailLabel: "E-mail",
             messageLabel: "Message",
             submit: "Envoyer",
+            destination: "Prochaine Destination",
+            emailSuccess: "Votre e-mail a bien été envoyé",
+            emailError: "Votre e-mail n'a pas pu être envoyé"
         }
     },
     404: {

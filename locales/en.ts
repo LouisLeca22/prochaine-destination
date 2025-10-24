@@ -70,6 +70,9 @@ export default {
             emailLabel: "Email",
             messageLabel: "Message",
             submit: "Submit",
+            destination: "Next Destination",
+            emailSuccess: "Your email has been sent successfully",
+            emailError: "Your email could not be sent"
         }
     },
     404: {
