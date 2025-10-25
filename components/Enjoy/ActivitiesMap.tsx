@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -19,6 +19,7 @@ const defaultIcon = L.icon({
 });
 
 L.Marker.prototype.options.icon = defaultIcon;
+
 
 function Cluster({ activities }: { activities: Activity[] }) {
     const map = useMap();
@@ -42,7 +43,29 @@ function Cluster({ activities }: { activities: Activity[] }) {
     return null;
 }
 
-export default function ActivitiesMap({ activities }: { activities: Activity[] }) {
+interface ActivitiesMapProps {
+    activities: Activity[];
+    onBoundsChange: React.Dispatch<React.SetStateAction<L.LatLngBounds | null>>;
+}
+
+function MapEventHandler({ onBoundsChange }: { onBoundsChange: React.Dispatch<React.SetStateAction<L.LatLngBounds | null>>; }) {
+    const map = useMapEvents({
+        moveend: () => {
+            onBoundsChange(map.getBounds());
+        },
+        zoomend: () => {
+            onBoundsChange(map.getBounds());
+        },
+    });
+
+    useEffect(() => {
+        onBoundsChange(map.getBounds());
+    }, [map, onBoundsChange]);
+
+    return null;
+}
+
+export default function ActivitiesMap({ activities, onBoundsChange }: ActivitiesMapProps) {
     return (
         <MapContainer
             center={[49.2, 0.7]}
@@ -55,6 +78,7 @@ export default function ActivitiesMap({ activities }: { activities: Activity[] }
                 attribution='&copy; OpenStreetMap contributors'
             />
             <Cluster activities={activities} />
+            <MapEventHandler onBoundsChange={onBoundsChange} />
         </MapContainer>
     );
 }

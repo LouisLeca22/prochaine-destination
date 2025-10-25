@@ -2,9 +2,11 @@
 
 import { ActivityType } from "@/data";
 import { useActivityFilterStore } from "@/store/activityFilterStore";
+import { useState } from "react";
 
-export default function Filters() {
+export default function ActivitiesFilter() {
     const { keyword, price, type, setKeyword, setType, setPrice } = useActivityFilterStore();
+
 
     return (
         <div className="w-[70vw] self-end flex gap-4 items-center bg-gray-100 p-3 rounded-xl">
