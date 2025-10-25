@@ -1,7 +1,7 @@
 "use client";
 
 import { ActivityType } from "@/data";
-import { useActivityFilterStore } from "@/store/activityFilterSroe";
+import { useActivityFilterStore } from "@/store/activityFilterStore";
 
 export default function Filters() {
     const { keyword, price, type, setKeyword, setType, setPrice } = useActivityFilterStore();
