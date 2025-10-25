@@ -4,8 +4,8 @@ import { ActivityType } from "@/data";
 import { useActivityFilterStore } from "@/store/activityFilterStore";
 import { useState } from "react";
 
-export default function ActivitiesFilter() {
-    const { keyword, price, type, setKeyword, setType, setPrice } = useActivityFilterStore();
+export default function ActivitiesFilter({ onReset }: { onReset?: () => void }) {
+    const { keyword, price, type, setKeyword, setType, setPrice, resetFilters } = useActivityFilterStore();
 
 
     return (
@@ -57,6 +57,13 @@ export default function ActivitiesFilter() {
                     }
                     className="w-16 border rounded-lg px-1"
                 />
+
+                <button
+                    onClick={resetFilters}
+                    className="ml-auto bg-white border border-gray-300 px-3 py-1 rounded-lg hover:bg-gray-200 transition"
+                >
+                    Réinitialiser
+                </button>
             </div>
         </div>
     );

@@ -11,6 +11,7 @@ import { useEffect } from "react";
 
 import iconUrl from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
+import { useActivityFilterStore } from "@/store/activityFilterStore";
 
 const defaultIcon = L.icon({
     iconUrl: iconUrl.src,
@@ -43,29 +44,25 @@ function Cluster({ activities }: { activities: Activity[] }) {
     return null;
 }
 
-interface ActivitiesMapProps {
-    activities: Activity[];
-    onBoundsChange: React.Dispatch<React.SetStateAction<L.LatLngBounds | null>>;
-}
 
-function MapEventHandler({ onBoundsChange }: { onBoundsChange: React.Dispatch<React.SetStateAction<L.LatLngBounds | null>>; }) {
+function MapEventHandler() {
+    const { setMapBounds, mapBounds } = useActivityFilterStore();
     const map = useMapEvents({
-        moveend: () => {
-            onBoundsChange(map.getBounds());
-        },
-        zoomend: () => {
-            onBoundsChange(map.getBounds());
-        },
+        moveend: () => setMapBounds(map.getBounds()),
+        zoomend: () => setMapBounds(map.getBounds()),
     });
 
     useEffect(() => {
-        onBoundsChange(map.getBounds());
-    }, [map, onBoundsChange]);
+        if (mapBounds === null) {
+            map.setView([49.2, 0.7], 8);
+        }
+    }, [mapBounds, map]);
 
     return null;
 }
 
-export default function ActivitiesMap({ activities, onBoundsChange }: ActivitiesMapProps) {
+
+export default function ActivitiesMap({ activities }: { activities: Activity[] }) {
     return (
         <MapContainer
             center={[49.2, 0.7]}
@@ -78,7 +75,7 @@ export default function ActivitiesMap({ activities, onBoundsChange }: Activities
                 attribution='&copy; OpenStreetMap contributors'
             />
             <Cluster activities={activities} />
-            <MapEventHandler onBoundsChange={onBoundsChange} />
+            <MapEventHandler />
         </MapContainer>
     );
 }

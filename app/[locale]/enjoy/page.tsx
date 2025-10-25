@@ -13,8 +13,7 @@ export default function HomePage() {
 
     const allActivities = useMemo(() => activities, []);
 
-    const { keyword, price, type } = useActivityFilterStore();
-    const [mapBounds, setMapBounds] = useState<L.LatLngBounds | null>(null);
+    const { keyword, price, type, mapBounds } = useActivityFilterStore();
 
 
     const [filteredActivities, setFilteredActivities] = useState<Activity[]>(allActivities);
@@ -48,7 +47,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="w-1/2">
-                    <ActivitiesMap activities={filteredActivities} onBoundsChange={setMapBounds}
+                    <ActivitiesMap activities={filteredActivities}
                     />
                 </div>
             </div>
