@@ -1,0 +1,61 @@
+"use client";
+
+import { ActivityType } from "@/data";
+import { useActivityFilterStore } from "@/store/activityFilterSroe";
+
+export default function Filters() {
+    const { keyword, price, type, setKeyword, setType, setPrice } = useActivityFilterStore();
+
+    return (
+        <div className="w-[70vw] self-end flex gap-4 items-center bg-gray-100 p-3 rounded-xl">
+            <input
+                type="text"
+                placeholder="Recherche..."
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+                className="border rounded-lg px-2 py-1 flex-1"
+            />
+
+            <select
+                value={type}
+                onChange={(e) => setType(e.target.value as ActivityType | "all")}
+                className="border rounded-lg px-2 py-1"
+            >
+                <option value="all">Tous les types</option>
+                {Object.entries(ActivityType).map(([key, val]) => (
+                    <option key={key} value={val}>
+                        {key
+                            .toLowerCase()
+                            .replace(/_/g, " ")
+                            .replace(/^\w/, (c) => c.toUpperCase())}
+                    </option>
+                ))}
+            </select>
+
+            <div className="flex items-center gap-2">
+                <label>Prix :</label>
+                <input
+                    type="number"
+                    min={0}
+                    max={100}
+                    value={price[0]}
+                    onChange={(e) =>
+                        setPrice([Number(e.target.value), price[1]])
+                    }
+                    className="w-16 border rounded-lg px-1"
+                />
+                <span>-</span>
+                <input
+                    type="number"
+                    min={0}
+                    max={100}
+                    value={price[1]}
+                    onChange={(e) =>
+                        setPrice([price[0], Number(e.target.value)])
+                    }
+                    className="w-16 border rounded-lg px-1"
+                />
+            </div>
+        </div>
+    );
+}
