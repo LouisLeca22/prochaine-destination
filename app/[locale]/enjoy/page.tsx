@@ -6,10 +6,12 @@ import { activities, Activity } from "@/data";
 import { useActivityFilterStore } from "@/store/activityFilterStore";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ActivitiesMap = dynamic(() => import("@/components/Enjoy/ActivitiesMap"), { ssr: false });
 
 export default function HomePage() {
+    const isMobile = useIsMobile();
 
     const allActivities = useMemo(() => activities, []);
 
@@ -27,7 +29,8 @@ export default function HomePage() {
             return matchesKeyword && matchesType && matchesPrice;
         });
 
-        if (mapBounds) {
+
+        if (mapBounds && !isMobile) {
             filtered = filtered.filter((a) =>
                 mapBounds.contains([a.lat, a.lng])
             );
@@ -35,18 +38,18 @@ export default function HomePage() {
 
 
         setFilteredActivities(filtered);
-    }, [keyword, type, price, mapBounds, allActivities]);
+    }, [keyword, type, price, mapBounds, isMobile, allActivities]);
 
 
     return (
-        <div className="flex pt-5 flex-col gap-4 p-4 h-screen">
-            <ActivitiesFilter />
-            <div className="flex flex-1 gap-4 overflow-hidden">
-                <div className="w-1/2 overflow-y-auto">
+        <div className="flex pt-25 md:pt-6 flex-col gap-4 p-4 h-screen">
+            <ActivitiesFilter activitiesCount={filteredActivities.length} />
+            <div className="flex md:flex-row flex-1 gap-4 overflow-hidden">
+                <div className="w-full md:w-1/2 overflow-y-auto">
                     <ActivitiesList activities={filteredActivities} />
                 </div>
 
-                <div className="w-1/2">
+                <div className="md:block hidden w-1/2">
                     <ActivitiesMap activities={filteredActivities}
                     />
                 </div>

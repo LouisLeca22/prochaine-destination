@@ -2,14 +2,16 @@
 
 import { ActivityType } from "@/data";
 import { useActivityFilterStore } from "@/store/activityFilterStore";
-import { useState } from "react";
 
-export default function ActivitiesFilter({ onReset }: { onReset?: () => void }) {
+export default function ActivitiesFilter({ activitiesCount }: { activitiesCount: number }) {
     const { keyword, price, type, setKeyword, setType, setPrice, resetFilters } = useActivityFilterStore();
 
-
     return (
-        <div className="w-[70vw] self-end flex gap-4 items-center bg-gray-100 p-3 rounded-xl">
+        <div className="md:w-[70vw] md:self-end w-full flex-col md:flex-row flex gap-4 items-center bg-gray-100 p-3 rounded-xl">
+            <span className="ml-4 text-gray-700 font-medium">
+                {activitiesCount} activité{activitiesCount > 1 ? "s" : ""} trouvée{activitiesCount > 1 ? "s" : ""}
+            </span>
+
             <input
                 type="text"
                 placeholder="Recherche..."
@@ -57,14 +59,13 @@ export default function ActivitiesFilter({ onReset }: { onReset?: () => void }) 
                     }
                     className="w-16 border rounded-lg px-1"
                 />
-
-                <button
-                    onClick={resetFilters}
-                    className="ml-auto bg-white border border-gray-300 px-3 py-1 rounded-lg hover:bg-gray-200 transition"
-                >
-                    Réinitialiser
-                </button>
             </div>
+            <button
+                onClick={resetFilters}
+                className="bg-white border border-gray-300 px-3 py-1 rounded-lg hover:bg-gray-200 transition"
+            >
+                Réinitialiser
+            </button>
         </div>
     );
 }
