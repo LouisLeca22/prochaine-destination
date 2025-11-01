@@ -39,11 +39,18 @@ export default {
         CAMPING: 'Camping',
         BUSINESS: "Business hotel"
     },
+    Filter: {
+        searchPlaceholder: "Search",
+        anyType: "Any Type",
+        priceLabel: "Price:",
+        reset: "Reset"
+    },
     Details: {
         summer: "Summer",
         autumn: "Autumn",
         winter: "Winter",
         spring: "Spring",
+        from: "From",
         adults: "Adultes",
         allSeasons: "Toutes les saisons",
         familyFriendly: "Family-friendly",
@@ -129,14 +136,20 @@ export default {
     Activities: {
         Heading: "Activities",
         NoActivity: "No activity found",
-        Filter: {
-            foundActivitySingular: "activity found",
-            foundActivitiesPlural: "activites found",
-            searchPlaceholder: "Search",
-            anyType: "Any Type",
-            priceLabel: "Price:",
-            reset: "Reset"
-        },
+        foundActivitySingular: "activity found",
+        foundActivitiesPlural: "activites found",
+    },
+    Restaurants: {
+        Heading: "Restaurants",
+        NoRestaurant: "No restaurant found",
+        foundRestaurantSingular: "restaurant found",
+        foundRestaurantsPlural: "restaurants found",
+    },
+    Accommodations: {
+        Heading: "Accommodations",
+        NoAccommodation: "No accommodation found",
+        foundAccommodationSingular: "accommodation found",
+        foundAccommodationsPlural: "accommodations found",
     },
     404: {
         notFound: "Page not found...",

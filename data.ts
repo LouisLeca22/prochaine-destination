@@ -72,7 +72,7 @@ export type Restaurant = {
     type: RestaurantType,
     stars: number,
     meetingPoint: string,
-    priceRange: [number, number],
+    price: number,
     lat: number,
     lng: number,
     from: number,
@@ -123,7 +123,7 @@ export type Accommodation = {
     type: AccommodationType,
     stars: number,
     meetingPoint: string,
-    priceRange: [number, number],
+    price: number,
     lat: number,
     lng: number,
     from: number,
@@ -1074,7 +1074,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.BISTRO,
         stars: 4,
         meetingPoint: "2 Rue Adolphe Boissaye, 76790 Étretat, France",
-        priceRange: [25, 70],
+        price: 25,
         lat: 49.7076,
         lng: 0.2045,
         from: 2,
@@ -1089,8 +1089,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/etretat_bistro_1.jpg",
-            "https://example.com/images/etretat_bistro_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Vue mer", "Cuisine normande", "Produits locaux", "Falaises d'Étretat"],
         tagsEN: ["Sea view", "Norman cuisine", "Local products", "Étretat cliffs"],
@@ -1113,7 +1112,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.BREWERY,
         stars: 3,
         meetingPoint: "25 Quai George V, 76600 Le Havre, France",
-        priceRange: [18, 50],
+        price: 18,
         lat: 49.4891,
         lng: 0.1080,
         from: 1,
@@ -1128,8 +1127,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/lehavre_brasserie_1.jpg",
-            "https://example.com/images/lehavre_brasserie_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Brasserie", "Produits de la mer", "Ambiance détendue"],
         tagsEN: ["Brewery", "Seafood", "Casual atmosphere"],
@@ -1153,7 +1151,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CREPERIE,
         stars: 4,
         meetingPoint: "8 Rue Saint-Jacques, 76200 Dieppe, France",
-        priceRange: [12, 35],
+        price: 12,
         lat: 49.9225,
         lng: 1.0773,
         from: 2,
@@ -1168,8 +1166,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/dieppe_creperie_1.jpg",
-            "https://example.com/images/dieppe_creperie_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Crêpes", "Cidre", "Tradition", "Centre-ville"],
         tagsEN: ["Crepes", "Cider", "Tradition", "City center"],
@@ -1193,7 +1190,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CAFE,
         stars: 4,
         meetingPoint: "5 Place du Vieux Marché, 76000 Rouen, France",
-        priceRange: [8, 25],
+        price: 8,
         lat: 49.4428,
         lng: 1.0913,
         from: 1,
@@ -1206,8 +1203,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/rouen_cafe_1.jpg",
-            "https://example.com/images/rouen_cafe_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Café", "Pâtisserie", "Centre historique", "Ambiance bohème"],
         tagsEN: ["Coffee", "Pastry", "Historic center", "Bohemian vibe"],
@@ -1231,7 +1227,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.FOOD_TRUCK,
         stars: 4,
         meetingPoint: "Front de mer, 76400 Fécamp, France",
-        priceRange: [10, 25],
+        price: 10,
         lat: 49.7575,
         lng: 0.3725,
         from: 3,
@@ -1246,8 +1242,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: true,
         vegan: false,
         images: [
-            "https://example.com/images/fecamp_foodtruck_1.jpg",
-            "https://example.com/images/fecamp_foodtruck_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Food truck", "Burgers", "Produits locaux", "Côte d’Albâtre"],
         tagsEN: ["Food truck", "Burgers", "Local products", "Alabaster Coast"],
@@ -1271,7 +1266,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.INN,
         stars: 5,
         meetingPoint: "12 Route de la Vallée, 76450 Cany-Barville, France",
-        priceRange: [30, 75],
+        price: 30,
         lat: 49.7923,
         lng: 0.6351,
         from: 3,
@@ -1286,8 +1281,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/canybarville_inn_1.jpg",
-            "https://example.com/images/canybarville_inn_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Auberge", "Cuisine normande", "Campagne", "Charme"],
         tagsEN: ["Inn", "Norman cuisine", "Countryside", "Charm"],
@@ -1310,7 +1304,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.WINE_BAR,
         stars: 4,
         meetingPoint: "18 Quai d’Amont, 76460 Saint-Valery-en-Caux, France",
-        priceRange: [15, 45],
+        price: 15,
         lat: 49.8689,
         lng: 0.7136,
         from: 3,
@@ -1323,8 +1317,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/saintvalery_winebar_1.jpg",
-            "https://example.com/images/saintvalery_winebar_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Bar à vins", "Charcuterie", "Fromages", "Vue port"],
         tagsEN: ["Wine bar", "Charcuterie", "Cheese", "Harbor view"],
@@ -1348,7 +1341,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.BUFFET,
         stars: 3,
         meetingPoint: "Place de la Gare, 76270 Neufchâtel-en-Bray, France",
-        priceRange: [15, 40],
+        price: 15,
         lat: 49.7333,
         lng: 1.4406,
         from: 2,
@@ -1363,8 +1356,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/neufchatel_buffet_1.jpg",
-            "https://example.com/images/neufchatel_buffet_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Buffet", "Cuisine de bistrot", "Gare", "Produits du terroir"],
         tagsEN: ["Buffet", "Bistro cuisine", "Old station", "Local products"],
@@ -1388,7 +1380,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CANTEEN,
         stars: 4,
         meetingPoint: "14 Rue Victor Hugo, 76600 Le Havre, France",
-        priceRange: [10, 28],
+        price: 10,
         lat: 49.4924,
         lng: 0.1079,
         from: 1,
@@ -1403,8 +1395,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/lehavre_canteen_1.jpg",
-            "https://example.com/images/lehavre_canteen_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Cantine", "Cuisine maison", "Art", "Musique"],
         tagsEN: ["Canteen", "Homemade food", "Art", "Music"],
@@ -1428,7 +1419,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.GASTROPUB,
         stars: 5,
         meetingPoint: "3 Rue du Docteur Bourgeois, 76980 Veules-les-Roses, France",
-        priceRange: [35, 90],
+        price: 35,
         lat: 49.8762,
         lng: 0.7893,
         from: 3,
@@ -1443,8 +1434,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/veules_gastropub_1.jpg",
-            "https://example.com/images/veules_gastropub_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Gastronomie", "Produits du terroir", "Cuisine créative", "Mer"],
         tagsEN: ["Gastronomy", "Local produce", "Creative cuisine", "Sea"],
@@ -1468,7 +1458,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.SNACK_BAR,
         stars: 3,
         meetingPoint: "Promenade du Front de Mer, 76740 Saint-Aubin-sur-Mer, France",
-        priceRange: [6, 20],
+        price: 6,
         lat: 49.8754,
         lng: 0.8629,
         from: 2,
@@ -1481,8 +1471,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/saintaubin_snackbar_1.jpg",
-            "https://example.com/images/saintaubin_snackbar_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Snack", "Plage", "Vue mer", "Ambiance estivale"],
         tagsEN: ["Snack", "Beach", "Sea view", "Summer vibe"],
@@ -1506,7 +1495,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.PIZZERIA,
         stars: 4,
         meetingPoint: "21 Rue des Victoires, 76190 Yvetot, France",
-        priceRange: [10, 28],
+        price: 10,
         lat: 49.6165,
         lng: 0.7542,
         from: 2,
@@ -1521,8 +1510,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: true,
         vegan: true,
         images: [
-            "https://example.com/images/yvetot_pizzeria_1.jpg",
-            "https://example.com/images/yvetot_pizzeria_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Pizzeria", "Four à bois", "Pâte maison", "Produits frais"],
         tagsEN: ["Pizzeria", "Wood-fired", "Homemade dough", "Fresh ingredients"],
@@ -1546,7 +1534,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.TEA_ROOM,
         stars: 5,
         meetingPoint: "10 Rue des Martyrs, 76500 Elbeuf, France",
-        priceRange: [7, 22],
+        price: 7,
         lat: 49.2934,
         lng: 1.0102,
         from: 2,
@@ -1559,8 +1547,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/elbeuf_tearoom_1.jpg",
-            "https://example.com/images/elbeuf_tearoom_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Salon de thé", "Pâtisserie", "Thés rares", "Ambiance élégante"],
         tagsEN: ["Tea room", "Pastries", "Rare teas", "Elegant atmosphere"],
@@ -1584,7 +1571,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CATERER,
         stars: 5,
         meetingPoint: "45 Boulevard de Verdun, 76200 Dieppe, France",
-        priceRange: [25, 80],
+        price: 25,
         lat: 49.9253,
         lng: 1.0775,
         from: 1,
@@ -1597,8 +1584,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: true,
         vegan: true,
         images: [
-            "https://example.com/images/dieppe_caterer_1.jpg",
-            "https://example.com/images/dieppe_caterer_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Traiteur", "Événements", "Produits de la mer", "Mariage"],
         tagsEN: ["Caterer", "Events", "Seafood", "Wedding"],
@@ -1622,7 +1608,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.BISTRO,
         stars: 4,
         meetingPoint: "Quai Berigny, 76400 Fécamp, France",
-        priceRange: [14, 35],
+        price: 14,
         lat: 49.7599,
         lng: 0.3768,
         from: 2,
@@ -1637,8 +1623,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/fecamp_bistro_1.jpg",
-            "https://example.com/images/fecamp_bistro_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Bistrot", "Port", "Cuisine maison", "Ambiance conviviale"],
         tagsEN: ["Bistro", "Harbor", "Homemade food", "Friendly atmosphere"],
@@ -1662,7 +1647,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.INN,
         stars: 4,
         meetingPoint: "12 Route de Forges, 76270 Neufchâtel-en-Bray, France",
-        priceRange: [18, 45],
+        price: 18,
         lat: 49.7311,
         lng: 1.4397,
         from: 3,
@@ -1677,8 +1662,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/neufchatel_inn_1.jpg",
-            "https://example.com/images/neufchatel_inn_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Auberge", "Cuisine normande", "Produits du terroir", "Campagne"],
         tagsEN: ["Inn", "Norman cuisine", "Local products", "Countryside"],
@@ -1702,7 +1686,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CREPERIE,
         stars: 4,
         meetingPoint: "8 Place de la République, 76190 Yvetot, France",
-        priceRange: [10, 25],
+        price: 10,
         lat: 49.6214,
         lng: 0.7531,
         from: 2,
@@ -1717,8 +1701,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/yvetot_creperie_1.jpg",
-            "https://example.com/images/yvetot_creperie_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Crêperie", "Galettes", "Produits locaux", "Ambiance familiale"],
         tagsEN: ["Crêperie", "Savory crêpes", "Local products", "Family friendly"],
@@ -1742,7 +1725,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.BUFFET,
         stars: 4,
         meetingPoint: "85 Quai de Southampton, 76600 Le Havre, France",
-        priceRange: [20, 40],
+        price: 20,
         lat: 49.489,
         lng: 0.1032,
         from: 1,
@@ -1757,8 +1740,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/lehavre_buffet_1.jpg",
-            "https://example.com/images/lehavre_buffet_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Buffet", "Fruits de mer", "Poissons grillés", "Vue sur le port"],
         tagsEN: ["Buffet", "Seafood", "Grilled fish", "Harbor view"],
@@ -1782,7 +1764,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.BREWERY,
         stars: 5,
         meetingPoint: "17 Rue Léon Gambetta, 76290 Montivilliers, France",
-        priceRange: [18, 50],
+        price: 18,
         lat: 49.5443,
         lng: 0.1871,
         from: 2,
@@ -1797,8 +1779,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/montivilliers_brewery_1.jpg",
-            "https://example.com/images/montivilliers_brewery_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Brasserie", "Bière artisanale", "Cuisine locale", "Ambiance conviviale"],
         tagsEN: ["Brewery", "Craft beer", "Local food", "Friendly atmosphere"],
@@ -1822,7 +1803,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.FOOD_TRUCK,
         stars: 4,
         meetingPoint: "Stationné régulièrement à Saint-Valery-en-Caux, 76460 France",
-        priceRange: [8, 18],
+        price: 8,
         lat: 49.8676,
         lng: 0.7149,
         from: 3,
@@ -1837,8 +1818,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/saintvalery_foodtruck_1.jpg",
-            "https://example.com/images/saintvalery_foodtruck_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Food truck", "Burgers", "Cuisine nomade", "Produits locaux"],
         tagsEN: ["Food truck", "Burgers", "Street food", "Local ingredients"],
@@ -1862,7 +1842,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.GASTROPUB,
         stars: 5,
         meetingPoint: "22 Rue du Vieux Marché, 76000 Rouen, France",
-        priceRange: [20, 60],
+        price: 20,
         lat: 49.4424,
         lng: 1.0943,
         from: 2,
@@ -1877,8 +1857,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/rouen_gastropub_1.jpg",
-            "https://example.com/images/rouen_gastropub_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Gastro-pub", "Cuisine créative", "Vins naturels", "Ambiance moderne"],
         tagsEN: ["Gastropub", "Creative cuisine", "Natural wines", "Modern vibe"],
@@ -1902,7 +1881,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CAFE,
         stars: 4,
         meetingPoint: "2 Rue Alphonse Karr, 76790 Étretat, France",
-        priceRange: [6, 20],
+        price: 6,
         lat: 49.7069,
         lng: 0.2053,
         from: 2,
@@ -1915,8 +1894,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/etretat_cafe_1.jpg",
-            "https://example.com/images/etretat_cafe_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Café", "Pâtisserie", "Vue sur mer", "Ambiance artistique"],
         tagsEN: ["Café", "Pastries", "Sea view", "Artistic ambiance"],
@@ -1940,7 +1918,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.SNACK_BAR,
         stars: 3,
         meetingPoint: "Promenade de la Plage, 76980 Veules-les-Roses, France",
-        priceRange: [5, 15],
+        price: 5,
         lat: 49.8735,
         lng: 0.7894,
         from: 3,
@@ -1953,8 +1931,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/veules_snackbar_1.jpg",
-            "https://example.com/images/veules_snackbar_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Snack", "Plage", "Burgers", "Glaces"],
         tagsEN: ["Snack bar", "Beach", "Burgers", "Ice cream"],
@@ -1978,7 +1955,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.WINE_BAR,
         stars: 5,
         meetingPoint: "4 Rue de la Barre, 76200 Dieppe, France",
-        priceRange: [10, 35],
+        price: 10,
         lat: 49.9232,
         lng: 1.0776,
         from: 2,
@@ -1991,8 +1968,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: false,
         images: [
-            "https://example.com/images/dieppe_winebar_1.jpg",
-            "https://example.com/images/dieppe_winebar_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Bar à vins", "Charcuterie", "Fromages", "Ambiance cosy"],
         tagsEN: ["Wine bar", "Charcuterie", "Cheese boards", "Cozy atmosphere"],
@@ -2016,7 +1992,7 @@ export const restaurants: Restaurant[] = [
         type: RestaurantType.CANTEEN,
         stars: 4,
         meetingPoint: "2 Rue du Vieux Moulin, 76280 Saint-Jouin-Bruneval, France",
-        priceRange: [12, 25],
+        price: 12,
         lat: 49.6523,
         lng: 0.1694,
         from: 1,
@@ -2029,8 +2005,7 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://example.com/images/saintjouin_canteen_1.jpg",
-            "https://example.com/images/saintjouin_canteen_2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["Cantine", "Cuisine locale", "Décontracté", "Falaises"],
         tagsEN: ["Canteen", "Local cuisine", "Casual", "Cliffs"],
@@ -2060,11 +2035,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.HOTEL,
         stars: 4,
         meetingPoint: "10 rue du Port, Étretat",
-        priceRange: [120, 250],
+        price: 120,
         lat: 49.706,
         lng: 0.205,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 4,
         open: "08:00",
         close: "22:00",
         bookingRequired: true,
@@ -2085,8 +2060,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: false,
         images: [
-            "./assets/accommodations/falaises1.jpg",
-            "./assets/accommodations/falaises2.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["vue mer", "charme", "centre-ville"],
         tagsEN: ["sea view", "charming", "downtown"],
@@ -2110,11 +2084,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.AUBERGE,
         stars: 3,
         meetingPoint: "2 chemin du Moulin, Saint-Jouin-Bruneval",
-        priceRange: [85, 140],
+        price: 85,
         lat: 49.638,
         lng: 0.167,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "07:30",
         close: "21:00",
         bookingRequired: false,
@@ -2135,9 +2109,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: false,
         images: [
-            "./assets/accommodations/auberge1.jpg",
-            "./assets/accommodations/auberge2.jpg",
-            "./assets/accommodations/auberge3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["campagne", "calme", "gastronomie locale"],
         tagsEN: ["countryside", "quiet", "local cuisine"],
@@ -2161,11 +2133,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.CAMPING,
         stars: 4,
         meetingPoint: "Route de la Plage, Saint-Pierre-en-Port",
-        priceRange: [45, 110],
+        price: 45,
         lat: 49.790,
         lng: 0.555,
-        from: 2025,
-        to: 2025,
+        from: 2,
+        to: 5,
         open: "07:00",
         close: "22:00",
         bookingRequired: false,
@@ -2186,9 +2158,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/camping1.jpg",
-            "./assets/accommodations/camping2.jpg",
-            "./assets/accommodations/camping3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["bord de mer", "nature", "famille"],
         tagsEN: ["seaside", "nature", "family"],
@@ -2212,11 +2182,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.BED_AND_BREAKFAST,
         stars: 4,
         meetingPoint: "12 rue des Peintres, Yport",
-        priceRange: [95, 160],
+        price: 95,
         lat: 49.723,
         lng: 0.313,
-        from: 2025,
-        to: 2025,
+        from: 2,
+        to: 5,
         open: "08:00",
         close: "21:00",
         bookingRequired: true,
@@ -2237,9 +2207,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/maisonarts1.jpg",
-            "./assets/accommodations/maisonarts2.jpg",
-            "./assets/accommodations/maisonarts3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["charme", "culture", "tranquillité"],
         tagsEN: ["charming", "cultural", "peaceful"],
@@ -2263,11 +2231,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.HOTEL,
         stars: 5,
         meetingPoint: "Boulevard Albert Ier, Fécamp",
-        priceRange: [180, 420],
+        price: 180,
         lat: 49.758,
         lng: 0.372,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "07:00",
         close: "23:00",
         bookingRequired: true,
@@ -2288,9 +2256,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/horizonspa1.jpg",
-            "./assets/accommodations/horizonspa2.jpg",
-            "./assets/accommodations/horizonspa3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["vue mer", "spa", "luxe"],
         tagsEN: ["sea view", "spa", "luxury"],
@@ -2314,11 +2280,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.GUEST_HOUSE,
         stars: 3,
         meetingPoint: "Chemin du Vallon, Les Loges",
-        priceRange: [70, 130],
+        price: 70,
         lat: 49.678,
         lng: 0.248,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 4,
         open: "08:00",
         close: "22:00",
         bookingRequired: false,
@@ -2339,9 +2305,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/vallonvert1.jpg",
-            "./assets/accommodations/vallonvert2.jpg",
-            "./assets/accommodations/vallonvert3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["campagne", "gîte", "tranquillité"],
         tagsEN: ["countryside", "cottage", "peaceful"],
@@ -2365,11 +2329,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.RESIDENCE,
         stars: 4,
         meetingPoint: "Avenue des Embruns, Étretat",
-        priceRange: [110, 220],
+        price: 110,
         lat: 49.709,
         lng: 0.204,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 5,
         open: "08:00",
         close: "22:00",
         bookingRequired: true,
@@ -2390,9 +2354,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/voilesblanches1.jpg",
-            "./assets/accommodations/voilesblanches2.jpg",
-            "./assets/accommodations/voilesblanches3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["mer", "famille", "modernité"],
         tagsEN: ["sea", "family", "modern"],
@@ -2416,11 +2378,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.AUBERGE,
         stars: 2,
         meetingPoint: "6 quai du Port, Fécamp",
-        priceRange: [35, 80],
+        price: 35,
         lat: 49.758,
         lng: 0.378,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 4,
         open: "07:00",
         close: "23:00",
         bookingRequired: false,
@@ -2441,9 +2403,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/voyageur1.jpg",
-            "./assets/accommodations/voyageur2.jpg",
-            "./assets/accommodations/voyageur3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["auberge", "convivialité", "budget"],
         tagsEN: ["hostel", "friendly", "budget"],
@@ -2467,11 +2427,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.VACATION_RENTAL,
         stars: 4,
         meetingPoint: "Forêt de Grainval, Vattetot-sur-Mer",
-        priceRange: [120, 200],
+        price: 120,
         lat: 49.733,
         lng: 0.295,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 5,
         open: "09:00",
         close: "20:00",
         bookingRequired: true,
@@ -2492,9 +2452,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: false,
         images: [
-            "./assets/accommodations/cabanechenes1.jpg",
-            "./assets/accommodations/cabanechenes2.jpg",
-            "./assets/accommodations/cabanechenes3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["nature", "insolite", "déconnexion"],
         tagsEN: ["nature", "unusual", "disconnect"],
@@ -2518,11 +2476,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.GUEST_HOUSE,
         stars: 4,
         meetingPoint: "Promenade Guy de Maupassant, Étretat",
-        priceRange: [150, 280],
+        price: 150,
         lat: 49.710,
         lng: 0.206,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "08:00",
         close: "21:00",
         bookingRequired: true,
@@ -2543,9 +2501,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/villabelleepoque1.jpg",
-            "./assets/accommodations/villabelleepoque2.jpg",
-            "./assets/accommodations/villabelleepoque3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["vue mer", "romantique", "charme"],
         tagsEN: ["sea view", "romantic", "charming"],
@@ -2569,11 +2525,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.BUSINESS,
         stars: 4,
         meetingPoint: "Rue du 129e Régiment Infanterie, Le Havre",
-        priceRange: [110, 220],
+        price: 110,
         lat: 49.492,
         lng: 0.125,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 4,
         open: "06:00",
         close: "23:00",
         bookingRequired: true,
@@ -2594,9 +2550,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/lehavrebusiness1.jpg",
-            "./assets/accommodations/lehavrebusiness2.jpg",
-            "./assets/accommodations/lehavrebusiness3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["affaires", "centre-ville", "confort"],
         tagsEN: ["business", "downtown", "comfort"],
@@ -2620,11 +2574,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.CAMPING,
         stars: 3,
         meetingPoint: "Chemin des Falaises, Yport",
-        priceRange: [25, 90],
+        price: 25,
         lat: 49.739,
         lng: 0.320,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 5,
         open: "07:30",
         close: "22:00",
         openTwo: "08:00",
@@ -2647,9 +2601,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/campingfalaises1.jpg",
-            "./assets/accommodations/campingfalaises2.jpg",
-            "./assets/accommodations/campingfalaises3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["famille", "nature", "bord de mer"],
         tagsEN: ["family", "nature", "seaside"],
@@ -2673,11 +2625,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.AUBERGE,
         stars: 4,
         meetingPoint: "Chemin du Moulin Vert, Criquetot-l’Esneval",
-        priceRange: [90, 180],
+        price: 90,
         lat: 49.653,
         lng: 0.254,
-        from: 2025,
-        to: 2025,
+        from: 2,
+        to: 6,
         open: "08:00",
         close: "20:00",
         bookingRequired: true,
@@ -2698,9 +2650,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/moulinvert1.jpg",
-            "./assets/accommodations/moulinvert2.jpg",
-            "./assets/accommodations/moulinvert3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["campagne", "authentique", "calme"],
         tagsEN: ["countryside", "authentic", "peaceful"],
@@ -2724,11 +2674,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.HOTEL,
         stars: 5,
         meetingPoint: "Boulevard Albert 1er, Fécamp",
-        priceRange: [220, 420],
+        price: 220,
         lat: 49.759,
         lng: 0.367,
-        from: 2025,
-        to: 2025,
+        from: 2,
+        to: 5,
         open: "07:00",
         close: "23:00",
         bookingRequired: true,
@@ -2749,9 +2699,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/vaguesbleues1.jpg",
-            "./assets/accommodations/vaguesbleues2.jpg",
-            "./assets/accommodations/vaguesbleues3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["spa", "vue mer", "détente"],
         tagsEN: ["spa", "sea view", "relaxation"],
@@ -2775,11 +2723,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.BED_AND_BREAKFAST,
         stars: 3,
         meetingPoint: "Place du Marché, Le Havre",
-        priceRange: [75, 140],
+        price: 75,
         lat: 49.494,
         lng: 0.107,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 4,
         open: "07:30",
         close: "21:30",
         bookingRequired: true,
@@ -2800,9 +2748,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/cours1.jpg",
-            "./assets/accommodations/cours2.jpg",
-            "./assets/accommodations/cours3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["centre-ville", "charmant", "accueil"],
         tagsEN: ["city center", "charming", "welcoming"],
@@ -2826,11 +2772,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.RESIDENCE,
         stars: 3,
         meetingPoint: "Avenue du Littoral, Saint-Jouin-Bruneval",
-        priceRange: [95, 170],
+        price: 95,
         lat: 49.657,
         lng: 0.189,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "08:00",
         close: "20:00",
         bookingRequired: true,
@@ -2851,9 +2797,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/residencealizes1.jpg",
-            "./assets/accommodations/residencealizes2.jpg",
-            "./assets/accommodations/residencealizes3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["résidence", "famille", "autonomie"],
         tagsEN: ["residence", "family", "independent"],
@@ -2877,11 +2821,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.AUBERGE,
         stars: 3,
         meetingPoint: "Route de Gonneville, Maniquerville",
-        priceRange: [80, 160],
+        price: 80,
         lat: 49.674,
         lng: 0.325,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "07:30",
         close: "22:00",
         bookingRequired: true,
@@ -2902,9 +2846,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/vieuxpressoir1.jpg",
-            "./assets/accommodations/vieuxpressoir2.jpg",
-            "./assets/accommodations/vieuxpressoir3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["gastronomie", "tradition", "campagne"],
         tagsEN: ["gastronomy", "tradition", "countryside"],
@@ -2928,11 +2870,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.VACATION_RENTAL,
         stars: 4,
         meetingPoint: "Chemin des Sapins, Saint-Léonard",
-        priceRange: [130, 250],
+        price: 130,
         lat: 49.735,
         lng: 0.345,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 5,
         open: "08:00",
         close: "21:00",
         bookingRequired: true,
@@ -2953,9 +2895,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/boisdormants1.jpg",
-            "./assets/accommodations/boisdormants2.jpg",
-            "./assets/accommodations/boisdormants3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["écologique", "forêt", "calme"],
         tagsEN: ["eco-friendly", "forest", "peaceful"],
@@ -2979,11 +2919,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.RESIDENCE,
         stars: 4,
         meetingPoint: "Chemin du Manoir, Bénouville",
-        priceRange: [100, 190],
+        price: 100,
         lat: 49.664,
         lng: 0.235,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 5,
         open: "09:00",
         close: "20:00",
         bookingRequired: true,
@@ -3004,9 +2944,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/residencedesarts1.jpg",
-            "./assets/accommodations/residencedesarts2.jpg",
-            "./assets/accommodations/residencedesarts3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["culture", "artistes", "création"],
         tagsEN: ["culture", "artists", "creativity"],
@@ -3030,11 +2968,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.VACATION_RENTAL,
         stars: 4,
         meetingPoint: "Chemin du Belvédère, Senneville-sur-Fécamp",
-        priceRange: [120, 230],
+        price: 120,
         lat: 49.786,
         lng: 0.405,
-        from: 2025,
-        to: 2025,
+        from: 2,
+        to: 5,
         open: "08:00",
         close: "21:00",
         bookingRequired: true,
@@ -3055,9 +2993,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/gitefalaises1.jpg",
-            "./assets/accommodations/gitefalaises2.jpg",
-            "./assets/accommodations/gitefalaises3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["falaises", "randonnée", "mer"],
         tagsEN: ["cliffs", "hiking", "sea"],
@@ -3081,11 +3017,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.BUSINESS,
         stars: 4,
         meetingPoint: "Rue de la République, Le Havre",
-        priceRange: [120, 250],
+        price: 120,
         lat: 49.494,
         lng: 0.112,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "06:00",
         close: "23:00",
         bookingRequired: true,
@@ -3106,9 +3042,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/businesscentral1.jpg",
-            "./assets/accommodations/businesscentral2.jpg",
-            "./assets/accommodations/businesscentral3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["affaires", "centre-ville", "professionnel"],
         tagsEN: ["business", "downtown", "professional"],
@@ -3132,11 +3066,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.CAMPING,
         stars: 3,
         meetingPoint: "Route de la Plage, Veules-les-Roses",
-        priceRange: [30, 90],
+        price: 30,
         lat: 49.810,
         lng: 0.650,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 4,
         open: "07:00",
         close: "22:00",
         openTwo: "08:00",
@@ -3159,9 +3093,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: false,
         laundryService: true,
         images: [
-            "./assets/accommodations/coquillages1.jpg",
-            "./assets/accommodations/coquillages2.jpg",
-            "./assets/accommodations/coquillages3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["famille", "plage", "nature"],
         tagsEN: ["family", "beach", "nature"],
@@ -3185,11 +3117,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.HOTEL,
         stars: 5,
         meetingPoint: "Allée du Château, Saint-Valéry-en-Caux",
-        priceRange: [250, 450],
+        price: 250,
         lat: 49.767,
         lng: 0.395,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "08:00",
         close: "22:00",
         bookingRequired: true,
@@ -3210,9 +3142,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/chateauriviere1.jpg",
-            "./assets/accommodations/chateauriviere2.jpg",
-            "./assets/accommodations/chateauriviere3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["château", "romantique", "patrimoine"],
         tagsEN: ["castle", "romantic", "heritage"],
@@ -3236,11 +3166,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.BUSINESS,
         stars: 4,
         meetingPoint: "Boulevard de Strasbourg, Le Havre",
-        priceRange: [130, 260],
+        price: 130,
         lat: 49.495,
         lng: 0.115,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "06:00",
         close: "23:00",
         bookingRequired: true,
@@ -3261,9 +3191,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/corporatelehavre1.jpg",
-            "./assets/accommodations/corporatelehavre2.jpg",
-            "./assets/accommodations/corporatelehavre3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["affaires", "professionnel", "centre-ville"],
         tagsEN: ["business", "professional", "downtown"],
@@ -3287,11 +3215,11 @@ export const accommodations: Accommodation[] = [
         type: AccommodationType.BUSINESS,
         stars: 4,
         meetingPoint: "Quai de la Seine, Le Havre",
-        priceRange: [140, 280],
+        price: 140,
         lat: 49.493,
         lng: 0.120,
-        from: 2025,
-        to: 2025,
+        from: 1,
+        to: 6,
         open: "06:00",
         close: "23:00",
         bookingRequired: true,
@@ -3312,9 +3240,7 @@ export const accommodations: Accommodation[] = [
         conciergeService: true,
         laundryService: true,
         images: [
-            "./assets/accommodations/executiveseine1.jpg",
-            "./assets/accommodations/executiveseine2.jpg",
-            "./assets/accommodations/executiveseine3.jpg"
+            "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
         ],
         tagsFR: ["affaires", "moderne", "centre-ville"],
         tagsEN: ["business", "modern", "downtown"],

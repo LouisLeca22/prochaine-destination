@@ -87,8 +87,8 @@ function NavLinks() {
 
     const links = [
         { key: "explore", href: "/explore" },
-        { key: "stay", href: "/stay" },
-        { key: "taste", href: "/taste" },
+        { key: "stay", href: "/accommodations" },
+        { key: "taste", href: "/restaurants" },
         { key: "enjoy", href: "/activities" },
     ] as const
 

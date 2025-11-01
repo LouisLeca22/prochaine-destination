@@ -1,8 +1,8 @@
 "use client";
 
-import { ActivityType } from "@/data";
+import { AccommodationType } from "@/data";
 import { useScopedI18n } from "@/locales/client";
-import { useActivityFilterStore } from "@/store/activityFilterState";
+import { useAccommodationFilterStore } from "@/store/accommodationFilterState";
 import { Input } from "@/components/ui/Input";
 import {
     Select,
@@ -13,17 +13,17 @@ import {
 } from "@/components/ui/Select"
 import CountUp from "../ui/CountUp";
 
-export default function ActivitiesFilter({ activitiesCount }: { activitiesCount: number }) {
-    const { keyword, price, setKeyword, setType, setPrice, resetFilters } = useActivityFilterStore();
+export default function AccommodationsFilter({ accommodationsCount }: { accommodationsCount: number }) {
+    const { keyword, price, setKeyword, setType, setPrice, resetFilters } = useAccommodationFilterStore();
     const t1 = useScopedI18n("Filter")
     const t2 = useScopedI18n("Types")
-    const t3 = useScopedI18n("Activities")
+    const t3 = useScopedI18n("Accommodations")
 
     return (
         <div className="shadow-sm md:h-15 text-primary-foreground self-center w-full md:w-[70vw] flex-col md:flex-row flex gap-4 items-center bg-secondary p-3 mb-3 rounded-xl">
             <span className="ml-4 font-medium">
-                <CountUp from={0} to={activitiesCount} className="mr-1" />
-                {activitiesCount > 1 ? t3("foundActivitiesPlural") : t3("foundActivitySingular")}
+                <CountUp from={0} to={accommodationsCount} className="mr-1" />
+                {accommodationsCount > 1 ? t3("foundAccommodationsPlural") : t3("foundAccommodationSingular")}
             </span>
 
             <Input
@@ -34,7 +34,7 @@ export default function ActivitiesFilter({ activitiesCount }: { activitiesCount:
                 className="border text-primary-foreground! border-primary-foreground px-2 py-1 flex-1 dark:bg-transparent placeholder:text-primary-foreground"
             />
 
-            <Select defaultValue="all" onValueChange={(val) => setType(val as ActivityType | "all")}
+            <Select defaultValue="all" onValueChange={(val) => setType(val as AccommodationType | "all")}
             >
                 <SelectTrigger className="md:w-[180px] w-full text-primary-foreground! border-primary-foreground dark:bg-transparent">
                     <SelectValue className="hover:bg-primary-foreground! hover:text-white!" />
@@ -47,9 +47,9 @@ export default function ActivitiesFilter({ activitiesCount }: { activitiesCount:
                     >
                         {t1("anyType")}
                     </SelectItem>
-                    {Object.entries(ActivityType).map(([key, val]) => (
+                    {Object.entries(AccommodationType).map(([key, val]) => (
                         <SelectItem className="text-primary-foreground! hover:bg-primary-foreground! hover:text-white!" key={key} value={val}>
-                            {t2(key as keyof typeof ActivityType)}
+                            {t2(key as keyof typeof AccommodationType)}
                         </SelectItem>
                     ))}
                 </SelectContent>

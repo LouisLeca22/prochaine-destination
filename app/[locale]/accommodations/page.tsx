@@ -1,9 +1,9 @@
 "use client";
 import SplitText from "@/components/ui/SplitText";
-import ActivitiesList from "@/components/Activities/ActivitiesList";
-import ActivitiesFilter from "@/components/Activities/ActivitiesFilter";
-import { activities, Activity } from "@/data";
-import { useActivityFilterStore } from "@/store/activityFilterState";
+import AccommodationsList from "@/components/Accommodations/AccommodationsList";
+import AccommodationsFilter from "@/components/Accommodations/AccommodationsFilter";
+import { Accommodation, accommodations } from "@/data";
+import { useAccommodationFilterStore } from "@/store/accommodationFilterState";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -11,25 +11,25 @@ import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-const ActivitiesMap = dynamic(() => import("@/components/Activities/ActivityMap"), { ssr: false });
+const AccommodationsMap = dynamic(() => import("@/components/Accommodations/AccommodationMap"), { ssr: false });
 
-export default function ActivitiesPage() {
+export default function AccommodationsPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const idFromUrl = searchParams.get("id");
 
 
     const locale = useCurrentLocale()
-    const t = useScopedI18n("Activities")
+    const t = useScopedI18n("Accommodations")
 
     const isMobile = useIsMobile();
 
-    const allActivities = useMemo(() => activities, []);
+    const allAccommodations = useMemo(() => accommodations, []);
 
-    const { keyword, price, type, mapBounds, selectedId, setKeyword, setType, setPrice, setSelectedId } = useActivityFilterStore();
+    const { keyword, price, type, mapBounds, selectedId, setKeyword, setType, setPrice, setSelectedId } = useAccommodationFilterStore();
 
 
-    const [filteredActivities, setFilteredActivities] = useState<Activity[]>(allActivities);
+    const [filteredAccommodations, setFilteredAccommodations] = useState<Accommodation[]>(allAccommodations);
     useEffect(() => {
         const keywordParam = searchParams.get("keyword") || "";
         const typeParam = (searchParams.get("type") as any) || "all";
@@ -68,7 +68,7 @@ export default function ActivitiesPage() {
     }, [keyword, type, price, router]);
 
     useEffect(() => {
-        let filtered = allActivities.filter((a) => {
+        let filtered = allAccommodations.filter((a) => {
             const name = locale === "fr" ? a.nameFR : a.nameEN
             const matchesKeyword = name.toLowerCase().includes(keyword.toLowerCase());
             const matchesType = type === "all" || a.type === type;
@@ -85,8 +85,8 @@ export default function ActivitiesPage() {
         }
 
 
-        setFilteredActivities(filtered);
-    }, [keyword, type, price, mapBounds, isMobile, allActivities]);
+        setFilteredAccommodations(filtered);
+    }, [keyword, type, price, mapBounds, isMobile, allAccommodations]);
 
 
     return (
@@ -104,14 +104,14 @@ export default function ActivitiesPage() {
                 rootMargin="-100px"
                 textAlign={isMobile ? "center" : "end"}
             />
-            <ActivitiesFilter activitiesCount={filteredActivities.length} />
+            <AccommodationsFilter accommodationsCount={filteredAccommodations.length} />
             <div className="flex md:flex-row flex-1 gap-4 overflow-hidden">
                 <div className="w-full md:w-1/2 overflow-y-auto">
-                    <ActivitiesList activities={filteredActivities} />
+                    <AccommodationsList accommodations={filteredAccommodations} />
                 </div>
 
                 <div className="md:block hidden w-1/2">
-                    <ActivitiesMap activities={filteredActivities}
+                    <AccommodationsMap accommodations={filteredAccommodations}
                     />
                 </div>
             </div>

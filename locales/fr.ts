@@ -39,11 +39,18 @@ export default {
         CAMPING: 'Camping',
         BUSINESS: "Hôtel d’affaires"
     },
+    Filter: {
+        searchPlaceholder: "Rechercher",
+        anyType: "Tout type",
+        priceLabel: "Prix :",
+        reset: "Réinitaliser",
+    },
     Details: {
         summer: "Été",
         autumn: "Automne",
         winter: "Hiver",
         spring: "Printemps",
+        from: "À partir de",
         allSeasons: "all seasons",
         familyFriendly: "Familial",
         ecoFriendly: "Éco-responsable",
@@ -129,14 +136,20 @@ export default {
     Activities: {
         Heading: "Activités",
         NoActivity: "Aucune activité trouvée",
-        Filter: {
-            foundActivitySingular: "activitée trouvée",
-            foundActivitiesPlural: "activitées trouvées",
-            searchPlaceholder: "Rechercher",
-            anyType: "Tout type",
-            priceLabel: "Prix :",
-            reset: "Réinitaliser",
-        },
+        foundActivitySingular: "activitée trouvée",
+        foundActivitiesPlural: "activitées trouvées",
+    },
+    Restaurants: {
+        Heading: "Restaurants",
+        NoRestaurant: "Aucun restaurant trouvé",
+        foundRestaurantSingular: "restaurant trouvé",
+        foundRestaurantsPlural: "restaurants trouvés",
+    },
+    Accommodations: {
+        Heading: "Hébergements",
+        NoAccommodation: "Aucun hébergement trouvé",
+        foundAccommodationSingular: "hébergement trouvé",
+        foundAccommodationsPlural: "hébergements trouvées",
     },
     404: {
         notFound: "Cette page n'existe pas...",

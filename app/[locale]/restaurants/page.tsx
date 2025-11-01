@@ -1,9 +1,9 @@
 "use client";
 import SplitText from "@/components/ui/SplitText";
-import ActivitiesList from "@/components/Activities/ActivitiesList";
-import ActivitiesFilter from "@/components/Activities/ActivitiesFilter";
-import { activities, Activity } from "@/data";
-import { useActivityFilterStore } from "@/store/activityFilterState";
+import RestaurantsList from "@/components/Restaurants/RestaurantsList";
+import RestaurantsFilter from "@/components/Restaurants/RestaurantsFilter";
+import { Restaurant, restaurants } from "@/data";
+import { useRestaurantFilterStore } from "@/store/restaurantFilterState";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -11,25 +11,25 @@ import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-const ActivitiesMap = dynamic(() => import("@/components/Activities/ActivityMap"), { ssr: false });
+const RestaurantsMap = dynamic(() => import("@/components/Restaurants/RestaurantMap"), { ssr: false });
 
-export default function ActivitiesPage() {
+export default function RestaurantsPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const idFromUrl = searchParams.get("id");
 
 
     const locale = useCurrentLocale()
-    const t = useScopedI18n("Activities")
+    const t = useScopedI18n("Restaurants")
 
     const isMobile = useIsMobile();
 
-    const allActivities = useMemo(() => activities, []);
+    const allRestaurants = useMemo(() => restaurants, []);
 
-    const { keyword, price, type, mapBounds, selectedId, setKeyword, setType, setPrice, setSelectedId } = useActivityFilterStore();
+    const { keyword, price, type, mapBounds, selectedId, setKeyword, setType, setPrice, setSelectedId } = useRestaurantFilterStore();
 
 
-    const [filteredActivities, setFilteredActivities] = useState<Activity[]>(allActivities);
+    const [filteredRestaurants, setFilteredRestaurants] = useState<Restaurant[]>(allRestaurants);
     useEffect(() => {
         const keywordParam = searchParams.get("keyword") || "";
         const typeParam = (searchParams.get("type") as any) || "all";
@@ -68,7 +68,7 @@ export default function ActivitiesPage() {
     }, [keyword, type, price, router]);
 
     useEffect(() => {
-        let filtered = allActivities.filter((a) => {
+        let filtered = allRestaurants.filter((a) => {
             const name = locale === "fr" ? a.nameFR : a.nameEN
             const matchesKeyword = name.toLowerCase().includes(keyword.toLowerCase());
             const matchesType = type === "all" || a.type === type;
@@ -85,8 +85,8 @@ export default function ActivitiesPage() {
         }
 
 
-        setFilteredActivities(filtered);
-    }, [keyword, type, price, mapBounds, isMobile, allActivities]);
+        setFilteredRestaurants(filtered);
+    }, [keyword, type, price, mapBounds, isMobile, allRestaurants]);
 
 
     return (
@@ -104,14 +104,14 @@ export default function ActivitiesPage() {
                 rootMargin="-100px"
                 textAlign={isMobile ? "center" : "end"}
             />
-            <ActivitiesFilter activitiesCount={filteredActivities.length} />
+            <RestaurantsFilter restaurantsCount={filteredRestaurants.length} />
             <div className="flex md:flex-row flex-1 gap-4 overflow-hidden">
                 <div className="w-full md:w-1/2 overflow-y-auto">
-                    <ActivitiesList activities={filteredActivities} />
+                    <RestaurantsList restaurants={filteredRestaurants} />
                 </div>
 
                 <div className="md:block hidden w-1/2">
-                    <ActivitiesMap activities={filteredActivities}
+                    <RestaurantsMap restaurants={filteredRestaurants}
                     />
                 </div>
             </div>

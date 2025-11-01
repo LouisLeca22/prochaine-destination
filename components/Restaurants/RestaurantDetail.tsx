@@ -1,10 +1,10 @@
 "use client";
 
-import { Activity } from "@/data";
+import { Restaurant } from "@/data";
 import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useActivityFilterStore } from "@/store/activityFilterState";
+import { useRestaurantFilterStore } from "@/store/restaurantFilterState";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -48,24 +48,24 @@ const MapContainer = dynamic(() => import("react-leaflet").then(m => m.MapContai
 const TileLayer = dynamic(() => import("react-leaflet").then(m => m.TileLayer), { ssr: false });
 const Marker = dynamic(() => import("react-leaflet").then(m => m.Marker), { ssr: false });
 
-interface ActivityDetailProps {
-    activities: Activity[];
+interface RestaurantDetailProps {
+    restaurants: Restaurant[];
     closeDrawer: () => void;
     openDrawer: (id: number) => void;
 }
 
-export default function ActivityDetail({
-    activities,
+export default function RestaurantDetail({
+    restaurants,
     closeDrawer,
     openDrawer,
-}: ActivityDetailProps) {
+}: RestaurantDetailProps) {
     const locale = useCurrentLocale();
     const t1 = useScopedI18n("Types")
     const t2 = useScopedI18n("Details")
-    const { selectedId } = useActivityFilterStore();
-    const activity = activities.find((a) => a.id === selectedId);
+    const { selectedId } = useRestaurantFilterStore();
+    const restaurant = restaurants.find((a) => a.id === selectedId);
 
-    if (!activity) return null;
+    if (!restaurant) return null;
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -77,9 +77,9 @@ export default function ActivityDetail({
         return () => window.removeEventListener('keydown', handleKeyDown)
     }, [])
 
-    if (activity) {
-        const tags = locale === "fr" ? activity.tagsFR : activity?.tagsEN
-        const includes = locale === "fr" ? activity.includesFR : activity?.includesEN
+    if (restaurant) {
+        const tags = locale === "fr" ? restaurant.tagsFR : restaurant?.tagsEN
+        const includes = locale === "fr" ? restaurant.includesFR : restaurant?.includesEN
 
         return (
             <AnimatePresence mode="wait">
@@ -118,11 +118,11 @@ export default function ActivityDetail({
                                     modules={[Pagination, Autoplay]}
                                     className="h-full w-full"
                                 >
-                                    {activity.images.map((image, index) => (
+                                    {restaurant.images.map((image, index) => (
                                         <SwiperSlide key={index}>
                                             <Image
                                                 src={image}
-                                                alt={locale === "fr" ? activity.nameFR : activity.nameEN}
+                                                alt={locale === "fr" ? restaurant.nameFR : restaurant.nameEN}
                                                 fill
                                                 className="object-cover"
                                             />
@@ -140,14 +140,14 @@ export default function ActivityDetail({
                             >
                                 {/* Titre & type */}
                                 <h2 className="text-3xl font-bold text-center mb-2 text-primary">
-                                    {locale === "fr" ? activity.nameFR : activity.nameEN}
+                                    {locale === "fr" ? restaurant.nameFR : restaurant.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
                                 <div className="flex items-center gap-2 text-gray-600 text-sm">
                                     <span className="uppercase tracking-wide font-medium font-inter">
-                                        {t1(activity.type)}
+                                        {t1(restaurant.type)}
                                     </span>
-                                    <span className="text-primary font-semibold">— {t2("from")} {activity.price} €</span>
+                                    <span className="text-primary font-semibold"> — {t2("from")} {restaurant.price} €</span>
                                 </div>
 
                                 {/* Tags */}
@@ -168,7 +168,7 @@ export default function ActivityDetail({
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }} className="text-gray-700 text-base leading-relaxed text-center mt-2 font-inter">
-                                    {locale === "fr" ? activity.descriptionFR : activity.descriptionEN}
+                                    {locale === "fr" ? restaurant.descriptionFR : restaurant.descriptionEN}
                                 </motion.p>
 
                                 {/* Infos principales */}
@@ -184,11 +184,11 @@ export default function ActivityDetail({
                                     initial="hidden"
                                     animate="visible"
                                 >
-                                    <InfoCard icon={<Clock />} text={activity.duration} />
-                                    <InfoCard icon={<Calendar />} text={t2(activity.season)} />
-                                    {activity.family && <InfoCard icon={<Users />} text={t2("familyFriendly")} />}
-                                    {activity.ecoFriendly && <InfoCard icon={<Leaf />} text={t2("ecoFriendly")} />}
-                                    {activity.ecoFriendly && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />}
+                                    {/* <InfoCard icon={<Clock />} text={restaurant.duration} />
+                                    <InfoCard icon={<Calendar />} text={t2(restaurant.season)} />
+                                    {restaurant.family && <InfoCard icon={<Users />} text={t2("familyFriendly")} />}
+                                    {restaurant.ecoFriendly && <InfoCard icon={<Leaf />} text={t2("ecoFriendly")} />}
+                                    {restaurant.ecoFriendly && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />} */}
                                 </motion.div>
 
                                 {/* Horaires + Lieu */}
@@ -198,12 +198,12 @@ export default function ActivityDetail({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    <div className="flex items-center gap-2 text-gray-800 font-semibold">
+                                    {/* <div className="flex items-center gap-2 text-gray-800 font-semibold">
                                         <Clock className="w-5 h-5 text-primary" />
                                         {t2("startTimes")}
                                     </div>
                                     <div className="flex gap-2 flex-wrap">
-                                        {activity.startTimes.map((time, i) => (
+                                        {restaurant.startTimes.map((time, i) => (
                                             <span
                                                 key={i}
                                                 className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
@@ -211,13 +211,13 @@ export default function ActivityDetail({
                                                 {time}
                                             </span>
                                         ))}
-                                    </div>
+                                    </div> */}
 
                                     <div className="flex items-center gap-2 mt-4 text-gray-800 font-semibold">
                                         <MapPin className="w-5 h-5 text-primary" />
                                         {t2("address")}
                                     </div>
-                                    <p className="text-gray-700 text-sm ml-7">{activity.meetingPoint}</p>
+                                    <p className="text-gray-700 text-sm ml-7">{restaurant.meetingPoint}</p>
                                 </motion.div>
 
                                 {/* Carte Leaflet */}
@@ -225,7 +225,7 @@ export default function ActivityDetail({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }} className="w-full h-64 mt-6 rounded-2xl overflow-hidden shadow">
                                     <MapContainer
-                                        center={[activity.lat, activity.lng]}
+                                        center={[restaurant.lat, restaurant.lng]}
                                         zoom={13}
                                         style={{ width: "100%", height: "100%" }}
                                         scrollWheelZoom={false}
@@ -234,7 +234,7 @@ export default function ActivityDetail({
                                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                             attribution="&copy; OpenStreetMap contributors"
                                         />
-                                        <Marker position={[activity.lat, activity.lng]}></Marker>
+                                        <Marker position={[restaurant.lat, restaurant.lng]}></Marker>
                                     </MapContainer>
                                 </motion.div>
 
@@ -268,43 +268,43 @@ export default function ActivityDetail({
                                 >
                                     <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-primary">
                                         <Users className="w-5 h-5" />
-                                        {activity.provider}
+                                        {restaurant.provider}
                                     </h3>
 
                                     {/* Provider */}
-                                    <p className="text-gray-800 font-medium">{activity.provider}</p>
+                                    <p className="text-gray-800 font-medium">{restaurant.provider}</p>
 
                                     {/* Contact rows */}
                                     <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
                                         {/* Row 1: Email / Phone */}
                                         <a
-                                            href={`mailto:${activity.email}`}
+                                            href={`mailto:${restaurant.email}`}
                                             className="flex items-center gap-2 hover:text-primary transition-colors"
                                         >
                                             <Mail className="w-4 h-4 text-primary" />
-                                            {activity.email}
+                                            {restaurant.email}
                                         </a>
                                         <a
-                                            href={`tel:${activity.phone}`}
+                                            href={`tel:${restaurant.phone}`}
                                             className="flex items-center gap-2 hover:text-primary transition-colors"
                                         >
                                             <Phone className="w-4 h-4 text-primary" />
-                                            {activity.phone}
+                                            {restaurant.phone}
                                         </a>
 
                                         {/* Row 2: Website / Socials */}
                                         <a
-                                            href={activity.website}
+                                            href={restaurant.website}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center gap-2 hover:text-primary transition-colors"
                                         >
                                             <Globe className="w-4 h-4 text-primary" />
-                                            {activity.website.replace(/^https?:\/\//, "")}
+                                            {restaurant.website.replace(/^https?:\/\//, "")}
                                         </a>
                                         <div className="flex items-center gap-4">
                                             <a
-                                                href={activity.facebook}
+                                                href={restaurant.facebook}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Facebook"
@@ -312,7 +312,7 @@ export default function ActivityDetail({
                                                 <Facebook className="w-5 h-5 text-primary hover:text-secondary transition-colors" />
                                             </a>
                                             <a
-                                                href={activity.instagram}
+                                                href={restaurant.instagram}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Instagram"
@@ -331,7 +331,7 @@ export default function ActivityDetail({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    <Popover>
+                                    {/* <Popover>
                                         <PopoverTrigger asChild>
                                             <Button
                                                 variant="outline"
@@ -344,15 +344,15 @@ export default function ActivityDetail({
                                         <PopoverContent className="w-auto p-0">
                                             <ShadCalendar
                                                 mode="multiple"
-                                                selected={activity.availability.map((d) => new Date(d))}
+                                                selected={restaurant.availability.map((d) => new Date(d))}
                                             />
                                         </PopoverContent>
-                                    </Popover>
+                                    </Popover> */}
 
-                                    {activity.externalBookingLink && (
+                                    {restaurant.externalBookingLink && (
                                         <Button
                                             className="flex-1 bg-secondary text-primary-foreground hover:bg-secondary/90 transition-colors"
-                                            onClick={() => window.open(activity.externalBookingLink, "_blank")}
+                                            onClick={() => window.open(restaurant.externalBookingLink, "_blank")}
                                         >
                                             <ExternalLink className="w-4 h-4 mr-2" />
                                             {t2("bookNow")}
@@ -367,8 +367,8 @@ export default function ActivityDetail({
                                 <button
                                     className="text-3xl font-bold text-secondary-foreground hover:text-primary cursor-pointer"
                                     onClick={() => {
-                                        const index = activities.findIndex((a) => a.id === selectedId);
-                                        const prev = activities[index - 1];
+                                        const index = restaurants.findIndex((a) => a.id === selectedId);
+                                        const prev = restaurants[index - 1];
                                         if (prev) openDrawer(prev.id);
                                     }}
                                 >
@@ -380,8 +380,8 @@ export default function ActivityDetail({
                                 <button
                                     className="text-3xl font-bold text-secondary-foreground hover:text-secondary cursor-pointer"
                                     onClick={() => {
-                                        const index = activities.findIndex((a) => a.id === selectedId);
-                                        const next = activities[index + 1];
+                                        const index = restaurants.findIndex((a) => a.id === selectedId);
+                                        const next = restaurants[index + 1];
                                         if (next) openDrawer(next.id);
                                     }}
                                 >

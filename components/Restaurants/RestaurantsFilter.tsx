@@ -1,8 +1,8 @@
 "use client";
 
-import { ActivityType } from "@/data";
+import { RestaurantType } from "@/data";
 import { useScopedI18n } from "@/locales/client";
-import { useActivityFilterStore } from "@/store/activityFilterState";
+import { useRestaurantFilterStore } from "@/store/restaurantFilterState";
 import { Input } from "@/components/ui/Input";
 import {
     Select,
@@ -13,17 +13,17 @@ import {
 } from "@/components/ui/Select"
 import CountUp from "../ui/CountUp";
 
-export default function ActivitiesFilter({ activitiesCount }: { activitiesCount: number }) {
-    const { keyword, price, setKeyword, setType, setPrice, resetFilters } = useActivityFilterStore();
+export default function RestaurantsFilter({ restaurantsCount }: { restaurantsCount: number }) {
+    const { keyword, price, setKeyword, setType, setPrice, resetFilters } = useRestaurantFilterStore();
     const t1 = useScopedI18n("Filter")
     const t2 = useScopedI18n("Types")
-    const t3 = useScopedI18n("Activities")
+    const t3 = useScopedI18n("Restaurants")
 
     return (
         <div className="shadow-sm md:h-15 text-primary-foreground self-center w-full md:w-[70vw] flex-col md:flex-row flex gap-4 items-center bg-secondary p-3 mb-3 rounded-xl">
             <span className="ml-4 font-medium">
-                <CountUp from={0} to={activitiesCount} className="mr-1" />
-                {activitiesCount > 1 ? t3("foundActivitiesPlural") : t3("foundActivitySingular")}
+                <CountUp from={0} to={restaurantsCount} className="mr-1" />
+                {restaurantsCount > 1 ? t3("foundRestaurantsPlural") : t3("foundRestaurantSingular")}
             </span>
 
             <Input
@@ -34,7 +34,7 @@ export default function ActivitiesFilter({ activitiesCount }: { activitiesCount:
                 className="border text-primary-foreground! border-primary-foreground px-2 py-1 flex-1 dark:bg-transparent placeholder:text-primary-foreground"
             />
 
-            <Select defaultValue="all" onValueChange={(val) => setType(val as ActivityType | "all")}
+            <Select defaultValue="all" onValueChange={(val) => setType(val as RestaurantType | "all")}
             >
                 <SelectTrigger className="md:w-[180px] w-full text-primary-foreground! border-primary-foreground dark:bg-transparent">
                     <SelectValue className="hover:bg-primary-foreground! hover:text-white!" />
@@ -47,9 +47,9 @@ export default function ActivitiesFilter({ activitiesCount }: { activitiesCount:
                     >
                         {t1("anyType")}
                     </SelectItem>
-                    {Object.entries(ActivityType).map(([key, val]) => (
+                    {Object.entries(RestaurantType).map(([key, val]) => (
                         <SelectItem className="text-primary-foreground! hover:bg-primary-foreground! hover:text-white!" key={key} value={val}>
-                            {t2(key as keyof typeof ActivityType)}
+                            {t2(key as keyof typeof RestaurantType)}
                         </SelectItem>
                     ))}
                 </SelectContent>
