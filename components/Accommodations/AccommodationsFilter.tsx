@@ -19,6 +19,7 @@ export default function AccommodationsFilter({ accommodationsCount }: { accommod
     const t2 = useScopedI18n("Types")
     const t3 = useScopedI18n("Accommodations")
 
+
     return (
         <div className="shadow-sm md:h-15 text-primary-foreground self-center w-full md:w-[70vw] flex-col md:flex-row flex gap-4 items-center bg-secondary p-3 mb-3 rounded-xl">
             <span className="ml-4 font-medium">
