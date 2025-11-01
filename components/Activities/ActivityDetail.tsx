@@ -21,7 +21,7 @@ import {
     Info,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/Button_temp";
+import { Button } from "@/components/ui/Button";
 import {
     Popover,
     PopoverContent,
