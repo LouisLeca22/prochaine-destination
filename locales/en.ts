@@ -39,6 +39,22 @@ export default {
         CAMPING: 'Camping',
         BUSINESS: "Business hotel"
     },
+    Details: {
+        summer: "Summer",
+        autumn: "Autumn",
+        winter: "Winter",
+        spring: "Spring",
+        adults: "Adultes",
+        allSeasons: "Toutes les saisons",
+        familyFriendly: "Family-friendly",
+        ecoFriendly: "Eco-friendly",
+        bookingRequired: "Booking required",
+        startTimes: "Start times",
+        address: "Address",
+        included: "Included",
+        availableDates: "View available dates",
+        bookNow: "Book now"
+    },
     Menu: {
         explore: "Explore",
         stay: "Stay",

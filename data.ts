@@ -34,7 +34,7 @@ export type Activity = {
     tagsEN: string[],
     includesFR: string[],
     includesEN: string[],
-    season: "spring" | "summer" | "winter" | "autumn" | "all"
+    season: "spring" | "summer" | "winter" | "autumn" | "allSeasons"
     ecoFriendly: boolean
     externalBookingLink: string
     provider: string,

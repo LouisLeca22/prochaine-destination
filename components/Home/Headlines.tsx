@@ -50,7 +50,7 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
                     style={{ y }}
                 >
                     <h2 className="text-2xl font-bold">{item.title}</h2>
-                    <p className="text-lg">{item.desc}</p>
+                    <p className="text-lg font-inter">{item.desc}</p>
                     <AnimatedLink href={item.href} text={t("more")} />
                 </motion.div>
             </div>
