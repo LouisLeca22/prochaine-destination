@@ -113,7 +113,7 @@ function Social() {
                     scrollStart="center bottom+=50%"
                     scrollEnd="bottom bottom-=40%"
                     stagger={0.03}
-                    textClassName="text-3xl md:text-4xl font-josefin-sans font-bold text-cyan-500"
+                    textClassName="text-3xl font-josefin-sans font-bold text-cyan-500"
                 >
                     {t("Heading")}
                 </ScrollFloat>

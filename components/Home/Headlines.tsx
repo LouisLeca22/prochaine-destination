@@ -28,7 +28,7 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
     return (
         <section className="h-[50vh] md:m-10 pt-20 md:pt-10 relative">
             <div
-                className={`md:max-w-[1300px] h-full m-auto flex items-center justify-center md:gap-20 
+                className={`max-w-[1100px] h-full m-auto flex items-center justify-center md:gap-20 
         ${reverse ? "md:flex-row-reverse" : ""}
         flex-col md:flex-row`}
             >
@@ -49,8 +49,8 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
            absolute md:static inset-0 md:inset-auto p-6 md:p-0  text-white md:text-foreground"
                     style={{ y }}
                 >
-                    <h2 className="text-2xl font-bold">{item.title}</h2>
-                    <p className="text-lg font-inter">{item.desc}</p>
+                    <h2 className="text-xl font-bold">{item.title}</h2>
+                    <p className=" font-inter">{item.desc}</p>
                     <AnimatedLink href={item.href} text={t("more")} />
                 </motion.div>
             </div>
@@ -111,7 +111,7 @@ function Headlines() {
                     scrollStart='center bottom+=50%'
                     scrollEnd='bottom bottom-=40%'
                     stagger={0.03}
-                    textClassName="text-3xl md:text-4xl font-josefin-sans font-bold text-primary"
+                    textClassName="text-3xl font-josefin-sans font-bold text-primary"
                 >
                     {t("Heading")}
                 </ScrollFloat>
