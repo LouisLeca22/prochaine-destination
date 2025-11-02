@@ -34,7 +34,7 @@ export default function AccommodationsPage() {
         const keywordParam = searchParams.get("keyword") || "";
         const typeParam = (searchParams.get("type") as any) || "all";
         const minPrice = Number(searchParams.get("minPrice")) || 0;
-        const maxPrice = Number(searchParams.get("maxPrice")) || 100;
+        const maxPrice = Number(searchParams.get("maxPrice")) || 1000;
 
         setKeyword(keywordParam);
         setType(typeParam);
@@ -59,7 +59,7 @@ export default function AccommodationsPage() {
         if (keyword) params.set("keyword", keyword);
         if (type && type !== "all") params.set("type", type);
         if (price[0] !== 0) params.set("minPrice", price[0].toString());
-        if (price[1] !== 100) params.set("maxPrice", price[1].toString());
+        if (price[1] !== 1000) params.set("maxPrice", price[1].toString());
 
         const queryString = params.toString();
         const newUrl = queryString ? `?${queryString}` : window.location.pathname;

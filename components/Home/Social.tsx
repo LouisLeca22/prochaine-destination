@@ -6,6 +6,7 @@ import { useScopedI18n } from "@/locales/client"
 import DomeGallery from "@/components//ui/DomeGallery"
 import { motion, Variants } from "framer-motion"
 import { InstagramIcon, FacebookIcon, YoutubeIcon, LinkedinIcon } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const images = [
     {
@@ -84,6 +85,7 @@ const images = [
 ]
 
 function Social() {
+    const isMobile = useIsMobile()
     const t = useScopedI18n("Home.Social")
 
     const containerVariants: Variants = {
@@ -149,7 +151,7 @@ function Social() {
                         </motion.a>
                     </motion.div>
                 </div>
-                <div className="md:flex-2 h-[75vh]">
+                <div className="md:flex-2 md:h-screen h-[75vh] mt-15 md:mt-0">
                     <DomeGallery images={images} grayscale={false} overlayBlurColor="transparent" />
                 </div>
             </div>

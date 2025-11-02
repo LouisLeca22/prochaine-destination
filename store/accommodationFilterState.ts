@@ -20,7 +20,7 @@ interface AccommodationFilterState {
 export const useAccommodationFilterStore = create<AccommodationFilterState>((set) => ({
     keyword: "",
     type: "all",
-    price: [0, 800],
+    price: [0, 700],
     mapBounds: null,
     selectedId: null,
 
@@ -35,7 +35,7 @@ export const useAccommodationFilterStore = create<AccommodationFilterState>((set
         set({
             keyword: "",
             type: "all",
-            price: [0, 800],
+            price: [0, 500],
             mapBounds: null,
         }),
 }));
