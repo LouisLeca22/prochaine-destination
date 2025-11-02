@@ -53,9 +53,9 @@
   --card-foreground: oklch(0.25 0.03 250);
   --popover: oklch(0.97 0.015 230);
   --popover-foreground: oklch(0.25 0.03 250);
-  --primary: oklch(0.7150 0.1430 215.22);
-  --primary-foreground: oklch(0.52 0.105 223.128);
-  --secondary: oklch(0.905 0.093 164.15);
+  --primary: #7eb8bc;
+  --primary-foreground: #52898c;
+  --secondary: #ddcfcc;
   --secondary-foreground: oklch(0.765 0.177 163.223);
   --muted: oklch(0.93 0.02 230);
   --muted-foreground: oklch(0.45 0.03 250);
@@ -145,14 +145,17 @@
 }
 
 .marker-cluster-small {
+  color: white;
   background-color: var(--color-primary) !important;
 }
 
 .marker-cluster-medium {
+  color: white;
   background-color: var(--color-primary) !important;
 }
 
 .marker-cluster-large {
+  color: white;
   background-color: var(--color-primary) !important;
 }
 

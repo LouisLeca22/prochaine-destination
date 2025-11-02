@@ -1,6 +1,6 @@
 "use client";
 
-import { Restaurant } from "@/data";
+import { Restaurant, WeekdaysEN, WeekdaysFR } from "@/data";
 import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,10 +10,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import {
-    Calendar,
+    Star,
     Clock,
+    Vegan,
+    Hamburger,
+    PackageCheck,
+    Accessibility,
     MapPin,
-    Leaf,
     Users,
     ExternalLink,
     Hash,
@@ -28,12 +31,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/Popover";
-import { Calendar as ShadCalendar } from "@/components/ui/Calendar";
+
 
 import dynamic from "next/dynamic";
 
@@ -99,12 +97,17 @@ export default function RestaurantDetail({
                         >
                             {/* Close button */}
                             <button
-                                className="absolute top-4 right-4 text-secondary rounded-2xl cursor-pointer z-80 "
+                                className="absolute top-4 right-4 cursor-pointer z-80  p-1"
                                 onClick={closeDrawer}
                             >
-                                <X strokeWidth={3} style={{
-                                    filter: "drop-shadow(0 0 2px #40A0FF) drop-shadow(0 0 2px 40A0FF)"
-                                }} size={40} className="text-shadow-lg hover:scale-110 transition-transform" />
+                                <X
+                                    size={40}
+                                    strokeWidth={2}
+                                    className="text-secondary-foreground hover:scale-110 transition-transform"
+                                    style={{
+                                        filter: "drop-shadow(0 0 1px black) drop-shadow(0 0 1px black)"
+                                    }}
+                                />
                             </button>
 
                             {/* Swiper */}
@@ -143,11 +146,18 @@ export default function RestaurantDetail({
                                     {locale === "fr" ? restaurant.nameFR : restaurant.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
-                                <div className="flex items-center gap-2 text-gray-600 text-sm">
+                                <div className="flex  items-baseline gap-2 text-gray-600 text-sm">
                                     <span className="uppercase tracking-wide font-medium font-inter">
                                         {t1(restaurant.type)}
                                     </span>
                                     <span className="text-primary font-semibold"> — {t2("from")} {restaurant.price} €</span>
+                                </div>
+
+                                {/*  Stars */}
+                                <div className="flex justify-center gap-1">
+                                    {[...Array(restaurant.stars)].map((_, i) => (
+                                        <Star key={i} className="w-5 h-5 text-primary fill-secondary" />
+                                    ))}
                                 </div>
 
                                 {/* Tags */}
@@ -184,11 +194,11 @@ export default function RestaurantDetail({
                                     initial="hidden"
                                     animate="visible"
                                 >
-                                    {/* <InfoCard icon={<Clock />} text={restaurant.duration} />
-                                    <InfoCard icon={<Calendar />} text={t2(restaurant.season)} />
-                                    {restaurant.family && <InfoCard icon={<Users />} text={t2("familyFriendly")} />}
-                                    {restaurant.ecoFriendly && <InfoCard icon={<Leaf />} text={t2("ecoFriendly")} />}
-                                    {restaurant.ecoFriendly && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />} */}
+                                    {restaurant.vegan && <InfoCard icon={<Vegan />} text={t2("vegan")} />}
+                                    {restaurant.deliveryAvailable && <InfoCard icon={<PackageCheck />} text={t2("deliveryAvailable")} />}
+                                    {restaurant.takeAwayAvailable && <InfoCard icon={<Hamburger />} text={t2("takeAwayAvailable")} />}
+                                    {restaurant.accessibility && <InfoCard icon={<Accessibility />} text={t2("accessibility")} />}
+                                    {restaurant.bookingRequired && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />}
                                 </motion.div>
 
                                 {/* Horaires + Lieu */}
@@ -198,20 +208,47 @@ export default function RestaurantDetail({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    {/* <div className="flex items-center gap-2 text-gray-800 font-semibold">
+
+
+                                    <div className="flex items-center gap-2 text-gray-800 font-semibold">
                                         <Clock className="w-5 h-5 text-primary" />
-                                        {t2("startTimes")}
+                                        {t2("openingDays")}
+                                    </div>
+                                    {locale === "fr" && (
+                                        <div className="flex gap-2 flex-wrap">
+                                            <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                                                {`${WeekdaysFR[restaurant.from]} – ${WeekdaysFR[restaurant.to]}`}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {locale === "en" && (
+                                        <div className="flex gap-2 flex-wrap">
+                                            <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                                                {`${WeekdaysEN[restaurant.from]} – ${WeekdaysEN[restaurant.to]}`}
+                                            </span>
+                                        </div>
+                                    )}
+
+                                    <div className="flex items-center gap-2 text-gray-800 font-semibold">
+                                        <Clock className="w-5 h-5 text-primary" />
+                                        {t2("openingHours")}
                                     </div>
                                     <div className="flex gap-2 flex-wrap">
-                                        {restaurant.startTimes.map((time, i) => (
+                                        <span
+                                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                                        >
+                                            {restaurant.open} — {restaurant.close}
+                                        </span>
+
+                                        {restaurant.openTwo && restaurant.closeTwo &&
                                             <span
-                                                key={i}
                                                 className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                                             >
-                                                {time}
+                                                {restaurant.openTwo} — {restaurant.closeTwo}
                                             </span>
-                                        ))}
-                                    </div> */}
+                                        }
+
+                                    </div>
 
                                     <div className="flex items-center gap-2 mt-4 text-gray-800 font-semibold">
                                         <MapPin className="w-5 h-5 text-primary" />

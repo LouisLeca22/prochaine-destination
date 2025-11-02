@@ -98,13 +98,19 @@ export default function ActivityDetail({
                             transition={{ type: "tween", duration: 0.4 }}
                         >
                             {/* Close button */}
+                            {/* Close button */}
                             <button
-                                className="absolute top-4 right-4 text-secondary rounded-2xl cursor-pointer z-80 "
+                                className="absolute top-4 right-4 cursor-pointer z-80  p-1"
                                 onClick={closeDrawer}
                             >
-                                <X strokeWidth={3} style={{
-                                    filter: "drop-shadow(0 0 2px #40A0FF) drop-shadow(0 0 2px 40A0FF)"
-                                }} size={40} className="text-shadow-lg hover:scale-110 transition-transform" />
+                                <X
+                                    size={40}
+                                    strokeWidth={2}
+                                    className="text-secondary-foreground hover:scale-110 transition-transform"
+                                    style={{
+                                        filter: "drop-shadow(0 0 1px black) drop-shadow(0 0 1px black)"
+                                    }}
+                                />
                             </button>
 
                             {/* Swiper */}
@@ -143,7 +149,7 @@ export default function ActivityDetail({
                                     {locale === "fr" ? activity.nameFR : activity.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
-                                <div className="flex items-center gap-2 text-gray-600 text-sm">
+                                <div className="flex items-baseline gap-2 text-gray-600 text-sm">
                                     <span className="uppercase tracking-wide font-medium font-inter">
                                         {t1(activity.type)}
                                     </span>
@@ -188,7 +194,7 @@ export default function ActivityDetail({
                                     <InfoCard icon={<Calendar />} text={t2(activity.season)} />
                                     {activity.family && <InfoCard icon={<Users />} text={t2("familyFriendly")} />}
                                     {activity.ecoFriendly && <InfoCard icon={<Leaf />} text={t2("ecoFriendly")} />}
-                                    {activity.ecoFriendly && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />}
+                                    {activity.bookingRequired && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />}
                                 </motion.div>
 
                                 {/* Horaires + Lieu */}

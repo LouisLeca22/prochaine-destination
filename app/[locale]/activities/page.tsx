@@ -93,7 +93,7 @@ export default function ActivitiesPage() {
         <div className="flex flex-col gap-4 p-4 h-screen">
             <SplitText
                 text={t("Heading")}
-                className="text-3xl md:p-3 mt-20 md:mt-0 tracking-wide md:text-5xl text-cyan-500 font-extrabold text-shadow-sm font-inter "
+                className="text-3xl md:p-3 mt-20 md:mt-0 tracking-wide md:text-5xl text-primary font-extrabold text-shadow-sm font-inter "
                 delay={100}
                 duration={0.6}
                 ease="power3.out"

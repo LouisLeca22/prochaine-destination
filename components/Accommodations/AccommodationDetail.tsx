@@ -1,6 +1,6 @@
 "use client";
 
-import { Accommodation } from "@/data";
+import { Accommodation, WeekdaysEN, WeekdaysFR } from "@/data";
 import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,9 +11,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import {
     Calendar,
-    Clock,
     MapPin,
-    Leaf,
+    Star,
     Users,
     ExternalLink,
     Hash,
@@ -25,6 +24,20 @@ import {
     Globe,
     Facebook,
     Instagram,
+    Clock,
+    Accessibility,
+    PawPrint,
+    SquareParking,
+    Wifi,
+    WavesLadder,
+    AirVent,
+    Coffee,
+    ChefHat,
+    Leaf,
+    Bike,
+    Waves,
+    KeyRound,
+    WashingMachine,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
@@ -99,12 +112,17 @@ export default function AccommodationDetail({
                         >
                             {/* Close button */}
                             <button
-                                className="absolute top-4 right-4 text-secondary rounded-2xl cursor-pointer z-80 "
+                                className="absolute top-4 right-4 cursor-pointer z-80  p-1"
                                 onClick={closeDrawer}
                             >
-                                <X strokeWidth={3} style={{
-                                    filter: "drop-shadow(0 0 2px #40A0FF) drop-shadow(0 0 2px 40A0FF)"
-                                }} size={40} className="text-shadow-lg hover:scale-110 transition-transform" />
+                                <X
+                                    size={40}
+                                    strokeWidth={2}
+                                    className="text-secondary-foreground hover:scale-110 transition-transform"
+                                    style={{
+                                        filter: "drop-shadow(0 0 1px black) drop-shadow(0 0 1px black)"
+                                    }}
+                                />
                             </button>
 
                             {/* Swiper */}
@@ -143,11 +161,18 @@ export default function AccommodationDetail({
                                     {locale === "fr" ? accommodation.nameFR : accommodation.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
-                                <div className="flex items-center gap-2 text-gray-600 text-sm">
+                                <div className="flex items-baseline gap-2 text-gray-600 text-sm">
                                     <span className="uppercase tracking-wide font-medium font-inter">
                                         {t1(accommodation.type)}
                                     </span>
                                     <span className="text-primary font-semibold"> — {t2("from")} {accommodation.price} €</span>
+                                </div>
+
+                                {/*  Stars */}
+                                <div className="flex justify-center gap-1">
+                                    {[...Array(accommodation.stars)].map((_, i) => (
+                                        <Star key={i} className="w-5 h-5 text-primary fill-secondary" />
+                                    ))}
                                 </div>
 
                                 {/* Tags */}
@@ -184,11 +209,21 @@ export default function AccommodationDetail({
                                     initial="hidden"
                                     animate="visible"
                                 >
-                                    {/* <InfoCard icon={<Clock />} text={accommodation.duration} />
-                                    <InfoCard icon={<Calendar />} text={t2(accommodation.season)} />
-                                    {accommodation.family && <InfoCard icon={<Users />} text={t2("familyFriendly")} />}
+                                    {accommodation.laundryService && <InfoCard icon={<WashingMachine />} text={t2("laundryService")} />}
+                                    {accommodation.conciergeService && <InfoCard icon={<KeyRound />} text={t2("conciergeService")} />}
+                                    {accommodation.scenicView && <InfoCard icon={<Waves />} text={t2("scenicView")} />}
+                                    {accommodation.bikeFriendly && <InfoCard icon={<Bike />} text={t2("bikeFriendly")} />}
                                     {accommodation.ecoFriendly && <InfoCard icon={<Leaf />} text={t2("ecoFriendly")} />}
-                                    {accommodation.ecoFriendly && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />} */}
+                                    {accommodation.familyFriendly && <InfoCard icon={<Users />} text={t2("familyFriendly")} />}
+                                    {accommodation.restaurantOnSite && <InfoCard icon={<ChefHat />} text={t2("restaurantOnSite")} />}
+                                    {accommodation.breakfastIncluded && <InfoCard icon={<Coffee />} text={t2("breakfastIncluded")} />}
+                                    {accommodation.airConditioning && <InfoCard icon={<AirVent />} text={t2("airConditioning")} />}
+                                    {accommodation.pool && <InfoCard icon={<WavesLadder />} text={t2("pool")} />}
+                                    {accommodation.wifi && <InfoCard icon={<Wifi />} text={t2("wifi")} />}
+                                    {accommodation.parking && <InfoCard icon={<SquareParking />} text={t2("parking")} />}
+                                    {accommodation.petAllowed && <InfoCard icon={<PawPrint />} text={t2("petAllowed")} />}
+                                    {accommodation.accessibility && <InfoCard icon={<Accessibility />} text={t2("accessibility")} />}
+                                    {accommodation.bookingRequired && <InfoCard icon={<CheckCircle2 />} text={t2("bookingRequired")} />}
                                 </motion.div>
 
                                 {/* Horaires + Lieu */}
@@ -198,26 +233,51 @@ export default function AccommodationDetail({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    {/* <div className="flex items-center gap-2 text-gray-800 font-semibold">
+
+                                    <div className="flex items-center gap-2 text-gray-800 font-semibold">
                                         <Clock className="w-5 h-5 text-primary" />
-                                        {t2("startTimes")}
+                                        {t2("openingDays")}
+                                    </div>
+                                    {locale === "fr" && (
+                                        <div className="flex gap-2 flex-wrap">
+                                            <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                                                {`${WeekdaysEN[accommodation.from]} – ${WeekdaysEN[accommodation.to]}`}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {locale === "en" && (
+                                        <div className="flex gap-2 flex-wrap">
+                                            <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                                                {`${WeekdaysFR[accommodation.from]} – ${WeekdaysFR[accommodation.to]}`}
+                                            </span>
+                                        </div>
+                                    )}
+
+                                    <div className="flex items-center gap-2 text-gray-800 font-semibold">
+                                        <Clock className="w-5 h-5 text-primary" />
+                                        {t2("openingHours")}
                                     </div>
                                     <div className="flex gap-2 flex-wrap">
-                                        {accommodation.startTimes.map((time, i) => (
+                                        <span
+                                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                                        >
+                                            {accommodation.open} — {accommodation.close}
+                                        </span>
+
+                                        {accommodation.openTwo && accommodation.closeTwo &&
                                             <span
-                                                key={i}
                                                 className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                                             >
-                                                {time}
+                                                {accommodation.openTwo} — {accommodation.closeTwo}
                                             </span>
-                                        ))}
-                                    </div> */}
+                                        }
 
+                                    </div>
                                     <div className="flex items-center gap-2 mt-4 text-gray-800 font-semibold">
                                         <MapPin className="w-5 h-5 text-primary" />
                                         {t2("address")}
                                     </div>
-                                    <p className="text-gray-700 text-sm ml-7">{accommodation.meetingPoint}</p>
+                                    <p className="text-gray-700 text-sm ml-7">{accommodation.meetingPoint} — {accommodation.distanceToCityCenter} km {t2("fromCityCenter")}</p>
                                 </motion.div>
 
                                 {/* Carte Leaflet */}
@@ -331,7 +391,7 @@ export default function AccommodationDetail({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    {/* <Popover>
+                                    <Popover>
                                         <PopoverTrigger asChild>
                                             <Button
                                                 variant="outline"
@@ -347,7 +407,7 @@ export default function AccommodationDetail({
                                                 selected={accommodation.availability.map((d) => new Date(d))}
                                             />
                                         </PopoverContent>
-                                    </Popover> */}
+                                    </Popover>
 
                                     {accommodation.externalBookingLink && (
                                         <Button
