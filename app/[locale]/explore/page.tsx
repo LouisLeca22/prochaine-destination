@@ -75,8 +75,7 @@ export default function ExplorePage() {
                     </h1>
                 </div>
             </header>
-
-            <section className="h-screen max-w-6xl mx-auto my-16 px-6 grid md:grid-cols-2 gap-8 items-center">
+            <section className="max-w-6xl mx-auto my-16 px-6 grid md:grid-cols-2 gap-8 items-center">
                 <motion.div
                     className="grid grid-cols-2 gap-4"
                     initial={{ opacity: 0, x: -80 }}
@@ -91,7 +90,7 @@ export default function ExplorePage() {
                                 hidden: { opacity: 0, y: 40 },
                                 show: { opacity: 1, y: 0 },
                             }}
-                            className="relative w-full h-50 rounded-3xl overflow-hidden shadow-xl  hover:shadow-2xl transition-shadow duration-300"
+                            className="relative w-full  aspect-square rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
                         >
                             <Image
                                 src={src}
@@ -113,7 +112,7 @@ export default function ExplorePage() {
                     <h2 className="text-3xl font-josefin-sans font-bold text-primary mb-4">
                         Découvrir autrement
                     </h2>
-                    <Separator width="w-100" className="mx-auto" />
+                    <Separator width="w-40" className="mx-auto " />
                     <p className="leading-relaxed mt-10">
                         Découvrez des lieux chargés d’histoire, des expériences uniques et des
                         rencontres inattendues. Chaque destination révèle une atmosphère, un
@@ -128,7 +127,7 @@ export default function ExplorePage() {
                     enableBlur={true}
                     baseRotation={5}
                     blurStrength={10}
-                    textClassName="text-3xl!"
+                    textClassName="text-xl!"
                 >
                     When does a man die? When he is hit by a bullet? No! When he suffers a disease?
                     No! When he ate a soup made out of a poisonous mushroom?
