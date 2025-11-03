@@ -146,19 +146,23 @@
 
 .marker-cluster-small {
   background-color: var(--color-primary) !important;
+  color: white !important
 }
 
 .marker-cluster-medium {
   background-color: var(--color-primary) !important;
+  color: white !important
 }
 
 .marker-cluster-large {
   background-color: var(--color-primary) !important;
+  color: white !important
 }
 
 .marker-cluster div {
   background-color: var(--color-primary) !important;
   border: 2px solid #fff;
+  color: white !important
 }
 
 

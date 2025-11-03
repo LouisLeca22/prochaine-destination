@@ -34,7 +34,7 @@ export default function AccommodationsPage() {
         const keywordParam = searchParams.get("keyword") || "";
         const typeParam = (searchParams.get("type") as any) || "all";
         const minPrice = Number(searchParams.get("minPrice")) || 0;
-        const maxPrice = Number(searchParams.get("maxPrice")) || 1000;
+        const maxPrice = Number(searchParams.get("maxPrice")) || 500;
 
         setKeyword(keywordParam);
         setType(typeParam);

@@ -17,7 +17,8 @@ interface Result {
 
 export default function GlobalSearch() {
     const locale = useCurrentLocale()
-    const t = useScopedI18n("Types")
+    const t1 = useScopedI18n("Types")
+    const t2 = useScopedI18n("Menu")
 
     const [isOpen, setIsOpen] = useState(false)
     const [query, setQuery] = useState('')
@@ -110,7 +111,7 @@ export default function GlobalSearch() {
                                     type="text"
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
-                                    placeholder="Rechercher un lieu, un restaurant, un hôtel..."
+                                    placeholder={t2("searchPlaceholder")}
                                     autoFocus
                                     className="w-full bg-transparent outline-none text-lg text-primary-foreground placeholder-primary-foreground"
                                 />
@@ -148,7 +149,7 @@ export default function GlobalSearch() {
                                                                 {locale === "fr" ? item.nameFR : item.nameEN}
                                                             </span>
                                                             <span className="text-1xl font-extrabold text-neutral-500">
-                                                                {t(item.type)}
+                                                                {t1(item.type)}
                                                             </span>
                                                         </Link>
                                                     </motion.li>
@@ -162,7 +163,7 @@ export default function GlobalSearch() {
                                                 animate={{ opacity: 1 }}
                                                 exit={{ opacity: 0 }}
                                             >
-                                                Aucun résultat trouvé pour{' '}
+                                                {t2("noResults")}{' '}
                                                 <span className="font-medium">{query}</span>
                                             </motion.p>
                                         )
@@ -174,7 +175,7 @@ export default function GlobalSearch() {
                                             animate={{ opacity: 1 }}
                                             exit={{ opacity: 0 }}
                                         >
-                                            Tapez quelque chose pour commencer la recherche
+                                            {t2("startSearch")}
                                         </motion.p>
                                     )}
                                 </AnimatePresence>

@@ -93,7 +93,7 @@ export default function AccommodationsFilter({ accommodationsCount }: { accommod
             </div>
             <button
                 onClick={resetFilters}
-                className="bg-secondary-foreground text-primary-foreground! border border-transparent cursor-pointer active:scale-110 px-3 py-1 rounded-lg hover:bg-gray-200 transition"
+                className="bg-secondary-foreground text-white border border-transparent cursor-pointer active:scale-110 px-3 py-1 rounded-lg hover:bg-gray-200 hover:text-primary-foreground transition"
             >
                 {t1("reset")}
             </button>

@@ -90,6 +90,9 @@ export default {
         groups: "Groups",
         partners: "Partners",
         business: "Business",
+        searchPlaceholder: "Search for a place, restaurant, or hotel...",
+        noResults: "No results found for",
+        startSearch: "Type something to start searching"
     },
     Home: {
         Header: {

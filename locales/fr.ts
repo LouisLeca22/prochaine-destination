@@ -88,7 +88,10 @@ export default {
         press: "Presse",
         groups: "Groupes",
         partners: "Pro",
-        business: "Affaire"
+        business: "Affaire",
+        searchPlaceholder: "Rechercher un lieu, un restaurant, un hôtel...",
+        noResults: "Aucun résultat trouvé pour",
+        startSearch: "Tapez quelque chose pour commencer la recherche"
     },
     Home: {
         Header: {

@@ -1936,7 +1936,6 @@ export const restaurants: Restaurant[] = [
         deliveryAvailable: false,
         vegan: true,
         images: [
-            "https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
             "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
         ],
         tagsFR: ["Café", "Pâtisserie", "Vue sur mer", "Ambiance artistique"],
