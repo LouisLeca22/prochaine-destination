@@ -173,6 +173,9 @@ export default {
         foundAccommodationSingular: "accommodation found",
         foundAccommodationsPlural: "accommodations found",
     },
+    Explore: {
+        Heading: "Explore"
+    },
     404: {
         notFound: "Page not found...",
         goHome: "Go back home"
