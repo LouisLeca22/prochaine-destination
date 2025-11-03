@@ -26,7 +26,7 @@ export default function ExplorePage() {
     ]
     return (
         <>
-            <header className="relative w-full h-[40vh] overflow-hidden header-blur">
+            <header className="relative w-full h-[40vh] overflow-hidden header-blur mb-10">
                 <div className="absolute inset-0 z-0">
                     <Swiper
                         modules={[Autoplay, EffectFade]}
