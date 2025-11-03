@@ -395,7 +395,7 @@ export default function AccommodationDetail({
                                         <PopoverTrigger asChild>
                                             <Button
                                                 variant="outline"
-                                                className="flex-1 border-gray-300 text-primary hover:bg-primary/10 transition-colors"
+                                                className="flex-1 border-gray-300 cursor-pointer text-primary hover:bg-primary/10 transition-colors"
                                             >
                                                 <Calendar className="mr-2 h-4 w-4" />
                                                 {t2("availableDates")}
@@ -411,7 +411,7 @@ export default function AccommodationDetail({
 
                                     {accommodation.externalBookingLink && (
                                         <Button
-                                            className="flex-1 bg-secondary text-primary-foreground hover:bg-secondary/90 transition-colors"
+                                            className="flex-1 bg-secondary cursor-pointer text-primary-foreground hover:bg-secondary/90 transition-colors"
                                             onClick={() => window.open(accommodation.externalBookingLink, "_blank")}
                                         >
                                             <ExternalLink className="w-4 h-4 mr-2" />
