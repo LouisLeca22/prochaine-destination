@@ -1,34 +1,41 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import ThemeToggler from "@/components/Menu/ThemeToggler"
 import Navigation from "@/components/Menu/Navigation"
 import GlobalSearch from "./GllobalSearch"
 import { LanguageSwitcher } from "./LanguageSwitcher"
-import { useEffect, useState } from "react"
 import { HomeLink } from "./HomeLink"
+import { usePathname } from "next/navigation";
 
-function Menu() {
 
-    const [scrolled, setScrolled] = useState(false);
+export default function Menu() {
+    const [scrolled, setScrolled] = useState(false)
+    const pathname = usePathname();
+
+    const isHome = pathname === "/fr" || pathname === "/en"
+
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > window.innerHeight - 10);
-        };
+        if (isHome) return
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-    return (<div
-        className={`z-50 fixed top-0 left-0 h-20 md:h-10 w-full transition-colors duration-500 ${scrolled ? "bg-background" : "bg-transparent"
-            }`}
-    >
-        <Navigation />
-        <ThemeToggler />
-        <GlobalSearch />
-        <LanguageSwitcher />
-        <HomeLink />
-    </div>
+        const handleScroll = () => setScrolled(window.scrollY > 250)
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    return (
+        <div
+            className={`fixed top-0 left-0  w-full h-25 flex items-center justify-between  transition-all duration-500 z-50 ${scrolled
+                ? "bg-background/95  shadow-lg"
+                : "bg-transparent"
+                }`}
+        >
+            <HomeLink />
+            <Navigation />
+            <GlobalSearch />
+            <LanguageSwitcher />
+            <ThemeToggler />
+        </div>
     )
 }
-export default Menu

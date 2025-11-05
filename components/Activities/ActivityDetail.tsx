@@ -91,7 +91,7 @@ export default function ActivityDetail({
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="bg-white w-full h-full relative overflow-y-auto shadow-xl"
+                            className="bg-background w-full h-full relative overflow-y-auto shadow-xl"
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
@@ -173,7 +173,7 @@ export default function ActivityDetail({
                                 {/* Description */}
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }} className="text-gray-700 text-base leading-relaxed text-center mt-2 font-inter">
+                                    transition={{ duration: 0.5 }} className=" text-base leading-relaxed text-center mt-2 font-inter">
                                     {locale === "fr" ? activity.descriptionFR : activity.descriptionEN}
                                 </motion.p>
 
