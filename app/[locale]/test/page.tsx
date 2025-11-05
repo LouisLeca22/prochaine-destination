@@ -8,6 +8,7 @@ import ThreeCards from "@/components/ui/ThreeCards";
 import Headband from "@/components/ui/HeadBand";
 import { SquareCards } from "@/components/ui/SquareCards";
 import HeaderSlider from "@/components/ui/HeaderSlider";
+import OverlappingCards from "@/components/ui/OverlappingCards";
 
 
 
@@ -26,6 +27,21 @@ export default function TestPage() {
         'https://images.unsplash.com/photo-1593812350679-8bfcb563b297?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1167',
         'https://images.unsplash.com/photo-1542202229-7d93c33f5d07?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1170',
         'https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1171',
+    ]
+
+    const overlapCards = [
+        {
+            title: "Les calanques de Marseille",
+            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        },
+        {
+            title: "La Cité radieuse – Le Corbusier",
+            image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad"
+        },
+        {
+            title: "Les îles du Frioul",
+            image: "https://images.unsplash.com/photo-1502085671122-2d218cd434e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1226"
+        }
     ]
 
     const cardsData = [
@@ -58,12 +74,12 @@ export default function TestPage() {
                 reverse={true}
             />
             <Headband verticalImage={verticalImage}
-                descriptionText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
+                descriptionText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
                 cardTitle="Coup de cœur"
                 cardText="Un lieu à explorer sans attendre, entre authenticité et émerveillement."
             />
             <ThreeCards cards={cardsData} />
-
+            <OverlappingCards cards={overlapCards} />
 
             {/* <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">
                 <ScrollReveal

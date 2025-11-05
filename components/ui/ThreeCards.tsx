@@ -36,7 +36,7 @@ const cardVariant: Variants = {
 export default function ThreeCards({ cards }: CardGridProps) {
     return (
         <motion.section
-            className="max-w-6xl mx-auto my-12 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
+            className="max-w-6xl mx-auto my-20 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
             variants={container}
             initial="hidden"
             whileInView="show"
