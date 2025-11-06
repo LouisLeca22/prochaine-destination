@@ -18,7 +18,7 @@ export const SquareCards = ({
     reverse = false,
 }: DiscoverSectionProps) => {
     return (
-        <section className="max-w-6xl my-40 mx-auto   px-6 grid md:grid-cols-2 gap-8 items-center">
+        <section className="max-w-6xl my-50 mx-auto   px-6 grid md:grid-cols-2 gap-8 items-center">
             {/* Images */}
             <motion.div
                 className={`grid grid-cols-2 gap-4 ${reverse ? 'md:order-2' : ''}`}

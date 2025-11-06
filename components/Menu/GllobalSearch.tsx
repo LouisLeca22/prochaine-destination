@@ -36,19 +36,28 @@ export default function GlobalSearch() {
         setIsOpen(false)
     }
 
-
     useEffect(() => {
         if (!query.trim()) {
             setResults([])
             return
         }
-        const q = query.toLowerCase()
-        const filtered = data.filter((item) =>
-            locale === "fr" ? item.nameFR.toLowerCase().includes(q) : item.nameEN.toLowerCase().includes(q)
-        )
-        setResults(filtered)
-    }, [query, data])
 
+        const q = query.toLowerCase()
+
+        const filtered = data.filter((item) => {
+            const nameMatch =
+                locale === "fr"
+                    ? item.nameFR.toLowerCase().includes(q)
+                    : item.nameEN.toLowerCase().includes(q)
+
+            const translatedType = t1(item.type)?.toLowerCase?.() || ""
+            const typeMatch = translatedType.includes(q)
+
+            return nameMatch || typeMatch
+        })
+
+        setResults(filtered)
+    }, [query, data, locale, t1])
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {

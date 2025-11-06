@@ -8,6 +8,7 @@ interface Card {
     title: string;
     description: string;
     offsetClass?: string;
+    href: string
 }
 
 interface CardGridProps {
@@ -36,14 +37,15 @@ const cardVariant: Variants = {
 export default function ThreeCards({ cards }: CardGridProps) {
     return (
         <motion.section
-            className="max-w-6xl mx-auto my-20 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
+            className="max-w-6xl mx-auto my-10 sm:my-50 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
             variants={container}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
         >
             {cards.map((card, index) => (
-                <motion.div
+                <motion.a
+                    href={card.href}
                     key={index}
                     className={`relative bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 ${card.offsetClass || ""
                         }`}
@@ -62,7 +64,7 @@ export default function ThreeCards({ cards }: CardGridProps) {
                         <h3 className="text-xl text-primary font-semibold mb-2">{card.title}</h3>
                         <p className="text-gray-600 text-sm">{card.description}</p>
                     </div>
-                </motion.div>
+                </motion.a>
             ))}
         </motion.section>
     );

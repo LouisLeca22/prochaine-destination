@@ -3,19 +3,21 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
 interface HeadbandProps {
-    verticalImage: string | StaticImageData;
-    descriptionText: string;
-    cardTitle: string;
-    cardText: string;
+    bandText: string
+    card: {
+        title: string
+        description: string
+        img: string | StaticImageData;
+        href: string
+    }
+
 }
 
 const Headband: FC<HeadbandProps> = ({
-    verticalImage,
-    descriptionText = "Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture.",
-    cardTitle = "Coup de cœur",
-    cardText = "Un lieu à explorer sans attendre, entre authenticité et émerveillement.",
+    bandText,
+    card
 }) => (
-    <section className="h-[60vh] flex items-center">
+    <section className="my-10 sm:my-50 flex items-center">
 
         <div className="relative w-full bg-primary py-16 px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -23,14 +25,15 @@ const Headband: FC<HeadbandProps> = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: false }}
-                className="w-[70%] text-center "
+                className="sm:w-[70%] w-full text-center "
             >
                 <p className="text-base sm:text-xl text-white leading-relaxed">
-                    {descriptionText}
+                    {bandText}
                 </p>
             </motion.div>
 
-            <motion.div
+            <motion.a
+                href={card.href}
                 initial={{ opacity: 0, y: -100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
@@ -45,17 +48,17 @@ const Headband: FC<HeadbandProps> = ({
             >
                 <div className="relative h-48 sm:h-64 w-full mb-4">
                     <Image
-                        src={verticalImage}
-                        alt={cardTitle}
+                        src={card.img}
+                        alt={card.title}
                         fill
                         className="object-cover rounded-xl"
                     />
                 </div>
                 <h3 className="text-lg sm:text-xl text-primary font-semibold mb-2">
-                    {cardTitle}
+                    {card.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base">{cardText}</p>
-            </motion.div>
+                <p className="text-gray-600 text-sm sm:text-base">{card.description}</p>
+            </motion.a>
         </div>
     </section>
 );

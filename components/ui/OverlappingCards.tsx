@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export interface Card {
     image: string;
     title: string;
+    href: string
 }
 
 interface OverlappingCardsProps {
@@ -21,9 +22,10 @@ function OverlappingCards({
     showButton = true,
 }: OverlappingCardsProps) {
     return (
-        <section className="mx-auto my-50 relative w-full max-w-6xl flex flex-col-reverse gap-4 md:gap-0 sm:flex-row">
+        <section className="mx-auto my-10 sm:my-50 relative w-full max-w-6xl flex flex-col-reverse gap-4 md:gap-0 sm:flex-row">
             {/* Left Card */}
-            <motion.div
+            <motion.a
+                href={cards[0].href}
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,10 +43,11 @@ function OverlappingCards({
                         {cards[0].title}
                     </h3>
                 </div>
-            </motion.div>
+            </motion.a>
 
             {/* Center Card */}
-            <motion.div
+            <motion.a
+                href={cards[1].href}
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -62,10 +65,11 @@ function OverlappingCards({
                         {cards[1].title}
                     </h3>
                 </div>
-            </motion.div>
+            </motion.a>
 
             {/* Right Card */}
-            <motion.div
+            <motion.a
+                href={cards[2].href}
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -83,7 +87,7 @@ function OverlappingCards({
                         {cards[1].title}
                     </h3>
                 </div>
-            </motion.div>
+            </motion.a>
 
             {/* Button */}
             <motion.div
@@ -108,7 +112,7 @@ function OverlappingCards({
                             d="M4 4v5h.582a9.001 9.001 0 0117.338 2H22v5h-5v-.582a9.001 9.001 0 01-17.338-2H2V9h5v.582a7 7 0 0013.416 1.836A7 7 0 004.582 9H4z"
                         />
                     </svg>
-                    Je me laisse inspirer
+                    {buttonText}
                 </button>
             </motion.div>
         </section>
