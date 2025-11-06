@@ -17,8 +17,8 @@ export default function Experience() {
 
     const cards: Card[] = [
         {
-            title: t("accomodations"),
-            href: '/accomodations',
+            title: t("accommodations"),
+            href: '/accommodations',
             src: "/images/experience/accommodation.jpg",
 
         },

@@ -22,9 +22,9 @@ export const SquareCards = ({
             {/* Images */}
             <motion.div
                 className={`grid grid-cols-2 gap-4 ${reverse ? 'md:order-2' : ''}`}
-                initial={{ opacity: 0, x: reverse ? 80 : -80 }}
+                initial={{ opacity: 0, x: reverse ? 120 : -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.9, ease: 'easeOut' }}
                 viewport={{ once: false }}
             >
                 {images.map((src, i) => (
@@ -44,9 +44,9 @@ export const SquareCards = ({
             {/* Text */}
             <motion.div
                 className={`text-center ${reverse ? 'md:order-1' : ''}`}
-                initial={{ opacity: 0, x: reverse ? -80 : 80 }}
+                initial={{ opacity: 0, x: reverse ? -120 : 120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
                 viewport={{ once: false }}
             >
                 <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">{title}</h2>

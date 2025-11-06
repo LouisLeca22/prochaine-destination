@@ -23,7 +23,7 @@ const Headband: FC<HeadbandProps> = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: false }}
-                className="max-w-5xl text-center "
+                className="w-[70%] text-center "
             >
                 <p className="text-base sm:text-xl text-white leading-relaxed">
                     {descriptionText}

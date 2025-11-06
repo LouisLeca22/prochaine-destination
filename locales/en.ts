@@ -134,7 +134,7 @@ export default {
         },
         Experience: {
             Heading: "Get ready for your trip",
-            accomodations: "Accommodations",
+            accommodations: "Accommodations",
             restaurants: "Restaurants",
             activities: "Activities",
         },

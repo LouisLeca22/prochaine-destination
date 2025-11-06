@@ -64,7 +64,7 @@ function Favorites() {
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
                 modules={[EffectCoverflow, Pagination, Autoplay]}
-                className="w-[90vw] h-[90vh] max-w-[1000px] flex items-center justify-center"
+                className="w-[90vw] h-[90vh] max-w-[1000px] mt-20 flex items-center justify-center"
             >
                 {slides.map(({ src, title, href }, i) => (
                     <SwiperSlide
