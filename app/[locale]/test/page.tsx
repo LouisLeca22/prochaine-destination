@@ -18,13 +18,12 @@ import MirrorGrid from "@/components/ui/MirrorGrid";
 export default function TestPage() {
     const t = useScopedI18n("Explore")
 
-    const headBandCard = {
+    const card = {
         img: "https://images.unsplash.com/photo-1551927411-95e412943b58?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=749",
         title: "Coup de cœur",
         description: "Un lieu à explorer sans attendre, entre authenticité et émerveillement.",
         href: "/"
     }
-
 
     const headerImages = [
         "https://images.unsplash.com/photo-1446038202205-1c96430dbdab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
@@ -101,14 +100,10 @@ export default function TestPage() {
             />
             <Headband
                 bandText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
-                card={headBandCard}
+                card={card}
             />
             <ThreeCards cards={threeCards} />
             <OverlappingCards cards={overlapCards} />
-
-
-            <MirrorGrid cards={mirrorImages} />
-
 
             <SocialMasonry
                 title="Follow Our Journey"
@@ -128,6 +123,8 @@ export default function TestPage() {
                 ]}
                 hideOnMobile
             />
+
+            <MirrorGrid cards={mirrorImages} />
 
             {/* <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">
                 <ScrollReveal

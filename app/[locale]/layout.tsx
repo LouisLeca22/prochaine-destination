@@ -30,7 +30,6 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: t('title'),
     description: t('description'),
-    viewport: "width=device-width, initial-scale=1.0",
     openGraph: {
       title: t('title'),
       description: t('description'),

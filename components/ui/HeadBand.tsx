@@ -39,12 +39,7 @@ const Headband: FC<HeadbandProps> = ({
                 transition={{ duration: 0.9 }}
                 viewport={{ once: false }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className="
-            bg-white shadow-lg rounded-2xl p-6 w-full sm:w-80 
-            mt-10 sm:mt-0
-            relative sm:absolute 
-            sm:right-30 sm:-bottom-1/2
-            "
+                className="block bg-white shadow-lg rounded-2xl p-6 w-full sm:w-80 mt-10 sm:mt-0 relative sm:absolute sm:right-30 sm:-bottom-1/2"
             >
                 <div className="relative h-48 sm:h-64 w-full mb-4">
                     <Image
