@@ -18,8 +18,7 @@ export const SquareCards = ({
     reverse = false,
 }: DiscoverSectionProps) => {
     return (
-        <section className="max-w-6xl my-50 mx-auto   px-6 grid md:grid-cols-2 gap-8 items-center">
-            {/* Images */}
+        <section className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <motion.div
                 className={`grid grid-cols-2 gap-4 ${reverse ? 'md:order-2' : ''}`}
                 initial={{ opacity: 0, x: reverse ? 120 : -120 }}
@@ -41,7 +40,6 @@ export const SquareCards = ({
                 ))}
             </motion.div>
 
-            {/* Text */}
             <motion.div
                 className={`text-center ${reverse ? 'md:order-1' : ''}`}
                 initial={{ opacity: 0, x: reverse ? -120 : 120 }}

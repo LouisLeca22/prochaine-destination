@@ -34,7 +34,7 @@ export default function SocialMasonry({
     hideOnMobile = true,
 }: SocialMasonryProps) {
     return (
-        <section className="md:my-30 px-6">
+        <div className=" px-6">
             <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 max-w-6xl mx-auto">
                 <div className={hideOnMobile ? "hidden sm:block" : ""}>
                     {images.slice(0, 3).map((src, i) => (
@@ -59,7 +59,6 @@ export default function SocialMasonry({
                     ))}
                 </div>
 
-                {/* Social links block */}
                 <motion.div
                     className="bg-white text-center py-12 flex flex-col justify-center items-center rounded-lg mb-4 break-inside-avoid shadow-md"
                     variants={fadeUp}
@@ -108,6 +107,6 @@ export default function SocialMasonry({
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

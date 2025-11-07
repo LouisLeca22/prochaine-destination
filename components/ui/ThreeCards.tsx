@@ -15,17 +15,15 @@ interface CardGridProps {
     cards: Card[];
 }
 
-// Container for staggered animation
 const container: Variants = {
     hidden: {},
     show: {
         transition: {
-            staggerChildren: 0.2, // cards fade in one after another
+            staggerChildren: 0.2,
         },
     },
 };
 
-// Card fade-in only
 const cardVariant: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -37,7 +35,7 @@ const cardVariant: Variants = {
 export default function ThreeCards({ cards }: CardGridProps) {
     return (
         <motion.section
-            className="max-w-6xl mx-auto my-10 sm:my-50 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
+            className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
             variants={container}
             initial="hidden"
             whileInView="show"

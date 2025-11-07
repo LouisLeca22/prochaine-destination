@@ -179,5 +179,8 @@ export default {
     404: {
         notFound: "Cette page n'existe pas...",
         goHome: "Retour à la page d'accueil"
+    },
+    Components: {
+        followUs: "Suivez-nous !"
     }
 } as const

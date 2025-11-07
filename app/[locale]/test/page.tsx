@@ -1,8 +1,4 @@
 "use client"
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-import Image from "next/image";
-import SplitText from "@/components/ui/SplitText";
 import { useScopedI18n } from "@/locales/client";
 import ThreeCards from "@/components/ui/ThreeCards";
 import Headband from "@/components/ui/HeadBand";
@@ -12,11 +8,13 @@ import OverlappingCards from "@/components/ui/OverlappingCards";
 import SocialMasonry from "@/components/ui/SocialMasonry";
 import { Facebook, Instagram, Link, Linkedin, Youtube } from "lucide-react";
 import MirrorGrid from "@/components/ui/MirrorGrid";
+import Section from "@/components/ui/Section";
 
 
 
 export default function TestPage() {
-    const t = useScopedI18n("Explore")
+    const t1 = useScopedI18n("Explore")
+    const t2 = useScopedI18n("Components")
 
     const card = {
         img: "https://images.unsplash.com/photo-1551927411-95e412943b58?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=749",
@@ -91,40 +89,53 @@ export default function TestPage() {
     ];
     return (
         <div className="overflow-hidden">
-            <HeaderSlider images={headerImages} heading="Explore" />
-            <SquareCards
-                title="Découvrir autrement"
-                description="Découvrez des lieux chargés d’histoire, des expériences uniques et des rencontres inattendues. Chaque destination révèle une atmosphère,  savoir-faire et un patrimoine à préserver."
-                images={squareImages}
-                reverse={true}
-            />
-            <Headband
-                bandText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
-                card={card}
-            />
-            <ThreeCards cards={threeCards} />
-            <OverlappingCards cards={overlapCards} />
+            <HeaderSlider images={headerImages} heading={t1("Heading")} />
+            <Section className="md:my-40 my-10">
+                <SquareCards
+                    title="Découvrir autrement"
+                    description="Découvrez des lieux chargés d’histoire, des expériences uniques et des rencontres inattendues. Chaque destination révèle une atmosphère,  savoir-faire et un patrimoine à préserver."
+                    images={squareImages}
+                    reverse={true}
+                />
+            </Section>
+            <Section className="md:my-40 my-10">
 
-            <SocialMasonry
-                title="Follow Our Journey"
-                images={[
-                    "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
-                    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-                    "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba",
-                    "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
-                    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-                    "https://images.unsplash.com/photo-1519681393784-d120267933ba",
-                ]}
-                socialLinks={[
-                    { label: "Instagram", icon: <Instagram size={28} />, href: "http://instagram.com" },
-                    { label: "Facebook", icon: <Facebook size={28} />, href: "http://facebook.com" },
-                    { label: "Linkedin", icon: <Linkedin size={28} />, href: "http://linkedin.com" },
-                    { label: "YouTube", icon: <Youtube size={28} />, href: "http://youtube.com" },
-                ]}
-                hideOnMobile
-            />
+                <Headband
+                    bandText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
+                    card={card}
+                />
+            </Section>
+            <Section className="md:my-40 my-10">
+                <ThreeCards cards={threeCards} />
+            </Section>
+            <Section className="md:my-60 my-10">
+                <OverlappingCards cards={overlapCards} />
+            </Section>
+            <Section className="md:my-40 my-10">
+                <SocialMasonry
+                    title={t2("followUs")}
+                    images={[
+                        "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+                        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba",
+                        "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+                        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+                        "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+                    ]}
+                    socialLinks={[
+                        { label: "Instagram", icon: <Instagram size={28} />, href: "http://instagram.com" },
+                        { label: "Facebook", icon: <Facebook size={28} />, href: "http://facebook.com" },
+                        { label: "Linkedin", icon: <Linkedin size={28} />, href: "http://linkedin.com" },
+                        { label: "YouTube", icon: <Youtube size={28} />, href: "http://youtube.com" },
+                    ]}
+                    hideOnMobile
+                />
+            </Section>
 
-            <MirrorGrid cards={mirrorImages} />
+            <Section className="md:my-40 my-10">
+
+                <MirrorGrid cards={mirrorImages} />
+            </Section>
 
             {/* <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">
                 <ScrollReveal

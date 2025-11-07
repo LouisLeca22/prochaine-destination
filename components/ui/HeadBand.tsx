@@ -17,7 +17,7 @@ const Headband: FC<HeadbandProps> = ({
     bandText,
     card
 }) => (
-    <section className="my-10 sm:my-50 flex items-center">
+    <div className="flex items-center">
 
         <div className="relative w-full bg-primary py-16 px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -55,7 +55,7 @@ const Headband: FC<HeadbandProps> = ({
                 <p className="text-gray-600 text-sm sm:text-base">{card.description}</p>
             </motion.a>
         </div>
-    </section>
+    </div>
 );
 
 export default Headband;

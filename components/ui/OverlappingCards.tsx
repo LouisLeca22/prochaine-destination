@@ -22,7 +22,7 @@ function OverlappingCards({
     showButton = true,
 }: OverlappingCardsProps) {
     return (
-        <section className="mx-auto my-10 sm:my-50 relative w-full max-w-6xl flex flex-col-reverse gap-4 md:gap-0 sm:flex-row">
+        <section className="mx-auto relative w-full max-w-6xl flex flex-col-reverse gap-4 md:gap-0 sm:flex-row">
             {/* Left Card */}
             <motion.a
                 href={cards[0].href}
