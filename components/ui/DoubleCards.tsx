@@ -2,29 +2,33 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Separator from '@/components/ui/Separator';
 
-interface DiscoverSectionProps {
+interface DoubleCardsProps {
     title: string;
     description: string;
-    images: [string, string, string, string];
+    images: [string, string];
     imageAlt?: string;
     reverse?: boolean;
 }
 
-export const SquareCards = ({
+export const DoubleCards = ({
     title,
     description,
     images,
     imageAlt = 'Discover image',
     reverse = false,
-}: DiscoverSectionProps) => {
+}: DoubleCardsProps) => {
     return (
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+            {/* Images section */}
             <motion.div
                 className={`grid grid-cols-2 gap-4 ${reverse ? 'md:order-2' : ''}`}
                 initial={{ opacity: 0, x: reverse ? 120 : -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, ease: 'easeOut' }}
-                viewport={{ once: true, amount: .5 }}
+                viewport={{
+                    amount: 0.5,
+                    once: true
+                }}
             >
                 {images.map((src, i) => (
                     <motion.div
@@ -40,12 +44,16 @@ export const SquareCards = ({
                 ))}
             </motion.div>
 
+            {/* Text section */}
             <motion.div
                 className={`text-center ${reverse ? 'md:order-1' : ''}`}
                 initial={{ opacity: 0, x: reverse ? -120 : 120 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
-                viewport={{ once: true, amount: .5 }}
+                viewport={{
+                    amount: 0.5,
+                    once: true
+                }}
             >
                 <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">{title}</h2>
                 <Separator width="w-40" className="mx-auto" />

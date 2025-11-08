@@ -20,7 +20,7 @@ interface ImageGridProps {
 export default function ImageGrid({
     cards,
     className = "",
-    animateOnce = false,
+    animateOnce = true,
     stagger = 0.1,
 }: ImageGridProps) {
     return (
@@ -51,7 +51,7 @@ export default function ImageGrid({
                     initial={{ opacity: 0, y: 40, scale: 0.95 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.6, delay: i * stagger, ease: "easeOut" }}
-                    viewport={{ once: animateOnce, amount: 0.3 }}
+                    viewport={{ once: animateOnce, amount: 0.5 }}
                     whileHover={{ scale: 1.02 }}
                 >
                     {/* Background image */}

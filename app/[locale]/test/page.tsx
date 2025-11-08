@@ -9,7 +9,13 @@ import SocialMasonry from "@/components/ui/SocialMasonry";
 import { Facebook, Instagram, Link, Linkedin, Youtube } from "lucide-react";
 import MirrorGrid from "@/components/ui/MirrorGrid";
 import Section from "@/components/ui/Section";
-
+import { useMemo } from "react";
+import { activities } from "@/data";
+import BandCards from "@/components/ui/BandCards";
+import { DoubleCards } from "@/components/ui/DoubleCards";
+import Carrousel from "@/components/ui/Carrousel";
+import BandMap from "@/components/ui/BandMap";
+import { selectItemsByIds } from "@/utils";
 
 
 export default function TestPage() {
@@ -36,23 +42,12 @@ export default function TestPage() {
         'https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1171',
     ]
 
-    const overlapCards = [
-        {
-            title: "Les calanques de Marseille",
-            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-            href: "/"
-        },
-        {
-            title: "La Cité radieuse – Le Corbusier",
-            image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad",
-            href: "/"
-        },
-        {
-            title: "Les îles du Frioul",
-            image: "https://images.unsplash.com/photo-1502085671122-2d218cd434e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1226",
-            href: "/"
-        }
+    const doubleImages: [string, string] = [
+        'https://images.unsplash.com/photo-1542202229-7d93c33f5d07?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1171',
     ]
+
+
 
     const threeCards = [
         {
@@ -78,6 +73,10 @@ export default function TestPage() {
         },
     ];
 
+    const allActivities = useMemo(() => activities, []);
+
+
+    const activitiesMap = selectItemsByIds(allActivities, [1, 2, 4, 6])
 
     const mirrorImages = [
         { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", text: "Card 1", span: "md:row-span-2", href: "/" },
@@ -109,7 +108,7 @@ export default function TestPage() {
                 <ThreeCards cards={threeCards} />
             </Section>
             <Section className="md:my-60 my-10">
-                <OverlappingCards cards={overlapCards} />
+                <OverlappingCards items={allActivities} buttonText={t2("inspire")} />
             </Section>
             <Section className="md:my-40 my-10">
                 <SocialMasonry
@@ -135,6 +134,26 @@ export default function TestPage() {
             <Section className="md:my-40 my-10">
 
                 <MirrorGrid cards={mirrorImages} />
+            </Section>
+
+            <Section className="md:my-40 my-10">
+                <BandCards cards={threeCards} />
+            </Section>
+
+            <Section className="md:my-40 my-10">
+                <DoubleCards
+                    title="Découvrir autrement"
+                    description="Découvrez des lieux chargés d’histoire, des expériences uniques et des rencontres inattendues. Chaque destination révèle une atmosphère,  savoir-faire et un patrimoine à préserver."
+                    images={doubleImages}
+                />
+            </Section>
+
+            <Section className="md:my-40 my-10">
+                <Carrousel items={allActivities} />
+            </Section>
+
+            <Section className="md:my-40 my-10">
+                <BandMap items={activitiesMap} />
             </Section>
 
             {/* <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">

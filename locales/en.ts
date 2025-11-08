@@ -181,6 +181,7 @@ export default {
         goHome: "Go back home"
     },
     Components: {
-        followUs: "Follow us!"
+        followUs: "Follow us!",
+        inspire: "Let the inspiration flow"
     }
 } as const

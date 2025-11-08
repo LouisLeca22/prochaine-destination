@@ -39,7 +39,7 @@ export default function ThreeCards({ cards }: CardGridProps) {
             variants={container}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.5 }}
         >
             {cards.map((card, index) => (
                 <motion.a

@@ -181,6 +181,7 @@ export default {
         goHome: "Retour à la page d'accueil"
     },
     Components: {
-        followUs: "Suivez-nous !"
+        followUs: "Suivez-nous !",
+        inspire: "Je me laisse inspirer"
     }
 } as const

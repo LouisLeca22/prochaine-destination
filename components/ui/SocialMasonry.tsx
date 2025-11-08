@@ -45,7 +45,7 @@ export default function SocialMasonry({
                             initial="hidden"
                             whileInView="visible"
                             transition={{ duration: 0.6, delay: i * 0.1 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true, amount: .5 }}
                         >
                             <Image
                                 src={src}
@@ -65,7 +65,7 @@ export default function SocialMasonry({
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 0.7 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true, amount: .5 }}
                 >
                     <h2 className="text-2xl text-primary font-semibold mb-3">{title}</h2>
                     <div className="flex gap-6 text-primary text-2xl">
@@ -93,7 +93,7 @@ export default function SocialMasonry({
                             initial="hidden"
                             whileInView="visible"
                             transition={{ duration: 0.6, delay: i * 0.1 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true, amount: .5 }}
                         >
                             <Image
                                 src={src}

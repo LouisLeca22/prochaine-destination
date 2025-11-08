@@ -18,53 +18,6 @@ export enum WeekdaysFR {
     dimanche = 7
 }
 
-export enum ActivityType {
-    NAUTICAL_SPORT = 'NAUTICAL_SPORT',
-    HIKING = 'HIKING',
-    WORKSHOP = "WORKSHOP",
-    COOKING_CLASS = 'COOKING_CLASS',
-    CULTURAL_TOUR = 'CULTURAL_TOUR',
-    CYCLING = 'CYCLING',
-    NATURE = 'NATURE',
-    WELLNESS = 'WELLNESS',
-    THRILL = 'THRILL',
-}
-
-
-
-export type Activity = {
-    id: number,
-    category: "activities",
-    nameFR: string,
-    nameEN: string,
-    descriptionFR: string,
-    descriptionEN: string,
-    type: ActivityType,
-    duration: string,
-    availability: string[],
-    startTimes: string[],
-    meetingPoint: string,
-    price: number,
-    lat: number,
-    lng: number,
-    images: string[],
-    bookingRequired: boolean
-    family: boolean
-    tagsFR: string[],
-    tagsEN: string[],
-    includesFR: string[],
-    includesEN: string[],
-    season: "spring" | "summer" | "winter" | "autumn" | "allSeasons"
-    ecoFriendly: boolean
-    externalBookingLink: string
-    provider: string,
-    email: string,
-    website: string,
-    phone: string,
-    facebook: string,
-    instagram: string
-}
-
 export enum RestaurantType {
     BISTRO = 'BISTRO',
     BREWERY = 'BREWERY',
@@ -82,35 +35,24 @@ export enum RestaurantType {
     GASTROPUB = 'GASTROPUB',
 }
 
-export type Restaurant = {
+export interface BaseItem {
     id: number,
-    category: "restaurants",
-    nameFR: string,
-    nameEN: string,
-    descriptionFR: string,
-    descriptionEN: string,
-    type: RestaurantType,
-    stars: number,
-    meetingPoint: string,
-    price: number,
-    lat: number,
-    lng: number,
-    from: number,
-    to: number,
-    open: string,
-    close: string,
-    openTwo?: string,
-    closeTwo?: string,
-    bookingRequired: boolean,
-    accessibility: boolean,
-    takeAwayAvailable: boolean,
-    deliveryAvailable: boolean,
-    vegan: boolean,
-    images: string[],
-    tagsFR: string[],
-    tagsEN: string[],
-    includesFR: string[],
-    includesEN: string[],
+    category: "restaurants" | "accommodations" | "activities"
+    type: ActivityType | RestaurantType | AccommodationType
+    nameEN: string
+    nameFR: string
+    descriptionFR: string
+    descriptionEN: string
+    images: string[]
+    price: number
+    lat: number
+    lng: number
+    meetingPoint: string
+    tagsEN: string[]
+    tagsFR: string[]
+    includesFR: string[]
+    includesEN: string[]
+    bookingRequired: boolean
     externalBookingLink: string,
     provider: string,
     email: string,
@@ -118,6 +60,49 @@ export type Restaurant = {
     phone: string,
     facebook: string,
     instagram: string
+}
+
+export enum ActivityType {
+    NAUTICAL_SPORT = 'NAUTICAL_SPORT',
+    HIKING = 'HIKING',
+    WORKSHOP = "WORKSHOP",
+    COOKING_CLASS = 'COOKING_CLASS',
+    CULTURAL_TOUR = 'CULTURAL_TOUR',
+    CYCLING = 'CYCLING',
+    NATURE = 'NATURE',
+    WELLNESS = 'WELLNESS',
+    THRILL = 'THRILL',
+}
+
+
+
+export interface Activity extends BaseItem {
+
+    category: "activities",
+    type: ActivityType,
+    duration: string,
+    availability: string[],
+    startTimes: string[],
+    family: boolean
+    season: "spring" | "summer" | "winter" | "autumn" | "allSeasons"
+    ecoFriendly: boolean
+}
+
+
+
+export interface Restaurant extends BaseItem {
+
+    stars: number,
+    from: number,
+    to: number,
+    open: string,
+    close: string,
+    openTwo?: string,
+    closeTwo?: string,
+    accessibility: boolean,
+    takeAwayAvailable: boolean,
+    deliveryAvailable: boolean,
+    vegan: boolean,
 }
 
 
@@ -133,26 +118,15 @@ export enum AccommodationType {
     BUSINESS = "BUSINESS"
 }
 
-export type Accommodation = {
-    id: number,
-    category: "accommodations",
-    nameFR: string,
-    nameEN: string,
-    descriptionFR: string,
-    descriptionEN: string,
-    type: AccommodationType,
+export interface Accommodation extends BaseItem {
+
     stars: number,
-    meetingPoint: string,
-    price: number,
-    lat: number,
-    lng: number,
     from: number,
     to: number,
     open: string,
     close: string,
     openTwo?: string,
     closeTwo?: string,
-    bookingRequired: boolean,
     accessibility: boolean,
     petAllowed: boolean,
     parking: boolean,
@@ -170,18 +144,6 @@ export type Accommodation = {
     distanceToCityCenter: number,
     conciergeService: boolean,
     laundryService: boolean,
-    images: string[],
-    tagsFR: string[],
-    tagsEN: string[],
-    includesFR: string[],
-    includesEN: string[],
-    externalBookingLink: string,
-    provider: string,
-    email: string,
-    website: string,
-    phone: string,
-    facebook: string,
-    instagram: string
 }
 
 export const activities: Activity[] = [

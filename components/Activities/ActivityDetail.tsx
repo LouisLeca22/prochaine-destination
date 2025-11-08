@@ -159,6 +159,7 @@ export default function ActivityDetail({
                                 {/* Tags */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }} className="flex flex-wrap gap-2  justify-center">
                                     {tags.map((tag, i) => (
                                         <span
@@ -173,6 +174,7 @@ export default function ActivityDetail({
                                 {/* Description */}
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }} className=" text-base leading-relaxed text-center mt-2 font-inter">
                                     {locale === "fr" ? activity.descriptionFR : activity.descriptionEN}
                                 </motion.p>
@@ -203,6 +205,7 @@ export default function ActivityDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true, amount: .5 }}
                                 >
                                     <div className="flex items-center gap-2 text-gray-800 font-semibold">
                                         <Clock className="w-5 h-5 text-primary" />
@@ -229,6 +232,7 @@ export default function ActivityDetail({
                                 {/* Carte Leaflet */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }} className="w-full h-64 mt-6 rounded-2xl overflow-hidden shadow">
                                     <MapContainer
                                         center={[activity.lat, activity.lng]}
@@ -250,6 +254,7 @@ export default function ActivityDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true, amount: .5 }}
                                 >
                                     <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-primary">
                                         <Info className="w-5 h-5" />
@@ -271,14 +276,14 @@ export default function ActivityDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true, amount: .5 }}
                                 >
                                     <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-primary">
                                         <Users className="w-5 h-5" />
-                                        {activity.provider}
+                                        Contact – {activity.provider}
                                     </h3>
 
-                                    {/* Provider */}
-                                    <p className="text-gray-800 font-medium">{activity.provider}</p>
+
 
                                     {/* Contact rows */}
                                     <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
@@ -334,6 +339,7 @@ export default function ActivityDetail({
                                 <motion.div
                                     className="flex flex-col sm:flex-row justify-center gap-4 mt-10 w-full max-w-md"
                                     initial={{ opacity: 0, y: 30 }}
+                                    viewport={{ once: true, amount: .5 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
@@ -408,6 +414,7 @@ export default function ActivityDetail({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: .5 }}
                 className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
             >
                 <span className="text-primary">{icon}</span>

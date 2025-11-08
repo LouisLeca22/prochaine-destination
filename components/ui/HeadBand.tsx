@@ -19,12 +19,15 @@ const Headband: FC<HeadbandProps> = ({
 }) => (
     <div className="flex items-center">
 
-        <div className="relative w-full bg-primary py-16 px-4 sm:px-6 lg:px-8">
+        <div className="relative w-full  bg-linear-to-b from-primary to-primary-foreground py-16 px-4 sm:px-6 lg:px-8">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: false }}
+                viewport={{
+                    amount: 0.5,
+                    once: true
+                }}
                 className="sm:w-[70%] w-full text-center "
             >
                 <p className="text-base sm:text-xl text-white leading-relaxed">
@@ -37,7 +40,10 @@ const Headband: FC<HeadbandProps> = ({
                 initial={{ opacity: 0, y: -100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
-                viewport={{ once: false }}
+                viewport={{
+                    amount: 0.5,
+                    once: true
+                }}
                 whileHover={{ scale: 1.03, y: -5 }}
                 className="block bg-white shadow-lg rounded-2xl p-6 w-full sm:w-80 mt-10 sm:mt-0 relative sm:absolute sm:right-30 sm:-bottom-1/2"
             >
