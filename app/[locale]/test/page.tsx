@@ -22,12 +22,7 @@ export default function TestPage() {
     const t1 = useScopedI18n("Explore")
     const t2 = useScopedI18n("Components")
 
-    const card = {
-        img: "https://images.unsplash.com/photo-1551927411-95e412943b58?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=749",
-        title: "Coup de cœur",
-        description: "Un lieu à explorer sans attendre, entre authenticité et émerveillement.",
-        href: "/"
-    }
+
 
     const headerImages = [
         "https://images.unsplash.com/photo-1446038202205-1c96430dbdab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
@@ -48,35 +43,14 @@ export default function TestPage() {
     ]
 
 
-
-    const threeCards = [
-        {
-            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-            title: "Évasion marine",
-            description: "Le souffle de l’océan et la beauté brute des falaises.",
-            offsetClass: "sm:top-0 md:top-8",
-            href: "/"
-        },
-        {
-            image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-            title: "Escapade urbaine",
-            description: "Flânez dans les ruelles d’une ville pleine d’histoires et d’art.",
-            offsetClass: "sm:top-0 md:-top-8",
-            href: "/"
-        },
-        {
-            image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-            title: "Nature et sérénité",
-            description: "Respirez, contemplez, et laissez-vous porter par la beauté du monde.",
-            offsetClass: "sm:top-0 md:top-8",
-            href: "/"
-        },
-    ];
-
     const allActivities = useMemo(() => activities, []);
 
+    const threeCards = selectItemsByIds(allActivities, [9, 10, 11])
 
     const activitiesMap = selectItemsByIds(allActivities, [1, 2, 4, 6])
+
+    const sixCards = selectItemsByIds(allActivities, [1, 2, 3, 4, 5, 6])
+
 
     const mirrorImages = [
         { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", text: "Card 1", span: "md:row-span-2", href: "/" },
@@ -101,11 +75,11 @@ export default function TestPage() {
 
                 <Headband
                     bandText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
-                    card={card}
+                    item={allActivities[12]}
                 />
             </Section>
             <Section className="md:my-40 my-10">
-                <ThreeCards cards={threeCards} />
+                <ThreeCards items={threeCards} />
             </Section>
             <Section className="md:my-60 my-10">
                 <OverlappingCards items={allActivities} buttonText={t2("inspire")} />
@@ -133,11 +107,11 @@ export default function TestPage() {
 
             <Section className="md:my-40 my-10">
 
-                <MirrorGrid cards={mirrorImages} />
+                <MirrorGrid cards={sixCards} />
             </Section>
 
             <Section className="md:my-40 my-10">
-                <BandCards cards={threeCards} />
+                <BandCards items={threeCards} />
             </Section>
 
             <Section className="md:my-40 my-10">

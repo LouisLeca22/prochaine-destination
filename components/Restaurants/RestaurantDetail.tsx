@@ -163,7 +163,6 @@ export default function RestaurantDetail({
                                 {/* Tags */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className="flex flex-wrap gap-2  justify-center">
                                     {tags.map((tag, i) => (
                                         <span
@@ -178,7 +177,6 @@ export default function RestaurantDetail({
                                 {/* Description */}
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }} className=" text-base leading-relaxed text-center mt-2 font-inter">
                                     {locale === "fr" ? restaurant.descriptionFR : restaurant.descriptionEN}
                                 </motion.p>
@@ -208,7 +206,6 @@ export default function RestaurantDetail({
                                     className="bg-gray-50 rounded-2xl p-5 w-full mt-4 flex flex-col gap-3"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }}
                                 >
 
@@ -263,7 +260,6 @@ export default function RestaurantDetail({
                                 {/* Carte Leaflet */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }} className="w-full h-64 mt-6 rounded-2xl overflow-hidden shadow">
                                     <MapContainer
                                         center={[restaurant.lat, restaurant.lng]}
@@ -284,7 +280,6 @@ export default function RestaurantDetail({
                                     className="bg-gray-50 rounded-2xl p-4 w-full mt-6"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }}
                                 >
                                     <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-primary">
@@ -306,7 +301,6 @@ export default function RestaurantDetail({
                                     className="bg-gray-50 rounded-2xl p-4 w-full mt-6"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: .5 }}
                                     transition={{ duration: 0.5 }}
                                 >
                                     <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-primary">
@@ -370,7 +364,6 @@ export default function RestaurantDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    viewport={{ once: true, amount: .5 }}
                                 >
 
 
@@ -427,9 +420,6 @@ export default function RestaurantDetail({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{
-                    once: true, amount: .5
-                }}
                 className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
             >
                 <span className="text-primary">{icon}</span>

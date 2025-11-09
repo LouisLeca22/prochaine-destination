@@ -2,16 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BaseItem } from "@/data";
+import { useCurrentLocale } from "@/locales/client";
 
-export interface Card {
-    src: string;
-    text?: string;
-    span?: string;
-    href: string
-}
+
 
 interface ImageGridProps {
-    cards: Card[];
+    cards: BaseItem[];
     className?: string;
     animateOnce?: boolean;
     stagger?: number;
@@ -23,6 +20,7 @@ export default function ImageGrid({
     animateOnce = true,
     stagger = 0.1,
 }: ImageGridProps) {
+    const locale = useCurrentLocale()
     return (
         <div
             className={`
@@ -41,11 +39,11 @@ export default function ImageGrid({
         >
             {cards.map((card, i) => (
                 <motion.a
-                    href={card.href}
+                    href={`/${card.category}?id=${card.id}`}
                     key={i}
                     className={`
-            relative rounded-2xl overflow-hidden group
-            ${card.span ?? ""}
+            relative rounded-2xl overflow-hidden group text-center
+          ${i === 0 || i === 3 ? " md:row-span-2" : ""}
             aspect-4/3 md:aspect-auto
           `}
                     initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -61,8 +59,8 @@ export default function ImageGrid({
                         transition={{ duration: 0.6 }}
                     >
                         <Image
-                            src={card.src}
-                            alt={card.text ?? "Image"}
+                            src={card.images[0]}
+                            alt={locale === "fr" ? card.nameFR : card.nameEN}
                             fill
                             className="object-cover"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -71,16 +69,16 @@ export default function ImageGrid({
                     </motion.div>
 
                     {/* Permanent text overlay */}
-                    {card.text && (
-                        <div
-                            className="
+
+                    <div
+                        className="
                 absolute inset-0 flex items-center justify-center
                 bg-black/40 text-white text-lg font-semibold
               "
-                        >
-                            {card.text}
-                        </div>
-                    )}
+                    >
+                        {locale === "fr" ? card.nameFR : card.nameEN}
+                    </div>
+
                 </motion.a>
             ))}
         </div>

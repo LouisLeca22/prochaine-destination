@@ -33,12 +33,12 @@ const cardVariant: Variants = {
     },
 }
 
-function BandMap<T extends BaseItem>({ items }: { items: T[] }) {
+function BandMap({ items }: { items: BaseItem[] }) {
     const locale = useCurrentLocale()
     const t1 = useScopedI18n("Types")
     const t2 = useScopedI18n("Details")
 
-    const [selectedItem, setSelectedItem] = useState<T>(items[0])
+    const [selectedItem, setSelectedItem] = useState<BaseItem>(items[0])
 
     const bounds = useMemo(() => {
         const latLngs = items.map(item => [item.lat, item.lng] as [number, number])
@@ -115,10 +115,10 @@ function BandMap<T extends BaseItem>({ items }: { items: T[] }) {
 
                 {/* Text */}
                 <div className="flex flex-col justify-center md:justify-start items-start md:items-center gap-2 md:gap-4 flex-1 p-4 text-left md:text-center">
-                    <h3 className="text-lg md:text-xl text-primary font-semibold">
+                    <h3 className="text-lg md:text-xl text-primary font-semibold ">
                         {locale === "fr" ? selectedItem.nameFR : selectedItem.nameEN}
                     </h3>
-                    <span className="uppercase tracking-wide font-medium font-inte">
+                    <span className="uppercase tracking-wide font-medium font-inter">
                         {t1(selectedItem.type)}
                     </span>
                     <span className="text-gray-600 font-semibold text-sm md:text-base">

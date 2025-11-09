@@ -7,13 +7,13 @@ import { getRandomItems } from "@/utils";
 import { useCurrentLocale } from "@/locales/client";
 
 
-function OverlappingCards<T extends BaseItem>({
+function OverlappingCards({
     items,
     buttonText,
-}: { items: T[], buttonText: string }) {
+}: { items: BaseItem[], buttonText: string }) {
 
     const locale = useCurrentLocale();
-    const [cards, setCards] = useState<T[]>([])
+    const [cards, setCards] = useState<BaseItem[]>([])
 
     useEffect(() => {
         setCards(getRandomItems(items, 3))

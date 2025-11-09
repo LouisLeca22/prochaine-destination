@@ -2,18 +2,12 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { BaseItem } from "@/data";
+import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 
-interface Card {
-    image: string;
-    title: string;
-    description: string;
-    offsetClass?: string;
-    href: string
-}
 
-interface CardGridProps {
-    cards: Card[];
-}
+
+
 
 const container: Variants = {
     hidden: {},
@@ -32,7 +26,10 @@ const cardVariant: Variants = {
     },
 };
 
-export default function ThreeCards({ cards }: CardGridProps) {
+export default function ThreeCards({ items }: { items: BaseItem[] }) {
+    const t1 = useScopedI18n("Types")
+    const t2 = useScopedI18n("Details")
+    const locale = useCurrentLocale()
     return (
         <motion.section
             className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative"
@@ -41,26 +38,30 @@ export default function ThreeCards({ cards }: CardGridProps) {
             whileInView="show"
             viewport={{ once: false, amount: 0.5 }}
         >
-            {cards.map((card, index) => (
+            {items.map((item, index) => (
                 <motion.a
-                    href={card.href}
+                    href={`/${item.category}?id=${item.id}`}
                     key={index}
-                    className={`relative bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 ${card.offsetClass || ""
-                        }`}
+                    className={`relative bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105`}
                     variants={cardVariant}
                 >
                     <div className="relative w-full h-56">
                         <Image
-                            src={card.image}
-                            alt={card.title}
+                            src={item.images[0]}
+                            alt={locale === "fr" ? item.nameFR : item.nameEN}
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 33vw"
                         />
                     </div>
-                    <div className="p-6">
-                        <h3 className="text-xl text-primary font-semibold mb-2">{card.title}</h3>
-                        <p className="text-gray-600 text-sm">{card.description}</p>
+                    <div className="p-6 flex flex-col items-center justify-center text-center">
+                        <h3 className="text-xl text-primary font-semibold mb-2 h-12 line-clamp-2">{locale === "fr" ? item.nameFR : item.nameEN}</h3>
+                        <span className="uppercase tracking-wide font-medium font-inte">
+                            {t1(item.type)}
+                        </span>
+                        <span className="text-gray-600 font-semibold text-sm md:text-base">
+                            {t2("from")} {item.price} €
+                        </span>
                     </div>
                 </motion.a>
             ))}
