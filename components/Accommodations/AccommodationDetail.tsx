@@ -98,7 +98,7 @@ export default function AccommodationDetail({
             <AnimatePresence mode="wait">
                 {selectedId !== null && (
                     <motion.div
-                        className="fixed inset-0 flex justify-end z-50 bg-black/30 backdrop-blur-sm"
+                        className="fixed inset-0 flex justify-end z-100 bg-black/30 backdrop-blur-sm"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
