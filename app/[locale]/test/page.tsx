@@ -16,6 +16,9 @@ import { DoubleCards } from "@/components/ui/DoubleCards";
 import Carrousel from "@/components/ui/Carrousel";
 import BandMap from "@/components/ui/BandMap";
 import { selectItemsByIds } from "@/utils";
+import Featured from "@/components/ui/Featured";
+import HeaderPolygon from "@/components/ui/HeaderPolygon";
+import HeaderCards from "@/components/ui/HeaderCards";
 
 
 export default function TestPage() {
@@ -52,17 +55,9 @@ export default function TestPage() {
     const sixCards = selectItemsByIds(allActivities, [1, 2, 3, 4, 5, 6])
 
 
-    const mirrorImages = [
-        { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", text: "Card 1", span: "md:row-span-2", href: "/" },
-        { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", text: "Card 2", href: "/" },
-        { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", text: "Card 3", href: "/" },
-        { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", text: "Card 4", span: "md:row-span-2", href: "/" },
-        { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", text: "Card 5", href: "/" },
-        { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", text: "Card 6", href: "/" },
-    ];
     return (
         <div className="overflow-hidden">
-            <HeaderSlider images={headerImages} heading={t1("Heading")} />
+            <HeaderCards images={headerImages} heading={t1("Heading")} />
             <Section className="md:my-40 my-10">
                 <SquareCards
                     title="Découvrir autrement"
@@ -128,6 +123,10 @@ export default function TestPage() {
 
             <Section className="md:my-40 my-10">
                 <BandMap items={activitiesMap} />
+            </Section>
+
+            <Section className="md:my-40 my-10">
+                <Featured items={threeCards} featured={allActivities[0]} heading="Que faire à marseille" subHeading="Encore plus d'idées" />
             </Section>
 
             {/* <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { BaseItem } from "@/data";
 import { useCurrentLocale, useScopedI18n } from "@/locales/client";
 
@@ -45,18 +45,18 @@ const Headband: FC<HeadbandProps> = ({
                         once: true
                     }}
                     whileHover={{ scale: 1.03, y: -5 }}
-                    className="block bg-white shadow-lg rounded-2xl p-6 w-full sm:w-80 mt-10 sm:mt-0 relative sm:absolute sm:right-30 sm:-bottom-1/2"
+                    className="block bg-white shadow-lg overflow-hidden rounded-2xl w-full sm:w-80 mt-10 sm:mt-0 relative sm:absolute sm:right-30 sm:-bottom-1/2"
                 >
-                    <div className="relative h-48 sm:h-64 w-full mb-4">
+                    <div className="relative h-48 sm:h-64 w-full">
                         <Image
                             src={item.images[0]}
                             alt={locale === "fr" ? item.nameFR : item.nameEN}
                             fill
-                            className="object-cover rounded-xl"
+                            className="object-cover"
                         />
                     </div>
-                    <div className="flex flex-col items-center justify-center gap-2 text-center">
-                        <h3 className="text-lg sm:text-xl text-primary font-semibold mb-2">
+                    <div className="flex flex-col items-center justify-center p-2 gap-2 text-center">
+                        <h3 className="text-lg sm:text-xl text-primary font-semibold ">
                             {locale === "fr" ? item.nameFR : item.nameEN}
                         </h3>
                         <span className="text-primary-foreground uppercase tracking-wide font-medium font-inter">

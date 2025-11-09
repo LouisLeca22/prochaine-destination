@@ -197,3 +197,10 @@
 .swiper-pagination-bullet-active {
   background-color: var(--color-secondary) !important;
 }
+
+
+
+.polygon-hero-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+
+}
