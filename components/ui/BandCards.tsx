@@ -48,10 +48,10 @@ export default function BandCards({ items }: { items: BaseItem[] }) {
                                 <h3 className="text-xl text-primary font-semibold mb-2 h-12 line-clamp-2">
                                     {locale === "fr" ? item.nameFR : item.nameEN}
                                 </h3>
-                                <span className="uppercase tracking-wide font-medium font-inter">
+                                <span className="text-primary-foreground uppercase tracking-wide font-medium font-inter">
                                     {t1(item.type)}
                                 </span>
-                                <span className="text-gray-600 font-semibold text-sm md:text-base">
+                                <span className=" font-semibold text-sm text-muted-foreground">
                                     {t2("from")} {item.price} €
                                 </span>
                             </div>

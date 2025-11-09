@@ -90,6 +90,7 @@ export default function ActivityDetail({
                         className="fixed inset-0 flex justify-end z-50 bg-black/30 backdrop-blur-sm"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
+                        viewport={{ once: true }}
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
@@ -97,6 +98,7 @@ export default function ActivityDetail({
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
+                            viewport={{ once: true }}
                             transition={{ type: "tween", duration: 0.4 }}
                         >
                             {/* Close button */}
@@ -144,6 +146,7 @@ export default function ActivityDetail({
                                 className="flex flex-col items-center max-w-3xl mx-auto mt-10 px-6 pb-20 space-y-6"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
                             >
                                 {/* Titre & type */}
@@ -151,8 +154,8 @@ export default function ActivityDetail({
                                     {locale === "fr" ? activity.nameFR : activity.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
-                                <div className="flex items-baseline gap-2 text-gray-600 text-sm">
-                                    <span className="uppercase tracking-wide font-medium font-inter">
+                                <div className="flex items-baseline gap-2 text-sm">
+                                    <span className="uppercase tracking-wide text-secondary font-medium font-inter">
                                         {t1(activity.type)}
                                     </span>
                                     <span className="text-primary font-semibold">— {t2("from")} {activity.price} €</span>
@@ -161,6 +164,7 @@ export default function ActivityDetail({
                                 {/* Tags */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className="flex flex-wrap gap-2  justify-center">
                                     {tags.map((tag, i) => (
                                         <span
@@ -175,6 +179,7 @@ export default function ActivityDetail({
                                 {/* Description */}
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className=" text-base leading-relaxed text-center mt-2 font-inter">
                                     {locale === "fr" ? activity.descriptionFR : activity.descriptionEN}
                                 </motion.p>
@@ -191,6 +196,7 @@ export default function ActivityDetail({
                                     }}
                                     initial="hidden"
                                     animate="visible"
+                                    viewport={{ once: true }}
                                 >
                                     <InfoCard icon={<Clock />} text={activity.duration} />
                                     <InfoCard icon={<Calendar />} text={t2(activity.season)} />
@@ -205,6 +211,7 @@ export default function ActivityDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <div className="flex items-center gap-2 text-gray-800 font-semibold">
                                         <Clock className="w-5 h-5 text-primary" />
@@ -252,6 +259,7 @@ export default function ActivityDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-primary">
                                         <Info className="w-5 h-5" />
@@ -272,6 +280,7 @@ export default function ActivityDetail({
                                     className="bg-gray-50 rounded-2xl p-4 w-full mt-6"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }}
                                 >
                                     <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-primary">
@@ -337,6 +346,7 @@ export default function ActivityDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <Popover>
                                         <PopoverTrigger asChild>
@@ -409,7 +419,7 @@ export default function ActivityDetail({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-
+                viewport={{ once: true }}
                 className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
             >
                 <span className="text-primary">{icon}</span>

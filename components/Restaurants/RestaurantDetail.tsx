@@ -87,6 +87,7 @@ export default function RestaurantDetail({
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
+                        viewport={{ once: true }}
                     >
                         <motion.div
                             className="bg-background w-full h-full relative overflow-y-auto shadow-xl"
@@ -94,6 +95,7 @@ export default function RestaurantDetail({
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "tween", duration: 0.4 }}
+                            viewport={{ once: true }}
                         >
                             {/* Close button */}
                             <button
@@ -140,14 +142,15 @@ export default function RestaurantDetail({
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
+                                viewport={{ once: true }}
                             >
                                 {/* Titre & type */}
                                 <h2 className="text-3xl font-bold text-center mb-2 text-primary">
                                     {locale === "fr" ? restaurant.nameFR : restaurant.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
-                                <div className="flex  items-baseline gap-2 text-gray-600 text-sm">
-                                    <span className="uppercase tracking-wide font-medium font-inter">
+                                <div className="flex  items-baseline gap-2  text-sm">
+                                    <span className="uppercase tracking-wide text-secondary font-medium font-inter">
                                         {t1(restaurant.type)}
                                     </span>
                                     <span className="text-primary font-semibold"> — {t2("from")} {restaurant.price} €</span>
@@ -163,6 +166,7 @@ export default function RestaurantDetail({
                                 {/* Tags */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className="flex flex-wrap gap-2  justify-center">
                                     {tags.map((tag, i) => (
                                         <span
@@ -177,6 +181,7 @@ export default function RestaurantDetail({
                                 {/* Description */}
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className=" text-base leading-relaxed text-center mt-2 font-inter">
                                     {locale === "fr" ? restaurant.descriptionFR : restaurant.descriptionEN}
                                 </motion.p>
@@ -193,6 +198,7 @@ export default function RestaurantDetail({
                                     }}
                                     initial="hidden"
                                     animate="visible"
+                                    viewport={{ once: true }}
                                 >
                                     {restaurant.vegan && <InfoCard icon={<Vegan />} text={t2("vegan")} />}
                                     {restaurant.deliveryAvailable && <InfoCard icon={<PackageCheck />} text={t2("deliveryAvailable")} />}
@@ -207,6 +213,7 @@ export default function RestaurantDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
 
 
@@ -260,6 +267,7 @@ export default function RestaurantDetail({
                                 {/* Carte Leaflet */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className="w-full h-64 mt-6 rounded-2xl overflow-hidden shadow">
                                     <MapContainer
                                         center={[restaurant.lat, restaurant.lng]}
@@ -281,6 +289,7 @@ export default function RestaurantDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-primary">
                                         <Info className="w-5 h-5" />
@@ -302,6 +311,7 @@ export default function RestaurantDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-primary">
                                         <Users className="w-5 h-5" />
@@ -364,6 +374,7 @@ export default function RestaurantDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
 
 
@@ -419,6 +430,7 @@ export default function RestaurantDetail({
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
             >

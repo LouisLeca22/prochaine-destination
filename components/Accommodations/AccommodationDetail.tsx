@@ -102,6 +102,7 @@ export default function AccommodationDetail({
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
+                        viewport={{ once: true }}
                     >
                         <motion.div
                             className="bg-background w-full h-full relative overflow-y-auto shadow-xl"
@@ -109,6 +110,7 @@ export default function AccommodationDetail({
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "tween", duration: 0.4 }}
+                            viewport={{ once: true }}
                         >
                             {/* Close button */}
                             <button
@@ -155,14 +157,15 @@ export default function AccommodationDetail({
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
+                                viewport={{ once: true }}
                             >
                                 {/* Titre & type */}
                                 <h2 className="text-3xl font-bold text-center mb-2 text-primary">
                                     {locale === "fr" ? accommodation.nameFR : accommodation.nameEN}
                                 </h2>
                                 <Separator width="w-84" />
-                                <div className="flex items-baseline gap-2 text-gray-600 text-sm">
-                                    <span className="uppercase tracking-wide font-medium font-inter">
+                                <div className="flex items-baseline gap-2  text-sm">
+                                    <span className="uppercase tracking-wide text-secondary font-medium font-inter">
                                         {t1(accommodation.type)}
                                     </span>
                                     <span className="text-primary font-semibold"> — {t2("from")} {accommodation.price} €</span>
@@ -178,6 +181,7 @@ export default function AccommodationDetail({
                                 {/* Tags */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className="flex flex-wrap gap-2  justify-center">
                                     {tags.map((tag, i) => (
                                         <span
@@ -192,6 +196,7 @@ export default function AccommodationDetail({
                                 {/* Description */}
                                 <motion.p initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className=" text-base leading-relaxed text-center mt-2 font-inter">
                                     {locale === "fr" ? accommodation.descriptionFR : accommodation.descriptionEN}
                                 </motion.p>
@@ -206,6 +211,7 @@ export default function AccommodationDetail({
                                             transition: { staggerChildren: 0.15 },
                                         },
                                     }}
+                                    viewport={{ once: true }}
                                     initial="hidden"
                                     animate="visible"
                                 >
@@ -232,6 +238,7 @@ export default function AccommodationDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
 
                                     <div className="flex items-center gap-2 text-gray-800 font-semibold">
@@ -283,6 +290,7 @@ export default function AccommodationDetail({
                                 {/* Carte Leaflet */}
                                 <motion.div initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.5 }} className="w-full h-64 mt-6 rounded-2xl overflow-hidden shadow">
                                     <MapContainer
                                         center={[accommodation.lat, accommodation.lng]}
@@ -304,6 +312,7 @@ export default function AccommodationDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-primary">
                                         <Info className="w-5 h-5" />
@@ -325,6 +334,7 @@ export default function AccommodationDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-primary">
                                         <Users className="w-5 h-5" />
@@ -388,6 +398,7 @@ export default function AccommodationDetail({
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
                                 >
                                     <Popover>
                                         <PopoverTrigger asChild>
@@ -460,6 +471,7 @@ export default function AccommodationDetail({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
             >
                 <span className="text-primary">{icon}</span>

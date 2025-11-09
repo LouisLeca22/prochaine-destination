@@ -118,10 +118,10 @@ function BandMap({ items }: { items: BaseItem[] }) {
                     <h3 className="text-lg md:text-xl text-primary font-semibold ">
                         {locale === "fr" ? selectedItem.nameFR : selectedItem.nameEN}
                     </h3>
-                    <span className="uppercase tracking-wide font-medium font-inter">
+                    <span className="text-primary-foreground uppercase tracking-wide font-medium font-inter">
                         {t1(selectedItem.type)}
                     </span>
-                    <span className="text-gray-600 font-semibold text-sm md:text-base">
+                    <span className=" font-semibold text-sm text-muted-foreground">
                         {t2("from")} {selectedItem.price} €
                     </span>
                 </div>

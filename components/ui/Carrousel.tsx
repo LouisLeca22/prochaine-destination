@@ -6,6 +6,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 import { useCurrentLocale } from "@/locales/client";
 import { Autoplay } from "swiper/modules";
+import Link from "next/link";
 
 
 
@@ -50,19 +51,21 @@ function Carrousel<T extends BaseItem>({ items }: { items: T[] }) {
                 >
                     {items.map((item, i) => (
                         <SwiperSlide key={item.id || i}>
-                            <div className="w-full h-full relative rounded-lg overflow-hidden shadow-md">
-                                <Image
-                                    src={item.images[0]}
-                                    alt={locale === "fr" ? item.nameFR : item.nameEN}
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                    <h3 className="text-white text-2xl font-semibold text-center px-4">
-                                        {locale === "fr" ? item.nameFR : item.nameEN}
-                                    </h3>
+                            <Link href={`/${item.category}?id=${item.id}`} className="block w-full h-full">
+                                <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
+                                    <Image
+                                        src={item.images[0]}
+                                        alt={locale === "fr" ? item.nameFR : item.nameEN}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                        <h3 className="text-white text-2xl font-semibold text-center px-4">
+                                            {locale === "fr" ? item.nameFR : item.nameEN}
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>
