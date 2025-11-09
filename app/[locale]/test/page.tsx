@@ -117,9 +117,9 @@ export default function TestPage() {
                 />
             </Section>
 
-            <Section className="md:my-40 my-10">
+            {/* <Section className="md:my-40 my-10">
                 <Carrousel items={allActivities} />
-            </Section>
+            </Section> */}
 
             <Section className="md:my-40 my-10">
                 <BandMap items={activitiesMap} />
