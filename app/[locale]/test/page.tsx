@@ -57,7 +57,7 @@ export default function TestPage() {
 
     return (
         <div className="overflow-hidden">
-            <HeaderCards images={headerImages} heading={t1("Heading")} />
+            {/* <HeaderCards images={headerImages} heading={t1("Heading")} /> */}
             <Section className="md:my-40 my-10">
                 <SquareCards
                     title="Découvrir autrement"

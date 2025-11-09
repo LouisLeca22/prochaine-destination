@@ -174,7 +174,18 @@ export default {
         foundAccommodationsPlural: "hébergements trouvées",
     },
     Explore: {
-        Heading: "Explorer"
+        Heading: "Explorer",
+        Subheading: "Ici, la mer façonne : le paysage, le climat, le rythme de vie. Entre falaises et petits ports, la côte normande révèle un caractère simple et authentique.",
+        cardOneTitle: "La mer, toujours présente",
+        cardOneDescription: "Compagne du quotidien, la mer rythme les vies, les promenades et les rêves. Elle apaise, inspire et relie à l’horizon.",
+        cardTwoTitle: "Une terre d’histoires",
+        cardTwoDescription: "Artisans, producteurs et conteurs perpétuent la mémoire du pays. Ici, chaque geste célèbre l’authenticité.",
+        cardThreeTitle: "Lumières et émotions",
+        cardThreeDescription: "Peintres et rêveurs l’ont saisie : la lumière normande change tout. Chaque instant devient une œuvre vivante.",
+        spiritTitle: "L'esprit des lieux",
+        spiritDescription: "Entre paysages pittoresques et patrimoine vivant, la destination invite à la flânerie et à la simplicité. Chaque lieu raconte une histoire, chaque rencontre ou table locale révèle un goût du terroir unique. Ici, il fait bon prendre le temps, savourer la gastronomie et s’imprégner de cette atmosphère authentique et conviviale qui fait tout le charme des lieux.",
+        topTitle: "Les incontournables",
+        topDescription: "Prenez le large en voile, admirez la beauté brute des paysages de la côte, explorez les ruelles chargées d’histoire, flânez dans l’arrière-pays, suivez les sentiers jusqu’aux caps et ressentez l’adrénaline au sommet des falaises battues par le vent."
     },
     404: {
         notFound: "Cette page n'existe pas...",

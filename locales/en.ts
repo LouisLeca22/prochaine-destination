@@ -174,7 +174,18 @@ export default {
         foundAccommodationsPlural: "accommodations found",
     },
     Explore: {
-        Heading: "Explore"
+        Heading: "Explore",
+        Subheading: "Here, the sea shapes everything — the landscape, the climate, the pace of life. Between cliffs and small harbors, Normandy’s coast reveals its simple, genuine character.",
+        cardOneTitle: "The Ever-Present Sea",
+        cardOneDescription: "A daily companion, the sea sets the rhythm of life, walks, and dreams. It soothes, inspires, and connects to the horizon.",
+        cardTwoTitle: "A Land of Stories",
+        cardTwoDescription: "Artisans, farmers, and storytellers keep the region’s memory alive. Every gesture here celebrates authenticity.",
+        cardThreeTitle: "Light and Emotion",
+        cardThreeDescription: "Painters and dreamers have captured it — Normandy’s light changes everything. Each moment becomes a living artwork.",
+        spiritTitle: "The Spirit of the Place",
+        spiritDescription: "Between picturesque landscapes and living heritage, the destination invites you to slow down and enjoy life’s simple pleasures. Every place tells a story, every encounter or local table reveals a unique taste of the region. Here, it feels good to take your time, savor the gastronomy, and soak up the authentic, welcoming atmosphere that gives the place its true charm.",
+        topTitle: "Top Experiences",
+        topDescription: "Set sail to discover the rugged beauty of the coast, explore cobbled streets steeped in history, wander through the quiet countryside, follow the trails to the cliffs, and feel the rush of adrenaline above the waves."
     },
     404: {
         notFound: "Page not found...",

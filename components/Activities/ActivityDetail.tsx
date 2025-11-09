@@ -155,7 +155,7 @@ export default function ActivityDetail({
                                 </h2>
                                 <Separator width="w-84" />
                                 <div className="flex items-baseline gap-2 text-sm">
-                                    <span className="uppercase tracking-wide text-secondary font-medium font-inter">
+                                    <span className="uppercase tracking-wide text-secondary-foreground dark:text-secondary font-medium font-inter">
                                         {t1(activity.type)}
                                     </span>
                                     <span className="text-primary font-semibold">— {t2("from")} {activity.price} €</span>

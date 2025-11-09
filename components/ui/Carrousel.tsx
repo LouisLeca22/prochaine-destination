@@ -10,14 +10,14 @@ import Link from "next/link";
 
 
 
-function Carrousel<T extends BaseItem>({ items }: { items: T[] }) {
+function Carrousel<T extends BaseItem>({ items, title, description }: { items: T[], title: string, description: string }) {
     const locale = useCurrentLocale();
     const isMobile = useIsMobile()
     return (
         <div className="flex w-full sm:flex-row flex-col items-center relative">
             {/* Left / Top Section */}
             <motion.div
-                className="sm:flex-1 w-full sm:h-[70vh] bg-secondary text-primary-foreground flex items-center justify-center flex-col p-6"
+                className="sm:flex-1 w-full sm:h-[70vh] bg-white text-primary-foreground flex items-center justify-center flex-col p-6"
                 initial={{ opacity: 0, x: -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
@@ -27,13 +27,11 @@ function Carrousel<T extends BaseItem>({ items }: { items: T[] }) {
                 }}
             >
                 <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">
-                    Title
+                    {title}
                 </h2>
                 <Separator width="w-40" className="mx-auto mb-8" />
                 <p className="text-lg text-center px-6 leading-relaxed">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
-                    alias, impedit sapiente omnis maxime iusto assumenda sunt laboriosam
-                    numquam ex.
+                    {description}
                 </p>
             </motion.div>
 
