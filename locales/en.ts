@@ -185,7 +185,21 @@ export default {
         spiritTitle: "The Spirit of the Place",
         spiritDescription: "Between picturesque landscapes and living heritage, the destination invites you to slow down and enjoy life’s simple pleasures. Every place tells a story, every encounter or local table reveals a unique taste of the region. Here, it feels good to take your time, savor the gastronomy, and soak up the authentic, welcoming atmosphere that gives the place its true charm.",
         topTitle: "Top Experiences",
-        topDescription: "Set sail to discover the rugged beauty of the coast, explore cobbled streets steeped in history, wander through the quiet countryside, follow the trails to the cliffs, and feel the rush of adrenaline above the waves."
+        topDescription: "Set sail to discover the rugged beauty of the coast, explore cobbled streets steeped in history, wander through the quiet countryside, follow the trails to the cliffs, and feel the rush of adrenaline above the waves.",
+        feelTitle: "To Live, To Feel",
+        feelDescription: "Treat yourself to a timeless escape on the Norman coast. Nordic baths facing the sea, soothing massages, and peaceful walks in nature create a true cocoon of relaxation. Indulge in local flavors — fresh seafood, salted butter caramel, sparkling cider — before unwinding in an unusual accommodation, lulled by the murmur of the waves or the song of the birds. Here, everything is designed to slow down, breathe, and savor.",
+        cultureTitle: "Culture & Living Heritage",
+        cultureDescription: "History is written in the stone of manor houses, the stained glass of churches, and the memories of local people. Cultural life flourishes with the seasons: open-air exhibitions, beachside theatre, concerts in gardens. It’s a place where tradition inspires creation, and where every generation adds its own color to the shared heritage.",
+        cultureCardOneTitle: "Treasures Behind the Walls",
+        cultureCardOneDescription: "Intimate collections where heritage meets imagination, and every object whispers a fragment of the past.",
+        cultureCardTwoTitle: "Echoes of the Past",
+        cultureCardTwoDescription: "Travel through the centuries — from Viking sagas to the sleek lines of modern architecture, each era has left its mark.",
+        cultureAsideTitle: "Guided Tours & Sightseeing Circuits",
+        cultureAsideDescription: "Set off to discover the region with those who know its secrets. From storytelling walks to themed tours, each visit reveals a living facet of its history.",
+        buttonText: "See all",
+        gastronomyTitle: "Flavours and Local Heritage",
+        gastronomyDescription: "Butter, farmhouse cheeses, shellfish and cider — our tables celebrate the generosity of local produce. From lively markets to gourmet restaurants, and from farms to cozy taverns, the region offers a palette of flavours where tradition meets creativity.",
+        inspireTitle: "Need some inspiration?"
     },
     404: {
         notFound: "Page not found...",
@@ -193,6 +207,7 @@ export default {
     },
     Components: {
         followUs: "Follow us!",
-        inspire: "Let the inspiration flow"
+        inspire: "Let the inspiration flow",
+        seeMore: "See more"
     }
 } as const

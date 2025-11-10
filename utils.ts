@@ -12,3 +12,9 @@ export function selectItemsByIds<T extends BaseItem>(items: T[], ids: number[]):
         .filter(item => ids.includes(item.id))
         .map(item => structuredClone(item));
 }
+
+
+export function selectItemById<T extends BaseItem>(items: T[], id: number): T | undefined {
+    const item = items.find(item => item.id === id);
+    return item ? structuredClone(item) : undefined;
+}

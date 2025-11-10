@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
-import SplitText from "./SplitText"; // adjust path
+import SplitText from "./SplitText";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { motion, Variants } from "framer-motion";
 
 interface HeaderCards {
     images: string[];
@@ -24,6 +25,26 @@ interface HeaderCards {
         effect?: "fade" | "slide";
     };
 }
+
+const containerVariants: Variants = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.3,
+            delayChildren: 0.2,
+        },
+    },
+};
+
+const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    show: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
 
 const HeaderCards: React.FC<HeaderCards> = ({
     images,
@@ -83,33 +104,34 @@ const HeaderCards: React.FC<HeaderCards> = ({
                         textAlign="end"
                     />
                 </h1>
-                <p className="text-3xl hidden sm:block text-white max-w-5xl">{subHeading}</p>
 
-                <div className="relative md:max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-6">
+                <p className="text-3xl hidden sm:block text-white max-w-5xl">
+                    {subHeading}
+                </p>
 
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="relative md:max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-6"
+                >
                     {cards.map((card, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={cardVariants}
                             className="flex-1 bg-white rounded-3xl shadow-xl p-3 transform hover:-translate-y-2 transition duration-500"
                         >
-                            <h3
-                                className="
-    font-semibold text-slate-800 
-    flex items-center gap-2 
-    justify-start md:justify-center
-    text-left md:text-center
-  "
-                            >
+                            <h3 className="font-semibold text-slate-800 flex items-center gap-2 justify-start md:justify-center text-left md:text-center">
                                 {card.title.icon}
                                 {card.title.text}
                             </h3>
                             <p className="text-slate-600 hidden sm:block px-4 py-2 leading-relaxed">
                                 {card.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
-
-                </div>
+                </motion.div>
             </div>
 
             <div className="bg-black/40 w-full h-full absolute top-0 left-0 z-40"></div>

@@ -15,7 +15,7 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
     const isMobile = useIsMobile()
     return (
         <div className="flex w-full sm:flex-row flex-col items-center relative">
-            {/* Left / Top Section */}
+
             <motion.div
                 className="sm:flex-1 w-full sm:h-[70vh] bg-white text-primary-foreground flex items-center justify-center flex-col p-6"
                 initial={{ opacity: 0, x: -120 }}
@@ -35,8 +35,14 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
                 </p>
             </motion.div>
 
-            {/* Right / Bottom Section */}
-            <div className="md:flex-3 overflow-hidden w-full h-[50vh]  shadow-lg z-20 sm:-ml-8">
+
+            <motion.div initial={{ opacity: 0, y: -120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+                viewport={{
+                    amount: 0.5,
+                    once: true
+                }} className="md:flex-3 overflow-hidden w-full h-[50vh]  shadow-lg z-20 sm:-ml-8">
                 <Swiper
                     slidesPerView={isMobile ? 1 : 3}
                     spaceBetween={isMobile ? 0 : 30}
@@ -67,7 +73,7 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>
+            </motion.div>
         </div>
     );
 }

@@ -185,7 +185,21 @@ export default {
         spiritTitle: "L'esprit des lieux",
         spiritDescription: "Entre paysages pittoresques et patrimoine vivant, la destination invite à la flânerie et à la simplicité. Chaque lieu raconte une histoire, chaque rencontre ou table locale révèle un goût du terroir unique. Ici, il fait bon prendre le temps, savourer la gastronomie et s’imprégner de cette atmosphère authentique et conviviale qui fait tout le charme des lieux.",
         topTitle: "Les incontournables",
-        topDescription: "Prenez le large en voile, admirez la beauté brute des paysages de la côte, explorez les ruelles chargées d’histoire, flânez dans l’arrière-pays, suivez les sentiers jusqu’aux caps et ressentez l’adrénaline au sommet des falaises battues par le vent."
+        topDescription: "Prenez le large en voile, admirez la beauté brute des paysages de la côte, explorez les ruelles chargées d’histoire, flânez dans l’arrière-pays, suivez les sentiers jusqu’aux caps et ressentez l’adrénaline au sommet des falaises battues par le vent.",
+        feelTitle: "À vivre, à ressentir",
+        feelDescription: "Offrez-vous une pause hors du temps sur la côte normande. Bains nordiques face à la mer, massages enveloppants et balades apaisantes dans la nature composent un véritable cocon de détente. Laissez-vous tenter par les saveurs locales — fruits de mer, caramel au beurre salé, cidre pétillant — avant de vous ressourcer dans un hébergement insolite, bercé par le murmure des vagues ou le chant des oiseaux. Ici, tout est pensé pour ralentir, respirer, savourer.",
+        cultureTitle: "Culture & patrimoine vivant",
+        cultureDescription: "L’histoire s’écrit dans la pierre des manoirs, les vitraux des églises et la mémoire des habitants. La vie culturelle s’épanouit au fil des saisons : expositions en plein air, théâtre sur la plage, concerts dans les jardins. C’est un territoire où la tradition inspire la création, et où chaque génération apporte sa couleur au patrimoine commun.",
+        cultureCardOneTitle: "Trésors Derrière les Murs",
+        cultureCardOneDescription: "Des collections intimes où le patrimoine rencontre l’imaginaire, et où chaque objet murmure un fragment du passé.",
+        cultureCardTwoTitle: "Les Échos du Passé",
+        cultureCardTwoDescription: "Remontez le fil des siècles — des sagas vikings aux lignes épurées de l’architecture moderne, chaque époque a laissé son empreinte",
+        cultureAsideTitle: "Visites guidées & circuits touristiques",
+        cultureAsideDescription: " Partez à la découverte du territoire en compagnie de ceux qui en connaissent les secrets.Des balades contées aux circuits thématiques, chaque visite révèle une facette vivante de son histoire.",
+
+        gastronomyTitle: "Saveurs et terroir",
+        gastronomyDescription: "Beurre, fromages fermiers, coquillages et cidre : nos tables célèbrent la générosité des produits locaux. Des marchés animés aux restaurants gastronomiques, en passant par les fermes et les petites tavernes, la région offre une palette de saveurs où tradition et créativité se rencontrent.",
+        inspireTitle: "En panne d'inspiration ?"
     },
     404: {
         notFound: "Cette page n'existe pas...",
@@ -193,6 +207,7 @@ export default {
     },
     Components: {
         followUs: "Suivez-nous !",
-        inspire: "Je me laisse inspirer"
+        inspire: "Je me laisse surprendre !",
+        seeMore: "Voir plus",
     }
 } as const
