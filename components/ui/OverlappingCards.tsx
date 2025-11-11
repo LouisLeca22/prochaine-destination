@@ -37,7 +37,7 @@ function OverlappingCards({
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="md:translate-x-[25%] md:-translate-y-[15%] w-full sm:w-[400px] h-64 rounded-xl overflow-hidden shadow-lg z-10 relative"
             >
                 <Image
@@ -59,7 +59,7 @@ function OverlappingCards({
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: false, amount: .5 }}
+                viewport={{ once: true, amount: .5 }}
                 className="md:translate-y-1/2 w-full md:w-[400px] h-64 rounded-xl overflow-hidden shadow-2xl z-30 relative"
             >
                 <Image
@@ -81,7 +81,7 @@ function OverlappingCards({
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: false, amount: .5 }}
+                viewport={{ once: true, amount: .5 }}
                 className="md:-translate-x-1/3 md:-translate-[10%] w-full md:w-[400px] h-64 rounded-xl overflow-hidden shadow-lg z-20 relative"
             >
                 <Image
@@ -102,7 +102,7 @@ function OverlappingCards({
                 initial={{ y: 30 }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                viewport={{ once: false, amount: .5 }}
+                viewport={{ once: true, amount: .5 }}
                 className="md:absolute right-10 -bottom-20 text-center"
             >
                 <button onClick={() => handleRandomize()} className="flex items-center gap-2 bg-secondary text-primary-foreground font-medium border-none rounded-xl px-4 py-2 w-full cursor-pointer justify-center overflow-hidden hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md">
