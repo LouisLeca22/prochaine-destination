@@ -55,7 +55,7 @@ function Header() {
             </div>
             <div className="relative top-0 left-0 w-full h-full bg-black/40">
                 <h1 className="flex w-full h-full flex-col items-end justify-end px-5 md:px-20 py-30">
-                    <span className="text-sm md:text-2xl font-josefin-sans text-white font-bold mb-4 uppercase">{t("tagline")} <Link className="text-bold text-secondary" href="https://louis-leca.web.app/">Louis Leca</Link></span>
+                    <span className="text-sm md:text-2xl font-josefin-sans text-white font-bold mb-4 uppercase">{t("tagline")} <Link className="text-bold text-secondary" href="http://www.linkedin.com/in/louis-leca">Louis Leca</Link></span>
                     <Separator width="w-40" className="md:w-70" />
                     <SplitText
                         text={t("next")}

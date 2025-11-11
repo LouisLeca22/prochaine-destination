@@ -64,7 +64,7 @@ function MapChart() {
     )
 }
 
-function ContactForm() {
+export function ContactForm() {
     const formRef = useRef(null);
     const t = useScopedI18n("Home.Contact")
 

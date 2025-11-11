@@ -26,7 +26,7 @@ const HeaderPolygon: React.FC<HeaderPolygonProps> = ({
     const { speed, autoplayDelay, loop, effect } = swiperOptions;
 
     return (
-        <header className={`relative w-full h-[40vh] overflow-hidden polygon-hero-shape ${className}`}>
+        <header className={`relative w-full h-[60vh] overflow-hidden polygon-hero-shape ${className}`}>
             <div className="absolute inset-0 z-0">
                 <Swiper
                     modules={[Autoplay, EffectFade]}

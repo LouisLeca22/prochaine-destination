@@ -201,6 +201,32 @@ export default {
         gastronomyDescription: "Butter, farmhouse cheeses, shellfish and cider — our tables celebrate the generosity of local produce. From lively markets to gourmet restaurants, and from farms to cozy taverns, the region offers a palette of flavours where tradition meets creativity.",
         inspireTitle: "Need some inspiration?"
     },
+    Press: {
+        Heading: "Press room",
+        subHeading: "Welcome to the Press Room!",
+        description: "Here you’ll find everything you need for your articles, reports, and media collaborations.",
+        releaseTitle: "Press Releases",
+        keyFigures: "Key figures",
+        visitors: "visitors / year",
+        labelled: "accommodations",
+        fromParis: " from Paris",
+        charm: "of charm and adventure!",
+        seasons: "Seasons",
+        photoLibrary: "Media Library",
+        libraryButton: "Go to the media library",
+        socialMedia: "Influencers & Social Media",
+        downloads: "Useful Downloads",
+        logosTitle: "Logos",
+        logosDescription: "Download official versions of our logos.",
+        kitTitle: "Communication Kit",
+        kitDescription: "Visual materials and templates for your communications.",
+        brandTitle: "Brand Guidelines",
+        brandDescription: "All the elements of our brand identity.",
+        dossierTitle: "Press Kits",
+        dossierDescription: "The press files, reviews, and releases you need.",
+        receptionTitle: "Press Reception",
+        receptionDescription: "Are you a journalist interested in discovering the destination? We organize press trips throughout the year. Contact us to plan your visit:",
+    },
     404: {
         notFound: "Page not found...",
         goHome: "Go back home"
@@ -208,6 +234,7 @@ export default {
     Components: {
         followUs: "Follow us!",
         inspire: "Let the inspiration flow",
-        seeMore: "See more"
+        seeMore: "See more",
+        download: "Download"
     }
 } as const

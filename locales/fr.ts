@@ -201,6 +201,32 @@ export default {
         gastronomyDescription: "Beurre, fromages fermiers, coquillages et cidre : nos tables célèbrent la générosité des produits locaux. Des marchés animés aux restaurants gastronomiques, en passant par les fermes et les petites tavernes, la région offre une palette de saveurs où tradition et créativité se rencontrent.",
         inspireTitle: "En panne d'inspiration ?"
     },
+    Press: {
+        Heading: "Espace presse",
+        subHeading: "Bienvenue dans l’espace presse !",
+        description: "Retrouvez ici tous les éléments utiles pour vos articles, reportages et collaborations presse.",
+        releaseTitle: "Communiqués de presse",
+        keyFigures: "Les chiffres clés",
+        visitors: " visiteurs / an",
+        labelled: "hébergements labellisés",
+        fromParis: "depuis Paris",
+        charm: "de charme et d'aventures !",
+        seasons: "Saisons",
+        photoLibrary: "Mediathèque",
+        libraryButton: "Accèder à la médiathèque",
+        socialMedia: "Influenceurs & Médias sociaux",
+        downloads: "Téléchargements utiles",
+        logosTitle: "Les logos",
+        logosDescription: "Télécharger les versions officielles de nos logos.",
+        kitTitle: "Kit de communication",
+        kitDescription: "Supports visuels et templates pour vos communications.",
+        brandTitle: "Charte graphique",
+        brandDescription: "Tous les éléments de notre charte graphique.",
+        dossierTitle: "Dossiers de presse",
+        dossierDescription: "Les dossiers, revues, communiqués dont vous avez besoin.",
+        receptionTitle: "Accueil presse",
+        receptionDescription: "Vous êtes journaliste et souhaitez découvrir la destination ? Nous organisons des accueils presse tout au long de l’année. Contactez-nous pour oganiser votre séjour :"
+    },
     404: {
         notFound: "Cette page n'existe pas...",
         goHome: "Retour à la page d'accueil"
@@ -209,5 +235,6 @@ export default {
         followUs: "Suivez-nous !",
         inspire: "Je me laisse surprendre !",
         seeMore: "Voir plus",
+        download: "Télécharger"
     }
 } as const
