@@ -15,7 +15,7 @@ export default function AnimatedLink({ href, text }: LinkProps) {
         >
             <Link
                 href={href}
-                className="relative bg-secondary text-primary-foreground font-medium border-none rounded-xl px-4 py-2 w-[200px] flex justify-center items-center overflow-hidden hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md"
+                className="relative bg-secondary text-primary-foreground font-medium border-none rounded-xl px-4 py-2 w-[200px] flex justify-center items-center overflow-hidden hover:text-white chover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md"
             >
                 <motion.span
                     className="absolute inset-0  opacity-0"
