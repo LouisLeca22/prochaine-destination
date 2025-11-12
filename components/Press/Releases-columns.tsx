@@ -36,7 +36,7 @@ export const getReleasesColumns = (locale: "fr" | "en"): ColumnDef<PressRelease>
                 day: "numeric",
             }).format(date)
         },
-        sortingFn: "datetime", // built-in TanStack sorting for Date objects
+        sortingFn: "datetime",
     },
     {
         accessorKey: "tags",
@@ -67,8 +67,8 @@ export const getReleasesColumns = (locale: "fr" | "en"): ColumnDef<PressRelease>
         header: () => <div className="text-center">Action</div>,
         cell: ({ row }) => {
             return (
-                <Link href="http://www.linkedin.com/louis-leca" className="flex justify-center">
-                    <ExternalLink className="h-6 w-6 text-secondary" />
+                <Link href="http://www.linkedin.com/in/louis-leca" target="_blank" className="flex justify-center">
+                    <ExternalLink className="h-6 w-6 text-secondary-foreground" />
                 </Link>
             )
         },

@@ -37,9 +37,8 @@ const containerVariants: Variants = {
 };
 
 const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    hidden: { y: 40, scale: 0.95 },
     show: {
-        opacity: 1,
         y: 0,
         scale: 1,
         transition: { duration: 0.6, ease: "easeOut" },
@@ -88,7 +87,7 @@ const HeaderCards: React.FC<HeaderCards> = ({
                 </Swiper>
             </div>
 
-            <div className="relative flex items-center justify-center gap-20 text-center flex-col top-0 left-0 w-full min-h-[80vh] md:translate-y-1/6 z-50">
+            <div className="relative flex items-center justify-center gap-20 text-center flex-col top-0 left-0 w-full min-h-[80vh] md:translate-y-1/5 z-50">
                 <h1>
                     <SplitText
                         text={heading}
@@ -105,7 +104,7 @@ const HeaderCards: React.FC<HeaderCards> = ({
                     />
                 </h1>
 
-                <p className="text-3xl hidden sm:block text-white max-w-5xl">
+                <p className="text-3xl hidden sm:block text-white max-w-5xl text-shadow-lg ">
                     {subHeading}
                 </p>
 
@@ -134,7 +133,7 @@ const HeaderCards: React.FC<HeaderCards> = ({
                 </motion.div>
             </div>
 
-            <div className="bg-black/40 w-full h-full absolute top-0 left-0 z-40"></div>
+            <div className="bg-black/55 w-full h-full absolute top-0 left-0 z-40"></div>
         </header>
     );
 };

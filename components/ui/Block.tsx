@@ -66,8 +66,8 @@ export default function Block({ cards, title, description, asideTitle, asideDesc
                                     className="w-full h-48 sm:h-56 object-cover"
                                 />
                                 <div className="p-4">
-                                    <h3 className="font-semibold text-lg">{card.title}</h3>
-                                    <p className="text-sm text-primary-foreground mt-2">
+                                    <h3 className="font-semibold text-primary text-lg">{card.title}</h3>
+                                    <p className="text-sm text-gray-600 mt-2">
                                         {card.description}
                                     </p>
                                 </div>

@@ -234,7 +234,7 @@ function PressPage() {
 
 
                     </div>
-                    <Link href="http://linkedin.com/louis-leca" className="bg-secondary mt-10 md:mt-0 self-center text-primary-foreground py-2 px-4 rounded-xl transition hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md">
+                    <Link href="http://www.linkedin.com/in/louis-leca" target="_blank" className="bg-secondary mt-10 md:mt-0 self-center text-primary-foreground py-2 px-4 rounded-xl transition hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md">
                         {t1("libraryButton")}
                     </Link>
                 </div>
@@ -303,7 +303,7 @@ function PressPage() {
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("logosTitle")}</h3>
                             <p className="text-sm text-gray-500 mb-4">{t1("logosDescription")}</p>
-                            <Link href="http://www.linkedin.com/louis-leca" target="_blank"
+                            <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                                 className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
@@ -319,7 +319,7 @@ function PressPage() {
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("kitTitle")}</h3>
                             <p className="text-sm text-gray-500 mb-4">{t1("kitDescription")}</p>
-                            <Link href="http://www.linkedin.com/louis-leca" target="_blank"
+                            <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                                 className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
@@ -334,7 +334,7 @@ function PressPage() {
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("brandTitle")}</h3>
                             <p className="text-sm text-gray-500 mb-4">{t1("brandDescription")}</p>
-                            <Link href="http://www.linkedin.com/louis-leca" target="_blank"
+                            <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                                 className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
@@ -349,7 +349,7 @@ function PressPage() {
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("dossierTitle")}</h3>
                             <p className="text-sm text-gray-500 mb-4">{t1("dossierDescription")}</p>
-                            <Link href="http://www.linkedin.com/louis-leca" target="_blank"
+                            <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                                 className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>

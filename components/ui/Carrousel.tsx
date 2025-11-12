@@ -30,7 +30,7 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
                     {title}
                 </h2>
                 <Separator width="w-40" className="mx-auto mb-8" />
-                <p className="text-lg text-center px-6 leading-relaxed">
+                <p className="text-lg text-center text-gray-600 px-6 leading-relaxed">
                     {description}
                 </p>
             </motion.div>
