@@ -363,7 +363,7 @@ function page() {
                     <Separator width="w-48 " />
 
                     <div className="container mx-auto mt-5 max-w-6xl ">
-                        <p className="md:text-2xl font-josefin-sans text-gray-600 text-center">{t1("contactGroupDescription")}</p>
+                        <p className="md:text-2xl font-josefin-sans text-center">{t1("contactGroupDescription")}</p>
                         <div className="flex md:flex-row flex-col mt-10">
                             <ContactForm />
                             <img src="/images/groups/groups.svg" className="w-[40%] md:block hidden " />
