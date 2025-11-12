@@ -22,7 +22,7 @@ export default function Menu() {
         const handleScroll = () => setScrolled(window.scrollY > 250)
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+    }, [isHome])
 
     return (
         <div
