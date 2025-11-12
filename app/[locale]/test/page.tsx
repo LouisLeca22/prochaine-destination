@@ -100,10 +100,10 @@ export default function TestPage() {
                 />
             </Section>
 
-            <Section className="md:my-40 my-10">
+            {/* <Section className="md:my-40 my-10">
 
                 <MirrorGrid cards={sixCards} />
-            </Section>
+            </Section> */}
 
             <Section className="md:my-40 my-10">
                 <BandCards items={threeCards} />
