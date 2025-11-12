@@ -8,6 +8,7 @@ interface DoubleCardsProps {
     images: [string, string];
     imageAlt?: string;
     reverse?: boolean;
+    smallTitle?: boolean
 }
 
 export const DoubleCards = ({
@@ -16,6 +17,7 @@ export const DoubleCards = ({
     images,
     imageAlt = 'Discover image',
     reverse = false,
+    smallTitle = false
 }: DoubleCardsProps) => {
     return (
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
@@ -55,7 +57,8 @@ export const DoubleCards = ({
                     once: true
                 }}
             >
-                <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">{title}</h2>
+                <h2 className={`${smallTitle ? "md:text-3xl" : "md:text-4xl"
+                    } text-2xl font-josefin-sans font-bold text-primary mb-4`}>{title}</h2>
                 <Separator width="w-40" className="mx-auto" />
                 <p className="text-lg leading-relaxed mt-10">{description}</p>
             </motion.div>

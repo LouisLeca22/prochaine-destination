@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { BaseItem } from "@/data";
-import { useCurrentLocale } from "@/locales/client";
 
 
 
 interface ImageGridProps {
-    cards: BaseItem[];
+    cards: {
+        title: string
+        image: string
+    }[]
     className?: string;
     animateOnce?: boolean;
     stagger?: number;
@@ -20,7 +21,6 @@ export default function ImageGrid({
     animateOnce = true,
     stagger = 0.1,
 }: ImageGridProps) {
-    const locale = useCurrentLocale()
     return (
         <div
             className={`
@@ -39,7 +39,7 @@ export default function ImageGrid({
         >
             {cards.map((card, i) => (
                 <motion.a
-                    href={`/${card.category}?id=${card.id}`}
+                    href={`http://www.linkedin.com/in/louis-leca`}
                     key={i}
                     className={`
             relative rounded-2xl overflow-hidden group text-center
@@ -52,15 +52,14 @@ export default function ImageGrid({
                     viewport={{ once: animateOnce, amount: 0.5 }}
                     whileHover={{ scale: 1.02 }}
                 >
-                    {/* Background image */}
                     <motion.div
                         className="absolute inset-0"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.6 }}
                     >
                         <Image
-                            src={card.images[0]}
-                            alt={locale === "fr" ? card.nameFR : card.nameEN}
+                            src={card.image}
+                            alt={card.title}
                             fill
                             className="object-cover"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -68,7 +67,6 @@ export default function ImageGrid({
                         />
                     </motion.div>
 
-                    {/* Permanent text overlay */}
 
                     <div
                         className="
@@ -76,7 +74,7 @@ export default function ImageGrid({
                 bg-black/40 text-white text-lg font-semibold
               "
                     >
-                        {locale === "fr" ? card.nameFR : card.nameEN}
+                        {card.title}
                     </div>
 
                 </motion.a>

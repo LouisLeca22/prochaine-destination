@@ -8,7 +8,7 @@ interface SeparatorProps {
 const Separator: React.FC<SeparatorProps> = ({ width = "w-24", className = "" }) => {
     return (
         <div
-            className={`h-[4px] mb-4 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full ${width} ${className}`}
+            className={`h-1 mb-4 bg-linear-to-r from-cyan-400 to-cyan-600 rounded-full ${width} ${className}`}
         />
     );
 };

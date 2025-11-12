@@ -142,14 +142,14 @@ function PressPage() {
             </header>
 
             <Section className="my-20 p-10 md:p-0">
-                <div className="max-w-6xl mx-auto flex items-end flex-col">
+                <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
                         animationDuration={1}
                         ease="back.inOut(2)"
                         scrollStart="center bottom+=50%"
                         scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans font-bold text-primary"
+                        textClassName="text-2xl whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
                         {t1("keyFigures")}
                     </ScrollFloat>
@@ -160,7 +160,7 @@ function PressPage() {
                             <p className="text-4xl font-bold mb-2 text-primary">
                                 <CountUp startWhen={true} from={0} to={1.2} />
                             </p>
-                            <p>{t1("visitors")}</p> M
+                            <p>{t1("visitors")}</p>M
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold  mb-2 text-primary">
@@ -170,7 +170,7 @@ function PressPage() {
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold mb-2 text-primary">
-                                <CountUp from={0} to={3} /> h
+                                <CountUp from={0} to={3} />h
                             </p>
                             <p>{t1("fromParis")}</p>
                         </div>
@@ -181,7 +181,6 @@ function PressPage() {
                             <p>{t1("charm")}</p>
                         </div>
                     </div>
-
                 </div>
             </Section>
 
@@ -193,7 +192,7 @@ function PressPage() {
                         scrollStart="center bottom+=50%"
                         scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans font-bold text-primary"
+                        textClassName="text-2xl whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
                         {t1("releaseTitle")}
                     </ScrollFloat>
@@ -213,7 +212,7 @@ function PressPage() {
                         scrollStart="center bottom+=50%"
                         scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans font-bold text-primary"
+                        textClassName="text-2xl  whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
                         {t1("photoLibrary")}
                     </ScrollFloat>
@@ -247,7 +246,7 @@ function PressPage() {
                         scrollStart="center bottom+=50%"
                         scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans font-bold text-primary"
+                        textClassName="text-2xl whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
                         {t1("socialMedia")}
                     </ScrollFloat>
@@ -281,7 +280,7 @@ function PressPage() {
                         scrollStart="center bottom+=100%"
                         scrollEnd="bottom bottom-=5%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans font-bold text-primary"
+                        textClassName="text-2xl whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
                         {t1("downloads")}
                     </ScrollFloat>
@@ -365,7 +364,7 @@ function PressPage() {
                         scrollStart="center bottom+=100%"
                         scrollEnd="bottom bottom-=5%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans font-bold text-primary"
+                        textClassName="text-2xl whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
                         {t1("receptionTitle")}
                     </ScrollFloat>
@@ -374,16 +373,12 @@ function PressPage() {
                     <div className="container mx-auto mt-5 max-w-6xl">
                         <p className="md:text-2xl font-josefin-sans text-gray-600 text-center">{t1("receptionDescription")}</p>
                         <div className="flex md:flex-row flex-col mt-10">
-
-
                             <ContactForm />
                             <img src="/images/press/press.svg" className="w-[40%] md:block hidden " />
                         </div>
                     </div>
-
                 </div>
             </Section>
-
         </>
     )
 }

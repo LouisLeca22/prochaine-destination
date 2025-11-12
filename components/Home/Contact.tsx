@@ -110,7 +110,7 @@ export function ContactForm() {
 
     return (
         <Form {...form}>
-            <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className=" w-full md:w-[50%] md:mx-20 mx-0 flex flex-col items-center justify-center space-y-5 md:space-y-10  rounded-2xl p-2 md:p-20 "
+            <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className=" w-full md:flex-1 flex flex-col items-center justify-center space-y-5 md:space-y-10  rounded-2xl p-2 md:p-20 "
             >
                 <FormField
                     control={form.control}
@@ -141,7 +141,7 @@ export function ContactForm() {
                 <Button variant="secondary"
                     className="relative bg-secondary text-primary-foreground font-medium border-none rounded-xl px-4 py-2 w-[200px]
              hover:bg-linear-to-r from-emerald-400 to-emerald-300 cursor-pointer shadow-md
-             hover:scale-110 transition-all duration-300 ease-out"
+             hover:scale-110 hover:text-white transition-all duration-300 ease-out"
                     type="submit"
                 >
                     {t("submit")}

@@ -70,7 +70,7 @@ const HeaderPolygon: React.FC<HeaderPolygonProps> = ({
                         to={{ opacity: 1, y: 0 }}
                         threshold={0.1}
                         rootMargin="-100px"
-                        textAlign="end"
+                        textAlign="center"
                     />
                 </h1>
             </div>
