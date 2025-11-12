@@ -185,7 +185,7 @@ export default {
         spiritTitle: "L'esprit des lieux",
         spiritDescription: "Entre paysages pittoresques et patrimoine vivant, la destination invite à la flânerie et à la simplicité. Chaque lieu raconte une histoire, chaque rencontre ou table locale révèle un goût du terroir unique. Dans nos contrées, il fait bon prendre le temps, savourer la gastronomie et s’imprégner de cette atmosphère authentique et conviviale qui fait tout le charme des lieux.",
         topTitle: "Les incontournables",
-        topDescription: "Prenez le large en voile, admirez la beauté brute des paysages de la côte, explorez les ruelles chargées d’histoire, flânez dans l’arrière-pays, suivez les sentiers jusqu’aux caps et ressentez l’adrénaline au sommet des falaises battues par le vent.",
+        topDescription: "Prenez le large en voile, admirez la beauté brute des paysages de la côte, explorez les ruelles chargées d’histoire, parcourez l’arrière-pays, suivez les sentiers jusqu’aux caps et ressentez l’adrénaline au sommet des falaises battues par le vent.",
         feelTitle: "À vivre, à ressentir",
         feelDescription: "Offrez-vous une pause hors du temps sur la côte normande. Bains nordiques face à la mer, massages enveloppants et balades apaisantes dans la nature composent un véritable cocon de détente. Laissez-vous tenter par les saveurs locales — fruits de mer, caramel au beurre salé, cidre pétillant — avant de vous ressourcer dans un hébergement insolite, bercé par le murmure des vagues ou le chant des oiseaux. Un lieu où l’on prend le temps de ralentir, de respirer, de savourer.",
         cultureTitle: "Culture & patrimoine vivant",

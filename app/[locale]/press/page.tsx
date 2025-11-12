@@ -12,7 +12,6 @@ import CountUp from "@/components/ui/CountUp"
 import Masonry from "@/components/ui/Masonry"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import Image from "next/image"
 import SocialMasonry from "@/components/ui/SocialMasonry"
 import { Facebook, FolderClosed, Image as Img, Instagram, LayoutPanelTop, Palette, Youtube } from "lucide-react"
 import { ContactForm } from "@/components/Home/Contact"
@@ -161,11 +160,11 @@ function PressPage() {
                             <p className="text-4xl font-bold mb-2 text-primary">
                                 <CountUp startWhen={true} from={0} to={1.2} />
                             </p>
-                            <p>{t1("visitors")}</p>
+                            <p>{t1("visitors")}</p> M
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold  mb-2 text-primary">
-                                <CountUp from={0} to={150} /> M
+                                <CountUp from={0} to={150} />
                             </p>
                             <p>{t1("labelled")}</p>
                         </div>

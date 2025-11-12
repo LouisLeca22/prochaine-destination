@@ -359,7 +359,7 @@ export default function ActivityDetail({
                                                 {t2("availableDates")}
                                             </Button>
                                         </PopoverTrigger>
-                                        <PopoverContent className="w-auto p-0">
+                                        <PopoverContent className="w-auto p-0 z-999">
                                             <ShadCalendar
                                                 mode="multiple"
                                                 selected={activity.availability.map((d) => new Date(d))}

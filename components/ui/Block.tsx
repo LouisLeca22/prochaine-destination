@@ -92,7 +92,7 @@ export default function Block({ cards, title, description, asideTitle, asideDesc
                         </h2>
                     </div>
 
-                    <p className="text-sm text-primary-foreground text-center mb-6 leading-relaxed">
+                    <p className="text-sm text-gray-600 text-center mb-6 leading-relaxed">
                         {asideDescription}
                     </p>
 
