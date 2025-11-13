@@ -107,37 +107,37 @@ function PartnersPage() {
             name: "Nesrine Hadji",
             role: t1("personOneRole"),
             testimony: t1("personOneTestimony"),
-            image: "https://randomuser.me/api/portraits/women/18.jpg"
+            image: "/images/partners/person1.jpg"
         },
         {
             name: "Thomas Anders",
             role: t1("personTwoRole"),
             testimony: t1("personTwoTestimony"),
-            image: "https://randomuser.me/api/portraits/men/53.jpg"
+            image: "/images/partners/person2.jpg"
         },
         {
             name: "Leona Hernandez",
             role: t1("personThreeRole"),
             testimony: t1("personThreeTestimony"),
-            image: "https://randomuser.me/api/portraits/women/74.jpg"
+            image: "/images/partners/person3.jpg"
         },
         {
             name: "Marc Delacourt",
             role: t1("personFourRole"),
             testimony: t1("personFourTestimony"),
-            image: "https://randomuser.me/api/portraits/men/21.jpg"
+            image: "/images/partners/person4.jpg"
         },
         {
             name: "Hawa Mendije",
             role: t1("personFiveRole"),
             testimony: t1("personFiveTestimony"),
-            image: "https://randomuser.me/api/portraits/women/16.jpg"
+            image: "/images/partners/person5.jpg"
         },
         {
             name: "Ilona Moretti",
             role: t1("personSixRole"),
             testimony: t1("personSixTestimony"),
-            image: "https://randomuser.me/api/portraits/women/27.jpg"
+            image: "/images/partners/person6.jpg"
         }
     ]
 
@@ -245,7 +245,7 @@ function PartnersPage() {
                                         <h3 className="font-semibold text-primary flex gap-4 justify-center items-center mb-3">
                                             {mission.icon} {mission.title}
                                         </h3>
-                                        <p className="text-center">{mission.description}</p>
+                                        <p className="text-center text-gray-600">{mission.description}</p>
                                     </div>
                                 </motion.div>
                             ))}

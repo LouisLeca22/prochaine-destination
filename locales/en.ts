@@ -364,6 +364,7 @@ export default {
         cardFiveDescription: "Refined décor, high-tech equipment, ideal for receptions and conferences.",
         cardSixDescription: "Large modular auditorium, exhibition area, direct access to the seafront promenade.",
         logisticTitle: "Access & Logistics",
+        logisiticDescription: "To ensure a smooth arrival and stay, we provide several transport and logistics solutions tailored to your needs. Whether you travel by train, by car, or using our dedicated services, access to the venue is simple and seamless for a fully hassle-free experience.",
         trainTitle: "By Train",
         trainDescription: "2 hours from Paris Saint-Lazare, daily connections to Le Havre and Rouen.",
         carTitle: "By Car",
@@ -380,6 +381,7 @@ export default {
         toolBoxTitle: "Business Tourism Tools",
         toolboxDescription: "Find our professional resources to help organize your events: technical sheets, practical guide and MICE brochure.",
         downloadBrochure: "Download the MICE Brochure",
+        linkedIn: "Our professional news on LinkedIn",
         contactBusiness: "Contact Our Business Team",
         contactDescription: "We support you in designing and delivering your professional events."
     },

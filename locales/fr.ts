@@ -363,6 +363,7 @@ export default {
         cardFiveDescription: "Décor raffiné, équipements haute technologie, idéal pour réceptions et conférences.",
         cardSixDescription: "Grand auditorium modulable, espace d’exposition, accès direct à la promenade maritime.",
         logisticTitle: "Accès & logistique",
+        logisticDescription: "Pour faciliter votre arrivée et votre séjour, nous mettons à disposition plusieurs solutions de transport et de logistique adaptées à tous les besoins. Que vous veniez en train, en voiture ou via nos services dédiés, l’accès au site est simple et fluide afin de garantir une expérience sans contrainte.",
         trainTitle: "Par le train",
         trainDescription: "2h depuis Paris Saint-Lazare, liaisons quotidiennes vers Le Havre et Rouen.",
         carTitle: "En voiture",
@@ -379,6 +380,7 @@ export default {
         toolBoxTitle: "Outils Tourisme d’affaires",
         toolboxDescription: "Retrouvez nos supports professionnels pour faciliter l’organisation de vos événements : fiches techniques, guide pratique et brochure MICE.",
         downloadBrochure: "Télécharger la brochure MICE",
+        linkedIn: "Notre actualité professionnelle sur linkedIn",
         contactBusiness: "Contactez notre équipe affaires",
         contactDescription: "Nous vous accompagnons dans la conception et la réalisation de vos événements professionnels."
     },
