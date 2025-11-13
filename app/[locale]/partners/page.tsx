@@ -34,7 +34,7 @@ function PartnersPage() {
             icon: <Megaphone className="w-8 h-8 text-primary" />,
             title: t1("promotionTitle"),
             description: t1("promotionDescription"),
-            img: " https://images.pexels.com/photos/8638300/pexels-photo-8638300.jpeg",
+            img: "https://images.pexels.com/photos/8638300/pexels-photo-8638300.jpeg",
             alt: t1("promotionTitle"),
         },
         {
