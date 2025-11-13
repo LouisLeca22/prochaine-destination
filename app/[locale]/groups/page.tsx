@@ -1,6 +1,7 @@
 "use client"
 
 import { ContactForm } from "@/components/Home/Contact"
+import BandMap from "@/components/ui/BandMap"
 import CountUp from "@/components/ui/CountUp"
 import { DoubleCards } from "@/components/ui/DoubleCards"
 import HeaderPolygon from "@/components/ui/HeaderPolygon"
@@ -8,14 +9,15 @@ import MirrorGrid from "@/components/ui/MirrorGrid"
 import ScrollFloat from "@/components/ui/ScrollFloat"
 import Section from "@/components/ui/Section"
 import Separator from "@/components/ui/Separator"
-import { activities } from "@/data"
+import { accommodations, activities, restaurants } from "@/data"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useScopedI18n } from "@/locales/client"
-import { selectItemsByIds } from "@/utils"
+import { selectItemById, selectItemsByIds } from "@/utils"
 import { motion } from "framer-motion"
 import { Eye, Handshake, Heart, Target } from "lucide-react"
 import Image from "next/image";
 import Link from "next/link"
+import { useMemo } from "react"
 
 
 function page() {
@@ -47,6 +49,7 @@ function page() {
             desc: t1("traditionDescription"),
         },
     ];
+
 
 
 
@@ -92,6 +95,14 @@ function page() {
         }
     ]
 
+    const allAccommodations = useMemo(() => accommodations, [accommodations])
+    const allRestaurants = useMemo(() => restaurants, [])
+
+    const groupAccommodations = selectItemsByIds(allAccommodations, [1, 7, 14, 16, 19, 21])
+    const groupRestaurants = selectItemsByIds(allRestaurants, [1, 2, 9, 15, 16])
+
+    console.log([...groupAccommodations, ...groupRestaurants].length)
+
     return (
         <>
             <header>
@@ -124,27 +135,27 @@ function page() {
                     <div className="grid md:grid-cols-4 gap-8 text-center text-gray-600 self-center  mt-10">
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold mb-2 text-primary">
-                                <CountUp startWhen={true} from={0} to={120} />km
+                                <CountUp startWhen={true} from={0} to={250} />
                             </p>
-                            <p>{t1("coast")}</p>
+                            <p>{t1("groups")}</p>
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold  mb-2 text-primary">
-                                <CountUp from={0} to={90} />
+                                <CountUp from={0} to={25} />
                             </p>
-                            <p>{t1("accommodations")}</p>
+                            <p>{t1("circuits")}</p>
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold mb-2 text-primary">
-                                <CountUp from={0} to={100} />+
+                                <CountUp from={0} to={48} />h
                             </p>
-                            <p>{t1("sites")}</p>
+                            <p>{t1("delay")}</p>
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold text-primary mb-2">
-                                <CountUp from={0} to={3} />h
+                                <CountUp from={0} to={94} />%
                             </p>
-                            <p>{t1("fromParis")}</p>
+                            <p>{t1("satisfaction")}</p>
                         </div>
                     </div>
 
@@ -283,6 +294,10 @@ function page() {
                     ]}
                     smallTitle={true}
                 />
+                <div className="mt-10">
+
+                    <BandMap items={[...groupAccommodations, ...groupRestaurants]} />
+                </div>
             </Section>
 
 

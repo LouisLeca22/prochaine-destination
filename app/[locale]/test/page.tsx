@@ -66,13 +66,13 @@ export default function TestPage() {
                     reverse={true}
                 />
             </Section>
-            <Section className="md:my-40 my-10">
+            {/* <Section className="md:my-40 my-10">
 
                 <Headband
                     bandText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
                     item={allActivities[12]}
                 />
-            </Section>
+            </Section> */}
             <Section className="md:my-40 my-10">
                 <ThreeCards items={threeCards} />
             </Section>

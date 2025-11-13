@@ -105,7 +105,7 @@ function OverlappingCards({
                 viewport={{ once: true, amount: .5 }}
                 className="md:absolute right-10 -bottom-20 text-center"
             >
-                <button onClick={() => handleRandomize()} className="flex items-center gap-2 bg-secondary text-primary-foreground font-medium border-none rounded-xl px-4 py-2 w-full cursor-pointer justify-center overflow-hidden hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md">
+                <button onClick={() => handleRandomize()} className="flex items-center gap-2 bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition cursor-pointer">
                     <Shuffle className="h-4 w-4" />
                     {buttonText}
                 </button>

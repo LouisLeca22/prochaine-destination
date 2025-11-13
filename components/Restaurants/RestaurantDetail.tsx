@@ -209,7 +209,7 @@ export default function RestaurantDetail({
 
                                 {/* Horaires + Lieu */}
                                 <motion.div
-                                    className="bg-gray-50 rounded-2xl p-5 w-full mt-4 flex flex-col gap-3"
+                                    className="bg-white rounded-2xl p-5 w-full mt-4 flex flex-col gap-3"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
@@ -285,7 +285,7 @@ export default function RestaurantDetail({
 
                                 {/* Inclus */}
                                 <motion.div
-                                    className="bg-gray-50 rounded-2xl p-4 w-full mt-6"
+                                    className="bg-white rounded-2xl p-4 w-full mt-6"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
@@ -307,7 +307,7 @@ export default function RestaurantDetail({
 
                                 {/* Organizer / Contact Info */}
                                 <motion.div
-                                    className="bg-gray-50 rounded-2xl p-4 w-full mt-6"
+                                    className="bg-white rounded-2xl p-4 w-full mt-6"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
@@ -432,7 +432,7 @@ export default function RestaurantDetail({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
+                className="flex items-center gap-2 bg-white px-3 py-2 rounded-xl text-gray-700 text-sm shadow-sm"
             >
                 <span className="text-primary">{icon}</span>
                 <span>{text}</span>

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import Separator from "./Separator";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { BaseItem } from "@/data";
 import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 import { useCurrentLocale } from "@/locales/client";
-import { Autoplay } from "swiper/modules";
 import Link from "next/link";
 
 
@@ -17,7 +17,7 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
         <div className="flex w-full sm:flex-row flex-col items-center relative">
 
             <motion.div
-                className="sm:flex-1 w-full sm:h-[70vh] bg-white text-primary-foreground flex items-center justify-center flex-col p-6"
+                className="sm:flex-1 w-full sm:h-[70vh] bg-linear-to-br from-primary to-primary-foreground flex items-center justify-center flex-col p-10"
                 initial={{ opacity: 0, x: -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
@@ -26,11 +26,11 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
                     once: true
                 }}
             >
-                <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">
+                <h2 className="text-4xl font-josefin-sans font-bold text-white mb-4">
                     {title}
                 </h2>
-                <Separator width="w-40" className="mx-auto mb-8" />
-                <p className="text-lg text-center text-gray-600 px-6 leading-relaxed">
+                <div className="h-1 bg-linear-to-r from-white to-[oklch(0.98_0.02_230)] mx-auto rounded-full w-72 mb-15" />
+                <p className="text-lg text-center text-white px-6 leading-relaxed">
                     {description}
                 </p>
             </motion.div>
@@ -54,7 +54,7 @@ function Carrousel<T extends BaseItem>({ items, title, description }: { items: T
                     className="w-full h-full"
                 >
                     {items.map((item, i) => (
-                        <SwiperSlide key={item.id || i}>
+                        <SwiperSlide key={i}>
                             <Link href={`/${item.category}?id=${item.id}`} className="block w-full h-full">
                                 <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
                                     <Image

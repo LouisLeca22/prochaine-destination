@@ -2,7 +2,11 @@
 
 import { useState, useMemo } from "react"
 import { Popup, useMap } from "react-leaflet"
-import L from "leaflet"
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import "leaflet.markercluster";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import "leaflet/dist/leaflet.css"
 import iconUrl from "leaflet/dist/images/marker-icon.png"
 import iconShadow from "leaflet/dist/images/marker-shadow.png"
@@ -68,16 +72,15 @@ function BandMap({ items }: { items: BaseItem[] }) {
                     bounds={bounds}
                     scrollWheelZoom={true}
                     minZoom={5}
-                    maxBounds={bounds}
                     maxBoundsViscosity={0.8}
                 >
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution="&copy; OpenStreetMap contributors"
                     />
-                    {items.map(item => (
+                    {items.map((item, index) => (
                         <Marker
-                            key={item.id}
+                            key={index}
                             position={[item.lat, item.lng]}
                             eventHandlers={{
                                 click: () => {
@@ -114,7 +117,7 @@ function BandMap({ items }: { items: BaseItem[] }) {
                 </div>
 
                 {/* Text */}
-                <div className="flex flex-col justify-center md:justify-start items-start md:items-center gap-2 md:gap-4 flex-1 p-4 text-left md:text-center">
+                <div className="flex flex-col justify-center  items-start md:items-center gap-2 md:gap-4 flex-1 p-4 text-left md:text-center">
                     <h3 className="text-lg md:text-xl text-primary font-semibold ">
                         {locale === "fr" ? selectedItem.nameFR : selectedItem.nameEN}
                     </h3>

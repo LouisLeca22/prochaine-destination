@@ -170,7 +170,10 @@ function Contact() {
                 <Separator width="w-200" />
             </div>
             <div className="flex md:flex-row flex-col">
-                <ContactForm />
+                <div className="flex-1 md:mx-20">
+
+                    <ContactForm />
+                </div>
                 <MapChart />
             </div>
         </section>

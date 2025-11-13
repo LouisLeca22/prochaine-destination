@@ -158,27 +158,27 @@ function PressPage() {
                     <div className="grid md:grid-cols-4 gap-8 text-center text-gray-600 self-center  mt-10">
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold mb-2 text-primary">
-                                <CountUp startWhen={true} from={0} to={1.2} />
+                                <CountUp startWhen={true} from={0} to={40} />
                             </p>
-                            <p>{t1("visitors")}</p>M
+                            <p>{t1("reception")}</p>
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold  mb-2 text-primary">
-                                <CountUp from={0} to={150} />
+                                <CountUp from={0} to={70} />
                             </p>
-                            <p>{t1("labelled")}</p>
+                            <p>{t1("articles")}</p>
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold mb-2 text-primary">
-                                <CountUp from={0} to={3} />h
+                                <CountUp from={0} to={80} />K
                             </p>
-                            <p>{t1("fromParis")}</p>
+                            <p>{t1("followers")}</p>
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold text-primary mb-2">
-                                <CountUp from={0} to={4} /> {t1("seasons")}
+                                <CountUp from={0} to={35} />
                             </p>
-                            <p>{t1("charm")}</p>
+                            <p>{t1("influencers")}</p>
                         </div>
                     </div>
                 </div>
