@@ -17,8 +17,8 @@ export default function Featured({ items, featured, heading, subHeading }: { ite
     return (
         <div >
             <div className=" relative sm:h-[30vh] sm:flex flex-col p-6 sm:bg-linear-to-b from-primary to-primary-foreground">
-                <h3 className="text-2xl text-secondary">{subHeading}</h3>
-                <h2 className="text-4xl font-inter text-white ">{heading} </h2>
+                <h3 className="text-2xl text-center md:text-start sm:text-white">{subHeading}</h3>
+                <h2 className="text-4xl font-inter text-center md:text-start md:mt-0 mt-5 sm:text-white ">{heading} </h2>
             </div>
             <div className="relative sm:-mt-24 py-6 sm:py-0 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row  items-stretch gap-12">
@@ -63,7 +63,7 @@ export default function Featured({ items, featured, heading, subHeading }: { ite
                     >
                         <div className="relative h-48 sm:h-64 w-full ">
                             <Image
-                                src="https://images.unsplash.com/photo-1601312044126-06d550c15beb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"
+                                src={featured.images[0]}
                                 alt=""
                                 fill
                                 className="object-cover"

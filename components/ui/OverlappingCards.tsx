@@ -103,7 +103,7 @@ function OverlappingCards({
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{ once: true, amount: .5 }}
-                className="md:absolute right-10 -bottom-20 text-center"
+                className="md:absolute right-10 -bottom-20 mx-auto  text-center"
             >
                 <button onClick={() => handleRandomize()} className="flex items-center gap-2 bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition cursor-pointer">
                     <Shuffle className="h-4 w-4" />

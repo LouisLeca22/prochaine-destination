@@ -54,7 +54,7 @@ function PartnersPage() {
         {
             icon: <Sprout className="w-8 h-8 text-primary" />,
             title: t1("sustainableTitle"),
-            description: t1("supportDescription"),
+            description: t1("sustainableDescription"),
             img: "https://images.pexels.com/photos/3608056/pexels-photo-3608056.jpeg",
             alt: t1("sustainableTitle"),
         },
@@ -339,7 +339,7 @@ function PartnersPage() {
                             </div>
 
                             <h3 className="font-semibold mb-2 text-primary">{item.title}</h3>
-                            <p className="grow">{item.description}</p>
+                            <p className="grow text-gray-600">{item.description}</p>
 
                             <a
                                 href={item.href}
@@ -373,7 +373,7 @@ function PartnersPage() {
                         spaceBetween={isMobile ? 0 : 30}
                         modules={[Autoplay]}
                         autoplay={{
-                            delay: 3000,
+                            delay: 5000,
                             disableOnInteraction: false,
                         }}
                         className="w-full h-full"

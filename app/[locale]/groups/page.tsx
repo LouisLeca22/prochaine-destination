@@ -101,7 +101,6 @@ function page() {
     const groupAccommodations = selectItemsByIds(allAccommodations, [1, 7, 14, 16, 19, 21])
     const groupRestaurants = selectItemsByIds(allRestaurants, [1, 2, 9, 15, 16])
 
-    console.log([...groupAccommodations, ...groupRestaurants].length)
 
     return (
         <>

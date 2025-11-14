@@ -79,7 +79,7 @@ function Favorites() {
                                     fill
                                     className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-black/30 transition-opacity duration-500 ease-out group-hover:bg-black/40" />
+                                <div className="absolute inset-0 bg-black/45 transition-opacity duration-500 ease-out group-hover:bg-black/40" />
                                 <h3 className="absolute inset-0 flex items-center justify-center text-white text-2xl font-semibold text-center pointer-events-none">
                                     {title}
                                 </h3>

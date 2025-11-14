@@ -1,3 +1,4 @@
+import { accommodations } from "@/data";
 
 export default {
     Metadata: {
@@ -353,9 +354,12 @@ export default {
         assistanceTitle: "Assistance technique",
         assistanceDescription: "Matériel audiovisuel, régie, interprétariat et support technique.",
         facilityTitle: "Nos espaces & capacités",
-        capacity: "Capacité",
+        facilityDescription: "Des lieux modulables et adaptés pour accueillir vos rencontres professionnelles, du séminaire intimiste au congrès de grande envergure.",
+        capacity: "Capacité :",
         seated: "assis",
         standing: "debout",
+        accommodations: "Nos hébergements certifiés affaires",
+        incentiveTitle: "Des expériences pour fédérer vos équipes",
         cardOneDescription: "Vue panoramique sur la mer, wifi, restauration sur place.",
         cardTwoDescription: "Ambiance élégante, salles modulables, hébergement sur place.",
         cardThreeDescription: "En cœur de ville, équipée pour conférences et concerts.",
@@ -373,14 +377,16 @@ export default {
         referenceTitle: "Ils nous ont fait confiance",
         referenceOne: "Forum Énergies & Territoires",
         referenceTwo: "Convention Régionale du Commerce",
-        referenceThree: "Colloque Développement Durable & Mobilités",
-        referenceFour: "Séminaire international - Groupe Aurore",
+        referenceThree: "Colloque Mobilités Douce",
+        referenceFour: "Séminaire Groupe Aurore",
         referenceFive: "Congrès Médical Normandie Santé",
         referenceSix: "Conférence RH - Innov’Emploi",
         toolBoxTitle: "Outils Tourisme d’affaires",
         toolboxDescription: "Retrouvez nos supports professionnels pour faciliter l’organisation de vos événements : fiches techniques, guide pratique et brochure MICE.",
         downloadBrochure: "Télécharger la brochure MICE",
-        linkedIn: "Notre actualité professionnelle sur linkedIn",
+        practicalGuide: "Lire le guide pratique",
+        businessClub: "Adhérer au Club Tourisme d'Affaires",
+        linkedIn: "Notre actualité professionnelle",
         contactBusiness: "Contactez notre équipe affaires",
         contactDescription: "Nous vous accompagnons dans la conception et la réalisation de vos événements professionnels."
     },

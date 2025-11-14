@@ -42,7 +42,10 @@ function BandMap({ items }: { items: BaseItem[] }) {
     const t1 = useScopedI18n("Types")
     const t2 = useScopedI18n("Details")
 
-    const [selectedItem, setSelectedItem] = useState<BaseItem>(items[0])
+    const [selectedItem, setSelectedItem] = useState<BaseItem>(() => {
+        const randomIndex = Math.floor(Math.random() * items.length);
+        return items[randomIndex];
+    })
 
     const bounds = useMemo(() => {
         const latLngs = items.map(item => [item.lat, item.lng] as [number, number])
