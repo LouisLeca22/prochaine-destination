@@ -61,7 +61,7 @@ export default function Featured({ items, featured, heading, subHeading }: { ite
                         whileHover={{ scale: 1.03, y: -5 }}
                         className="block bg-white shadow-lg rounded-2xl overflow-hidden  w-full sm:w-80 md:-translate-y-1/3"
                     >
-                        <div className="relative h-48 sm:h-64 w-full ">
+                        <div className="relative h-48 sm:h-72 w-full ">
                             <Image
                                 src={featured.images[0]}
                                 alt=""

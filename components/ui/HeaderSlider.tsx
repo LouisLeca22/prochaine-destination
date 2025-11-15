@@ -26,7 +26,7 @@ const HeaderSlider: React.FC<HeaderSliderProps> = ({
     const { speed, autoplayDelay, loop, effect } = swiperOptions;
 
     return (
-        <header className={`relative w-full h-[40vh] overflow-hidden header-blur ${className}`}>
+        <header className={`relative w-full h-[55vh] overflow-hidden header-blur ${className}`}>
             <div className="absolute inset-0 z-0">
                 <Swiper
                     modules={[Autoplay, EffectFade]}
@@ -70,7 +70,7 @@ const HeaderSlider: React.FC<HeaderSliderProps> = ({
                         to={{ opacity: 1, y: 0 }}
                         threshold={0.1}
                         rootMargin="-100px"
-                        textAlign="end"
+                        textAlign="center"
                     />
                 </h1>
             </div>

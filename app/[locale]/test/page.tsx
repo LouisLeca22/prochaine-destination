@@ -19,6 +19,7 @@ import { selectItemsByIds } from "@/utils";
 import Featured from "@/components/ui/Featured";
 import HeaderPolygon from "@/components/ui/HeaderPolygon";
 import HeaderCards from "@/components/ui/HeaderCards";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 
 export default function TestPage() {
@@ -66,19 +67,41 @@ export default function TestPage() {
                     reverse={true}
                 />
             </Section>
-            {/* <Section className="md:my-40 my-10">
+            <Section className="md:my-40 my-10">
 
                 <Headband
-                    bandText="Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture. Parcourez nos sélections exclusives et laissez-vous inspirer par des horizons nouveaux, entre nature et culture."
-                    item={allActivities[12]}
+                    bandText="Parcourez nos sélections exclusives nature et culture."
+                    image={squareImages[0]}
+                    buttonText="Inscrivez-vous"
+                    buttonLink="#"
+                    bandLisItems={[
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsa!",
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsa!",
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsa!",
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsa!",
+                    ]}
                 />
-            </Section> */}
+            </Section>
             <Section className="md:my-40 my-10">
                 <ThreeCards items={threeCards} />
             </Section>
             <Section className="md:my-60 my-10">
                 <OverlappingCards items={allActivities} buttonText={t2("inspire")} />
             </Section>
+
+            {/* 
+            <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">
+                <ScrollReveal
+                    baseOpacity={0}
+                    enableBlur={true}
+                    baseRotation={5}
+                    blurStrength={10}
+                >
+                    When does a man die? When he is hit by a bullet? No! When he suffers a disease?
+                    No! When he ate a soup made out of a poisonous mushroom?
+                    No! A man dies when he is forgotten!
+                </ScrollReveal>
+            </section> */}
             <Section className="md:my-40 my-10">
                 <SocialMasonry
                     title={t2("followUs")}
@@ -100,10 +123,40 @@ export default function TestPage() {
                 />
             </Section>
 
-            {/* <Section className="md:my-40 my-10">
 
-                <MirrorGrid cards={sixCards} />
-            </Section> */}
+
+            <Section className="md:my-40 my-10">
+                <MirrorGrid cards={[
+                    {
+                        title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                        image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+                    },
+                    {
+                        title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                        image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+
+                    },
+                    {
+                        title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                        image: "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba",
+
+                    },
+                    {
+                        title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                        image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+
+                    },
+                    {
+                        title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                        image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+
+                    },
+                    {
+                        title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                        image: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+                    }
+                ]} />
+            </Section>
 
             <Section className="md:my-40 my-10">
                 <BandCards items={threeCards} />
@@ -117,9 +170,11 @@ export default function TestPage() {
                 />
             </Section>
 
-            {/* <Section className="md:my-40 my-10">
-                <Carrousel items={allActivities} />
-            </Section> */}
+
+
+            <Section className="md:my-40 my-10">
+                <Carrousel items={allActivities} title="Voici le titre" description="Voici la description du carrousel pour présenter les choses" />
+            </Section>
 
             <Section className="md:my-40 my-10">
                 <BandMap items={activitiesMap} />
@@ -129,19 +184,6 @@ export default function TestPage() {
                 <Featured items={threeCards} featured={allActivities[0]} heading="Que faire à marseille" subHeading="Encore plus d'idées" />
             </Section>
 
-            {/* <section className="h-[50vh] max-w-6xl mx-auto my-16 px-6">
-                <ScrollReveal
-                    baseOpacity={0}
-                    enableBlur={true}
-                    baseRotation={5}
-                    blurStrength={10}
-                    textClassName="text-xl!"
-                >
-                    When does a man die? When he is hit by a bullet? No! When he suffers a disease?
-                    No! When he ate a soup made out of a poisonous mushroom?
-                    No! A man dies when he is forgotten!
-                </ScrollReveal>
-            </section> */}
         </div >
     )
 }
