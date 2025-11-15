@@ -7,11 +7,13 @@ import Separator from "./Separator";
 interface OneCardProps {
     image: string;
     title: string;
-    description: string;
+    description?: string;
+    ol?: string[]
     reverse?: boolean;
+    large?: boolean
 }
 
-function OneCard({ image, title, description, reverse = false }: OneCardProps) {
+function OneCard({ image, title, description, ol, reverse = false, large = false }: OneCardProps) {
     // Animation variants
     const containerVariants: Variants = {
         hidden: { opacity: 0, y: 50 },
@@ -26,7 +28,7 @@ function OneCard({ image, title, description, reverse = false }: OneCardProps) {
     return (
         <motion.div
             className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
-                gap-8 md:gap-10 max-w-6xl mx-auto items-center md:items-start px-4 md:px-8`}
+                gap-8  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center md:items-start px-4 md:px-8`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -47,17 +49,27 @@ function OneCard({ image, title, description, reverse = false }: OneCardProps) {
 
             {/* Text section */}
             <motion.div
-                className={`flex-1 flex flex-col items-center ${reverse
+                className={`flex-1 flex flex-col  justify-center h-[40vh] md:h-[60vh] items-center ${reverse
                     ? "md:items-start md:text-left"
                     : "md:items-end md:text-right"
-                    } text-center mt-6 md:mt-0`}
+                    } text-center  mt-6 md:mt-0`}
                 variants={containerVariants}
             >
                 <h2 className="text-3xl md:text-4xl font-josefin-sans font-bold text-primary mb-4">
                     {title}
                 </h2>
                 <Separator width="w-40 md:w-80" className="mb-6 md:mb-8" />
-                <p className="text-base md:text-lg leading-relaxed">{description}</p>
+                {description && (
+                    <p className="text-base md:text-lg leading-relaxed">{description}</p>
+                )}
+
+                {ol && (
+                    <ol className="text-base md:text-lg leading-relaxe">
+                        {ol.map((item, i) => (
+                            <li className="mb-4" key={i}>{item}</li>
+                        ))}
+                    </ol>
+                )}
             </motion.div>
         </motion.div>
     );

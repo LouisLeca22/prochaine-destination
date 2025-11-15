@@ -85,21 +85,21 @@ function Headlines() {
             title: t("Titles.citypass"),
             img: "/images/headlines/citypass.jpg",
             desc: t("Descriptions.citypass"),
-            href: "citypass"
+            href: "/citypass"
         },
         {
             id: 3,
             title: t("Titles.sustainable"),
             img: "/images/headlines/sustainable.jpg",
             desc: t("Descriptions.sustainable"),
-            href: "sustainable"
+            href: "/sustainable"
         },
         {
             id: 4,
             title: t("Titles.weekend"),
             img: "/images/headlines/weekend.jpg",
             desc: t("Descriptions.weekend"),
-            href: "sustainable"
+            href: "/weekend"
         },
     ]
     return (
