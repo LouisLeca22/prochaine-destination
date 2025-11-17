@@ -490,6 +490,7 @@ export default {
         buyTitle: "Available passes",
         adults: "adults",
         children: "children",
+        popular: "The most popular",
         buyButton: "Buy my pass",
         testimonialsTitle: "See what people are saying about the CityPass",
         personOneTestimony: "The pass allows you to centralize bookings for the main attractions in a single app, making planning simple and convenient.",
@@ -498,7 +499,6 @@ export default {
         personFourTestimony: "Practical and cost-effective, with a simple and intuitive interface to manage all your sightseeing activities easily.",
         personFiveTestimony: "The CityPass allowed me to visit the main attractions without any stress or wasted time, making my trip smooth.",
         personSixTestimony: "The CityPass makes discovering the city more enjoyable and efficient by simplifying access to all major sites.",
-        popular: "The most popular"
     },
     Sustainable: {
         heading: "Sustainable Tourism",
@@ -573,6 +573,72 @@ export default {
         ecoFiveDescription: "Seasonal products and local artisans.",
         normandyTitle: "#NormandyDurable",
         normandyDescription: "Tag your photos with #NormandyDurable and share your best moments. Your pictures may be featured in our gallery and inspire other visitors to discover Normandy sustainably."
+    },
+    Weekend: {
+        heading: "Weekend deals",
+        description: "Everything you need to make the most of your weekend in Normandy.",
+        topThree: "Top 3 of the Weekend",
+        unmissable: "Unmissable Events",
+        eventOneTitle: "Spray Festival",
+        eventOneDescription:
+            "A seaside festival blending Norman folk music, maritime stalls, and tastings of Albret oysters.",
+        eventTwoTitle: "The Great Seagull Festival",
+        eventTwoDescription:
+            "A unique family event featuring kite contests, children's workshops, and demonstrations of traditional fishing.",
+        eventThreeTitle: "White Cliffs Night Walk",
+        eventThreeDescription:
+            "A guided sunset walk to admire the glowing cliffs and listen to local maritime legends.",
+        eventFourTitle: "Sailors' Market",
+        eventFourDescription:
+            "A lively market where fishermen and artisans sell fresh fish, ropes, maritime goods, and coastal specialties.",
+        eventFiveTitle: "Foam Regatta",
+        eventFiveDescription:
+            "Watch a race of traditional sailboats, followed by a giant picnic on the beach.",
+        eventSixTitle: "Night of the Marine Lanterns",
+        eventSixDescription:
+            "A magical evening where the harbor lights up with hundreds of floating lanterns and soft waterfront concerts.",
+        location: "Location",
+        schedule: "Schedule",
+        freshAir: "Outdoor Activity Ideas",
+        hike: "Seaside Walk",
+        hikeDescription: "Discover a spectacular coastal trail with sea views and cliffs.",
+        photos: "Top 5 Photo Spots",
+        photosDescription: "A selection of the best spots to capture your most beautiful shots.",
+        bike: "This Weekend’s Bike Route",
+        bikeDescription: "Ride along a route that winds through forests, villages, and natural landscapes.",
+        weather: "Weekend Weather Conditions",
+        sky: "Clear sky",
+        wind: "Light wind",
+        humidity: "Humidity",
+        flavor: "Flavours of the Weekend",
+        shopping: "Shopping & Craft Deals",
+        shoppingOneTitle: "Local Creators",
+        shoppingOneDescription:
+            "Discover passionate artisans offering unique, handcrafted pieces made with skill and creativity.",
+        shoppingTwoTitle: "Antiques & Flea Markets",
+        shoppingTwoDescription:
+            "Browse vintage treasures, rare objects, and charming finds in local flea markets and antique shops.",
+        shoppingThreeTitle: "Norman Products",
+        shoppingThreeDescription:
+            "Experience the authenticity of Norman products: cider, caramels, cheeses, and other delights from the region.",
+        family: "Activities for the Whole Family",
+        familyDescription: "Fun and memorable outings for kids and adults alike, to enjoy together!",
+        pass: "Weekend must-sees with the CityPass",
+        optionOne: "Ideal for a day of wandering between the harbor and the cliffs.",
+        optionTwo: "The best balance between discovery and budget.",
+        optionThree: "For visitors who want to fully immerse themselves",
+        adults: "adults",
+        children: "children",
+        popular: "The most popular",
+        buyButton: "Buy my pass",
+        picsOfTheWeek: "Photos of the Week",
+        surprise: "The Weekend Surprise",
+        secretAdress: "A Secret Address",
+        secretAddressDescription: "Discover a hidden place, off the beaten path, that will give you an unforgettable experience.",
+        secretHiking: "A Hidden Walk",
+        secretHikingDescription: "Set out for a peaceful walk, away from the hustle and bustle, in a preserved and secret natural setting.",
+        specialOffer: "Exclusive Offer",
+        specialOfferDescription: "Take advantage of a unique opportunity reserved for weekend visitors: experience and privilege guaranteed."
     },
     404: {
         notFound: "Page not found...",
