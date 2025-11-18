@@ -349,15 +349,7 @@ function WeekendPage() {
                         </a>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ y: 30 }}
-                        whileInView={{ y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.8 }}
-                        viewport={{ once: true, amount: .5 }}
-                        className="md:absolute right-10 -bottom-20 mx-auto  text-center"
-                    >
 
-                    </motion.div>
                 </div>
             </Section>
 
@@ -605,7 +597,7 @@ function WeekendPage() {
                                             </div>
                                         </div>
 
-                                        <AnimatedLink href="http://linkedin.com/in/louis-leca" text={t1("buyButton")} />
+                                        <AnimatedLink href="/citypass" text={t1("buyButton")} />
                                     </div>
                                 </div>
                             </motion.div>
@@ -736,6 +728,7 @@ function WeekendPage() {
                     </div>
                 </div>
             </Section>
+
 
 
         </>

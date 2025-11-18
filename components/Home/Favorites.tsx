@@ -15,12 +15,12 @@ function Favorites() {
         {
             src: "/images/favorties/lighthouse.jpg",
             title: t("coast"),
-            href: "/coast"
+            href: "/coastline"
         },
         {
             src: "/images/favorties/modern_art.jpg",
             title: t("museum"),
-            href: "/museum"
+            href: "/museums"
         },
         {
             src: "/images/favorties/hiking.jpg",

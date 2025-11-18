@@ -540,9 +540,9 @@ function SustainablePage() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.6 }}
-                    className="bg-white max-w-6xl mx-auto p-4 mt-10"
+                    className="bg-white rounded-2xl max-w-6xl mx-auto p-4 mt-10"
                 >
-                    <h3 className="my-3 text-xl text-primary text-center">{t1("circuitsIdeas")}</h3>
+                    <h3 className="mb-3 text-xl text-primary text-center">{t1("circuitsIdeas")}</h3>
                     <CircuitMap
                         circuits={circuitsNormandie}
                         zoom={12}

@@ -2,6 +2,17 @@ import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Polyline, Marker, Popup, useMap } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import iconUrl from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png"
+import L from "leaflet";
+
+
+const defaultIcon = L.icon({
+    iconUrl: iconUrl.src,
+    shadowUrl: iconShadow.src,
+    iconAnchor: [12, 41],
+});
+L.Marker.prototype.options.icon = defaultIcon;
 
 export interface Circuit {
     name: string;
