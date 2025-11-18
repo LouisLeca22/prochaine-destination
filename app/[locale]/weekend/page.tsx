@@ -395,7 +395,7 @@ function WeekendPage() {
                             </div>
 
                             <div className="p-5 space-y-3">
-                                <h3 className="text-xl font-semibold">{item.title}</h3>
+                                <h3 className="text-xl text-primary font-semibold">{item.title}</h3>
 
                                 <p className="text-sm text-gray-600">
                                     <strong>{t1("location")} :</strong> {item.location}
@@ -430,7 +430,7 @@ function WeekendPage() {
 
                 <div className="h-1 bg-linear-to-r from-white to-[oklch(0.98_0.02_230)] mx-auto rounded-full w-72 mb-15" />
 
-                <div className="space-y-20">
+                <div className="space-y-20 max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-3 gap-10">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -694,7 +694,7 @@ function WeekendPage() {
                                 />
                             </div>
                             <div className="p-6 md:w-1/2 flex flex-col justify-center">
-                                <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
+                                <h3 className="text-2xl text-primary font-semibold mb-3">{item.title}</h3>
                                 <p className="text-gray-600 mb-4">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
                                     className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
