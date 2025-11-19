@@ -376,7 +376,7 @@ function MuseumsPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                                className={`flex flex-col md:flex-row items-center gap-8 ${isLeftImage ? '' : 'md:flex-row-reverse'}`}
+                                className={`flex flex-col md:flex-row items-center gap-8 mt-10 md:-mt-0 ${isLeftImage ? '' : 'md:flex-row-reverse'}`}
                             >
                                 {exp.image && (
                                     <motion.div
@@ -412,7 +412,7 @@ function MuseumsPage() {
                 </div>
             </Section>
 
-            <Section className="my-0 md:my-30 p-10 md:p-0">
+            <Section className=" md:my-30 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex items-center flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -428,7 +428,7 @@ function MuseumsPage() {
 
                     <p className="mx-auto text-center text-lg mt-10">{t1("behindDescription")}</p>
 
-                    <div className=" px-6 py-24 flex flex-col md:flex-row items-center gap-16">
+                    <div className=" px-6 sm:py-24 flex flex-col md:flex-row items-center gap-16">
 
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
@@ -445,7 +445,7 @@ function MuseumsPage() {
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.7 }}
                             transition={{ duration: 0.7 }}
                             className="flex-1 flex flex-col gap-4 items items-center"
                         >
@@ -463,8 +463,6 @@ function MuseumsPage() {
                 </div>
 
             </Section>
-
-
 
             <Section className="my-5 md:my-20  px-6 md:px-16">
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
