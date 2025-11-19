@@ -505,17 +505,17 @@ function WeekendPage() {
                         <div className="grid md:grid-cols-3 gap-6 text-center">
                             <div className="space-y-2">
                                 <div className="text-6xl">☀️</div>
-                                <p className="text-xl font-bold">18°C</p>
+                                <p className="text-xl text-gray-600 font-bold">18°C</p>
                                 <p className="text-gray-600">{t1("sky")}</p>
                             </div>
                             <div className="space-y-2">
                                 <div className="text-6xl">💨</div>
-                                <p className="text-xl font-bold">12 km/h</p>
+                                <p className="text-xl text-gray-600 font-bold">12 km/h</p>
                                 <p className="text-gray-600">{t1("wind")}</p>
                             </div>
                             <div className="space-y-2">
                                 <div className="text-6xl">💧</div>
-                                <p className="text-xl font-bold">35%</p>
+                                <p className="text-xl text-gray-600 font-bold">35%</p>
                                 <p className="text-gray-600">{t1("humidity")}</p>
                             </div>
                         </div>
@@ -566,8 +566,9 @@ function WeekendPage() {
                             <motion.div
                                 key={p.duration}
                                 initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.15, duration: 0.6 }}
+                                viewport={{ once: true, amount: 0.5 }}
                             >
                                 <div className={`rounded-3xl shadow-xl ${i == 1 && "scale-110"}  bg-white overflow-hidden border hover:shadow-2xl hover:scale-110 transition duration-300`}>
 

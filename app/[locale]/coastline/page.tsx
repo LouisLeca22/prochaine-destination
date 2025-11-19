@@ -78,17 +78,20 @@ function CoastPage() {
         {
             title: t1("itineraryOneTitle"),
             description: t1("itineraryOneDescription"),
-            tips: t1("itineraryOneTips")
+            tips: t1("itineraryOneTips"),
+            sub: t1("itineraryOneSub")
         },
         {
             title: t1("itineraryTwoTitle"),
             description: t1("itineraryTwoDescription"),
-            tips: t1("itineraryTwoTips")
+            tips: t1("itineraryTwoTips"),
+            sub: t1("itineraryTwoSub")
         },
         {
             title: t1("itineraryThreeTitle"),
             description: t1("itineraryThreeDescription"),
-            tips: t1("itineraryThreeTips")
+            tips: t1("itineraryThreeTips"),
+            sub: t1("itineraryThreeSub")
         }
     ]
 
@@ -361,6 +364,7 @@ function CoastPage() {
                                         {action.title}
                                     </h3>
                                     <p className="text-gray-600">{action.description}</p>
+                                    <p className="text-gray-600">{action.sub}</p>
                                     <p className="font-bold text-gray-600">
                                         {action.tips}
                                     </p>

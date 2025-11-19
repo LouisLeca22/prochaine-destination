@@ -596,7 +596,7 @@ function SustainablePage() {
                             ))}
                         </div>
                     </div>
-                    <div className="py-3">
+                    <div className="py-10">
                         <ThreeCards items={restaurantItems} />
                     </div>
                 </div>

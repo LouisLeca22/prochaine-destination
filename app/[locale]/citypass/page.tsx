@@ -234,13 +234,21 @@ function CityPassPage() {
                 </div>
                 <div className="grid md:grid-cols-2 mt-10 max-w-6xl mx-auto lg:grid-cols-4 gap-10">
                     {benefits.map((b, i) => (
-                        <div key={i}
+                        <motion.div key={i}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{
+                                duration: 0.8,
+                                delay: i * 0.35,
+                                ease: [0.25, 0.1, 0.25, 1],
+                            }}
                             className="group p-6 rounded-2xl bg-white  shadow-xl hover:scale-[1.03] transition-transform duration-300">
                             <h3 className="font-bold text-primary text-xl mb-2 flex items-center justify-center gap-2">{b.icon} {b.title}</h3>
                             <p className="opacity-90 text-gray-600 group-hover:opacity-100 transition-opacity text-center">
                                 {b.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
 
                 </div>
@@ -331,8 +339,9 @@ function CityPassPage() {
                             <motion.div
                                 key={p.duration}
                                 initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.15, duration: 0.6 }}
+                                viewport={{ once: true, amount: 0.5 }}
                             >
                                 <div className={`rounded-3xl shadow-xl ${i == 1 && "scale-110"}  bg-white overflow-hidden border hover:shadow-2xl hover:scale-110 transition duration-300`}>
 

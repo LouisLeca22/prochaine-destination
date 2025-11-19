@@ -130,24 +130,33 @@ function Social() {
                         viewport={{ once: false, amount: 0.3 }} className="flex flex-row md:flex-col gap-8"
                     >
                         <motion.a variants={iconVariants}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }} href="http://instagram.com">
-                            <InstagramIcon width={48} height={48} stroke="#06b6d4" />
+                            whileHover={{ scale: 1.2, rotate: 5 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="http://instagram.com"
+                        >
+                            <InstagramIcon width={48} height={48} className="text-primary hover:text-secondary-foreground transition-colors" />
                         </motion.a>
                         <motion.a variants={iconVariants}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }} href="http://facebook.com">
-                            <FacebookIcon width={48} height={48} stroke="#06b6d4" />
+                            whileHover={{ scale: 1.2, rotate: 5 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="http://facebook.com"
+                        >
+                            <FacebookIcon width={48} height={48} className="text-primary hover:text-secondary-foreground transition-colors" />
                         </motion.a>
                         <motion.a variants={iconVariants}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }} href="http://youtube.com">
-                            <YoutubeIcon width={48} height={48} stroke="#06b6d4" />
+                            whileHover={{ scale: 1.2, rotate: 5 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="http://facebook.com"
+                        >
+                            <YoutubeIcon width={48} height={48} className="text-primary hover:text-secondary-foreground transition-colors" />
                         </motion.a>
                         <motion.a variants={iconVariants}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }} href="http://linkedin.com">
-                            <LinkedinIcon width={48} height={48} stroke="#06b6d4" />
+                            whileHover={{ scale: 1.2, rotate: 5 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="http://facebook.com"
+                        >
+                            <LinkedinIcon width={48} height={48} className="text-primary hover:text-secondary-foreground transition-colors"
+                            />
                         </motion.a>
                     </motion.div>
                 </div>
