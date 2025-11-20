@@ -36,7 +36,7 @@ function MuseumsPage() {
         {
             image: "https://images.pexels.com/photos/3720778/pexels-photo-3720778.jpeg",
             title: t1("mustTwoTitle"),
-            description: t1("mustThreeDescription"),
+            description: t1("mustTwoDescription"),
             time: "11h - 19h",
             price: "7€",
             access: "Promenade des Falaises"
@@ -146,7 +146,7 @@ function MuseumsPage() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <p className="text-2xl">{t1("description")}</p>
+                    <p className="text-2xl mt-5">{t1("description")}</p>
                 </motion.div>
             </header>
 

@@ -415,8 +415,8 @@ function PartnersPage() {
                     <ScrollFloat
                         animationDuration={1}
                         ease="back.inOut(2)"
-                        scrollStart="center bottom+=100%"
-                        scrollEnd="bottom bottom-=5%"
+                        scrollStart="center bottom+=50%"
+                        scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
                         textClassName="text-2xl whitespace-nowrap sm:text-3xl font-josefin-sans font-bold text-primary"
                     >
