@@ -108,12 +108,12 @@ function HikingPage() {
                         t1("randoTwoPoiFour")
                     ]}
                     images={hikingTwoImages}
-                    duration="1h35"
-                    distance="3.5 km"
-                    type={t1("loop")}
-                    gain="+120 m"
-                    difficulty={t1("easy")}
-                    departure="Parking du Cap"
+                    duration="1h45"
+                    distance="4.2 km"
+                    type={t1("roundTrip")}
+                    gain="+160 m"
+                    difficulty={t1("normal")}
+                    departure="Plateau des Laperaux"
                     reverse
                 />
             </Section>
@@ -130,12 +130,12 @@ function HikingPage() {
                         t1("randoThreePoiFour")
                     ]}
                     images={hikingThreeImages}
-                    duration="1h35"
-                    distance="3.5 km"
+                    duration="2h"
+                    distance="6.8 km"
                     type={t1("loop")}
-                    gain="+120 m"
-                    difficulty={t1("easy")}
-                    departure="Parking du Cap"
+                    gain="+40 m"
+                    difficulty={t1("normal")}
+                    departure="Plage Nord"
                 />
             </Section>
 
@@ -150,12 +150,12 @@ function HikingPage() {
                         t1("randoFourPoiFour")
                     ]}
                     images={hikingFourImages}
-                    duration="1h35"
-                    distance="3.5 km"
+                    duration="1h30"
+                    distance="5 km"
                     type={t1("loop")}
-                    gain="+120 m"
+                    gain="+90 m"
                     difficulty={t1("easy")}
-                    departure="Parking du Cap"
+                    departure="Fort du Moulin"
                     reverse
                 />
             </Section>
@@ -172,12 +172,12 @@ function HikingPage() {
                         t1("randoFivePoiFour")
                     ]}
                     images={hikingFiveImages}
-                    duration="1h35"
-                    distance="3.5 km"
+                    duration="2h45"
+                    distance="9.2 km"
                     type={t1("loop")}
-                    gain="+120 m"
+                    gain="+210 m"
                     difficulty={t1("easy")}
-                    departure="Parking du Cap"
+                    departure="Plateau des Genêts"
                 />
             </Section>
 
@@ -193,12 +193,12 @@ function HikingPage() {
                         t1("randoSixPoiFour")
                     ]}
                     images={hikingSixImages}
-                    duration="1h35"
-                    distance="3.5 km"
-                    type={t1("loop")}
-                    gain="+120 m"
-                    difficulty={t1("easy")}
-                    departure="Parking du Cap"
+                    duration="2h15"
+                    distance="7.5 km"
+                    type={t1("roundTrip")}
+                    gain="+240 m"
+                    difficulty={t1("normal")}
+                    departure="Place du Phare"
                     reverse
                 />
             </Section>
@@ -271,7 +271,7 @@ const SquareCards = ({
                 <p className="text-lg leading-relaxed mt-10">{description}</p>
 
 
-                <div className="mt-10 grid grid-cols-2 gap-2 p-6 rounded-3xl shadow-lg bg-white text-left">                    {distance && (
+                <div className="mt-10 grid grid-cols-2 text-gray-600 gap-2 p-6 rounded-3xl shadow-lg bg-white text-left">                    {distance && (
                     <div className="flex items-center gap-2"><Route className="w-5 h-5 text-primary" /> <span>{t1("distance")}</span><span>{distance}</span></div>
                 )}
                     {duration && (
@@ -293,7 +293,7 @@ const SquareCards = ({
 
 
                 {pointsOfInterests.length > 0 && (
-                    <div className="mt-6 text-left bg-white p-6 rounded-3xl shadow-md">
+                    <div className="mt-6 text-left text-gray-600 bg-white p-6 rounded-3xl shadow-md">
                         <h3 className="text-xl font-semibold mb-3 text-primary">{t1("interest")}</h3>
                         <ul className=" space-y-1">
                             {pointsOfInterests.map((poi, idx) => (

@@ -1042,7 +1042,61 @@ export const activities: Activity[] = [
         phone: "+33 6 42 89 10 57",
         facebook: "https://www.facebook.com/",
         instagram: "https://www.instagram.com/"
+    },
+    {
+        id: 26,
+        category: "activities",
+        nameFR: "Atelier & Brunch normand au bord de la Seine",
+        nameEN: "Norman Brunch & Workshop by the Seine",
+        descriptionFR: "Vivez une expérience gourmande et participative avec cet atelier-brunch au bord de la Seine, près de Caudebec-en-Caux. Aux côtés d’un chef local, vous apprendrez à préparer plusieurs spécialités normandes du matin : œufs cocotte aux pommes, beurre aromatisé maison, pancakes au cidre et compote de pommes façon terroir. Le chef partage ses techniques, astuces et l’histoire des produits utilisés, issus de fermes partenaires de la région. L’atelier est suivi d’un généreux brunch mettant à l’honneur les créations réalisées, accompagnées de fromages normands, viennoiseries artisanales et boissons locales. Un moment chaleureux et immersif pour découvrir la gastronomie normande autrement.",
+        descriptionEN: "Enjoy a delicious and hands-on experience with this brunch workshop along the Seine near Caudebec-en-Caux. Together with a local chef, you’ll learn how to prepare several Norman-style morning specialties: baked eggs with apples, homemade flavored butter, cider pancakes, and traditional apple compote. The chef shares techniques, tips, and the stories behind the regional ingredients sourced from local farms. After the workshop, you’ll savor a generous brunch featuring your own creations, complemented by Norman cheeses, artisanal pastries, and local drinks. A warm and immersive way to discover Normandy’s culinary heritage.",
+        type: ActivityType.WORKSHOP,
+        price: 48,
+        lat: 49.528,
+        lng: 0.725,
+        images: [
+            "https://images.unsplash.com/photo-1611601184963-9d1de9b79ff3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        duration: "2h30",
+        availability: [
+            "2025-11-01", "2025-11-02", "2025-11-08", "2025-11-09", "2025-11-15", "2025-11-16",
+            "2025-11-22", "2025-11-23", "2025-11-29", "2025-11-30",
+            "2025-12-06", "2025-12-07", "2025-12-13", "2025-12-14",
+            "2025-12-20", "2025-12-21", "2025-12-27", "2025-12-28"
+        ],
+        startTimes: ["10:00"],
+        meetingPoint: "Auberge de la Seine – Caudebec-en-Caux",
+        bookingRequired: true,
+        family: true,
+        tagsFR: ["brunch", "atelier", "gastronomie", "produits locaux", "cuisine"],
+        tagsEN: ["brunch", "workshop", "gastronomy", "local products", "cooking"],
+        includesFR: [
+            "ingrédients locaux",
+            "matériel de cuisine",
+            "accompagnement par un chef",
+            "préparation de recettes",
+            "brunch complet"
+        ],
+        includesEN: [
+            "local ingredients",
+            "cooking equipment",
+            "guidance from a chef",
+            "recipe preparation",
+            "full brunch"
+        ],
+        season: "winter",
+        ecoFriendly: true,
+        externalBookingLink: "https://www.louis-leca.web.app",
+        provider: "Auberge de la Seine",
+        email: "contact@aubergedelaseine.fr",
+        website: "https://www.louis-leca.web.app",
+        phone: "+33 6 81 42 77 12",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/"
     }
+
 ];
 
 
