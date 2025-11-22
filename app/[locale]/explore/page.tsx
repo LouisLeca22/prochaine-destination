@@ -16,6 +16,7 @@ import Block from "@/components/ui/Block";
 import BandCards from "@/components/ui/BandCards";
 import AnimatedLink from "@/components/ui/AnimatedLink";
 import OverlappingCards from "@/components/ui/OverlappingCards";
+import PodcastOne from "@/components/ui/PodcastOne";
 
 
 export default function ExplorePage() {
@@ -93,7 +94,10 @@ export default function ExplorePage() {
             <header>
                 <HeaderCards cards={headerCards} images={headerImages} heading={t1("Heading")} subHeading={t1("Subheading")} />
             </header>
-            <Section className="my-10 md:my-50">
+            <Section className="relative my-10 md:my-50">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <SquareCards title={t1("spiritTitle")} description={t1("spiritDescription")} imageAlt={t1("spiritTitle")} images={discoverImages} />
             </Section>
             <Section className="my-10 md:my-50">
@@ -106,7 +110,10 @@ export default function ExplorePage() {
                 </div>
             </Section>
 
-            <Section className="my-10 md:my-20">
+            <Section className="relative my-10 md:my-20">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <Block
                     title={t1("cultureTitle")}
                     description={t1("cultureDescription")}
@@ -172,6 +179,20 @@ export default function ExplorePage() {
 
                 <OverlappingCards items={allActivities} buttonText={t2("inspire")} />
             </Section>
+
+            <Section className="relative md:mt-60 mb-20">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
+                <PodcastOne
+                    title="Échappées Normandes – Histoires & Atmosphères"
+                    description="Dans ce podcast, partez à la rencontre de la Normandie secrète : ses villages paisibles, ses marchés animés, ses traditions gourmandes et ses lieux chargés d’histoire. Chaque épisode capture une ambiance unique et vous transporte au cœur de cette destination fictive à travers récits, témoignages et sons d’ambiances locales."
+                    cover="https://images.unsplash.com/photo-1673806780536-d4eedc231dfd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="/audios/podcast.mp3"
+                    podcastName="Episode 1 – Une Journée en Pays d’Aubéline"
+                />
+            </Section>
+
         </>
     )
 }

@@ -13,6 +13,7 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { useMemo } from "react"
 import { activities } from "@/data"
 import { selectItemsByIds } from "@/utils"
+import { ArrowRight } from "lucide-react"
 
 function TastingPage() {
 
@@ -40,7 +41,7 @@ function TastingPage() {
         },
         {
             title: t1("flavorThreeTitle"),
-            description: t1("flavorTwoDescription"),
+            description: t1("flavorThreeDescription"),
             image: "https://images.unsplash.com/photo-1542634093-e0198d4d1e46?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
@@ -225,7 +226,11 @@ function TastingPage() {
                 </div>
             </Section>
 
-            <Section className="my-0 md:my-30 p-10 md:p-0">
+            <Section className="relative my-0 md:my-30 p-10 md:p-0">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute top-20 dark:bg-transparent left-2/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 dark:bg-transparent left-[40%] w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -311,54 +316,77 @@ function TastingPage() {
             </div>
 
             <Section className="my-0 md:my-30 p-10 md:p-0">
-                <div className="max-w-6xl mx-auto flex items-center flex-col">
+                <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">
                     <ScrollFloat
                         animationDuration={1}
                         ease="back.inOut(2)"
                         scrollStart="center bottom+=50%"
                         scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans text-center sm:w-full font-bold text-primary"
+                        textClassName="text-2xl sm:text-3xl font-josefin-sans text-center whitespace-nowrap font-bold text-primary"
                     >
                         {t1("iodeTitle")}
                     </ScrollFloat>
                     <Separator width="w-48 " />
                 </div>
-
-
-                <div className={isMobile ? 'mt-15 bg-linear-to-b from-primary to-primary-foreground' : 'mt-15'}>
-                    <div className="hidden relative h-[20vh] sm:flex flex-col justify-center items-center sm:bg-linear-to-b from-primary to-primary-foreground" />
-                    <div className="relative sm:-mt-24 py-6 sm:py-0 px-6 md:px-16">
-                        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {iode.map((item, i) => (
+                <div className="w-full flex justify-center py-20">
+                    <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-10">
+                        {iode.map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: i * 0.15 }}
+                                viewport={{ once: true }}
+                                className="relative group cursor-pointer h-full"
+                            >
                                 <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    transition={{ duration: 1, delay: i * 0.4 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                                    whileHover={{ rotate: i % 2 === 0 ? -2 : 2, scale: 1.02 }}
+                                    transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                                    className="bg-white backdrop-blur-xl border-primary border-3 rounded-3xl p-6 shadow-2xl relative overflow-visible 
+                                                      flex flex-col justify-between min-h-72"
                                 >
-                                    <div className="relative w-full h-40">
+                                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-40 h-40 rounded-2xl overflow-hidden shadow-xl rotate-3 group-hover:rotate-0 transition-all duration-500">
                                         <Image
                                             src={item.image}
                                             alt={item.title}
-                                            fill
-                                            className="object-cover"
+                                            width={300}
+                                            height={300}
+                                            className="object-cover w-full h-full"
                                         />
                                     </div>
-                                    <div className="p-5">
-                                        <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                        <p className="text-gray-600 text-sm">{item.description}</p>
+
+                                    <div className="pt-36 text-center flex flex-col flex-grow">
+                                        <h3 className="text-xl text-primary font-semibold mb-3 opacity-90">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                            {item.description}
+                                        </p>
+
+                                        <motion.div
+                                            whileHover={{ x: 5 }}
+                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                        >
+                                            <ArrowRight size={16} className="text-secondary-foreground" />
+                                            <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
+                                                {t2("discover")}
+                                            </Link>
+                                        </motion.div>
                                     </div>
                                 </motion.div>
-                            ))}
-                        </div>
 
+                                <motion.div
+                                    animate={{ y: [0, -10, 0], opacity: [0.6, 0.4, 0.6] }}
+                                    transition={{ duration: 6 + i, repeat: Infinity }}
+                                    className="absolute -z-10 -bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-purple-400/20 blur-3xl rounded-full"
+                                />
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </Section>
-
 
             <Section className="my-0 md:my-30 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">

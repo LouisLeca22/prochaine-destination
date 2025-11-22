@@ -299,7 +299,10 @@ function PartnersPage() {
             </Section>
 
 
-            <Section className="my-20 p-10">
+            <Section className="relative my-20 p-10">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex items-center flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -410,7 +413,10 @@ function PartnersPage() {
             </Section>
 
 
-            <Section className="sm:my-20 p-10 md:p-0">
+            <Section className="relative sm:my-20 p-10 md:p-0">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -424,7 +430,8 @@ function PartnersPage() {
                     </ScrollFloat>
                     <Separator width="w-48 " />
 
-                    <div className="container mx-auto mt-5 max-w-6xl ">
+                    <div className=" container mx-auto mt-5 max-w-6xl ">
+
                         <p className="md:text-2xl font-josefin-sans text-center">{t1("contactDescription")}</p>
                         <div className="flex md:flex-row flex-col mt-10">
                             <ContactForm />

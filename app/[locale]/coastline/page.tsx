@@ -2,6 +2,7 @@
 
 import CircuitMap, { Circuit } from "@/components/ui/CircuitMap"
 import HeaderPolygon from "@/components/ui/HeaderPolygon"
+import PodcastOne from "@/components/ui/PodcastOne"
 import ScrollFloat from "@/components/ui/ScrollFloat"
 import Section from "@/components/ui/Section"
 import Separator from "@/components/ui/Separator"
@@ -271,6 +272,16 @@ function CoastPage() {
                 </div>
             </Section >
 
+            <Section>
+                <PodcastOne
+                    title="Balades en Côte Valonne"
+                    description="Accompagnez Léonie, habitante de la Côte Valonne — une destination normande fictive — pour une promenade sonore entre plages dorées, dunes fleuries et petits villages de pêcheurs. Elle partage anecdotes, traditions locales et coins secrets pour vivre la côte comme un vrai habitant."
+                    cover="https://images.unsplash.com/photo-1515506733362-f6161cbcfbe6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="/audios/podcast.mp3"
+                    podcastName="Episode 1 – La côte à travers les yeux de Léonie"
+                />
+            </Section>
+
             <Section className="my-5 md:my-20  px-6 md:px-16">
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
@@ -320,6 +331,9 @@ function CoastPage() {
                 </div>
             </Section>
 
+
+
+
             <Section className="md:my-10 my-0 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex items-center md:items-start mb-10 flex-col">
                     <ScrollFloat
@@ -335,8 +349,11 @@ function CoastPage() {
                     <Separator width="w-48 " />
                 </div>
 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-
+                <div className="relative max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                    <div className="absolute inset-0 -z-10">
+                        <div className="absolute top-0 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                    </div>
                     <div className="md:col-span-2 space-y-8">
                         <p className="text-center text-xl">{t1("itinerariesDescription")}</p>
 
@@ -595,6 +612,7 @@ function CoastPage() {
                 </div>
             </div>
 
+
             <Section className="py-10 bg-linear-to-br from-primary to-primary-foreground text-gray-600">
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     <ScrollFloat
@@ -659,6 +677,8 @@ function CoastPage() {
                     </div>
                 </div>
             </Section>
+
+
 
         </>
     )

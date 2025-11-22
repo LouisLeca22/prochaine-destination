@@ -353,7 +353,11 @@ function WeekendPage() {
                 </div>
             </Section>
 
-            <Section className="md:my-20 p-10 md:p-0">
+            <Section className="relative md:my-20 p-10 md:p-0">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex items-center  flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -546,7 +550,7 @@ function WeekendPage() {
                 <Carrousel title={t1("family")} description={t1("familyDescription")} items={familyItems} />
             </Section>
 
-            <Section className="my-0 md:my-30 p-10 md:p-0">
+            <Section className="relative my-0 md:my-30 p-10 md:p-0">
 
                 <div className="max-w-6xl mx-auto flex items-center flex-col">
                     <ScrollFloat
@@ -653,7 +657,11 @@ function WeekendPage() {
                 </div>
             </Section>
 
-            <Section className="my-5 md:my-20  px-6 md:px-16">
+            <Section className="relative my-5 md:my-20  px-6 md:px-16">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
                         animationDuration={1}

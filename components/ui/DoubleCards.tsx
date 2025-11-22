@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Separator from '@/components/ui/Separator';
+import Link from 'next/link';
+import { useScopedI18n } from '@/locales/client';
 
 interface DoubleCardsProps {
     title: string;
@@ -19,6 +21,7 @@ export const DoubleCards = ({
     reverse = false,
     smallTitle = false
 }: DoubleCardsProps) => {
+    const t2 = useScopedI18n("Components")
     return (
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             {/* Images section */}
@@ -61,6 +64,10 @@ export const DoubleCards = ({
                     } text-2xl font-josefin-sans font-bold text-primary mb-4`}>{title}</h2>
                 <Separator width="w-40" className="mx-auto" />
                 <p className="text-lg leading-relaxed mt-10">{description}</p>
+                <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
+                    className="inline-block bg-secondary text-primary-foreground px-2 py-2 w-1/3 rounded-lg mt-6 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                    {t2("interesting")}
+                </Link>
             </motion.div>
         </div>
     );

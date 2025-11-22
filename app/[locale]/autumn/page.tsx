@@ -18,6 +18,8 @@ import ThreeCards from "@/components/ui/ThreeCards"
 import Featured from "@/components/ui/Featured"
 import Masonry from "@/components/ui/Masonry"
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import PodcastOne from "@/components/ui/PodcastOne"
 function AutumnPage() {
     const isMobile = useIsMobile()
     const t1 = useScopedI18n("Autumn")
@@ -195,7 +197,7 @@ function AutumnPage() {
 
                 </motion.div>
             </header>
-
+            {/* 
             <Section className="my-0 md:my-30 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex items-center flex-col">
                     <ScrollFloat
@@ -242,6 +244,79 @@ function AutumnPage() {
 
                     </div>
                 </div>
+            </Section> */}
+
+            <Section className="my-0 md:my-30 p-10 md:p-0">
+                <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">
+                    <ScrollFloat
+                        animationDuration={1}
+                        ease="back.inOut(2)"
+                        scrollStart="center bottom+=50%"
+                        scrollEnd="bottom bottom-=40%"
+                        stagger={0.03}
+                        textClassName="text-2xl sm:text-3xl font-josefin-sans text-center whitespace-nowrap font-bold text-primary"
+                    >
+                        {t1("highlights")}
+                    </ScrollFloat>
+                    <Separator width="w-48 " />
+                </div>
+                <div className="w-full flex justify-center py-20">
+                    <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-10">
+                        {highlights.map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: i * 0.15 }}
+                                viewport={{ once: true }}
+                                className="relative group cursor-pointer h-full"
+                            >
+                                <motion.div
+                                    whileHover={{ rotate: i % 2 === 0 ? -2 : 2, scale: 1.02 }}
+                                    transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                                    className="bg-white backdrop-blur-xl border-primary border-3 rounded-3xl p-6 shadow-2xl relative overflow-visible 
+                               flex flex-col justify-between min-h-92"
+                                >
+                                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-40 h-40 rounded-2xl overflow-hidden shadow-xl rotate-3 group-hover:rotate-0 transition-all duration-500">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            width={300}
+                                            height={300}
+                                            className="object-cover w-full h-full"
+                                        />
+                                    </div>
+
+                                    <div className="pt-36 text-center flex flex-col flex-grow">
+                                        <h3 className="text-xl text-primary font-semibold mb-3 opacity-90">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                            {item.description}
+                                        </p>
+
+                                        <motion.div
+                                            whileHover={{ x: 5 }}
+                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                        >
+                                            <ArrowRight size={16} className="text-secondary-foreground" />
+                                            <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
+                                                {t2("discover")}
+                                            </Link>
+                                        </motion.div>
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    animate={{ y: [0, -10, 0], opacity: [0.6, 0.4, 0.6] }}
+                                    transition={{ duration: 6 + i, repeat: Infinity }}
+                                    className="absolute -z-10 -bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-purple-400/20 blur-3xl rounded-full"
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
             </Section>
 
             <Section className="my-10 md:my-50">
@@ -249,7 +324,11 @@ function AutumnPage() {
             </Section>
 
 
-            <Section className="my-0 md:my-30 p-10 md:p-0">
+            <Section className="relative my-0 md:my-30 p-10 md:p-0">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -330,7 +409,10 @@ function AutumnPage() {
                 </div>
             </Section>
 
-            <Section className="my-0 md:my-30 p-10 md:p-0">
+            <Section className="relative my-0 md:my-30 p-10 md:p-0">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-6xl mx-auto flex items-center  flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -417,6 +499,19 @@ function AutumnPage() {
                         />
                     </div>
                 </div>
+            </Section>
+
+            <Section className="relative md:mt-60 mb-20">
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
+                </div>
+                <PodcastOne
+                    title="Échappées Normandes – Couleurs d’Automne"
+                    description="Dans ce podcast, plongez au cœur d’une Normandie parée de ses plus belles couleurs d’automne. Entre sentiers tapissés de feuilles dorées, parfums de pommes fraîchement pressées, brumes matinales sur les bocages et marchés débordant de gourmandises de saison, chaque épisode vous fait vivre l’atmosphère chaleureuse et enveloppante de cette destination à l’automne. Laissez-vous porter par les récits, les ambiances sonores et les traditions qui font de cette période un moment privilégié."
+                    cover="https://images.unsplash.com/photo-1673806780536-d4eedc231dfd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="/audios/podcast.mp3"
+                    podcastName="Balades d’Automne – Histoires & Atmosphères"
+                />
             </Section>
 
         </>
