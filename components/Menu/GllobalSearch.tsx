@@ -79,7 +79,7 @@ export default function GlobalSearch() {
 
             <motion.button
                 onClick={() => setIsOpen(true)}
-                className="fixed top-5 left-45 z-50 p-4 cursor-pointer rounded-full bg-secondary text-primary-foreground"
+                className="fixed top-5 left-40 z-50 p-4 cursor-pointer rounded-full bg-secondary text-primary-foreground"
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ rotate: 15 }}
                 transition={{ type: 'spring', stiffness: 300 }}

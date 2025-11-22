@@ -28,7 +28,7 @@ export const LanguageSwitcher = () => {
     }, [])
 
     return (
-        <div ref={containerRef} className="fixed top-5 left-65 ">
+        <div ref={containerRef} className="fixed top-5 left-57 ">
 
             <motion.button
                 onClick={() => setOpen(!open)}

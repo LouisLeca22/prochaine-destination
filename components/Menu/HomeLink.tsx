@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export const HomeLink = () => {
 
     return (
-        <div className="fixed top-5 left-85 z-50">
+        <div className="fixed top-5 left-74 z-50">
 
             <motion.a
                 href="/"
