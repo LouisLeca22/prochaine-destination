@@ -26,7 +26,7 @@ export default function Menu() {
 
     return (
         <div
-            className={`fixed top-0 left-0  w-full h-25 flex items-center justify-between  transition-all duration-500 z-90 ${scrolled
+            className={`fixed top-0 left-0  w-full h-23 flex items-center justify-between  transition-all duration-500 z-90 ${scrolled
                 ? "bg-background/95  shadow-lg"
                 : "bg-transparent"
                 }`}

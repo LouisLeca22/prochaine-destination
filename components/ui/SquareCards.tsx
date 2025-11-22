@@ -55,7 +55,7 @@ export const SquareCards = ({
                 <p className="text-lg leading-relaxed mt-10">{description}</p>
                 <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                     className="inline-block bg-secondary text-primary-foreground px-2 py-2 w-1/3 rounded-lg mt-6 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
-                    {t2("interesting")}
+                    {t2("seeMore")}
                 </Link>
             </motion.div>
         </div>

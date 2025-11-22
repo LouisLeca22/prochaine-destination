@@ -104,7 +104,7 @@ const HeaderCards: React.FC<HeaderCards> = ({
                     />
                 </h1>
 
-                <p className="text-3xl hidden sm:block text-white max-w-5xl text-shadow-lg ">
+                <p className="text-2xl hidden sm:block text-white max-w-5xl text-shadow-lg ">
                     {subHeading}
                 </p>
 

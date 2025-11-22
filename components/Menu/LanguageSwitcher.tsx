@@ -32,7 +32,7 @@ export const LanguageSwitcher = () => {
 
             <motion.button
                 onClick={() => setOpen(!open)}
-                className="bg-secondary p-5 cursor-pointer rounded-full flex items-center justify-center"
+                className="bg-secondary p-4 cursor-pointer rounded-full flex items-center justify-center"
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ rotate: 15 }}
                 transition={{ type: 'spring', stiffness: 300 }}

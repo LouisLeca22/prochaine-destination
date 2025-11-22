@@ -10,7 +10,7 @@ export const HomeLink = () => {
 
             <motion.a
                 href="/"
-                className="bg-secondary p-5 rounded-full flex items-center justify-center"
+                className="bg-secondary p-4 rounded-full flex items-center justify-center"
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ rotate: 15 }}
                 transition={{ type: 'spring', stiffness: 300 }}

@@ -13,7 +13,7 @@ function ToggleButton() {
     return (
         <button
             onClick={toggle}
-            className="w-[50px] h-[50px] rounded-full fixed top-[25px] left-[25px] px-3 pt-[3px] flex justify-center items-center bg-transparent border-0 cursor-pointer z-50"
+            className="w-[50px] h-[50px] rounded-full fixed top-[23px] left-[25px] px-3  flex justify-center items-center bg-transparent border-0 cursor-pointer z-50"
             aria-label="Toggle menu"
         >
             <motion.svg
@@ -170,7 +170,7 @@ function Navigation() {
             }
         },
         closed: {
-            clipPath: "circle(30px at 50px 50px)",
+            clipPath: "circle(26px at 50px 46px)",
             transition: {
                 type: "spring",
                 stiffness: 400,

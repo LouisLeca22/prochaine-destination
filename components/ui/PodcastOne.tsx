@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Separator from "./Separator";
 import AudioPlayer from "./AudioPlayer";
@@ -36,7 +37,7 @@ function PodcastOne({ title, description, src, ol, cover, podcastName, reverse =
             viewport={{ once: true, amount: 0.3 }}
         >
             <motion.div
-                className="relative w-full md:flex-1 h-auto"
+                className="relative w-full md:flex-1 h-[40vh] md:h-[60vh]"
                 variants={imageVariants}
             >
 
