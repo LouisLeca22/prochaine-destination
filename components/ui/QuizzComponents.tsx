@@ -97,7 +97,7 @@ export default function QuizComponent({ steps, title, description, items }: { it
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.98 }}
                                         onClick={() => handleAnswer(ans)}
-                                        className="p-5 rounded-2xl border text-primary-foreground cursor-pointer border-gray-200 bg-gray-50 hover:bg-secondary hover:text-white transition-all shadow-sm"
+                                        className="p-5 rounded-2xl border text-primary-foreground cursor-pointer border-gray-200 bg-gray-50 hover:bg-secondary transition-all shadow-sm"
                                     >
                                         {ans}
                                     </motion.button>
