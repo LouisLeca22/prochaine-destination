@@ -566,7 +566,7 @@ function SustainablePage() {
                         scrollStart="center bottom+=50%"
                         scrollEnd="bottom bottom-=40%"
                         stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans text-center whitespace-nowrap font-bold text-primary"
+                        textClassName="text-2xl  font-josefin-sans text-center whitespace-nowrap font-bold text-primary"
                     >
                         {t1("economyTitle")}
                     </ScrollFloat>

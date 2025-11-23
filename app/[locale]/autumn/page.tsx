@@ -193,58 +193,11 @@ function AutumnPage() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <h3 className="text-3xl underline-secondary">{t1("subHeading")}</h3>
+                    <p className="text-2xl">{t1("subHeading")}</p>
 
                 </motion.div>
             </header>
-            {/* 
-            <Section className="my-0 md:my-30 p-10 md:p-0">
-                <div className="max-w-6xl mx-auto flex items-center flex-col">
-                    <ScrollFloat
-                        animationDuration={1}
-                        ease="back.inOut(2)"
-                        scrollStart="center bottom+=50%"
-                        scrollEnd="bottom bottom-=40%"
-                        stagger={0.03}
-                        textClassName="text-2xl sm:text-3xl font-josefin-sans text-center whitespace-nowrap font-bold text-primary"
-                    >
-                        {t1("highlights")}
-                    </ScrollFloat>
-                    <Separator width="w-48 " />
-                </div>
 
-                <div className={isMobile ? 'mt-15 bg-linear-to-b from-primary to-primary-foreground' : 'mt-15'}>
-                    <div className="hidden relative h-[20vh] sm:flex flex-col justify-center items-center sm:bg-linear-to-b from-primary to-primary-foreground" />
-                    <div className="relative sm:-mt-24 py-6 sm:py-0 px-6 md:px-16">
-                        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {highlights.map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    transition={{ duration: 1, delay: i * 0.4 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
-                                >
-                                    <div className="relative w-full h-40">
-                                        <Image
-                                            src={item.image}
-                                            alt={item.title}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <div className="p-5">
-                                        <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                        <p className="text-gray-600 text-sm">{item.description}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                    </div>
-                </div>
-            </Section> */}
 
             <Section className="my-0 md:my-30 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">

@@ -185,7 +185,7 @@ function CulturePage() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <h3 className="text-3xl underline-secondary">{t1("description")}</h3>
+                    <p className="text-2xl ">{t1("description")}</p>
 
                 </motion.div>
             </header>
