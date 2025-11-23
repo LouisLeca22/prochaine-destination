@@ -325,7 +325,7 @@ function FriendsPage() {
                 </div>
             </Section>
 
-            <section className="w-full my-10 md:py-20 relative overflow-hidden">
+            <Section className="w-full my-10 md:py-20 relative overflow-hidden">
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -371,7 +371,7 @@ function FriendsPage() {
 
 
                                     <div className="p-5">
-                                        <h3 className="text-lg font-semibold text-sky-900 mb-2">
+                                        <h3 className="text-lg font-semibold text-primary-foreground mb-2">
                                             {exp.title}
                                         </h3>
                                         <p className="text-gray-700 text-sm mb-3">
@@ -387,7 +387,7 @@ function FriendsPage() {
                         })}
                     </div>
                 </div>
-            </section>
+            </Section>
 
             <Section className="my-0 sm:my-20 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex  items-center  flex-col">
