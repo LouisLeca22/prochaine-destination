@@ -944,7 +944,26 @@ export default {
         portraitTwoTitle: "Tom, Local Guide",
         portraitTwoDescription: "“Every corner of the coastline holds a story, an emotion, a memory passed on by those who shaped it.”",
         portraitThreeTitle: "Leïla, Photographer",
-        portraitThreeDescription: "“Between the horizon and the morning mist, the coast offers suspended moments you won’t find anywhere else.”"
+        portraitThreeDescription: "“Between the horizon and the morning mist, the coast offers suspended moments you won’t find anywhere else.”",
+        quizTitle: "What’s Your Ideal Cultural Getaway?",
+        quizDescription: "Answer 4 questions and discover your perfect cultural itinerary.",
+        quizQOne: "Preferred vibe",
+        quizQOneAOne: "Artistic explorations",
+        quizQOneATwo: "Heritage & history",
+        quizQOneAThree: "Contemporary scenes",
+        quizQTwo: "Budget",
+        quizQTwoAOne: "Premium comfort",
+        quizQTwoATwo: "Culture on a budget",
+        quizQTwoAThree: "Balanced",
+        quizQThree: "Duration",
+        quizQThreeAOne: "A few hours",
+        quizQThreeATwo: "Cultural weekend",
+        quizQThreeAThree: "Short trip",
+        quizQFour: "Main interest",
+        quizQFourAOne: "Museums & exhibitions",
+        quizQFourATwo: "Performing arts & live shows",
+        quizQFourAThree: "Local heritage & historic districts",
+        quizButton: "See my itinerary",
     },
     Friends: {
         heading: 'With Friends',
@@ -966,7 +985,7 @@ export default {
         experienceFourTips: 'Duration: 2h',
         experienceFiveTitle: 'Bar & Terrace Crawl',
         experienceFiveDescription: 'Our selection of the best spots for a friendly, seaside evening.',
-        experienceFiveTips: 'Evening • Happy hours',
+        experienceFiveTips: 'Happy hours',
         daysTitle: 'Ready-to-Enjoy Days',
         daysDescription: 'Pick a vibe, lace up your sneakers (or your wetsuit), and go!',
         dayOneTitle: 'Ocean Mood',
@@ -1014,7 +1033,7 @@ export default {
         dealThreeTitle: 'Happy Hours',
         dealThreeDescription: 'Find the terraces with happy hours to cut drink costs.',
         dealFourTitle: 'Free Spots',
-        dealFourDescription: 'Free parking, open viewpoints and unlimited nature.',
+        dealFourDescription: 'Free wifi, open viewpoints and unlimited nature.',
         accommodationTitle: 'Where to Crash?',
         tonightTitle: 'Going Out Tonight?',
         tonightDescription: 'Events, venues and ideas for a great night out.',
@@ -1022,7 +1041,7 @@ export default {
         tonightOneDescription: 'Emerging bands and small venues — check the weekend lineup.',
         tonightTwoTitle: 'Cocktail Bars & Terraces',
         tonightTwoDescription: 'Seaside terraces and cozy bars to keep the night going.',
-        tonightThreeTitle: 'Food Trucks & Night Markets',
+        tonightThreeTitle: 'Food Truck',
         tonightThreeDescription: 'Perfect for strolling and tasting local specialties.',
         quizTitle: 'What’s Your Perfect Friends’ Weekend?',
         quizDescription: 'Answer 4 questions and discover your recommended itinerary.',
@@ -1040,9 +1059,13 @@ export default {
         quizQThreeAThree: 'Week',
         quizQFour: 'Main interest',
         quizQFourAOne: 'Nature & views',
+        quizQFourATwo: "Sea and Water Sports",
         quizQFourAThree: 'Nightlife & local vibes',
         quizButton: 'See my itinerary',
-        followTitle: 'See More in Stories'
+        followTitle: 'See More in Stories',
+        playersTitle: "Our artists have talent",
+        playersDescription: "Come discover the stylish sounds from our local artists."
+
     },
     Family: {
         heading: "Family moments, at your own pace",
@@ -1122,6 +1145,8 @@ export default {
         knowMore: "En savoir plus",
         discover: "Discover",
         interesting: "That's interesting",
-        hot: "Up for it"
+        hot: "Up for it",
+        result: "This activity is made for you!"
+
     }
 } as const

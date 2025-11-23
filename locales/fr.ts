@@ -936,7 +936,27 @@ export default {
         portraitTwoTitle: "Tom, guide local",
         portraitTwoDescription: "« Chaque recoin du littoral porte un récit, une émotion, un souvenir transmis par ceux qui l’ont façonné. »",
         portraitThreeTitle: "Leïla, photographe",
-        portraitThreeDescription: "« Entre l’horizon et les brumes du matin, la côte offre des instants suspendus qu’on ne trouve nulle part ailleurs. »"
+        portraitThreeDescription: "« Entre l’horizon et les brumes du matin, la côte offre des instants suspendus qu’on ne trouve nulle part ailleurs. »",
+        quizTitle: "Quel week-end culturel est fait pour vous ?",
+        quizDescription: "Répondez à 4 questions et découvrez votre idée de séjour culturel parfait.",
+        quizQOne: "Ambiance recherchée",
+        quizQOneAOne: "Explorations artistiques",
+        quizQOneATwo: "Patrimoine & histoire",
+        quizQOneAThree: "Scènes contemporaines",
+        quizQTwo: "Budget",
+        quizQTwoAOne: "Confort premium",
+        quizQTwoATwo: "Culture à petit prix",
+        quizQTwoAThree: "Équilibré",
+        quizQThree: "Durée",
+        quizQThreeAOne: "Quelques heures",
+        quizQThreeATwo: "Week-end culturel",
+        quizQThreeAThree: "Mini-séjour",
+        quizQFour: "Intérêt principal",
+        quizQFourAOne: "Musées & expositions",
+        quizQFourATwo: "Spectacles & arts vivants",
+        quizQFourAThree: "Patrimoine local & quartiers historiques",
+        quizButton: "Découvrir mon parcours",
+
     },
     Friends: {
         heading: 'Entre potes',
@@ -958,7 +978,7 @@ export default {
         experienceFourTips: 'Durée : 2h',
         experienceFiveTitle: 'Tournée des bars & terrasses',
         experienceFiveDescription: 'Sélection des meilleures adresses pour une soirée conviviale face mer.',
-        experienceFiveTips: 'Soirée • Happy hours',
+        experienceFiveTips: 'Happy hours',
         daysTitle: 'Journées Prêtes à Kiffer',
         daysDescription: 'Choisis un thème, enfile tes baskets (ou ta combi) et c’est parti !',
         dayOneTitle: 'Ambiance Océan',
@@ -1006,7 +1026,7 @@ export default {
         dealThreeTitle: 'Happy hours',
         dealThreeDescription: 'Repérez les terrasses avec happy hours pour réduire le budget boissons.',
         dealFourTitle: 'Spots gratuits',
-        dealFourDescription: 'Parkings gratuits, panoramas ouverts à tous et nature à volonté.',
+        dealFourDescription: 'Wifi gratuits, panoramas ouverts à tous et nature à volonté.',
         accommodationTitle: 'Où On Se Pose ?',
         tonightTitle: 'Ça sort ce soir ?',
         tonightDescription: 'Programmation, adresses et idées pour une soirée réussie.',
@@ -1014,7 +1034,7 @@ export default {
         tonightOneDescription: 'Groupes émergents et petites salles : checkez la prog du week-end.',
         tonightTwoTitle: 'Bars à cocktails & terrasses',
         tonightTwoDescription: 'Terrasses face mer et bars cosy pour prolonger la soirée.',
-        tonightThreeTitle: 'Food trucks & marchés nocturnes',
+        tonightThreeTitle: 'Food trucks ',
         tonightThreeDescription: 'Pour une soirée debout autour de spécialités locales.',
         quizTitle: 'C’est quoi votre week-end de potes idéal ?',
         quizDescription: 'Réponds à 4 questions et découvre ton parcours recommandé.',
@@ -1032,9 +1052,12 @@ export default {
         quizQThreeAThree: 'Semaine',
         quizQFour: 'Intérêt principal',
         quizQFourAOne: 'Nature & panoramas',
+        quizQFourATwo: "Mer et activités nautiques",
         quizQFourAThree: 'Soirée & vie locale',
         quizButton: 'Voir mon parcours',
-        followTitle: 'La Suite en Stories'
+        followTitle: 'La Suite en Stories',
+        playersTitle: "Nos artistes ont du talent",
+        playersDescription: "Viens découvrir les sons stylés de nos artistes du coin."
     },
     Family: {
         heading: "En famille, au rythme de vos envies",
@@ -1114,6 +1137,7 @@ export default {
         access: "Accéder",
         knowMore: "En savoir plus",
         discover: "Je découvre",
-        hot: "On est chaud"
+        hot: "On est chaud",
+        result: "Cette activité est faite pour vous !"
     }
 } as const

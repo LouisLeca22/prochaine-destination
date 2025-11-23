@@ -165,7 +165,6 @@ function TastingPage() {
 
                     </motion.div>
 
-                    {/* Center Card */}
                     <motion.div
                         initial={{ y: 50 }}
                         whileInView={{ y: 0 }}

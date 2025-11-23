@@ -87,22 +87,22 @@ function BusinessPage() {
     const services = [
         {
 
-            icon: <Blocks className="w-4 h-4 text-primary" />,
+            icon: <Blocks className="w-8 h-8 text-primary" />,
             title: t1("organizationTitle"),
             description: t1("organizationDescription")
         },
         {
-            icon: <UtensilsCrossed className="w-4 h-4 text-primary" />,
+            icon: <UtensilsCrossed className="w-8 h-8 text-primary" />,
             title: t1("restaurationTitle"),
             description: t1("restaurationDescription")
         },
         {
-            icon: <Hotel className="w-4 h-4 text-primary" />,
+            icon: <Hotel className="w-8 h-8 text-primary" />,
             title: t1("accommodationTitle"),
             description: t1("accessibilityDescription")
         },
         {
-            icon: <HeartPlus className="w-4 h-4 text-primary" />,
+            icon: <HeartPlus className="w-8 h-8 text-primary" />,
             title: t1("assistanceTitle"),
             description: t1("assistanceDescription")
         }

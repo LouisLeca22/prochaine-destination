@@ -3,6 +3,7 @@
 import Carrousel from "@/components/ui/Carrousel"
 import { DoubleCards } from "@/components/ui/DoubleCards"
 import HeaderSlider from "@/components/ui/HeaderSlider"
+import QuizComponent from "@/components/ui/QuizzComponents"
 import ScrollFloat from "@/components/ui/ScrollFloat"
 import Section from "@/components/ui/Section"
 import Separator from "@/components/ui/Separator"
@@ -137,6 +138,41 @@ function CulturePage() {
         },
 
     ]
+
+    const steps = [
+        {
+            question: t1("quizQOne"),
+            answers: [
+                t1("quizQOneAOne"),
+                t1("quizQOneATwo"),
+                t1("quizQOneAThree"),
+            ]
+        },
+        {
+            question: t1("quizQTwo"),
+            answers: [
+                t1("quizQTwoAOne"),
+                t1("quizQTwoATwo"),
+                t1("quizQTwoAThree"),
+            ]
+        },
+        {
+            question: t1("quizQThree"),
+            answers: [
+                t1("quizQThreeAOne"),
+                t1("quizQThreeATwo"),
+                t1("quizQThreeAThree"),
+            ]
+        },
+        {
+            question: t1("quizQFour"),
+            answers: [
+                t1("quizQFourAOne"),
+                t1("quizQFourATwo"),
+                t1("quizQFourAThree"),
+            ]
+        },
+    ];
 
     return (
         <>
@@ -419,6 +455,9 @@ function CulturePage() {
                     ))}
                 </div>
             </Section>
+
+            <QuizComponent steps={steps} items={agenda} title={t1("quizTitle")} description={t1("quizDescription")} />
+
 
             <Section className="sm:my-20 my-0 p-10 md:p-0">
                 <div className="max-w-6xl mx-auto flex items-center md:items-end flex-col">
