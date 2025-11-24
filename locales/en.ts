@@ -199,7 +199,10 @@ export default {
         buttonText: "See all",
         gastronomyTitle: "Flavours and Local Heritage",
         gastronomyDescription: "Butter, farmhouse cheeses, shellfish and cider — our tables celebrate the generosity of local produce. From lively markets to gourmet restaurants, and from farms to cozy taverns, the region offers a palette of flavours where tradition meets creativity.",
-        inspireTitle: "Need some inspiration?"
+        inspireTitle: "Need some inspiration?",
+        podcastTitle: "Norman Escapes – Stories & Atmospheres",
+        podcastDescription: "In this podcast, set out to discover secret Normandy: its peaceful villages, lively markets, gourmet traditions, and places steeped in history. Each episode captures a unique atmosphere and transports you to the heart of this fictional destination through stories, interviews, and local ambient sounds.",
+        podcastName: "Episode 1 – A Day in the Land of Aubéline"
     },
     Press: {
         Heading: "Press room",
@@ -426,7 +429,7 @@ export default {
         ingredientsLiTwo: "10 cl of dry cider",
         ingredientsLiThree: "1 finely chopped shallot",
         ingredientsLiFour: "1 knob of butter",
-        ingredientsLiFive: "Crème fraîche (1 tablespoon)",
+        ingredientsLiFive: "Fresh cream (1 tablespoon)",
         ingredientsLiSix: "Salt, pepper",
         preparationTitle: "Preparation",
         preparationLiOne: "Sauté the shallot in butter until translucent.",
@@ -435,7 +438,10 @@ export default {
         preparationLiFour: "Stir in the cream, season and serve immediately with a sprinkle of parsley.",
         accommodationTitle: "Cosy Stays",
         accommodationSubTitle: "for your Autumn Getaways",
-        gallery: "Autumn Gallery"
+        gallery: "Autumn Gallery",
+        podcastTitle: "Norman Escapes – Autumn Colors",
+        podcastDescription: "In this podcast, dive into the heart of a Normandy adorned with its most beautiful autumn colors. Between trails carpeted with golden leaves, the scent of freshly pressed apples, morning mist over the hedgerows, and markets overflowing with seasonal delights, each episode brings you the warm and enveloping atmosphere of this destination in autumn. Let yourself be carried away by the stories, soundscapes, and traditions that make this time of year truly special.",
+        podcastName: "Autumn Walks – Stories & Atmospheres"
     },
     CityPass: {
         heading: "Your passport to a hassle-free coastal adventure.",
@@ -642,7 +648,7 @@ export default {
     },
     Coast: {
         heading: "Exploring the Coast",
-        description: "Kilometres of shoreline shaped by wind and sea — selected routes and tranquil stops to savour the salty air and the variety of coastal landscapes.",
+        description: "130 kilometres of shoreline shaped by wind and sea — selected routes and tranquil stops to savour the salty air and the variety of coastal landscapes.",
         hikingTitle: "Walks & Viewpoints",
         tips: "Tips",
         hikingDescription: "From easy paths to more demanding panoramas, choose the walk that suits your mood.",
@@ -709,7 +715,10 @@ export default {
         accessTitle: "Access",
         accessDescription: "municipal parking areas and local transport — prioritize soft mobility.",
         respectTitle: "Respect",
-        respectDescription: "do not take live shells and do not pick protected plants."
+        respectDescription: "do not take live shells and do not pick protected plants.",
+        podcastTitle: "Walks in Côte Valonne",
+        podcastDescription: "Join Léonie, a resident of Côte Valonne, for a sound-filled stroll between golden beaches, blooming dunes, and small fishing villages. She shares anecdotes, local traditions, and hidden spots to experience the coast like a true local.",
+        podcastName: "Episode 1 – The Coast Through Léonie’s Eyes"
     },
     Museums: {
         heading: "How about a museum visit?",
@@ -889,7 +898,7 @@ export default {
         wellnessOneTitle: "Moments of Relaxation",
         wellnessOneDescription: "Peaceful viewpoints, quiet beaches, hidden spots to read or meditate.",
         wellnessTwoTitle: "Thalasso & Marine Care",
-        wellnessTwoDescripton: "Treat yourself to a revitalizing pause in rhythm with the sea.",
+        wellnessTwoDescription: "Treat yourself to a revitalizing pause in rhythm with the sea.",
         wellnessThreeTitle: "Slow Moments",
         wellnessThreeDescription: "Wandering at dusk, listening to the waves, embracing the calm.",
         unmissableTitle: "Our Unmissable Experiences to Enjoy Without Moderation",
@@ -940,11 +949,11 @@ export default {
         portraitsTitle: "Portraits & Favorites",
         portraitsDescription: "Local voices share their intimate bond with the territory: artists, guides, photographers and enthusiasts offer their sensitive and inspiring vision of the Norman coast.",
         portraitOneTitle: "Lisa, Watercolor Artist",
-        portraitOneDescription: "“The ever-changing light of the cliffs is an endless source of inspiration. Everything here breathes poetry.”",
+        portraitOneDescription: "The ever-changing light of the cliffs is an endless source of inspiration. Everything here breathes poetry.",
         portraitTwoTitle: "Tom, Local Guide",
-        portraitTwoDescription: "“Every corner of the coastline holds a story, an emotion, a memory passed on by those who shaped it.”",
+        portraitTwoDescription: "Every corner of the coastline holds a story, an emotion, a memory passed on by those who shaped it.",
         portraitThreeTitle: "Leïla, Photographer",
-        portraitThreeDescription: "“Between the horizon and the morning mist, the coast offers suspended moments you won’t find anywhere else.”",
+        portraitThreeDescription: "Between the horizon and the morning mist, the coast offers suspended moments you won’t find anywhere else.",
         quizTitle: "What’s Your Ideal Cultural Getaway?",
         quizDescription: "Answer 4 questions and discover your perfect cultural itinerary.",
         quizQOne: "Preferred vibe",
@@ -967,7 +976,7 @@ export default {
     },
     Friends: {
         heading: 'With Friends',
-        description: 'The Normandy coast with good vibes only: sunset kitesurfing, rail-bike rides, cliffside apéros… Here are ready-to-live ideas for a weekend with your crew.',
+        description: 'The Normandy coast with good vibes only: sunset kitesurfing, rail-bike rides, cliffside cocktail parties. Here are ready-to-live ideas for a weekend with your crew.',
         top3: 'Top 3 to Get Started',
         experienceTitle: 'Experiences to Live Together',
         experienceDescription: 'Simple ideas, easy to book, perfect for creating memories as a group.',
@@ -1070,7 +1079,7 @@ export default {
     Family: {
         heading: "Family moments, at your own pace",
         description: "Enjoy a peaceful environment, a wide range of activities and a warm welcome designed for families. Nothing to plan — just time well spent, together.",
-        whyTitle: "Why your family will love it",
+        whyTitle: "Reasons why your family will love it",
         whyDescription: "Activities close by and an offer designed for all ages — here’s why families come back.",
         whyOneTitle: "Safe beaches",
         whyOneDescription: "Gentle slopes and supervised areas during the season.",
@@ -1248,7 +1257,9 @@ export default {
         itiThreeStepThreeTitle: "3. Third Day — Secret Cabins & Hidden Inspirations",
         itiThreeStepThreeDescription: "Seek out cabins perched above or tucked away in nature, unique refuges that feel truly special. An intimate view of the trees, enveloping silence, a creative atmosphere — the perfect setting to recharge, dream, write, draw… or simply enjoy time that no longer counts.",
         accommodationTitle: "Places to Stay for Two",
+        accommodationDescription: "Intimate and comfortable places, perfect for a romantic getaway.",
         agendaTitle: "Romantic Agenda",
+        agendaDescription: "To plan your sweet dates and your great adventures",
         agendaOne: "Intimate Concert",
         agendaTwo: "Nighttime Visit",
         agendaThree: "Tasting Workshop",
@@ -1423,7 +1434,7 @@ export default {
         download: "Download",
         see: "Consult",
         access: "Access",
-        knowMore: "En savoir plus",
+        knowMore: "Know more",
         discover: "Discover",
         interesting: "That's interesting",
         hot: "Up for it",

@@ -1,3 +1,4 @@
+import { accommodations } from "@/data";
 
 export default {
     Metadata: {
@@ -198,7 +199,10 @@ export default {
         cultureAsideDescription: " Partez à la découverte du territoire en compagnie de ceux qui en connaissent les secrets. Des balades contées aux circuits thématiques, chaque visite révèle une facette vivante de son histoire.",
         gastronomyTitle: "Saveurs et terroir",
         gastronomyDescription: "Beurre, fromages fermiers, coquillages et cidre : nos tables célèbrent la générosité des produits locaux. Des marchés animés aux restaurants gastronomiques, en passant par les fermes et les petites tavernes, la région offre une palette de saveurs où tradition et créativité se rencontrent.",
-        inspireTitle: "En panne d'inspiration ?"
+        inspireTitle: "En panne d'inspiration ?",
+        podcastTitle: "Échappées Normandes – Histoires & Atmosphères",
+        podcastDescription: "Dans ce podcast, partez à la rencontre de la Normandie secrète : ses villages paisibles, ses marchés animés, ses traditions gourmandes et ses lieux chargés d’histoire. Chaque épisode capture une ambiance unique et vous transporte au cœur de cette destination fictive à travers récits, témoignages et sons d’ambiances locales.",
+        podcastName: "Episode 1 – Une Journée en Pays d’Aubéline"
     },
     Press: {
         Heading: "Espace presse",
@@ -434,7 +438,10 @@ export default {
         preparationLiFour: "Incorporer la crème, saler, poivrer, puis servir aussitôt avec un peu de persil.",
         accommodationTitle: "Hébergements",
         accommodationSubTitle: "pour vos escapades douillettes",
-        gallery: "Galerie d'automne"
+        gallery: "Galerie d'automne",
+        podcastTitle: "Échappées Normandes – Couleurs d’Automne",
+        podcastDescription: "Dans ce podcast, plongez au cœur d’une Normandie parée de ses plus belles couleurs d’automne. Entre sentiers tapissés de feuilles dorées, parfums de pommes fraîchement pressées, brumes matinales sur les bocages et marchés débordant de gourmandises de saison, chaque épisode vous fait vivre l’atmosphère chaleureuse et enveloppante de cette destination à l’automne. Laissez-vous porter par les récits, les ambiances sonores et les traditions qui font de cette période un moment privilégié.",
+        podcastName: "Balades d’Automne – Histoires & Atmosphères"
     },
     CityPass: {
         heading: "Votre passeport pour une exploration sans prise de tête",
@@ -634,7 +641,7 @@ export default {
     },
     Coast: {
         heading: "Sillonner la côte",
-        description: "Kilomètres de littoral sculptés par le vent et la mer — itinéraires choisis et haltes pour goûter la douceur saline et la variété des paysages.",
+        description: "130 kilomètres de littoral sculptés par le vent et la mer — itinéraires choisis et haltes pour goûter la douceur saline et la variété des paysages.",
         hikingTitle: "Balades & promontoires",
         tips: "Conseils",
         hikingDescription: "Des sentiers faciles aux panoramas plus exigeants, choisissez la balade qui correspond à votre humeur.",
@@ -701,7 +708,10 @@ export default {
         accessTitle: "Accès",
         accessDescription: "parkings communaux et transports locaux — privilégiez la mobilité douce.",
         respectTitle: "Respect",
-        respectDescription: "n'emportez pas de coquillages vivants et ne cueillez pas les plantes protégées."
+        respectDescription: "n'emportez pas de coquillages vivants et ne cueillez pas les plantes protégées.",
+        podcastTitle: "Balades en Côte Valonne",
+        podcastDescription: "Accompagnez Léonie, habitante de la Côte Valonne pour une promenade sonore entre plages dorées, dunes fleuries et petits villages de pêcheurs. Elle partage anecdotes, traditions locales et coins secrets pour vivre la côte comme un vrai habitant.",
+        podcastName: "Episode 1 – La côte à travers les yeux de Léonie"
     },
     Museums: {
         heading: "Et si on allait au musée ?",
@@ -890,7 +900,7 @@ export default {
     },
     Culture: {
         heading: "Un territoire d’art et d’histoires",
-        description: "Parcours culturels, musées, ateliers, visites guidées… Laissez-vous porter par le patrimoine normand.",
+        description: "Parcours culturels, musées, ateliers, visites guidées… Succombez au charme du patrimoine normand.",
         unmissableTitle: "Les incontournables culturels",
         unmissableOneTitle: "Musées & espaces d’interprétation",
         unmissableOneDescription: "Découvrez des lieux dédiés aux arts visuels et aux récits locaux. Collections immersives, archives vivantes et expositions contemporaines éclairent l’âme du littoral.",
@@ -932,11 +942,11 @@ export default {
         portraitsTitle: "Portraits & coups de cœur",
         portraitsDescription: "Des voix locales racontent leur lien intime au territoire : artistes, guides, photographes et passionnés partagent leur vision sensible et inspirante de la côte normande.",
         portraitOneTitle: "Lisa, aquarelliste",
-        portraitOneDescription: "« La lumière changeante des falaises est une source inépuisable d’inspiration. Ici, tout respire la poésie. »",
+        portraitOneDescription: "La lumière changeante des falaises est une source inépuisable d’inspiration. Ici, tout respire la poésie.",
         portraitTwoTitle: "Tom, guide local",
-        portraitTwoDescription: "« Chaque recoin du littoral porte un récit, une émotion, un souvenir transmis par ceux qui l’ont façonné. »",
+        portraitTwoDescription: "Chaque recoin du littoral porte un récit, une émotion, un souvenir transmis par ceux qui l’ont façonné.",
         portraitThreeTitle: "Leïla, photographe",
-        portraitThreeDescription: "« Entre l’horizon et les brumes du matin, la côte offre des instants suspendus qu’on ne trouve nulle part ailleurs. »",
+        portraitThreeDescription: "Entre l’horizon et les brumes du matin, la côte offre des instants suspendus qu’on ne trouve nulle part ailleurs.",
         quizTitle: "Quel week-end culturel est fait pour vous ?",
         quizDescription: "Répondez à 4 questions et découvrez votre idée de séjour culturel parfait.",
         quizQOne: "Ambiance recherchée",
@@ -1239,7 +1249,9 @@ export default {
         itiThreeStepThreeTitle: "3. Troisième journée — Cabanes secrètes & inspirations cachées",
         itiThreeStepThreeDescription: "Rejoignez des cabanes perchées ou dissimulées dans la nature, des refuges atypiques où l’on se sent privilégié. Vue intime sur les arbres, silence enveloppant, atmosphère créative : un lieu parfait pour se ressourcer, rêver, écrire, dessiner… ou simplement savourer le temps qui ne compte plus.",
         accommodationTitle: "Hébergements pour deux",
+        accommodationDescription: "Des lieux intimes et confortables, parfaits pour une escapade en couple.",
         agendaTitle: "Agenda romantique",
+        agendaDescription: "Pour planifier vos doux rendez-vous et vos grandes aventures",
         agendaOne: "Concert intimiste",
         agendaTwo: "Visite nocturne",
         agendaThree: "Atelier dégustation",
@@ -1251,7 +1263,6 @@ export default {
         offerTwoTitle: "Surprise & romance (1 nuit)",
         offerTwoDescription: "Une nuit pensée comme une parenthèse enchantée : décor soigné, pétales délicatement dispersés, champagne prêt à être sabré. Tout est préparé pour créer la surprise parfaite et offrir un moment d’intimité douce et lumineuse.",
         kitTitle: "Le kit du week-end parfait",
-        packTitle: "À emporter",
         packOne: "Le plaid des confidences",
         packTwo: "La playlist du cœur",
         packThree: "Le tote bag des explorateurs tranquilles",
@@ -1271,9 +1282,9 @@ export default {
         storyOneTitle: "Le banc des promesses",
         storyOneDescription: "Face à la mer, à l’abri d’une haie de tamaris, un petit banc aurait vu naître plus d’un serment murmuré. On raconte qu’au début du XXᵉ siècle, les pêcheurs y retrouvaient leurs amantes avant de prendre le large, laissant sous une latte des mots comme des talismans contre l’attente. Aujourd’hui encore, certains couples y déposent un galet gravé — signe discret que l’histoire continue.",
         storyTwoTitle: "La maison des artistes",
-        storyTwoDescription: "Dans cette demeure baignée d’une lumière laiteuse, plusieurs peintres de passage trouvaient refuge pour travailler… et parfois aimer. On dit que Monet y peignit quelques études rapides en observant, depuis la fenêtre, une jeune femme lisant dans le jardin. L’atelier conserve cette atmosphère délicate, presque chuchotée, où chaque tableau semble une confidence.",
+        storyTwoDescription: "Dans cette demeure baignée d’une lumière laiteuse, plusieurs peintres de passage trouvaient refuge pour travailler… et parfois aimer. On dit que Monet y peignit quelques études rapides en observant, depuis la fenêtre, une jeune femme lisant dans le jardin. L’atelier conserve cette atmosphère délicate, presque chuchotée, où chaque tableau semble raconter une confidence.",
         storyThreeTitle: "La plage des lettres",
-        storyThreeDescription: "À marée basse, cette anse abritée dévoile des phrases tracées dans le sable. La légende raconte que dans les années 1950, deux amants, séparés par les conventions, y déposaient chacun un mot avant de repartir, sans jamais se croiser. Les vagues emportaient tout, sauf l’impression d’un dialogue suspendu. Les habitants perpétuent encore ce rituel en écrivant un prénom, un vœu ou simplement un « à bientôt ».",
+        storyThreeDescription: "À marée basse, cette anse abritée dévoile des phrases tracées dans le sable. La légende raconte que dans les années 1950, deux amants, séparés par les conventions, y déposaient chacun un mot avant de repartir, sans jamais se croiser. Les vagues emportaient tout, sauf l’impression d’un dialogue suspendu. Les habitants perpétuent encore ce rituel en écrivant un prénom ou un vœu.",
         sunsetTitle: "Nos adresses au coucher du soleil",
         sunsetOne: "Le Belvédère des Étoiles Basses",
         sunsetTwo: "La Pointe des Vœux Murmurés",

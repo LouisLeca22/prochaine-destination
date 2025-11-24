@@ -274,11 +274,11 @@ function CoastPage() {
 
             <Section>
                 <PodcastOne
-                    title="Balades en Côte Valonne"
-                    description="Accompagnez Léonie, habitante de la Côte Valonne — une destination normande fictive — pour une promenade sonore entre plages dorées, dunes fleuries et petits villages de pêcheurs. Elle partage anecdotes, traditions locales et coins secrets pour vivre la côte comme un vrai habitant."
+                    title={t1("podcastTitle")}
+                    description={t1("podcastDescription")}
                     cover="https://images.unsplash.com/photo-1515506733362-f6161cbcfbe6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     src="/audios/podcast.mp3"
-                    podcastName="Episode 1 – La côte à travers les yeux de Léonie"
+                    podcastName={t1("podcastName")}
                 />
             </Section>
 

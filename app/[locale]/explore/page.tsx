@@ -185,11 +185,11 @@ export default function ExplorePage() {
                     <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
                 </div>
                 <PodcastOne
-                    title="Échappées Normandes – Histoires & Atmosphères"
-                    description="Dans ce podcast, partez à la rencontre de la Normandie secrète : ses villages paisibles, ses marchés animés, ses traditions gourmandes et ses lieux chargés d’histoire. Chaque épisode capture une ambiance unique et vous transporte au cœur de cette destination fictive à travers récits, témoignages et sons d’ambiances locales."
+                    title={t1("podcastTitle")}
+                    description={t1("podcastDescription")}
                     cover="https://images.unsplash.com/photo-1673806780536-d4eedc231dfd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     src="/audios/podcast.mp3"
-                    podcastName="Episode 1 – Une Journée en Pays d’Aubéline"
+                    podcastName={t1("podcastName")}
                 />
             </Section>
 

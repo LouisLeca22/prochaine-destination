@@ -231,18 +231,18 @@ function CulturePage() {
                                         />
                                     </div>
 
-                                    <div className="pt-36 text-center flex flex-col flex-grow">
-                                        <h3 className="text-xl text-primary font-semibold mb-3 opacity-90">
+                                    <div className="pt-36 h-100 justify-between text-center flex flex-col flex-grow">
+                                        <h3 className="text-xl text-primary font-semibold mb-">
                                             {item.title}
                                         </h3>
 
-                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                        <p className=" text-gray-600  leading-relaxed ">
                                             {item.description}
                                         </p>
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition "
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
@@ -354,7 +354,7 @@ function CulturePage() {
 
 
                 <div className="flex flex-col gap-28 mt-20 relative">
-                    <div className="absolute left-1/2 top-0 bottom-100 w-[3px] bg-secondary -translate-x-1/2 rounded-full overflow-hidden">
+                    <div className="absolute left-1/2 top-0 bottom-110 w-[3px] bg-secondary -translate-x-1/2 rounded-full overflow-hidden">
                         <motion.div
                             style={{ height: lineHeight }}
                             className="w-full bg-primary rounded-full"
@@ -397,9 +397,13 @@ function CulturePage() {
                                     <h3 className="text-2xl font-semibold text-primary mb-4">
                                         {item.title}
                                     </h3>
-                                    <p className="text-gray-700 leading-relaxed text-lg">
+                                    <p className="text-gray-700 leading-relaxed mb-4 text-lg">
                                         {item.description}
                                     </p>
+                                    <Link href="http://www.linkedin.com/in/louis-leca"
+                                        className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        {t2("knowMore")}
+                                    </Link>
                                 </div>
                             </motion.div>
                         );

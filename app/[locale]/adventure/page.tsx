@@ -78,12 +78,13 @@ function AdventurePage() {
         {
             title: t1("challengeTwoTitle"),
             description: t1("challengeTwoDescription"),
-            image: "https://images.pexels.com/photos/840667/pexels-photo-840667.jpeg"
+            image: "https://images.pexels.com/photos/939729/pexels-photo-939729.jpeg"
+
         },
         {
             title: t1("challengeThreeTitle"),
             description: t1("challengeThreeDescription"),
-            image: "https://images.pexels.com/photos/939729/pexels-photo-939729.jpeg"
+            image: "https://images.pexels.com/photos/840667/pexels-photo-840667.jpeg"
         }
     ]
 
@@ -481,7 +482,7 @@ function AdventurePage() {
 
 
                                     <div className="p-5">
-                                        <h3 className="text-lg font-semibold text-primary-foreground mb-2">
+                                        <h3 className="text-lg font-semibold text-primary mb-2">
                                             {exp.title}
                                         </h3>
 
@@ -601,18 +602,18 @@ function AdventurePage() {
                                         />
                                     </div>
 
-                                    <div className="pt-36 text-center flex flex-col flex-grow">
-                                        <h3 className="text-xl text-primary font-semibold h-20 mb-3 opacity-90">
+                                    <div className="pt-36 h-90 text-center justify-between flex flex-col flex-grow">
+                                        <h3 className="text-xl text-primary font-semibold ">
                                             {locale === "fr" ? item.nameFR : item.nameEN}
                                         </h3>
 
-                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
-                                            {locale === "fr" ? item.nameFR : item.nameEN}
+                                        <p className=" text-gray-600  leading-relaxed ">
+                                            {locale === "fr" ? item.descriptionFR.split('.')[0] + '.' : item.descriptionEN.split('.')[0] + '.'}
                                         </p>
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition "
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">

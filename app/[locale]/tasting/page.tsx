@@ -90,7 +90,7 @@ function TastingPage() {
         },
         {
             title: t1("wellnessTwoTitle"),
-            description: t1("wellnessOneDescription"),
+            description: t1("wellnessTwoDescription"),
             image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
@@ -476,7 +476,7 @@ function TastingPage() {
                                     />
                                 </div>
                                 <div className="p-6 flex flex-col items-center justify-center">
-                                    <h3 className="text-lg text-primary font-semibold mb-4 line-clamp-2 text-center h-12">{item.title}</h3>
+                                    <h3 className="text-lg text-primary font-semibold mb-4 line-clamp-2 text-center ">{item.title}</h3>
                                     <p className="text-gray-600 text-sm mb-3">{item.description}</p>
                                     <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                                         className="inline-block bg-secondary text-primary-foreground px-4 py-2 w-1/2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">

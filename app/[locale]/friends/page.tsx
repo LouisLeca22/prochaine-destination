@@ -149,7 +149,7 @@ function FriendsPage() {
 
     const allAcccomodations = useMemo(() => accommodations, [])
 
-    const top3 = selectItemsByIds(allActivities, [7, 8, 1])
+    const top3 = selectItemsByIds(allActivities, [25, 16, 1])
 
     const sleepItems = selectItemsByIds(allAcccomodations, [3, 18, 9])
 
@@ -371,14 +371,14 @@ function FriendsPage() {
 
 
                                     <div className="p-5">
-                                        <h3 className="text-lg font-semibold text-primary-foreground mb-2">
+                                        <h3 className="text-lg font-semibold text-primary mb-2">
                                             {exp.title}
                                         </h3>
                                         <p className="text-gray-700 text-sm mb-3">
                                             {exp.description}
                                         </p>
 
-                                        <div className="bg-sky-50 border-l-4 border-sky-600 p-3 rounded-md text-sm text-sky-900 italic">
+                                        <div className="bg-sky-50 border-l-4 border-primary p-3 rounded-md text-sm text-primary-foreground italic">
                                             {exp.tips}
                                         </div>
                                     </div>
@@ -732,11 +732,11 @@ function FriendsPage() {
                                     </div>
 
                                     <div className="pt-36 text-center flex flex-col flex-grow">
-                                        <h3 className="text-xl text-primary font-semibold mb-3 opacity-90">
+                                        <h3 className="text-xl text-primary font-semibold mb-3 ">
                                             {item.title}
                                         </h3>
 
-                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                        <p className=" text-gray-600 leading-relaxed mb-6">
                                             {item.description}
                                         </p>
 

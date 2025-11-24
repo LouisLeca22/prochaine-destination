@@ -241,11 +241,11 @@ function AutumnPage() {
                                     </div>
 
                                     <div className="pt-36 text-center flex flex-col flex-grow">
-                                        <h3 className="text-xl text-primary font-semibold mb-3 opacity-90">
+                                        <h3 className="text-xl text-primary font-semibold mb-3">
                                             {item.title}
                                         </h3>
 
-                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                        <p className=" text-gray-600 leading-relaxed mb-6">
                                             {item.description}
                                         </p>
 
@@ -459,11 +459,11 @@ function AutumnPage() {
                     <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
                 </div>
                 <PodcastOne
-                    title="Échappées Normandes – Couleurs d’Automne"
-                    description="Dans ce podcast, plongez au cœur d’une Normandie parée de ses plus belles couleurs d’automne. Entre sentiers tapissés de feuilles dorées, parfums de pommes fraîchement pressées, brumes matinales sur les bocages et marchés débordant de gourmandises de saison, chaque épisode vous fait vivre l’atmosphère chaleureuse et enveloppante de cette destination à l’automne. Laissez-vous porter par les récits, les ambiances sonores et les traditions qui font de cette période un moment privilégié."
+                    title={t1("podcastName")}
+                    description={t1("podcastDescription")}
                     cover="https://images.unsplash.com/photo-1673806780536-d4eedc231dfd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     src="/audios/podcast.mp3"
-                    podcastName="Balades d’Automne – Histoires & Atmosphères"
+                    podcastName={t1("podcastName")}
                 />
             </Section>
 
