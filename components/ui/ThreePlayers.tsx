@@ -1,6 +1,7 @@
 'use client';
 
 import AudioPlayer from "./AudioPlayer";
+import { motion } from "framer-motion"
 
 interface PlayersProps {
     srcs: [string, string, string]
@@ -11,25 +12,21 @@ interface PlayersProps {
 export default function ThreePlayers({ srcs, titles, covers }: PlayersProps) {
     return (
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-
-            <AudioPlayer
-                src={srcs[0]}
-                title={titles[0]}
-                cover={covers[0]}
-            />
-
-            <AudioPlayer
-                src={srcs[1]}
-                title={titles[1]}
-                cover={covers[1]}
-            />
-
-            <AudioPlayer
-                src={srcs[2]}
-                title={titles[2]}
-                cover={covers[2]}
-            />
-
+            {[0, 1, 2].map((i) => (
+                <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: i * 0.15 }}
+                    whileHover={{ scale: 1.04 }}
+                >
+                    <AudioPlayer
+                        src={srcs[i]}
+                        title={titles[i]}
+                        cover={covers[i]}
+                    />
+                </motion.div>
+            ))}
         </div>
     );
 }

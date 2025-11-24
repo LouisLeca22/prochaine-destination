@@ -687,9 +687,13 @@ function CouplePage() {
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 mt-10 gap-6">
                     {art.map((spot, i) => (
-                        <div
+                        <motion.div
                             key={i}
                             className="relative group h-64 rounded-xl overflow-hidden cursor-pointer"
+                            initial={{ opacity: 0, y: 20, scale: 0.98 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.35, delay: i * 0.05, ease: "easeOut" }}
                         >
                             <Image
                                 src={spot.image}
@@ -705,7 +709,7 @@ function CouplePage() {
                                     {spot.title}
                                 </h3>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </Section>
@@ -728,20 +732,27 @@ function CouplePage() {
                     <p className="text-xl mx-auto text-center my-5">{t1("momentsDescription")}</p>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                         {moments.map((item, i) => (
-                            <div
+                            <motion.div
                                 key={i}
                                 className="
-            group flex flex-col items-center justify-center
-            rounded-2xl bg-primary text-primary-foreground
-            p-6 shadow-md transition-transform duration-300
-            hover:-translate-y-1 hover:shadow-xl hover:bg-primary/90
-          "
+                        group flex flex-col items-center justify-center
+                        rounded-2xl bg-primary text-primary-foreground
+                        p-6 shadow-md transition-transform duration-300
+                        hover:-translate-y-1 hover:shadow-xl hover:bg-primary/90
+                    "
+                                initial={{ opacity: 0, y: 20, scale: 0.98 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                viewport={{ once: true, amount: 0.15 }}
+                                transition={{ duration: 0.35, delay: i * 0.05, ease: "easeOut" }}
                             >
-                                <div className="mb-3 rounded-full p-3 bg-secondary">{item.icon}</div>
+                                <div className="mb-3 rounded-full p-3 bg-secondary">
+                                    {item.icon}
+                                </div>
+
                                 <p className="text-center text-white text-sm font-medium leading-tight">
                                     {item.title}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

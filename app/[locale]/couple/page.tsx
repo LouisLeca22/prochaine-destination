@@ -571,25 +571,40 @@ function CouplePage() {
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 mt-10 gap-6">
                     {sunsets.map((spot, i) => (
-                        <div
+                        <motion.div
                             key={i}
                             className="relative group h-64 rounded-xl overflow-hidden cursor-pointer"
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
+                            whileHover={{ y: -6 }}
                         >
-                            <Image
-                                src={spot.image}
-                                alt={spot.title}
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
+                            <motion.div
+                                className="absolute inset-0"
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                            >
+                                <Image
+                                    src={spot.image}
+                                    alt={spot.title}
+                                    fill
+                                    className="object-cover"
+                                />
+                            </motion.div>
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 pointer-events-none" />
 
-                            <div className="absolute bottom-3 left-4 right-4">
+                            <motion.div
+                                className="absolute bottom-3 left-4 right-4"
+                                whileHover={{ y: -4 }}
+                                transition={{ duration: 0.25 }}
+                            >
                                 <h3 className="text-white text-lg font-medium drop-shadow-md">
                                     {spot.title}
                                 </h3>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     ))}
                 </div>
             </Section>
