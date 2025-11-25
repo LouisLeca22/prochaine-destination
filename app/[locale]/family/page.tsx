@@ -41,7 +41,7 @@ function FamilyPage() {
         },
         {
             title: t1("whyTwoTitle"),
-            description: t1("whyOneDescription"),
+            description: t1("whyTwoDescription"),
             icon: <Baby className="h-8 w-8 text-primary-foreground" />
 
         },
@@ -400,7 +400,7 @@ function FamilyPage() {
                                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
                                 className="
                     w-full sm:w-[45%] lg:w-[30%]
-                    bg-white rounded-3xl shadow-lg border  overflow-hidden
+                    bg-white rounded-3xl shadow-lg border cursor-pointer overflow-hidden
                 "
                             >
                                 <div className="relative w-full h-40">
@@ -629,7 +629,7 @@ function FamilyPage() {
                                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                className="relative rounded-2xl overflow-hidden shadow-lg group"
+                                className="relative cursor-pointer rounded-2xl overflow-hidden shadow-lg group"
                             >
                                 <div className="relative w-full h-64">
                                     <Image

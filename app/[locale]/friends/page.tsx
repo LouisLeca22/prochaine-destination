@@ -422,7 +422,7 @@ function FriendsPage() {
                                         amount: 0.5,
                                         once: true
                                     }}
-                                    className="group max-w-70 bg-white rounded-2xl shadow-md  transition-all hover:-translate-y-2 hover:shadow-xl">
+                                    className="group max-w-70 bg-white cursor-pointer rounded-2xl shadow-md  transition-all hover:-translate-y-2 hover:shadow-xl">
 
                                     <div className="rounded-t-2xl overflow-hidden h-48 relative">
                                         <Image
@@ -666,7 +666,7 @@ function FriendsPage() {
                                         amount: 0.5,
                                         once: true
                                     }}
-                                    className="group max-w-70 bg-white rounded-2xl shadow-md p-6 transition-all hover:-translate-y-2 hover:shadow-xl">
+                                    className="group max-w-70 bg-white cursor-pointer rounded-2xl shadow-md p-6 transition-all hover:-translate-y-2 hover:shadow-xl">
 
                                     <div className="flex flex-col items-center text-center">
                                         <div
