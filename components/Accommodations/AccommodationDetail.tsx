@@ -40,6 +40,8 @@ import {
     WashingMachine,
 } from "lucide-react";
 
+import { fr, enGB } from "react-day-picker/locale";
+
 import { Button } from "@/components/ui/Button";
 import {
     Popover,
@@ -248,14 +250,14 @@ export default function AccommodationDetail({
                                     {locale === "fr" && (
                                         <div className="flex gap-2 flex-wrap">
                                             <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                                                {`${WeekdaysEN[accommodation.from]} – ${WeekdaysEN[accommodation.to]}`}
+                                                {`${WeekdaysFR[accommodation.from]} – ${WeekdaysFR[accommodation.to]}`}
                                             </span>
                                         </div>
                                     )}
                                     {locale === "en" && (
                                         <div className="flex gap-2 flex-wrap">
                                             <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                                                {`${WeekdaysFR[accommodation.from]} – ${WeekdaysFR[accommodation.to]}`}
+                                                {`${WeekdaysEN[accommodation.from]} – ${WeekdaysEN[accommodation.to]}`}
                                             </span>
                                         </div>
                                     )}
@@ -412,6 +414,7 @@ export default function AccommodationDetail({
                                         </PopoverTrigger>
                                         <PopoverContent className="w-auto p-0 z-999">
                                             <ShadCalendar
+                                                locale={locale === "fr" ? fr : enGB}
                                                 mode="multiple"
                                                 selected={accommodation.availability.map((d) => new Date(d))}
                                             />

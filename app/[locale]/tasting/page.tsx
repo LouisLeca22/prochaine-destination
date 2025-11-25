@@ -173,7 +173,7 @@ function TastingPage() {
                         className="md:translate-y-1/2 w-full md:w-[400px] h-64 rounded-xl  shadow-2xl z-30 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            2
+                            3
                         </div>
 
                         <a href={`/${top3[1].category}?id=${top3[1].id}`}
@@ -202,7 +202,7 @@ function TastingPage() {
                         className="md:-translate-x-1/3 md:-translate-[10%] w-full md:w-[400px] h-64 rounded-xl  shadow-lg z-20 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            3
+                            2
                         </div>
                         <a href={`/${top3[2].category}?id=${top3[2].id}`}
                             className="w-full h-full rounded-xl overflow-hidden shadow-lg block relative"
@@ -226,10 +226,7 @@ function TastingPage() {
             </Section>
 
             <Section className="relative my-0 md:my-30 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-20 dark:bg-transparent left-2/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 dark:bg-transparent left-[40%] w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -379,7 +376,7 @@ function TastingPage() {
                                 <motion.div
                                     animate={{ y: [0, -10, 0], opacity: [0.6, 0.4, 0.6] }}
                                     transition={{ duration: 6 + i, repeat: Infinity }}
-                                    className="absolute -z-10 -bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-purple-400/20 blur-3xl rounded-full"
+                                    className="absolute -z-10 -bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-purple/400 blur-3xl rounded-full"
                                 />
                             </motion.div>
                         ))}
@@ -432,7 +429,10 @@ function TastingPage() {
                                 >
                                     <h3 className="text-2xl font-semibold text-primary mb-4">{exp.title}</h3>
                                     <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
-
+                                    <Link href="http://www.linkedin.com/in/louis-leca"
+                                        className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        {t2("discover")}
+                                    </Link>
                                 </motion.div>
                             </motion.div>
                         );

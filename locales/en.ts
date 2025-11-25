@@ -361,6 +361,7 @@ export default {
         capacity: "Capacity:",
         seated: "seated",
         standing: "standing",
+        attendees: "attendees",
         accommodations: "Our Business-Certified Accommodations",
         incentiveTitle: "Experiences to Strengthen Team Bonds",
         cardOneDescription: "Panoramic sea view, Wi-Fi, on-site catering.",

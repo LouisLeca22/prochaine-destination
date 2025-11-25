@@ -99,7 +99,7 @@ function BusinessPage() {
         {
             icon: <Hotel className="w-8 h-8 text-primary" />,
             title: t1("accommodationTitle"),
-            description: t1("accessibilityDescription")
+            description: t1("accommodationDescription")
         },
         {
             icon: <HeartPlus className="w-8 h-8 text-primary" />,
@@ -347,7 +347,7 @@ function BusinessPage() {
                         viewport={{
                             amount: 0.5,
                             once: true
-                        }} className="md:flex-3 overflow-hidden w-full md:h-[60vh]  z-20 sm:-ml-8">
+                        }} className="md:flex-3 overflow-hidden w-full py-10  z-20 sm:-ml-8">
                         <Swiper
                             slidesPerView={isMobile ? 1 : 3}
                             spaceBetween={isMobile ? 0 : 30}
@@ -360,7 +360,7 @@ function BusinessPage() {
                         >
                             {facilities.map((item, i) => (
                                 <SwiperSlide key={i}>
-                                    <div className="bg-white rounded-2xl overflow-hidden md:h-[95%] shadow transition">
+                                    <div className="bg-white my-10  rounded-2xl  overflow-hidden shadow-lg transition">
 
                                         <div className="relative w-full h-56">
                                             <Image
@@ -489,10 +489,6 @@ function BusinessPage() {
 
 
             <Section className="relative md:mt-60 mt-0 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
                 <div className="max-w-6xl mx-auto flex items-center  flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -506,7 +502,7 @@ function BusinessPage() {
                     </ScrollFloat>
                     <Separator width="w-48 " />
                 </div>
-                <div className="max-w-6xl md:h-[60vh] mt-15 mx-auto ">
+                <div className="max-w-6xl md:h-[50vh] mt-15 mx-auto ">
                     <Swiper
                         slidesPerView={isMobile ? 1 : 3}
                         spaceBetween={isMobile ? 0 : 30}
@@ -534,7 +530,7 @@ function BusinessPage() {
                                             {item.title}
                                         </h3>
                                         <p className="text-gray-600 text-sm mt-1 flex gap-2">
-                                            {item.participants} participants <MapPin className="w-4 h-4 text-primary" /> {item.place}
+                                            {item.participants} {t1("attendees")} <MapPin className="w-4 h-4 text-primary" /> {item.place}
                                         </p>
                                     </div>
                                 </div>
@@ -547,7 +543,7 @@ function BusinessPage() {
 
 
 
-            <Section className="my-0 sm:my-20">
+            <Section className="my-0 sm:my-10">
                 <div className=" max-w-6xl mx-auto flex items-center md:items-start flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -585,9 +581,7 @@ function BusinessPage() {
             </Section>
 
             <Section className="relative sm:my-20 my-0 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex flex-col">
                     <ScrollFloat
                         animationDuration={1}

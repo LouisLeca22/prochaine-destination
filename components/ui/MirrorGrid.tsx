@@ -71,7 +71,7 @@ export default function ImageGrid({
                     <div
                         className="
                 absolute inset-0 flex items-center justify-center
-                bg-black/40 text-white text-lg font-semibold
+                bg-black/40 text-white text-xl font-semibold
               "
                     >
                         {card.title}

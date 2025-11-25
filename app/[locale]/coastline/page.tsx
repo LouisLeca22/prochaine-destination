@@ -350,10 +350,7 @@ function CoastPage() {
                 </div>
 
                 <div className="relative max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                    <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                    </div>
+
                     <div className="md:col-span-2 space-y-8">
                         <p className="text-center text-xl">{t1("itinerariesDescription")}</p>
 
@@ -494,7 +491,7 @@ function CoastPage() {
                         className="md:translate-y-1/2 w-full md:w-[400px] h-64 rounded-xl  shadow-2xl z-30 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            2
+                            3
                         </div>
 
                         <a href={`/${nature[1].category}?id=${nature[1].id}`}
@@ -523,7 +520,7 @@ function CoastPage() {
                         className="md:-translate-x-1/3 md:-translate-[10%] w-full md:w-[400px] h-64 rounded-xl  shadow-lg z-20 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            3
+                            2
                         </div>
                         <a href={`/${nature[2].category}?id=${nature[2].id}`}
                             className="w-full h-full rounded-xl overflow-hidden shadow-lg block relative"

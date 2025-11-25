@@ -235,10 +235,7 @@ function page() {
             </Section>
 
             <Section className="relative my-0 md:my-20 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex  flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -254,13 +251,14 @@ function page() {
 
                     <div className="grid md:grid-cols-3 gap-10 mt-10">
                         {featuredTours.map((item, i) => (
-                            <motion.div
+                            <motion.a
+                                href="http://linkedin.com/in/louis-leca"
                                 key={i}
                                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                className="relative rounded-2xl overflow-hidden shadow-lg group"
+                                className="relative  rounded-2xl overflow-hidden shadow-lg group"
                             >
                                 <div className="relative w-full h-64">
                                     <Image
@@ -273,9 +271,9 @@ function page() {
                                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/60 to-transparent"></div>
                                 <div className="absolute bottom-0 p-6 text-white">
                                     <h3 className="text-2xl font-semibold">{item.title}</h3>
-                                    <p className="text-sm text-gray-200 mt-2">{item.desc}</p>
+                                    <p className=" text-gray-200 mt-2">{item.desc}</p>
                                 </div>
-                            </motion.div>
+                            </motion.a>
                         ))}
                     </div>
 
@@ -367,9 +365,7 @@ function page() {
             </Section>
 
             <Section className="relative sm:my-20 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex flex-col">
                     <ScrollFloat
                         animationDuration={1}

@@ -1,5 +1,6 @@
 "use client"
 
+import AnimatedLink from "@/components/ui/AnimatedLink"
 import Carrousel from "@/components/ui/Carrousel"
 import CircuitMap, { Circuit } from "@/components/ui/CircuitMap"
 import CountUp from "@/components/ui/CountUp"
@@ -13,7 +14,7 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { useCurrentLocale, useScopedI18n } from "@/locales/client"
 import { selectItemsByIds } from "@/utils"
 import { motion } from "framer-motion"
-import { Apple, Bike, Bird, Bus, Footprints, Home, Leaf, LineSquiggle, PersonStanding, Recycle, ShoppingBag, Tent, Trash2, Waves } from "lucide-react"
+import { Apple, ArrowRight, Bike, Bird, Bus, Footprints, Home, Leaf, LineSquiggle, PersonStanding, Recycle, ShoppingBag, Tent, Trash2, Waves } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useMemo } from "react"
@@ -151,6 +152,10 @@ function SustainablePage() {
 
     const economyItems = [
         {
+            title: t1("souvenirsTitle"),
+            description: t1("souvenirsDescription")
+        },
+        {
             title: t1("producersTitle"),
             description: t1("producersDescription")
         },
@@ -158,10 +163,7 @@ function SustainablePage() {
             title: t1("restaurantsTitle"),
             description: t1("restaurantsDescription")
         },
-        {
-            title: t1("souvenirsTitle"),
-            description: t1("souvenirsDescription")
-        }
+
     ]
 
     const allRestaurants = useMemo(() => restaurants, [])
@@ -171,7 +173,7 @@ function SustainablePage() {
     const accommodationsItems = selectItemsByIds(allAccommodations, [2, 3, 12, 15, 18, 22])
 
     const allActivities = useMemo(() => activities, [])
-    const activitiesitems = selectItemsByIds(allActivities, [19, 5, 4])
+    const activitiesitems = selectItemsByIds(allActivities, [19, 17, 4])
 
     const actionItems = [
         {
@@ -267,7 +269,7 @@ function SustainablePage() {
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold mb-2 text-primary">
-                                <CountUp from={0} to={60} />
+                                <CountUp from={0} to={35} />
                             </p>
                             <p>{t1("partners")}</p>
                         </div>
@@ -351,9 +353,7 @@ function SustainablePage() {
             </Section>
 
             <Section className="relative md:my-20 my-0 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-40 dark:bg-transparent right-2/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -454,6 +454,15 @@ function SustainablePage() {
                                         {action.icon} {action.title}
                                     </h3>
                                     <p className="mt-2 text-gray-600 text-center">{action.description}</p>
+                                    <motion.div
+                                        whileHover={{ x: 5 }}
+                                        className="flex items-center mt-2 gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition "
+                                    >
+                                        <ArrowRight size={16} className="text-secondary-foreground" />
+                                        <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
+                                            {t2("discover")}
+                                        </Link>
+                                    </motion.div>
                                 </motion.div>
                             ))}
                         </motion.div>
@@ -496,9 +505,7 @@ function SustainablePage() {
             </Section>
 
             <Section className="relative md:my-20 py-0 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-70 dark:bg-transparent right-2/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center sm:items-start flex-col">
                     <ScrollFloat
                         animationDuration={1}

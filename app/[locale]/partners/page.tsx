@@ -180,7 +180,7 @@ function PartnersPage() {
                         </div>
                         <div className="bg-white shadow rounded-xl p-6">
                             <p className="text-4xl font-bold  mb-2 text-primary">
-                                <CountUp from={0} to={60} />
+                                <CountUp from={0} to={35} />
                             </p>
                             <p>{t1("eductours")}</p>
                         </div>
@@ -300,9 +300,7 @@ function PartnersPage() {
 
 
             <Section className="relative my-20 p-10">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -414,9 +412,7 @@ function PartnersPage() {
 
 
             <Section className="relative sm:my-20 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex flex-col">
                     <ScrollFloat
                         animationDuration={1}

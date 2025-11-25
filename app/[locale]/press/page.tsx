@@ -13,7 +13,7 @@ import Masonry from "@/components/ui/Masonry"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import SocialMasonry from "@/components/ui/SocialMasonry"
-import { Facebook, FolderClosed, Image as Img, Instagram, LayoutPanelTop, Palette, Youtube } from "lucide-react"
+import { Facebook, FolderClosed, Image as Img, Instagram, LayoutPanelTop, Linkedin, Palette, Youtube } from "lucide-react"
 import { ContactForm } from "@/components/Home/Contact"
 
 function PressPage() {
@@ -269,6 +269,7 @@ function PressPage() {
                         { label: "Instagram", icon: <Instagram size={28} />, href: "http://instagram.com" },
                         { label: "Facebook", icon: <Facebook size={28} />, href: "http://facebook.com" },
                         { label: "YouTube", icon: <Youtube size={28} />, href: "http://youtube.com" },
+                        { label: "LinkedIn", icon: <Linkedin size={28} />, href: "http://linkedin.com" },
                     ]}
                     hideOnMobile
 
@@ -303,7 +304,7 @@ function PressPage() {
                                 <Img className="w-8 h-8 text-primary-foreground" />
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("logosTitle")}</h3>
-                            <p className="text-sm text-gray-500 mb-4">{t1("logosDescription")}</p>
+                            <p className="text-gray-500 mb-4">{t1("logosDescription")}</p>
                             <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
                                 className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
@@ -360,10 +361,7 @@ function PressPage() {
             </Section >
 
             <Section className="relative sm:my-20 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-10 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex flex-col">
                     <ScrollFloat
                         animationDuration={1}

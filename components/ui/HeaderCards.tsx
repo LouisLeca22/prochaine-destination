@@ -87,7 +87,7 @@ const HeaderCards: React.FC<HeaderCards> = ({
                 </Swiper>
             </div>
 
-            <div className="relative flex items-center justify-center gap-20 text-center flex-col top-0 left-0 w-full min-h-[80vh] md:translate-y-1/5 z-50">
+            <div className="relative flex items-center justify-center gap-20 text-center flex-col top-0 left-0 w-full min-h-[80vh] md:translate-y-1/5 lg:translate-y-[25%] z-50">
                 <h1>
                     <SplitText
                         text={heading}
@@ -119,13 +119,13 @@ const HeaderCards: React.FC<HeaderCards> = ({
                         <motion.div
                             key={index}
                             variants={cardVariants}
-                            className="flex-1 bg-white rounded-3xl shadow-xl p-3 transform hover:-translate-y-2 transition duration-500"
+                            className="flex-1 bg-white rounded-3xl flex justify-center items-center gap-2 flex-col  min-h-40 shadow-xl p-3 transform hover:-translate-y-2 transition duration-500"
                         >
                             <h3 className="font-semibold text-slate-800 flex items-center gap-2 justify-start md:justify-center text-left md:text-center">
                                 {card.title.icon}
                                 {card.title.text}
                             </h3>
-                            <p className="text-slate-600 hidden sm:block px-4 py-2 leading-relaxed">
+                            <p className="text-slate-600 hidden sm:block px-4 leading-relaxed">
                                 {card.description}
                             </p>
                         </motion.div>

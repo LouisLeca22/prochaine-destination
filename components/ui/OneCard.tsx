@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Separator from "./Separator";
+import AnimatedLink from "./AnimatedLink";
+import { useScopedI18n } from "@/locales/client";
 
 interface OneCardProps {
     image: string;
@@ -11,9 +13,10 @@ interface OneCardProps {
     ol?: string[]
     reverse?: boolean;
     large?: boolean
+    button?: boolean
 }
 
-function OneCard({ image, title, description, ol, reverse = false, large = false }: OneCardProps) {
+function OneCard({ image, title, description, ol, reverse = false, large = false, button = false }: OneCardProps) {
     // Animation variants
     const containerVariants: Variants = {
         hidden: { opacity: 0, y: 50 },
@@ -25,10 +28,12 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
         visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
     };
 
+    const t1 = useScopedI18n("Components")
+
     return (
         <motion.div
             className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
-                gap-8  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center md:items-start px-4 md:px-8`}
+                  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center md:items-start px-4 md:px-8`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -36,7 +41,7 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
         >
             {/* Image section */}
             <motion.div
-                className="relative w-full md:flex-1 h-[40vh] md:h-[60vh]"
+                className="relative w-full md:flex-1 h-[40vh] md:h-[50vh]"
                 variants={imageVariants}
             >
                 <Image
@@ -49,7 +54,7 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
 
             {/* Text section */}
             <motion.div
-                className={`flex-1 flex flex-col  justify-center h-[40vh] md:h-[60vh] items-center ${reverse
+                className={`flex-1 flex flex-col  justify-center h-[40vh] md:h-[50vh] items-center ${reverse
                     ? "md:items-start md:text-left"
                     : "md:items-end md:text-right"
                     } text-center  mt-6 md:mt-0`}
@@ -69,6 +74,11 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
                             <li className="mb-4" key={i}>{item}</li>
                         ))}
                     </ol>
+                )}
+
+                {button && (
+                    <AnimatedLink href="http://linkedin.com/in/louis-leca" text={t1("knowMore")} />
+
                 )}
             </motion.div>
         </motion.div>

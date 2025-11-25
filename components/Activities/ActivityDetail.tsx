@@ -9,6 +9,9 @@ import { useActivityFilterStore } from "@/store/activityFilterState";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
+import { fr, enGB } from "react-day-picker/locale";
+
+
 import {
     Calendar,
     Clock,
@@ -361,6 +364,7 @@ export default function ActivityDetail({
                                         </PopoverTrigger>
                                         <PopoverContent className="w-auto p-0 z-999">
                                             <ShadCalendar
+                                                locale={locale === "fr" ? fr : enGB}
                                                 mode="multiple"
                                                 selected={activity.availability.map((d) => new Date(d))}
                                             />

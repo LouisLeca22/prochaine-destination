@@ -37,7 +37,7 @@ function PodcastOne({ title, description, src, ol, cover, podcastName, reverse =
             viewport={{ once: true, amount: 0.3 }}
         >
             <motion.div
-                className="relative w-full md:flex-1 h-[40vh] md:h-[60vh]"
+                className="relative w-full md:flex-1 h-[40vh] md:h-[60vh] mb-20 md:mb-0"
                 variants={imageVariants}
             >
 

@@ -278,10 +278,7 @@ function AutumnPage() {
 
 
             <Section className="relative my-0 md:my-30 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -363,9 +360,7 @@ function AutumnPage() {
             </Section>
 
             <Section className="relative my-0 md:my-30 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-20 dark:bg-transparent left-1/4 w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center  flex-col">
                     <ScrollFloat
                         animationDuration={1}
@@ -455,9 +450,7 @@ function AutumnPage() {
             </Section>
 
             <Section className="relative md:mt-60 mb-20">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <PodcastOne
                     title={t1("podcastName")}
                     description={t1("podcastDescription")}

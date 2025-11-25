@@ -95,9 +95,7 @@ export default function ExplorePage() {
                 <HeaderCards cards={headerCards} images={headerImages} heading={t1("Heading")} subHeading={t1("Subheading")} />
             </header>
             <Section className="relative my-10 md:my-50">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <SquareCards title={t1("spiritTitle")} description={t1("spiritDescription")} imageAlt={t1("spiritTitle")} images={discoverImages} />
             </Section>
             <Section className="my-10 md:my-50">
@@ -181,9 +179,7 @@ export default function ExplorePage() {
             </Section>
 
             <Section className="relative md:mt-60 mb-20">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-10 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <PodcastOne
                     title={t1("podcastTitle")}
                     description={t1("podcastDescription")}

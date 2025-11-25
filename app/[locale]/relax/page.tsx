@@ -265,9 +265,7 @@ function CouplePage() {
             </header>
 
             <Section className="relative mt-50 ">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute bottom-20 dark:bg-transparent right-1/4 w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <SquareCards title={t1("introTitle")} description={t1("introDescription")} imageAlt={t1("introTitle")} images={squareImages} />
             </Section>
 
