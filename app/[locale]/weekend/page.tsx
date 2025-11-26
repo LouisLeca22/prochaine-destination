@@ -10,6 +10,7 @@ import Section from "@/components/ui/Section"
 import Separator from "@/components/ui/Separator"
 import ThreeCards from "@/components/ui/ThreeCards"
 import { activities, restaurants } from "@/data"
+import { useIsMobile } from "@/hooks/use-mobile"
 import { useCurrentLocale, useScopedI18n } from "@/locales/client"
 import { selectItemById, selectItemsByIds } from "@/utils"
 import { motion } from "framer-motion"
@@ -233,7 +234,7 @@ function WeekendPage() {
             priceChildren: 56
         },
     ];
-
+    const isMobile = useIsMobile()
     return (
         <>
             <header>
@@ -271,7 +272,7 @@ function WeekendPage() {
                         className="md:translate-x-[25%] md:-translate-y-[15%] w-full sm:w-[400px] h-64 rounded-xl  shadow-lg z-10 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            1
+                            {isMobile ? 3 : 1}
                         </div>
                         <a href={`/${top3[0].category}?id=${top3[0].id}`}
                             className="w-full h-full rounded-xl overflow-hidden shadow-lg block relative"
@@ -301,7 +302,7 @@ function WeekendPage() {
                         className="md:translate-y-1/2 w-full md:w-[400px] h-64 rounded-xl  shadow-2xl z-30 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            3
+                            {isMobile ? 2 : 3}
                         </div>
 
                         <a href={`/${top3[1].category}?id=${top3[1].id}`}
@@ -330,7 +331,7 @@ function WeekendPage() {
                         className="md:-translate-x-1/3 md:-translate-[10%] w-full md:w-[400px] h-64 rounded-xl  shadow-lg z-20 relative"
                     >
                         <div className="absolute -top-3 -left-3 bg-primary text-white w-12 h-12  flex items-center justify-center rounded-full shadow-lg text-2xl font-bold z-20">
-                            2
+                            {isMobile ? 1 : 2}
                         </div>
                         <a href={`/${top3[2].category}?id=${top3[2].id}`}
                             className="w-full h-full rounded-xl overflow-hidden shadow-lg block relative"

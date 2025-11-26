@@ -449,7 +449,7 @@ function AutumnPage() {
                 </div>
             </Section>
 
-            <Section className="relative md:mt-60 mb-20">
+            <Section className="relative md:mt-40 mb-20">
 
                 <PodcastOne
                     title={t1("podcastName")}
