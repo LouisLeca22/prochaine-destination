@@ -119,7 +119,7 @@ const HeaderCards: React.FC<HeaderCards> = ({
                         <motion.div
                             key={index}
                             variants={cardVariants}
-                            className="flex-1 bg-white rounded-3xl flex justify-center items-center gap-2 flex-col  min-h-40 shadow-xl p-3 transform hover:-translate-y-2 transition duration-500"
+                            className="flex-1 bg-white rounded-3xl flex justify-center items-center gap-2 flex-col  sm:min-h-40 shadow-xl p-3 transform hover:-translate-y-2 transition duration-500"
                         >
                             <h3 className="font-semibold text-slate-800 flex items-center gap-2 justify-start md:justify-center text-left md:text-center">
                                 {card.title.icon}

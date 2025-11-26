@@ -30,14 +30,14 @@ function PodcastOne({ title, description, src, ol, cover, podcastName, reverse =
     return (
         <motion.div
             className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
-                gap-8  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center md:items-start px-4 md:px-8`}
+                gap-8  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center  px-4 md:px-8`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
         >
             <motion.div
-                className="relative w-full md:flex-1 h-[40vh] md:h-[60vh] mb-20 md:mb-0"
+                className="relative w-full md:flex-1    md:mb-0"
                 variants={imageVariants}
             >
 
@@ -45,7 +45,7 @@ function PodcastOne({ title, description, src, ol, cover, podcastName, reverse =
             </motion.div>
 
             <motion.div
-                className={`flex-1 flex flex-col  justify-center h-[40vh] md:h-[60vh] items-center ${reverse
+                className={`flex-1 flex flex-col  justify-center items-center ${reverse
                     ? "md:items-start md:text-left"
                     : "md:items-end md:text-right"
                     } text-center  mt-6 md:mt-0`}
