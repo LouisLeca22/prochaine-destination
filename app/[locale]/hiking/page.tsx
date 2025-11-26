@@ -237,15 +237,19 @@ const SquareCards = ({
     difficulty,
     departure
 }: SquareCardsProps) => {
+
     const t1 = useScopedI18n("Hiking")
+
     return (
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 sm:gap-20 gap-4 items-center">
+
+            {/* IMAGE GRID */}
             <motion.div
-                className={`grid grid-cols-2 gap-4 ${reverse ? 'md:order-2' : ''}`}
+                className={`grid grid-cols-2 gap-4 ${reverse ? "md:order-2" : ""}`}
                 initial={{ opacity: 0, x: reverse ? 120 : -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.9, ease: 'easeOut' }}
-                viewport={{ once: true, amount: .5 }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
             >
                 {images.map((src, i) => (
                     <motion.div
@@ -258,64 +262,111 @@ const SquareCards = ({
                 ))}
             </motion.div>
 
-
+            {/* TEXT BLOCK */}
             <motion.div
-                className={`text-center ${reverse ? 'md:order-1' : ''}`}
+                className={`text-center ${reverse ? "md:order-1" : ""}`}
                 initial={{ opacity: 0, x: reverse ? -120 : 120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
-                viewport={{ once: true, amount: .5 }}
+                transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true, amount: 0.5 }}
             >
-                <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">{title}</h2>
+                <h2 className="text-4xl font-josefin-sans font-bold text-primary mb-4">
+                    {title}
+                </h2>
+
                 <Separator width="w-40" className="mx-auto" />
-                <p className="text-lg leading-relaxed mt-10">{description}</p>
 
+                <p className="text-lg leading-relaxed mt-10">
+                    {description}
+                </p>
 
-                <div className="mt-10 grid grid-cols-2 text-gray-600 gap-2 p-6 rounded-3xl shadow-lg bg-white text-left">                    {distance && (
-                    <div className="flex items-center gap-2"><Route className="w-5 h-5 text-primary" /> <span>{t1("distance")}</span><span>{distance}</span></div>
-                )}
+                {/* INFO GRID 🟢 RESPONSIVE */}
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 p-6 rounded-3xl shadow-lg bg-white text-gray-600 text-left">
+                    {distance && (
+                        <div className="flex items-center gap-2">
+                            <Route className="w-5 h-5 text-primary" />
+                            <span>{t1("distance")}</span>
+                            <span>{distance}</span>
+                        </div>
+                    )}
                     {duration && (
-                        <div className="flex items-center gap-2"><Clock className="w-5 h-5 text-primary" /> <span>{t1("duration")}</span><span>{duration}</span></div>
+                        <div className="flex items-center gap-2">
+                            <Clock className="w-5 h-5 text-primary" />
+                            <span>{t1("duration")}</span>
+                            <span>{duration}</span>
+                        </div>
                     )}
                     {gain && (
-                        <div className="flex items-center gap-2"><ArrowUpCircle className="w-5 h-5 text-primary" /><span>{t1("gain")}</span> <span>{gain}</span></div>
+                        <div className="flex items-center gap-2">
+                            <ArrowUpCircle className="w-5 h-5 text-primary" />
+                            <span>{t1("gain")}</span>
+                            <span>{gain}</span>
+                        </div>
                     )}
                     {difficulty && (
-                        <div className="flex items-center gap-2"><Mountain className="w-5 h-5 text-primary" /><span>{t1("difficulty")}</span> <span>{difficulty}</span></div>
+                        <div className="flex items-center gap-2">
+                            <Mountain className="w-5 h-5 text-primary" />
+                            <span>{t1("difficulty")}</span>
+                            <span>{difficulty}</span>
+                        </div>
                     )}
                     {type && (
-                        <div className="flex items-center gap-2"><Activity className="w-5 h-5 text-primary" /> <span>{t1("type")}</span><span>{type}</span></div>
+                        <div className="flex items-center gap-2">
+                            <Activity className="w-5 h-5 text-primary" />
+                            <span>{t1("type")}</span>
+                            <span>{type}</span>
+                        </div>
                     )}
                     {departure && (
-                        <div className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /><span>{t1("departure")}</span> <span>{departure}</span></div>
+                        <div className="flex items-center gap-2">
+                            <MapPin className="w-5 h-5 text-primary" />
+                            <span>{t1("departure")}</span>
+                            <span>{departure}</span>
+                        </div>
                     )}
                 </div>
 
-
+                {/* POINTS OF INTEREST 🟢 RESPONSIVE */}
                 {pointsOfInterests.length > 0 && (
-                    <div className="mt-6 text-left text-gray-600 bg-white p-6 rounded-3xl shadow-md">
-                        <h3 className="text-xl font-semibold mb-3 text-primary">{t1("interest")}</h3>
-                        <ul className=" space-y-1">
+                    <div className="mt-6 text-gray-600 bg-white p-6 rounded-3xl shadow-md">
+                        <h3 className="text-xl font-semibold mb-3 text-primary">
+                            {t1("interest")}
+                        </h3>
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {pointsOfInterests.map((poi, idx) => (
-                                <li key={idx} className="flex  gap-2"><CircleCheckBig className="h-4 w-4 text-primary" />{poi}</li>
+                                <li
+                                    key={idx}
+                                    className="flex items-center gap-2 leading-tight"
+                                >
+                                    <CircleCheckBig className="shrink-0 h-4 w-4 text-primary" />
+                                    <span>{poi}</span>
+                                </li>
                             ))}
                         </ul>
                     </div>
                 )}
 
+                {/* BUTTONS */}
                 <div className="mt-10 flex justify-center gap-6">
-                    <Link href="http://www.linkedin.com/in/louis-leca"
-                        className="flex gap-2 bg-secondary text-primary-foreground px-2 py-3 hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
-                        <Download className="w-5 h-5" /> {t1("download")}
+                    <Link
+                        href="http://www.linkedin.com/in/louis-leca"
+                        className="flex gap-2 bg-secondary items-center justify-center text-primary-foreground px-3 py-3 hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition"
+                    >
+                        <Download className="w-5 h-5" />
+                        {t1("download")}
                     </Link>
-                    <Link href="http://www.linkedin.com/in/louis-leca"
-                        className="flex gap-2 bg-secondary text-primary-foreground px-2 py-3 hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
-                        <MapPlus className="w-5 h-5" /> {t1("gpx")}
+                    <Link
+                        href="http://www.linkedin.com/in/louis-leca"
+                        className="flex gap-2 bg-secondary items-center justify-center text-primary-foreground px-3 py-3 hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition"
+                    >
+                        <MapPlus className="w-5 h-5" />
+                        {t1("gpx")}
                     </Link>
                 </div>
-            </motion.div >
-        </div >
-    );
-};
+            </motion.div>
+        </div>
+    )
+}
 
 export default HikingPage
