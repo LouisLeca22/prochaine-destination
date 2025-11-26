@@ -239,7 +239,7 @@ function WeekendPage() {
             <header>
                 <HeaderSlider heading={t1("heading")} images={headerImages} />
                 <motion.div
-                    className="mt-20 md:mt-40 flex max-w-xl mx-auto flex-col justify-center items-center text-center gap-4"
+                    className="h-[35vh] p-3 md:p-0 flex max-w-xl mx-auto flex-col justify-center items-center text-center gap-4"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
