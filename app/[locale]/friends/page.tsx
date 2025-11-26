@@ -374,11 +374,11 @@ function FriendsPage() {
                                         <h3 className="text-lg font-semibold text-primary mb-2">
                                             {exp.title}
                                         </h3>
-                                        <p className="text-gray-700 text-sm mb-3">
+                                        <p className="text-gray-700  mb-3">
                                             {exp.description}
                                         </p>
 
-                                        <div className="bg-sky-50 border-l-4 border-primary p-3 rounded-md text-sm text-primary-foreground italic">
+                                        <div className="bg-sky-50 border-l-4 border-primary p-3 rounded-md  text-primary-foreground italic">
                                             {exp.tips}
                                         </div>
                                     </div>
@@ -436,14 +436,14 @@ function FriendsPage() {
                                     <div className="p-5">
                                         <ul className="space-y-3">
                                             {item.li.map((i, index) => (
-                                                <li key={index} className="text-gray-700 flex gap-2 text-sm leading-relaxed">
+                                                <li key={index} className="text-gray-700 flex gap-2  leading-relaxed">
                                                     <CircleCheck className="w-4 h-5 text-primary" />  {i}
                                                 </li>
                                             ))}
                                         </ul>
 
 
-                                        <p className="mt-6 text-sm text-gray-600">
+                                        <p className="mt-6 text-gray-600">
                                             <strong> {item.tips} </strong>
                                         </p>
                                     </div>
@@ -493,7 +493,7 @@ function FriendsPage() {
                                 <h3 className="text-2xl text-primary  font-semibold mb-3">{item.title}</h3>
                                 <p className="text-gray-600 mb-4">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("discover")}
                                 </Link>
                             </div>
@@ -602,9 +602,9 @@ function FriendsPage() {
                                 </div>
                                 <div className="p-6 flex flex-col min-h-54 justify-between items-center">
                                     <h3 className="text-lg text-primary font-semibold ">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                                    <p className="text-gray-600 ">{item.desc}</p>
                                     <Link href="http://www.linkedin.com/in/louis-leca"
-                                        className=" mx-auto text-center  bg-secondary text-primary-foreground px-3 py-1 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        className=" mx-auto text-center  bg-secondary text-primary-foreground px-3 py-1 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                         {t2("hot")}
                                     </Link>
                                 </div>
@@ -674,7 +674,7 @@ function FriendsPage() {
                                             {item.icon}
                                         </div>
                                         <h3 className="font-semibold text-lg mb-2 text-primary">{item.title}</h3>
-                                        <p className="text-sm text-gray-500 mb-4">{item.description}</p>
+                                        <p className=" text-gray-500 mb-4">{item.description}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -737,7 +737,7 @@ function FriendsPage() {
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                            className="flex items-center gap-2 justify-center opacity-80 hover:opacity-100 transition mt-auto"
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">

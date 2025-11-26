@@ -402,7 +402,7 @@ function CouplePage() {
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                            className="flex items-center gap-2 justify-center opacity-80 hover:opacity-100 transition mt-auto"
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
@@ -461,7 +461,7 @@ function CouplePage() {
                                     </div>
                                     <div className="p-5">
                                         <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                        <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+                                        <p className="text-gray-600  mb-4">{item.description}</p>
 
 
                                     </div>
@@ -474,10 +474,7 @@ function CouplePage() {
             </Section>
 
             <Section className="relative my-0 md:my-30 p-10 md:p-0">
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-30 dark:bg-transparent left-[45%] w-40 h-40 bg-primary/40 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-30 dark:bg-transparent right-[40%] w-56 h-56 bg-primary/30 rounded-full blur-3xl"></div>
-                </div>
+
                 <div className="max-w-6xl mx-auto flex items-center sm:items-end flex-col">
                     <ScrollFloat
                         animationDuration={1}

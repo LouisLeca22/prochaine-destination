@@ -327,7 +327,7 @@ function MuseumsPage() {
                                         <h3 className="text-xl text-primary font-semibold mb-3 opacity-90">
                                             {item.title}
                                         </h3>
-                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                        <p className=" text-gray-600 opacity-70 leading-relaxed mb-6">
                                             {item.description}
                                         </p>
 

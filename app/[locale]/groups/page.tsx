@@ -340,7 +340,7 @@ function page() {
                                         <h3 className="text-xl text-primary font-semibold mb-2 line-clamp-2">
                                             {item.title}
                                         </h3>
-                                        <p className=" font-semibold text-sm text-gray-600">
+                                        <p className=" font-semibold  text-gray-600">
                                             {item.desc}
                                         </p>
                                     </div>

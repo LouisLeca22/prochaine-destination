@@ -336,7 +336,7 @@ function FamilyPage() {
                                             {item.icon}
                                         </div>
                                         <h3 className="font-semibold text-lg mb-2 text-primary">{item.title}</h3>
-                                        <p className="text-sm text-gray-500 mb-4">{item.description}</p>
+                                        <p className=" text-gray-500 mb-4">{item.description}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -416,7 +416,7 @@ function FamilyPage() {
                                     <h3 className="text-xl font-semibold text-primary mb-2">
                                         {item.title}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed text-sm">
+                                    <p className="text-gray-600 leading-relaxed">
                                         {item.description}
                                     </p>
                                 </div>
@@ -468,7 +468,7 @@ function FamilyPage() {
 
 
                                 <h3 className="text-lg font-semibold text-primary">{spot.title}</h3>
-                                <p className="text-sm opacity-80 leading-relaxed text-gray-600">
+                                <p className=" opacity-80 leading-relaxed text-gray-600">
                                     {spot.description}
                                 </p>
                                 <div className="flex gap-2 flex-wrap text-gray-600">

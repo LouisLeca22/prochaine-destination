@@ -1426,7 +1426,7 @@ export default {
         seeMore: "Voir plus",
         download: "Télécharger",
         interesting: "Ça m'intéresse !",
-        see: "See",
+        see: "Voir",
         access: "Accéder",
         knowMore: "En savoir plus",
         discover: "Je découvre",
