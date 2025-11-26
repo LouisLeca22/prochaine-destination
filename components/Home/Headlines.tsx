@@ -26,26 +26,26 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
     const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
     return (
-        <section className="h-120 md:m-10 pt-20 md:pt-10 relative">
+        <section className="h-[50vh] md:m-10 pt-20 md:pt-10 relative">
             <div
-                className={`max-w-6xl h-full  mx-auto flex items-center justify-center md:gap-20 
+                className={`max-w-6xl h-full m-auto flex items-center justify-center md:gap-20 
         ${reverse ? "md:flex-row-reverse" : ""}
         flex-col md:flex-row`}
             >
-                <div ref={ref} className="flex-3/5  h-full relative ">
+                <div ref={ref} className="flex-1  h-full relative w-full">
                     <div className="hidden md:block absolute top-4 left-4 w-full h-full bg-primary rounded-2xl md:rounded-3xl"></div>
                     <Image
                         fill
-                        className="object-cover w-full h-full shadow-lg shadow-gray-700/40 rounded-none md:rounded-2xl"
+                        className="object-fill w-full h-full shadow-lg shadow-gray-700/40 rounded-none md:rounded-2xl"
                         src={item.img}
                         alt={item.title}
                     />
-                    {/* <div className="absolute inset-0 bg-black/50 md:hidden"></div> */}
+                    <div className="absolute inset-0 bg-black/50 md:hidden"></div>
                 </div>
 
 
                 <motion.div
-                    className="flex-2/5 flex flex-col justify-center items-center text-center h-full gap-3 
+                    className="flex-1  flex flex-col justify-center items-center text-center h-full gap-3 
            absolute md:static inset-0 md:inset-auto p-6 md:p-0  text-white md:text-foreground"
                     style={{ y }}
                 >
