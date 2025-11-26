@@ -488,7 +488,7 @@ function CouplePage() {
                                 <h3 className="text-2xl font-semibold text-center mb-3 text-primary">{item.title}</h3>
                                 <p className="text-gray-600 text-center mb-3 flex-grow">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("knowMore")}
                                 </Link>
                             </div>
@@ -537,7 +537,7 @@ function CouplePage() {
                                 {block.title}
                             </h3>
 
-                            <p className="text-gray-700 leading-relaxed text-sm md:text-base mb-3">
+                            <p className="text-gray-700 leading-relaxed  md:text-base mb-3">
                                 {block.description}
                             </p>
 
@@ -644,7 +644,7 @@ function CouplePage() {
                                 <h3 className="text-2xl text-primary  font-semibold mb-3">{item.title}</h3>
                                 <p className="text-gray-600 mb-4">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("knowMore")}
                                 </Link>
                             </div>
@@ -780,7 +780,7 @@ function CouplePage() {
                                 <h3 className="text-lg sm:text-xl text-primary font-semibold ">
                                     {t1("agendaFeaturedTitle")}
                                 </h3>
-                                <p className=" text-sm text-muted-foreground">
+                                <p className="  text-muted-foreground">
                                     {t1("agendaFeaturedDescription")}
                                 </p>
                             </div>
@@ -835,7 +835,7 @@ function CouplePage() {
                                     ))}
                                 </ul>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("discover")}
                                 </Link>
                             </div>

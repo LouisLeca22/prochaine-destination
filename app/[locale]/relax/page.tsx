@@ -334,7 +334,7 @@ function CouplePage() {
                                         {item.description}
                                     </p>
                                     <Link href="http://www.linkedin.com/in/louis-leca"
-                                        className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                         {t2("knowMore")}
                                     </Link>
                                 </div>
@@ -552,9 +552,9 @@ function CouplePage() {
                                 </div>
                                 <div className="p-6 flex flex-col min-h-54 justify-between items-center">
                                     <h3 className="text-lg text-primary font-semibold ">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.description}</p>
+                                    <p className="text-gray-600 ">{item.description}</p>
                                     <Link href="http://www.linkedin.com/in/louis-leca"
-                                        className=" mx-auto text-center  bg-secondary text-primary-foreground px-3 py-1 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        className=" mx-auto text-center  bg-secondary text-primary-foreground px-3 py-1 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                         {t2("knowMore")}
                                     </Link>
                                 </div>

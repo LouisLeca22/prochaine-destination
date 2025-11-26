@@ -396,7 +396,7 @@ function PartnersPage() {
                                                 className="w-20 h-20 mx-auto rounded-full object-cover mb-4 border-4 border-primary"
                                             />
                                             <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
-                                            <p className="text-sm text-primary mb-4">{item.role}</p>
+                                            <p className=" text-primary mb-4">{item.role}</p>
                                             <p className="text-gray-600 px-8 text-center italic leading-relaxed">
                                                 {item.testimony}
                                             </p>

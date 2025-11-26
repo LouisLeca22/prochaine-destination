@@ -390,17 +390,17 @@ function WeekendPage() {
                             <div className="p-5 space-y-3">
                                 <h3 className="text-xl text-primary font-semibold">{item.title}</h3>
 
-                                <p className="text-sm text-gray-600">
+                                <p className=" text-gray-600">
                                     <strong>{t1("location")} :</strong> {item.location}
                                 </p>
 
 
-                                <p className="text-sm text-gray-600">
+                                <p className=" text-gray-600">
                                     <strong>{t1("schedule")} :</strong> {item.schedule}
                                 </p>
 
 
-                                <p className="text-gray-700 text-sm leading-relaxed">
+                                <p className="text-gray-700 leading-relaxed">
                                     {item.description}
                                 </p>
                             </div>
@@ -444,7 +444,7 @@ function WeekendPage() {
                                 {t1("hikeDescription")}
                             </p>
                             <Link href="http://www.linkedin.com/in/louis-leca"
-                                className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("seeMore")}
                             </Link>
                         </motion.div>
@@ -467,7 +467,7 @@ function WeekendPage() {
                                 {t1("bikeDescription")}
                             </p>
                             <Link href="http://www.linkedin.com/in/louis-leca"
-                                className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("seeMore")}
                             </Link>
                         </motion.div>
@@ -490,7 +490,7 @@ function WeekendPage() {
                                 {t1("photosDescription")}
                             </p>
                             <Link href="http://www.linkedin.com/in/louis-leca"
-                                className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("seeMore")}
                             </Link>
                         </motion.div>
@@ -645,7 +645,7 @@ function WeekendPage() {
                                 <h3 className="text-2xl font-semibold text-center mb-3 text-primary">{item.title}</h3>
                                 <p className="text-gray-600 text-center mb-3 flex-grow">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("knowMore")}
                                 </Link>
                             </div>
@@ -692,7 +692,7 @@ function WeekendPage() {
                                 <h3 className="text-2xl text-primary font-semibold mb-3">{item.title}</h3>
                                 <p className="text-gray-600 mb-4">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("discover")}
                                 </Link>
                             </div>

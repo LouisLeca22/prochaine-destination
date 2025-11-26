@@ -281,7 +281,7 @@ function BusinessPage() {
                                         </div>
                                     </div>
                                     <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                                    <p className="text-gray-600 ">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -375,7 +375,7 @@ function BusinessPage() {
                                             <h3 className="font-semibold text-primary text-xl mb-2">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-sm font-bold text-primary-foreground mb-2">
+                                            <p className=" font-bold text-primary-foreground mb-2">
                                                 {t1("capacity")} {item.seated} {t1("seated")} / {item.standing} {t1("standing")}
                                             </p>
                                             <p className="text-gray-500">{item.description}</p>
@@ -446,7 +446,7 @@ function BusinessPage() {
                                             {item.icon}
                                         </div>
                                         <h3 className="font-semibold text-lg mb-2 text-primary">{item.title}</h3>
-                                        <p className="text-sm text-gray-500 mb-4">{item.description}</p>
+                                        <p className=" text-gray-500 mb-4">{item.description}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -529,7 +529,7 @@ function BusinessPage() {
                                         <h3 className="font-semibold text-primary text-lg">
                                             {item.title}
                                         </h3>
-                                        <p className="text-gray-600 text-sm mt-1 flex gap-2">
+                                        <p className="text-gray-600  mt-1 flex gap-2">
                                             {item.participants} {t1("attendees")} <MapPin className="w-4 h-4 text-primary" /> {item.place}
                                         </p>
                                     </div>

@@ -248,19 +248,19 @@ function CoastPage() {
                                     <div className="p-5 space-y-3">
                                         <h3 className="text-xl text-primary font-semibold">{item.title}</h3>
 
-                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                        <p className="text-gray-700 leading-relaxed">
                                             {item.description}
                                         </p>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                        <p className="text-gray-700  leading-relaxed">
                                             {item.duration}
                                         </p>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                        <p className="text-gray-700  leading-relaxed">
                                             {item.difficulty}
                                         </p>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                        <p className="text-gray-700  leading-relaxed">
                                             {item.access}
                                         </p>
-                                        <p className="text-sm text-gray-600">
+                                        <p className=" text-gray-600">
                                             <strong> {item.tips} </strong>
                                         </p>
                                     </div>
@@ -318,7 +318,7 @@ function CoastPage() {
                             <div className="p-3 md:w-1/2 flex flex-col text-center justify-center">
                                 <h3 className="text-2xl text-primary  font-semibold mb-3">{item.title}</h3>
                                 <p className="text-gray-600 mb-4">{item.description}</p>
-                                <p className="text-sm font-bold text-gray-600">
+                                <p className=" font-bold text-gray-600">
                                     {item.tips}
                                 </p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
@@ -599,7 +599,7 @@ function CoastPage() {
                                 <h3 className="text-lg sm:text-xl text-primary font-semibold ">
                                     {featured.title}
                                 </h3>
-                                <p className=" font-semibold text-sm text-muted-foreground">
+                                <p className=" font-semibold  text-muted-foreground">
                                     {featured.description}
                                 </p>
                             </div>
@@ -667,7 +667,7 @@ function CoastPage() {
                                         </div>
                                     </div>
                                     <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                                    <p className="text-gray-600 ">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

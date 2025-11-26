@@ -36,7 +36,7 @@ const Headline = ({ item, reverse }: { item: Item, reverse: boolean }) => {
                     <div className="hidden md:block absolute top-4 left-4 w-full h-full bg-primary rounded-2xl md:rounded-3xl"></div>
                     <Image
                         fill
-                        className="object-fill w-full h-full shadow-lg shadow-gray-700/40 rounded-none md:rounded-2xl"
+                        className="object-cover w-full h-full shadow-lg shadow-gray-700/40 rounded-none md:rounded-2xl"
                         src={item.img}
                         alt={item.title}
                     />

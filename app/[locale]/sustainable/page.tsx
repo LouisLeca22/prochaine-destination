@@ -344,7 +344,7 @@ function SustainablePage() {
                                         </div>
                                     </div>
                                     <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                                    <p className="text-gray-600 ">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -456,7 +456,7 @@ function SustainablePage() {
                                     <p className="mt-2 text-gray-600 text-center">{action.description}</p>
                                     <motion.div
                                         whileHover={{ x: 5 }}
-                                        className="flex items-center mt-2 gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition "
+                                        className="flex items-center mt-2 gap-2 justify-center  opacity-80 hover:opacity-100 transition "
                                     >
                                         <ArrowRight size={16} className="text-secondary-foreground" />
                                         <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
@@ -542,7 +542,7 @@ function SustainablePage() {
                                 <h4 className="font-semibold text-primary flex items-center justify-center gap-2">
                                     {item.icon} {item.title}
                                 </h4>
-                                <p className="mt-2 text-sm text-center text-slate-600">{item.description}</p>
+                                <p className="mt-2  text-center text-slate-600">{item.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -601,7 +601,7 @@ function SustainablePage() {
                                         <h3 className="text-xl text-primary font-semibold mb-2 line-clamp-2">
                                             {item.title}
                                         </h3>
-                                        <p className=" font-semibold text-sm text-gray-600">
+                                        <p className=" font-semibold text-gray-600">
                                             {item.description}
                                         </p>
                                     </div>
@@ -679,10 +679,10 @@ function SustainablePage() {
                             <div className="p-6 flex flex-col justify-between h-64 items-center">
 
                                 <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
-                                <p className="text-gray-600 mt-2 text-center text-sm">{item.description}</p>
+                                <p className="text-gray-600 mt-2 text-center ">{item.description}</p>
 
                                 <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
-                                    className="inline-block bg-secondary text-primary-foreground px-4 py-2 w-1/2 mx-auto  text-center rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="inline-block bg-secondary text-primary-foreground px-4 py-2 w-1/2 mx-auto  text-center rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {item.cta}
                                 </Link>
                             </div>
@@ -707,7 +707,7 @@ function SustainablePage() {
                             >
                                 <div className="mb-3">{eco.icon}</div>
                                 <h4 className="font-semibold text-primary">{eco.title}</h4>
-                                <p className="text-gray-600 text-sm mt-1">{eco.description}</p>
+                                <p className="text-gray-600  mt-1">{eco.description}</p>
                             </motion.div>
                         ))}
                     </div>

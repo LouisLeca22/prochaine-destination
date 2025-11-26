@@ -242,7 +242,7 @@ function CulturePage() {
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition "
+                                            className="flex items-center gap-2 justify-center  opacity-80 hover:opacity-100 transition "
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
@@ -316,7 +316,7 @@ function CulturePage() {
                                 {block.title}
                             </h3>
 
-                            <p className="text-gray-700 leading-relaxed text-sm md:text-base mb-3">
+                            <p className="text-gray-700 leading-relaxed  md:text-base mb-3">
                                 {block.description}
                             </p>
 
@@ -401,7 +401,7 @@ function CulturePage() {
                                         {item.description}
                                     </p>
                                     <Link href="http://www.linkedin.com/in/louis-leca"
-                                        className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        className="w-1/2 mx-auto text-center bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                         {t2("knowMore")}
                                     </Link>
                                 </div>
@@ -451,7 +451,7 @@ function CulturePage() {
                                 <h3 className="text-2xl font-semibold text-center mb-3 text-primary">{item.title}</h3>
                                 <p className="text-gray-600 text-center mb-3 flex-grow">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("knowMore")}
                                 </Link>
                             </div>

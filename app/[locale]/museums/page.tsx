@@ -188,14 +188,14 @@ function MuseumsPage() {
                                     </div>
                                     <div className="p-5">
                                         <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                        <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-                                        <p className="text-sm text-gray-600 mt-2">
+                                        <p className="text-gray-600  mb-4">{item.description}</p>
+                                        <p className=" text-gray-600 mt-2">
                                             <strong> {t1("time")}</strong> {item.time}
                                         </p>
-                                        <p className="text-sm text-gray-600 mt-2">
+                                        <p className=" text-gray-600 mt-2">
                                             <strong> {t1("price")}</strong> {item.price}
                                         </p>
-                                        <p className="text-sm text-gray-600 mt-2">
+                                        <p className=" text-gray-600 mt-2">
                                             <strong> {t1("access")}</strong> {item.access}
                                         </p>
                                     </div>
@@ -264,7 +264,7 @@ function MuseumsPage() {
                                         {item.description}
                                     </p>
 
-                                    <p className="text-sm text-gray-600 mt-2">
+                                    <p className=" text-gray-600 mt-2">
                                         <strong> {t1("until")} {item.date} </strong>
                                     </p>
 
@@ -333,7 +333,7 @@ function MuseumsPage() {
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition"
+                                            className="flex items-center gap-2 justify-center  opacity-80 hover:opacity-100 transition"
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">{t2("discover")}</Link>
@@ -504,7 +504,7 @@ function MuseumsPage() {
                                 <p className="text-gray-600 mb-4">{item.description}</p>
 
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("discover")}
                                 </Link>
                             </div>

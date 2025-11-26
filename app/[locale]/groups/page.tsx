@@ -226,7 +226,7 @@ function page() {
                                         </div>
                                     </div>
                                     <h3 className="text-lg text-primary font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                                    <p className="text-gray-600 ">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

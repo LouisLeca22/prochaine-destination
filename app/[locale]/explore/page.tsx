@@ -145,7 +145,7 @@ export default function ExplorePage() {
                     </div>
 
                     <p
-                        className="text-sm sm:text-base text-center"
+                        className=" sm:text-base text-center"
                     >
                         {t1("gastronomyDescription")}
                     </p>

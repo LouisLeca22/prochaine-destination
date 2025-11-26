@@ -261,7 +261,7 @@ function TastingPage() {
                                 <h3 className="text-2xl text-primary  font-semibold mb-3">{item.title}</h3>
                                 <p className="text-gray-600 mb-4">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
-                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                    className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                     {t2("discover")}
                                 </Link>
                             </div>
@@ -357,13 +357,13 @@ function TastingPage() {
                                             {item.title}
                                         </h3>
 
-                                        <p className="text-sm text-gray-600 opacity-70 leading-relaxed mb-6">
+                                        <p className=" text-gray-600 opacity-70 leading-relaxed mb-6">
                                             {item.description}
                                         </p>
 
                                         <motion.div
                                             whileHover={{ x: 5 }}
-                                            className="flex items-center gap-2 justify-center text-sm opacity-80 hover:opacity-100 transition mt-auto"
+                                            className="flex items-center gap-2 justify-center  opacity-80 hover:opacity-100 transition mt-auto"
                                         >
                                             <ArrowRight size={16} className="text-secondary-foreground" />
                                             <Link className="text-secondary-foreground" href="http://www.linkedin.com/in/louis-leca" target="_blank">
@@ -430,7 +430,7 @@ function TastingPage() {
                                     <h3 className="text-2xl font-semibold text-primary mb-4">{exp.title}</h3>
                                     <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
                                     <Link href="http://www.linkedin.com/in/louis-leca"
-                                        className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                         {t2("discover")}
                                     </Link>
                                 </motion.div>
@@ -477,9 +477,9 @@ function TastingPage() {
                                 </div>
                                 <div className="p-6 flex flex-col items-center justify-center">
                                     <h3 className="text-lg text-primary font-semibold mb-4 line-clamp-2 text-center ">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                                    <p className="text-gray-600  mb-3">{item.description}</p>
                                     <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
-                                        className="inline-block bg-secondary text-primary-foreground px-4 py-2 w-1/2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                        className="inline-block bg-secondary text-primary-foreground px-4 py-2 w-1/2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                         {t2("seeMore")}
                                     </Link>
                                 </div>

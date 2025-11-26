@@ -306,7 +306,7 @@ function PressPage() {
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("logosTitle")}</h3>
                             <p className="text-gray-500 mb-4">{t1("logosDescription")}</p>
                             <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
-                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
                         </div>
@@ -320,9 +320,9 @@ function PressPage() {
                                 <LayoutPanelTop className="w-8 h-8 text-primary-foreground" />
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("kitTitle")}</h3>
-                            <p className="text-sm text-gray-500 mb-4">{t1("kitDescription")}</p>
+                            <p className=" text-gray-500 mb-4">{t1("kitDescription")}</p>
                             <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
-                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
                         </div>
@@ -335,9 +335,9 @@ function PressPage() {
                                 <Palette className="w-8 h-8 text-primary-foreground" />
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("brandTitle")}</h3>
-                            <p className="text-sm text-gray-500 mb-4">{t1("brandDescription")}</p>
+                            <p className=" text-gray-500 mb-4">{t1("brandDescription")}</p>
                             <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
-                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
                         </div>
@@ -350,9 +350,9 @@ function PressPage() {
                                 <FolderClosed className="w-8 h-8 text-primary-foreground" />
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-primary">{t1("dossierTitle")}</h3>
-                            <p className="text-sm text-gray-500 mb-4">{t1("dossierDescription")}</p>
+                            <p className=" text-gray-500 mb-4">{t1("dossierDescription")}</p>
                             <Link href="http://www.linkedin.com/in/louis-leca" target="_blank"
-                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
+                                className="inline-block bg-secondary text-primary-foreground px-4 py-2 rounded-lg  font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
                                 {t2("download")}
                             </Link>
                         </div>
