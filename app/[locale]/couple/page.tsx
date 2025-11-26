@@ -184,8 +184,8 @@ function CouplePage() {
 
     const stories = [
         {
-            title: t1("storyThreeTitle"),
-            description: t1("storyThreeDescription"),
+            title: t1("storyOneTitle"),
+            description: t1("storyOneDescription"),
             image: "https://images.pexels.com/photos/1174958/pexels-photo-1174958.jpeg"
         },
         {
@@ -598,7 +598,7 @@ function CouplePage() {
                                 whileHover={{ y: -4 }}
                                 transition={{ duration: 0.25 }}
                             >
-                                <h3 className="text-white text-lg font-medium drop-shadow-md">
+                                <h3 className="text-white text-xl font-medium drop-shadow-md">
                                     {spot.title}
                                 </h3>
                             </motion.div>
@@ -645,7 +645,7 @@ function CouplePage() {
                                 <p className="text-gray-600 mb-4">{item.description}</p>
                                 <Link href="http://www.linkedin.com/in/louis-leca"
                                     className="w-1/2 mx-auto text-center  bg-secondary text-primary-foreground px-4 py-2 rounded-lg mt-3 text-sm font-medium hover:text-white hover:bg-linear-to-r from-emerald-400 to-emerald-300 shadow-md transition">
-                                    {t2("interesting")}
+                                    {t2("knowMore")}
                                 </Link>
                             </div>
                         </motion.div>

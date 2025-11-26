@@ -703,7 +703,7 @@ function CouplePage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
 
                             <div className="absolute bottom-3 left-4 right-4">
-                                <h3 className="text-white text-lg font-medium drop-shadow-md">
+                                <h3 className="text-white text-xl font-medium drop-shadow-md">
                                     {spot.title}
                                 </h3>
                             </div>
@@ -747,7 +747,7 @@ function CouplePage() {
                                     {item.icon}
                                 </div>
 
-                                <p className="text-center text-white text-sm font-medium leading-tight">
+                                <p className="text-center text-white font-medium leading-tight">
                                     {item.title}
                                 </p>
                             </motion.div>
