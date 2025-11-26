@@ -33,7 +33,7 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
     return (
         <motion.div
             className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"}
-                  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center md:items-start px-4 md:px-8`}
+                  ${large ? "max-w-7xl" : "max-w-6xl"} mx-auto items-center gap-6 md:items-start px-4 md:px-8`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -54,7 +54,7 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
 
             {/* Text section */}
             <motion.div
-                className={`flex-1 flex flex-col  justify-center h-[40vh] md:h-[50vh] items-center ${reverse
+                className={`flex-1 flex flex-col  justify-center h-[40vh] md:h-[50vh]  items-center ${reverse
                     ? "md:items-start md:text-left"
                     : "md:items-end md:text-right"
                     } text-center  mt-6 md:mt-0`}
@@ -65,11 +65,11 @@ function OneCard({ image, title, description, ol, reverse = false, large = false
                 </h2>
                 <Separator width="w-40 md:w-80" className="mb-6 md:mb-8" />
                 {description && (
-                    <p className="text-base md:text-lg leading-relaxed">{description}</p>
+                    <p className="text-base md:text-lg p-3 leading-relaxed">{description}</p>
                 )}
 
                 {ol && (
-                    <ol className="text-base md:text-lg leading-relaxe">
+                    <ol className="text-base md:text-lg p-3 leading-relaxe">
                         {ol.map((item, i) => (
                             <li className="mb-4" key={i}>{item}</li>
                         ))}
